@@ -497,6 +497,8 @@ Error message and password prompt
 
 <li>Youtube Playlists</li>
 
+<li>ZFS Garbage collection</li>
+
 <li>Zoiper Voice over IP App</li>
 
 </ul>
@@ -9913,7 +9915,7 @@ Error message and password prompt
     }
 }</pre>
 </div>
-<div created="20200415073616667" modified="20200517183458832" title="$:/DefaultTiddlers">
+<div created="20200415073616667" modified="20200519030520347" title="$:/DefaultTiddlers">
 <pre>[[Start]]
 [[Zoiper Voice over IP App]]
 [[Project: RasPBX (FreePBX/Asterisk) for the Home]]
@@ -9923,6 +9925,7 @@ Error message and password prompt
 [[Docker Containers 101]]
 [[PulseAudio]]
 [[Here’s What’s New in Ubuntu 20.04 - ZFS]]
+[[ZFS Garbage collection]]
 [[Wikipedia]]
 [[Radio Station Directory]]</pre>
 </div>
@@ -9999,8 +10002,8 @@ Error message and password prompt
 <div created="20200415235707159" modified="20200415235707159" title="$:/state/image-picker/system--940366523">
 <pre>show</pre>
 </div>
-<div created="20200415225849375" modified="20200430125426363" title="$:/state/showeditpreview">
-<pre>yes</pre>
+<div created="20200415225849375" modified="20200519030401255" title="$:/state/showeditpreview">
+<pre>no</pre>
 </div>
 <div created="20200416000753699" modified="20200517184445607" title="$:/state/sidebar">
 <pre>yes</pre>
@@ -10020,7 +10023,7 @@ Error message and password prompt
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20200517183434300" list="[[Berryboot Install]] [[Ubuntu 20.04 LTS. Raspberry Pi 4 SSD Installation. Berryboot.]] Start GettingStarted [[Zoiper Voice over IP App]] [[Project: RasPBX (FreePBX/Asterisk) for the Home]] [[X2GO: Linux Remote Desktop &amp; Terminal Server]] [[Crontab – Quick Reference]] [[Docker Containers 101]] PulseAudio [[Here’s What’s New in Ubuntu 20.04 - ZFS]] Wikipedia [[Radio Station Directory]]" modified="20200517183434300" title="$:/StoryList">
+<div created="20200519030450359" list="[[ZFS Garbage collection]] Start [[Zoiper Voice over IP App]] [[Project: RasPBX (FreePBX/Asterisk) for the Home]] [[Ubuntu 20.04 LTS. Raspberry Pi 4 SSD Installation. Berryboot.]] [[X2GO: Linux Remote Desktop &amp; Terminal Server]] [[Crontab – Quick Reference]] [[Docker Containers 101]] PulseAudio [[Here’s What’s New in Ubuntu 20.04 - ZFS]] Wikipedia [[Radio Station Directory]]" modified="20200519030845657" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200415065902661" modified="20200415065902661" title="$:/temp/advancedsearch">
@@ -12139,6 +12142,22 @@ https://youtu.be/oSuy1TS8FGs &lt;br&gt;
 # [[October2017|https://www.youtube.com/playlist?list=PLzHM9iyT6QCpsORVF008omissmzYBZTl0]]
 # [[Linux|https://www.youtube.com/playlist?list=PLzHM9iyT6QCoiODAtNAhvkIbL9G5gN346]]
 # [[Entertainment|https://www.youtube.com/playlist?list=PLzHM9iyT6QCpk1enXrCj9dgs8cIIdNbki]]</pre>
+</div>
+<div created="20200519030035985" modified="20200519030719804" tags="" title="ZFS Garbage collection">
+<pre>https://arstechnica.com/gadgets/2020/03/ubuntu-20-04s-zsys-adds-zfs-snapshots-to-package-management/ &lt;br&gt;
+Although it's still decidedly alpha—and isn't actually linked for operation yet—zsys does also have a facility for automatically pruning stale snapshots. The zsys team again chose to ignore existing ZFS terminology and call this service &quot;garbage collection&quot; rather than naming it anything to do with the snapshots themselves.
+
+The etymology reboot here appears to stem from a desire to get users to think in higher-level terms that encompass multiple grouped snapshots. We're not quite sure how we feel about that. Handled properly, it might indeed reduce end-user confusion. Sysadmin types, though—either casual or professional—are more likely to be hindered by a layer of obfuscation between scripting and reality. And right now, only sysadmin types are going to see any of this stuff, since it's the next best thing to undiscoverable.
+
+The actual facility is called with the command zsysctl service gc -a, which performs garbage collection on all zsys namespaces present on the system.  If you run the command yourself on a relatively new system, you probably won't see anything happen. It won't destroy any snapshots unless there are a minimum of 20 present, after which it thins them out according to age.
+
+The garbage collection ruleset is currently configurable before zsys compilation, but it's inaccessible after installation—building the package hardcodes its values into the zsys binaries. As things stand right now, these parameters are inaccessible to end users and administrators.
+
+As Ubuntu developer Didier Roche explained on Twitter, Ubuntu 20.04 systems don't automatically run zsysctl service gc yet. Roche strongly recommends that nobody run the command on any production systems for the time being, since it's a data-destroying feature that's still in alpha. Once it's had more time in testing and development, a systemd timer will be added to periodically call it.
+
+
+
+</pre>
 </div>
 <div created="20200415070111015" modified="20200427032124163" tags="Computer n6xre Help Phone" title="Zoiper Voice over IP App">
 <pre>[[Zoiper|https://www.zoiper.com/en/voip-softphone/download/current]] - [[Obihai-OBi200-Adapter|https://www.amazon.com/Obihai-OBi200-Adapter-Support-Service/dp/B07FCS1NGM/]] - https://en.wikipedia.org/wiki/Voice_over_IP&lt;br&gt;
