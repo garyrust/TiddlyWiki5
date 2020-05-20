@@ -12151,7 +12151,7 @@ https://youtu.be/oSuy1TS8FGs &lt;br&gt;
 # [[Linux|https://www.youtube.com/playlist?list=PLzHM9iyT6QCoiODAtNAhvkIbL9G5gN346]]
 # [[Entertainment|https://www.youtube.com/playlist?list=PLzHM9iyT6QCpk1enXrCj9dgs8cIIdNbki]]</pre>
 </div>
-<div created="20200519030035985" modified="20200519030719804" tags="" title="ZFS Garbage collection">
+<div created="20200519030035985" modified="20200520194207600" tags="" title="ZFS Garbage collection">
 <pre>https://arstechnica.com/gadgets/2020/03/ubuntu-20-04s-zsys-adds-zfs-snapshots-to-package-management/ &lt;br&gt;
 Although it's still decidedly alpha—and isn't actually linked for operation yet—zsys does also have a facility for automatically pruning stale snapshots. The zsys team again chose to ignore existing ZFS terminology and call this service &quot;garbage collection&quot; rather than naming it anything to do with the snapshots themselves.
 
@@ -12162,8 +12162,8 @@ The actual facility is called with the command zsysctl service gc -a, which perf
 The garbage collection ruleset is currently configurable before zsys compilation, but it's inaccessible after installation—building the package hardcodes its values into the zsys binaries. As things stand right now, these parameters are inaccessible to end users and administrators.
 
 As Ubuntu developer Didier Roche explained on Twitter, Ubuntu 20.04 systems don't automatically run zsysctl service gc yet. Roche strongly recommends that nobody run the command on any production systems for the time being, since it's a data-destroying feature that's still in alpha. Once it's had more time in testing and development, a systemd timer will be added to periodically call it.
-
-
+&lt;br&gt;
+Also see [[Raspberry Pi 4 transferring data to/from USB3.0 SSDs]] &lt;br&gt;
 
 </pre>
 </div>
