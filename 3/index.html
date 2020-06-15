@@ -487,6 +487,8 @@ Error message and password prompt
 
 <li>PulseAudio</li>
 
+<li>Raspberry Pi 4 8GB &amp; USB Boot</li>
+
 <li>Raspberry Pi 4 as a Network Router</li>
 
 <li>Raspberry Pi 4 transferring data to/from USB3.0 SSDs</li>
@@ -9935,7 +9937,7 @@ Error message and password prompt
     }
 }</pre>
 </div>
-<div created="20200415073616667" modified="20200614194847577" title="$:/DefaultTiddlers">
+<div created="20200415073616667" modified="20200615062056625" title="$:/DefaultTiddlers">
 <pre>[[Table Of Contents]]
 [[Start]]
 [[Linode]]
@@ -9946,6 +9948,7 @@ Error message and password prompt
 [[Crontab – Quick Reference]]
 [[PulseAudio]]
 [[Use Your Echo Device as a Bluetooth Speaker]]
+[[Raspberry Pi 4 8GB &amp; USB Boot]]
 [[Here’s What’s New in Ubuntu 20.04 - ZFS]]
 [[Docker Containers 101]]
 [[Kubernetes on Ubuntu 20.04 Focal Fossa Linux]]
@@ -10025,10 +10028,10 @@ Error message and password prompt
 <div created="20200415235707159" modified="20200415235707159" title="$:/state/image-picker/system--940366523">
 <pre>show</pre>
 </div>
-<div created="20200415225849375" modified="20200614194726323" title="$:/state/showeditpreview">
+<div created="20200415225849375" modified="20200615061931234" title="$:/state/showeditpreview">
 <pre>no</pre>
 </div>
-<div created="20200416000753699" modified="20200614194722417" title="$:/state/sidebar">
+<div created="20200416000753699" modified="20200615062007991" title="$:/state/sidebar">
 <pre>yes</pre>
 </div>
 <div created="20200415062333650" modified="20200425085242104" title="$:/state/tab-1749438307">
@@ -10052,7 +10055,7 @@ Error message and password prompt
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20200614194813848" list="[[Use Your Echo Device as a Bluetooth Speaker]] [[Table Of Contents]] Start Linode [[How to Make Your Own VPN]] [[Project: RasPBX (FreePBX/Asterisk) for the Home]] [[Zoiper Voice over IP App]] [[X2GO: Linux Remote Desktop &amp; Terminal Server]] [[Crontab – Quick Reference]] PulseAudio [[Here’s What’s New in Ubuntu 20.04 - ZFS]] [[Docker Containers 101]] [[Kubernetes on Ubuntu 20.04 Focal Fossa Linux]] [[ZFS Garbage collection]] Wikipedia" modified="20200614194813848" title="$:/StoryList">
+<div created="20200615062017790" list="[[Raspberry Pi 4 8GB &amp; USB Boot]] [[Table Of Contents]] Start Linode [[How to Make Your Own VPN]] [[Project: RasPBX (FreePBX/Asterisk) for the Home]] [[Zoiper Voice over IP App]] [[X2GO: Linux Remote Desktop &amp; Terminal Server]] [[Crontab – Quick Reference]] PulseAudio [[Use Your Echo Device as a Bluetooth Speaker]] [[Here’s What’s New in Ubuntu 20.04 - ZFS]] [[Docker Containers 101]] [[Kubernetes on Ubuntu 20.04 Focal Fossa Linux]] [[ZFS Garbage collection]] Wikipedia" modified="20200615062017790" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200415065902661" modified="20200529000602524" title="$:/temp/advancedsearch">
@@ -11704,6 +11707,47 @@ Also see [[Zoiper Voice over IP App]] - [[Here’s What’s New in Ubuntu 20.04 
 
 https://askubuntu.com/questions/151216/how-can-i-force-the-rediscovery-of-pulseaudio-virtual-sound-devices&lt;br&gt;
 </pre>
+</div>
+<div created="20200615061001325" modified="20200615062108506" tags="" title="Raspberry Pi 4 8GB &amp; USB Boot">
+<pre>https://youtu.be/2zrwjGcyM5s &lt;br&gt;
+&lt;iframe width=&quot;800&quot; height=&quot;450&quot; src=&quot;https://www.youtube.com/embed/2zrwjGcyM5s&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;&lt;br&gt;
+NOTE ON INSTALLING BETA USB BOOT FIRMWARE &lt;br&gt;
+In this video I show how I configured three Raspberry Pi 4s to boot from USB.  &lt;br&gt;
+Please note that these instructions are provided in good faith, but that you  &lt;br&gt;
+install any beta firmware at your own risk. There is also no guarantee that what &lt;br&gt;
+is shown in the video will work on your Pi 4 with your particular USB drives or  &lt;br&gt;
+USB SATA adapters. It is called beta firmware for a reason! Fairly soon the  &lt;br&gt;
+official Pi 4 USB boot firmware will be available, and waiting for this release is a safer option. &lt;br&gt;
+ &lt;br&gt;
+If you are familiar with the Raspberry Pi YouTube and wider community, you may  &lt;br&gt;
+notice that the process I use to install the beta firmware involves fewer steps than  &lt;br&gt;
+included in many other guides. In part this is because I flashed the June 6th 2020 firmware  &lt;br&gt;
+(pieeprom-2020-06-03.bin), and not the initial May 15th file (pieeprom-2020-05-15.bin) used  &lt;br&gt;
+in many other videos and tutorials. The latter required fixes to be made to a Raspberry Pi OS  &lt;br&gt;
+installation. But at the time of writing (June 9th 2020), the June 6th firmware did not. &lt;br&gt;
+ &lt;br&gt;
+Some other tutorials also execute unnecessary commands, as well as editing the   &lt;br&gt;
+-eeprom-update file located in the Pi’s /etc/default/ directory. Specifically they change the  &lt;br&gt;
+environment variable  “FIRMWARE_RELEASE_STATUS” in this file from “critical” to “beta”.  &lt;br&gt;
+As far as I am aware, this variable tells the Pi which category of firmware update to automatically  &lt;br&gt;
+install. However, it is also my understanding, as well as my practical experience, that this  &lt;br&gt;
+environment variable is ignored by the rpi-eeprom-update utility if you do a manual install with a -f flag  &lt;br&gt;
+included, followed by the location and name of a specific firmware file. Indeed, the -h help information  &lt;br&gt;
+for the rpi-eeprom-update utility states that the -f option installs “the given file instead of the latest  &lt;br&gt;
+applicable update”. &lt;br&gt;
+ &lt;br&gt;
+If you have changed “FIRMWARE_RELEASE_STATUS” from “critical” to “beta”, then your Pi will  &lt;br&gt;
+in the future automatically pick up beta firmware updates, which may not be what you want it to do!  &lt;br&gt;
+So if you have followed another guide and edited this file, my strong suggestion is to change “beta” back  &lt;br&gt;
+to “critical”. Of course, I may be wrong about all of this. But this is the best information I can provide. &lt;br&gt;
+ &lt;br&gt;
+Chapters: &lt;br&gt;
+00:00 Introduction &lt;br&gt;
+00:40 Pi 4 Models &lt;br&gt;
+03:48 Raspberry Pi OS &lt;br&gt;
+10:30 USB Boot demo &lt;br&gt;
+12:57 Firmware Update &lt;br&gt;
+18:06 Happy Birthday &lt;br&gt;</pre>
 </div>
 <div created="20200430125316218" modified="20200430141657003" tags="Computer Help n6xre" title="Raspberry Pi 4 as a Network Router">
 <pre>Also see [[Project: RasPBX (FreePBX/Asterisk) for the Home]] &lt;br&gt;
