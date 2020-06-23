@@ -10040,7 +10040,7 @@ Error message and password prompt
 <div created="20200415225849375" modified="20200616220710345" title="$:/state/showeditpreview">
 <pre>yes</pre>
 </div>
-<div created="20200416000753699" modified="20200623061445313" title="$:/state/sidebar">
+<div created="20200416000753699" modified="20200623062018564" title="$:/state/sidebar">
 <pre>yes</pre>
 </div>
 <div created="20200415062333650" modified="20200425085242104" title="$:/state/tab-1749438307">
@@ -11243,7 +11243,7 @@ https://www.anveo.com/service.asp &lt;br&gt;
 &lt;iframe src=&quot;https://bit.ly/2VY1q0R&quot; style=&quot;border:none;height:800px;width:100%&quot;&gt;&lt;/iframe&gt;&lt;br&gt;
 Also see [[Here’s What’s New in Ubuntu 20.04 - ZFS]] &lt;br&gt;</pre>
 </div>
-<div created="20200622135212313" modified="20200623061448444" tags="Computer Help n6xre" title="Berryboot Images">
+<div created="20200622135212313" modified="20200623062023150" tags="Computer Help n6xre" title="Berryboot Images">
 <pre>https://berryboot.alexgoldcheidt.com/images/  - http://berrytest.alexgoldcheidt.com:50841/Berryboot_OS_Testing/Raspberry_Pi_4/&lt;br&gt;
 [[Universal-Image-Generator-for-Berryboot|https://github.com/agoldcheidt/Universal-Image-Generator-for-Berryboot]] - [[Faq|https://berryboot.alexgoldcheidt.com/question-and-answer/]] - https://sourceforge.net/projects/berryboot-updated-images/files/Raspberry-Pi/ &lt;br&gt;
 [img[https://i.ytimg.com/vi/0_K9KqjEOFc/maxresdefault.jpg]]&lt;br&gt;
@@ -11253,18 +11253,19 @@ https://www.berryterminal.com/doku.php/berryboot &lt;br&gt;
 &lt;iframe width=&quot;800&quot; height=&quot;800&quot; src=&quot;https://www.berryterminal.com/doku.php/berryboot&quot; frameborder=&quot;0&quot; allow=&quot;autoplay; encrypted-media&quot; allowfullscreen&gt;&lt;/iframe&gt;&lt;br&gt;
 https://www.berryterminal.com/doku.php/berryboot/adding_custom_distributions&lt;br&gt;
 &lt;iframe width=&quot;800&quot; height=&quot;800&quot; src=&quot;https://www.berryterminal.com/doku.php/berryboot/adding_custom_distributions&quot; frameborder=&quot;0&quot; allow=&quot;autoplay; encrypted-media&quot; allowfullscreen&gt;&lt;/iframe&gt;&lt;br&gt;
-==================================================================================================  &lt;br&gt;
-Adding your own custom operating systems to the menu  &lt;br&gt;
-You can add your own extra operating systems to the Berryboot menu. However this requires that   &lt;br&gt;
-you convert your file system image to SquashFS format first.  &lt;br&gt;
+=========================================================  &lt;br&gt;
+Adding your own custom operating systems to the menu &lt;br&gt;
+You can add your own extra operating systems to the Berryboot menu. &lt;br&gt; 
+However this requires that you convert your file system image to &lt;br&gt; 
+SquashFS format first. &lt;br&gt;
 
-Most Raspberry Pi operating system images are disk images containing two partitions. A FAT   &lt;br&gt;
-partition with the boot loader and kernel files, and a second ext4 partition with everything   &lt;br&gt;
-else. We are interested in the second partition.  &lt;br&gt;
+Most Raspberry Pi operating system images are disk images containing &lt;br&gt; 
+two partitions. A FAT partition with the boot loader and kernel files, &lt;br&gt; 
+and a second ext4 partition with everything &lt;br&gt;
+else. We are interested in the second partition. &lt;br&gt;
 
-With a regular Linux desktop computer that has kpartx and mksquashfs installed, you can   &lt;br&gt;
-convert the second partition to SquashFS like this:  &lt;br&gt;
-
+With a regular Linux desktop computer that has kpartx and mksquashfs &lt;br&gt; 
+installed, you can convert the second partition to SquashFS like this: &lt;br&gt;
 ubuntu-20.04-xfce4-arm64+raspi-64Gb.img  &lt;br&gt;
 
 $ sudo kpartx -av ubuntu-20.04-xfce4-arm64+raspi-64Gb.img   &lt;br&gt;
@@ -11284,7 +11285,7 @@ $ sudo rm -f /mnt/etc/rc3.d/S01resize2fs_once   &lt;br&gt;
 $ sudo mksquashfs /mnt ubuntu-20.04-xfce4-arm64+raspi-converted_image_for_berryboot.img -comp lzo -e lib/modules   &lt;br&gt;
 $ sudo umount /mnt   &lt;br&gt;
 $ sudo kpartx -d ubuntu-20.04-xfce4-arm64+raspi-64Gb.img  &lt;br&gt;
-
+=========================================================  &lt;br&gt;
 https://en.wikipedia.org/wiki/SquashFS &lt;br&gt;
 &lt;iframe width=&quot;800&quot; height=&quot;400&quot; src=&quot;https://en.m.wikipedia.org/wiki/SquashFS&quot; frameborder=&quot;0&quot; allow=&quot;autoplay; encrypted-media&quot; allowfullscreen&gt;&lt;/iframe&gt;
  </pre>
