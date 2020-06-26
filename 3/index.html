@@ -10047,7 +10047,7 @@ Error message and password prompt
 <div created="20200415225849375" modified="20200616220710345" title="$:/state/showeditpreview">
 <pre>yes</pre>
 </div>
-<div created="20200416000753699" modified="20200626054855653" title="$:/state/sidebar">
+<div created="20200416000753699" modified="20200626072823959" title="$:/state/sidebar">
 <pre>yes</pre>
 </div>
 <div created="20200415062333650" modified="20200425085242104" title="$:/state/tab-1749438307">
@@ -11085,8 +11085,8 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div author="JeremyRuston" core-version="&gt;=5.0.0" created="20200415221704633" dependents="" description="Basic theme" modified="20200415221704633" name="Vanilla" original-plugin-type="theme" original-tags="" original-title="$:/themes/tiddlywiki/vanilla" original-type="application/json" plugin-priority="0" requires-reload="no" server-url="https://tiddlywiki.com/library/v5.1.22/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/themes/tiddlywiki/vanilla" type="text/vnd.tiddlywiki" version="5.1.22">
 <pre></pre>
 </div>
-<div created="20200415065856837" modified="20200626045309951" title="$:/temp/search">
-<pre>docker</pre>
+<div created="20200415065856837" modified="20200626070934779" title="$:/temp/search">
+<pre>boot</pre>
 </div>
 <div created="20200415221704581" modified="20200415221704581" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html" url="https://tiddlywiki.com/library/v5.1.22/index.html">
 <pre>loaded</pre>
@@ -11836,8 +11836,38 @@ Also see [[Zoiper Voice over IP App]] - [[Here’s What’s New in Ubuntu 20.04 
 https://askubuntu.com/questions/151216/how-can-i-force-the-rediscovery-of-pulseaudio-virtual-sound-devices&lt;br&gt;
 </pre>
 </div>
-<div created="20200615061001325" modified="20200620040701254" tags="Computer" title="Raspberry Pi 4 8GB &amp; USB Boot">
-<pre>https://youtu.be/2zrwjGcyM5s &lt;br&gt;
+<div created="20200615061001325" modified="20200626072827971" tags="Computer" title="Raspberry Pi 4 8GB &amp; USB Boot">
+<pre>[[Raspberry Pi official USB Boot|https://youtu.be/8vC3D19e_Ac]]&lt;br&gt;
+&lt;iframe width=&quot;800&quot; height=&quot;450&quot; src=&quot;https://www.youtube.com/embed/8vC3D19e_Ac&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;&lt;br&gt;
+&lt;code&gt;
+Step #1:
+As usual, download the Raspberry Pi OS version you want.
+Do not forget the ssh file if you want to work with ssh.
+Then type in :
+sudo apt update &amp;&amp; sudo apt full-upgrade
+and wait till done.
+Step #2:
+Enter this command:
+sudo nano /etc/default/rpi-eeprom-update
+and check if the “stable” release is selected.
+If not, change it and save the file.
+Step #3:
+If you want, you can check the newest EEPROM release:
+ls /lib/firmware/raspberrypi/bootloader/stable/
+Currently, pieeprom-2020-06-15.bin is the latest version.
+Enter
+sudo rpi-eeprom-update-d-f /lib/firmware/raspberrypi/bootloader/ stable /pieeprom-2020-06-15.bin
+and
+sudo reboot
+now
+If a newer version is available, use this one.
+Step #4: 
+Copy
+the SD card to your SSD. I use the Raspberry Pi desktop to do that. If you know a
+way to do that in a terminal window, please comment.
+Now you can remove the SD card and boot from USB
+&lt;/code&gt; 
+https://youtu.be/2zrwjGcyM5s &lt;br&gt;
 &lt;iframe width=&quot;800&quot; height=&quot;450&quot; src=&quot;https://www.youtube.com/embed/2zrwjGcyM5s&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;&lt;br&gt;
 NOTE ON INSTALLING BETA USB BOOT FIRMWARE &lt;br&gt;
 In this video I show how I configured three Raspberry Pi 4s to boot from USB.  &lt;br&gt;
