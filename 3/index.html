@@ -525,6 +525,8 @@ Error message and password prompt
 
 <li>Raspberry Pi with XFCE4</li>
 
+<li>SSHFS for Windows</li>
+
 <li>Start</li>
 
 <li>Strang G., Herman E. Calculus - 2018</li>
@@ -10076,7 +10078,7 @@ Error message and password prompt
 <div created="20200415225849375" modified="20200626105449734" title="$:/state/showeditpreview">
 <pre>yes</pre>
 </div>
-<div created="20200416000753699" modified="20200702185101516" title="$:/state/sidebar">
+<div created="20200416000753699" modified="20200704114719616" title="$:/state/sidebar">
 <pre>yes</pre>
 </div>
 <div created="20200415062333650" modified="20200425085242104" title="$:/state/tab-1749438307">
@@ -10100,7 +10102,7 @@ Error message and password prompt
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20200703062123227" list="[[Table Of Contents]] Start [[My Gallery on Github]] Linode [[Raspberry Pi 4 8GB &amp; USB Boot]] [[Crontab – Quick Reference]] [[Berryboot Images]] [[Amazon Alexa on a Raspberry Pi]] [[Use Your Echo Device as a Bluetooth Speaker]] PulseAudio [[X2GO: Linux Remote Desktop with Ubuntu On The Raspberry Pi]] Proxmox [[Install Windows 10 on Proxmox]] [[Ubuntu 19.10 for the Raspberry Pi 4 with a KVM-enabled kernel &amp; Windows 10 guest]] [[How to Make Your Own VPN]] [[Zoiper Voice over IP App]] [[Here’s What’s New in Ubuntu 20.04 - ZFS]] [[Docker Containers 101]] [[Kubernetes on Ubuntu 20.04 Focal Fossa Linux]] [[ZFS Garbage collection]] Wikipedia" modified="20200703062244679" title="$:/StoryList">
+<div list="[[SSHFS for Windows]] [[Table Of Contents]] Start [[My Gallery on Github]] Linode [[Raspberry Pi 4 8GB &amp; USB Boot]] [[Crontab – Quick Reference]] [[Berryboot Images]] [[Amazon Alexa on a Raspberry Pi]] [[Use Your Echo Device as a Bluetooth Speaker]] PulseAudio [[X2GO: Linux Remote Desktop with Ubuntu On The Raspberry Pi]] Proxmox [[Install Windows 10 on Proxmox]] [[How to Make Your Own VPN]] [[Zoiper Voice over IP App]] [[Here’s What’s New in Ubuntu 20.04 - ZFS]] [[Docker Containers 101]] [[Kubernetes on Ubuntu 20.04 Focal Fossa Linux]] [[ZFS Garbage collection]] Wikipedia" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200415065902661" modified="20200529000602524" title="$:/temp/advancedsearch">
@@ -10164,7 +10166,7 @@ Error message and password prompt
     }
 }</pre>
 </div>
-<div created="20200415062727221" modified="20200702182151716" title="$:/temp/NewTagName">
+<div created="20200415062727221" modified="20200704114707807" title="$:/temp/NewTagName">
 <pre></pre>
 </div>
 <div author="Paco Rivière" core-version="&gt;=5.0.0" created="20200415221704633" dependents="" description="Catalan (Spain)" icon="data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%3F%3E%0A%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22810%22%20height%3D%22540%22%3E%0A%3Crect%20width%3D%22810%22%20height%3D%22540%22%20fill%3D%22%23FCDD09%22%2F%3E%0A%3Cpath%20stroke%3D%22%23DA121A%22%20stroke-width%3D%2260%22%20d%3D%22M0%2C90H810m0%2C120H0m0%2C120H810m0%2C120H0%22%2F%3E%0A%3C%2Fsvg%3E" modified="20200415221704633" name="ca-ES" original-plugin-type="language" original-tags="" original-title="$:/languages/ca-ES" original-type="application/json" requires-reload="no" server-url="https://tiddlywiki.com/library/v5.1.22/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/languages/ca-ES" type="text/vnd.tiddlywiki" version="5.1.22">
@@ -12153,6 +12155,70 @@ Also see [[ZFS Garbage collection]] &lt;br&gt;</pre>
 <pre>[[Raspberry Pi with XFCE4|https://makingstuffwork.net/technology/lightweight-desktop-raspberry-pi-with-xfce4/]]&lt;br&gt;
 &lt;iframe width=&quot;800&quot; height=&quot;800&quot; src=&quot;https://makingstuffwork.net/technology/lightweight-desktop-raspberry-pi-with-xfce4/&quot; frameborder=&quot;0&quot; allow=&quot;autoplay; encrypted-media&quot; allowfullscreen&gt;&lt;/iframe&gt;&lt;br&gt;
 [[Raspberry Pi 4 8GB &amp; USB Boot]]&lt;br&gt;</pre>
+</div>
+<div created="20200704113655333" modified="20200704114727423" tags="Computer Software Help" title="SSHFS for Windows">
+<pre>https://github.com/billziss-gh/sshfs-win &lt;br&gt;
+&lt;code&gt;
+SSHFS-Win is a minimal port of SSHFS to Windows. Under the hood it uses Cygwin for the POSIX environment and WinFsp for the FUSE functionality.
+
+Installation
+Install the latest version of [[WinFsp|https://github.com/libfuse/sshfs]].
+Install the latest version of [[SSHFS-Win|https://github.com/billziss-gh/winfsp]]. Choose the x64 or x86 installer according to your computer's architecture.
+Basic Usage
+Once you have installed WinFsp and SSHFS-Win you can map a network drive to a directory on an SSHFS host using Windows Explorer or the net use command.
+
+Windows Explorer
+In Windows Explorer select This PC &gt; Map Network Drive and enter the desired drive letter and SSHFS path using the following UNC syntax:
+
+\\sshfs\REMUSER@HOST[\PATH]
+The first time you map a particular SSHFS path you will be prompted for the SSHFS username and password. You may choose to save these credentials with the Windows Credential Manager in which case you will not be prompted again.
+
+In order to unmap the drive, right-click on the drive icon in Windows Explorer and select Disconnect.
+[img[https://raw.githubusercontent.com/billziss-gh/sshfs-win/master/cap.gif]]
+Command Line
+You can map a network drive from the command line using the net use command:
+
+&gt; net use X: \\sshfs\billziss@mac2018.local
+The password is invalid for \\sshfs\billziss@mac2018.local.
+
+Enter the user name for 'sshfs': billziss
+Enter the password for sshfs:
+The command completed successfully.
+You can list your net use drives:
+
+$ net use
+New connections will be remembered.
+
+
+Status       Local     Remote                    Network
+
+-------------------------------------------------------------------------------
+             X:        \\sshfs\billziss@mac2018.local
+                                                WinFsp.Np
+The command completed successfully.
+Finally you can unmap the drive as follows:
+
+$ net use X: /delete
+X: was deleted successfully.
+UNC Syntax
+The complete UNC syntax is as follows:
+
+\\sshfs\[LOCUSER=]REMUSER@HOST[!PORT][\PATH]
+\\sshfs.r\[LOCUSER=]REMUSER@HOST[!PORT][\PATH]
+\\sshfs.k\[LOCUSER=]REMUSER@HOST[!PORT][\PATH]
+\\sshfs.kr\[LOCUSER=]REMUSER@HOST[!PORT][\PATH]
+REMUSER is the remote user (i.e. the user on the SSHFS host whose credentials are being used for access).
+HOST is the SSHFS host.
+PORT is the remote port on the SSHFS host (optional; default is 22).
+PATH is the remote path. This is interpreted as follows:
+The sshfs prefix maps to HOST:~REMUSER/PATH on the SSHFS host (i.e. relative to REMUSER's home directory).
+The sshfs.r prefix maps to HOST:/PATH on the SSHFS host (i.e. relative to the HOST's root directory).
+The sshfs.k prefix maps to HOST:~REMUSER/PATH and uses the ssh key in %USERPROFILE%/.ssh/id_rsa (where %USERPROFILE% is the home directory of the local Windows user).
+The sshfs.kr prefix maps to HOST:/PATH and uses the ssh key in %USERPROFILE%/.ssh/id_rsa.
+LOCUSER is the local Windows user (optional; USERNAME or DOMAIN+USERNAME format).
+Please note that this functionality is rarely necessary with latest versions of WinFsp.
+MORE ON PAGE
+&lt;/code&gt;</pre>
 </div>
 <div created="20200419081404438" modified="20200626105811480" tags="TableOfContents Help MySites n6xre" title="Start">
 <pre>GettingStarted &lt;br&gt;
