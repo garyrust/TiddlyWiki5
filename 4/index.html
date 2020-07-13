@@ -169,6 +169,10 @@ Error message and password prompt
 
 <li>$:/SiteTitle</li>
 
+<li>$:/state/showeditpreview</li>
+
+<li>$:/state/sidebar</li>
+
 <li>$:/state/tab-1749438307</li>
 
 <li>$:/state/tab-2065006209</li>
@@ -188,6 +192,8 @@ Error message and password prompt
 <li>$:/themes/tiddlywiki/vanilla</li>
 
 <li>Start</li>
+
+<li>tabs Macro (Examples)</li>
 
 </ul>
 </p>
@@ -9615,6 +9621,12 @@ Error message and password prompt
 <div created="20200713153317225" modified="20200713153321755" title="$:/SiteTitle">
 <pre>N6XRE Tiddlywiki - Page 4</pre>
 </div>
+<div created="20200713170435122" modified="20200713170435122" title="$:/state/showeditpreview">
+<pre>yes</pre>
+</div>
+<div created="20200713170438692" modified="20200713170454643" title="$:/state/sidebar">
+<pre>yes</pre>
+</div>
 <div created="20200713153608861" modified="20200713153608861" title="$:/state/tab-1749438307">
 <pre>$:/core/ui/ControlPanel/Saving</pre>
 </div>
@@ -9627,7 +9639,7 @@ Error message and password prompt
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div list="Start" title="$:/StoryList">
+<div list="[[tabs Macro (Examples)]] Start" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -9688,7 +9700,7 @@ Error message and password prompt
     }
 }</pre>
 </div>
-<div created="20200713161146068" modified="20200713161242781" title="$:/temp/NewTagName">
+<div created="20200713161146068" modified="20200713170406518" title="$:/temp/NewTagName">
 <pre></pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.22">
@@ -9847,6 +9859,17 @@ src=&quot;https://www.nwaea.org/media/cms/Screen_Shot_20141023_at_1_CA5F8D648ABB
 &lt;a href=&quot;https://garyrust.github.io/&quot; target=&quot;_blank&quot;&gt;Github Pages&lt;/a&gt;&lt;br&gt;
 &lt;/html&gt; &lt;br&gt;
 Also see [[Alexa Notify Me]] - [[My Gallery on Github]] &lt;br&gt;
+</pre>
+</div>
+<div created="20200713170053995" modified="20200713170459789" tags="[[Macro Examples]] [[tabs Macro]]" title="tabs Macro (Examples)" type="text/vnd.tiddlywiki">
+<pre>&lt;$macrocall $name=&quot;.example&quot; n=&quot;1&quot;
+eg=&quot;&quot;&quot;&lt;&lt;tabs &quot;SampleTabOne SampleTabTwo SampleTabThree SampleTabFour&quot; &quot;SampleTabOne&quot; &quot;$:/state/tab1&quot;&gt;&gt;&quot;&quot;&quot;/&gt;
+
+&lt;$macrocall $name=&quot;.example&quot; n=&quot;2&quot;
+eg=&quot;&quot;&quot;&lt;&lt;tabs &quot;[tag[sampletab]]&quot; &quot;SampleTabTwo&quot; &quot;$:/state/tab2&quot; &quot;tc-vertical&quot;&gt;&gt;&quot;&quot;&quot;/&gt;
+
+&lt;$macrocall $name=&quot;.example&quot; n=&quot;3&quot;
+eg=&quot;&quot;&quot;&lt;&lt;tabs &quot;[tag[sampletab]nsort[order]]&quot; &quot;SampleTabThree&quot; &quot;$:/state/tab3&quot; &quot;tc-vertical&quot;&gt;&gt;&quot;&quot;&quot;/&gt;
 </pre>
 </div>
 
