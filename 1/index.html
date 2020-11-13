@@ -497,6 +497,8 @@ Error message and password prompt
 
 <li>PROJECT ACCESS, INC. NONPROFIT ORGANIZATION</li>
 
+<li>scrcpy screen capture</li>
+
 <li>SHEEPIT</li>
 
 <li>Snowwolf WF MINI Coil</li>
@@ -9940,7 +9942,7 @@ Error message and password prompt
     }
 }</pre>
 </div>
-<div created="20200415073616667" modified="20201024182133377" title="$:/DefaultTiddlers">
+<div created="20200415073616667" modified="20201113060317805" title="$:/DefaultTiddlers">
 <pre>[[Table Of Contents]]
 [[Start]]
 [[De Wallen]]
@@ -9955,6 +9957,7 @@ Error message and password prompt
 [[GitHub]]
 [[garyrust.github.io on GitHub Pages]]
 [[Obitalk Speed Dial]]
+[[scrcpy screen capture]]
 [[Wikipedia]]
 [[Easy Dough Recipe (for Bread, Rolls, Pizza, &amp; More!)]]
 [[Easy Vegan Meals Playlist]]
@@ -10101,7 +10104,7 @@ Error message and password prompt
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div list="[[Table Of Contents]] Start [[De Wallen]] Welcome [[Image Map Generator]] [[How to Draw the Head]] [[The Pirate Bay]] [[Every third man is a SUCKER]] Cameras [[International Photographic Competition]] Keyboard GitHub [[garyrust.github.io on GitHub Pages]] [[Obitalk Speed Dial]] Wikipedia [[Easy Dough Recipe (for Bread, Rolls, Pizza, &amp; More!)]] [[Easy Vegan Meals Playlist]] [[Snowwolf WF MINI Coil]] [[Yougetsignal Webtools]] [[Airfoil Tools]] [[X Æ A-12 = Zhai-Aught-Tahwantu]] [[Captain X Æ A-12 Returns 23:30]] [[PROJECT ACCESS, INC. NONPROFIT ORGANIZATION]] SHEEPIT [[How to use Remote Desktop]]" title="$:/StoryList">
+<div created="20201113060254329" list="[[scrcpy screen capture]] [[Table Of Contents]] Start [[De Wallen]] Welcome [[Image Map Generator]] [[How to Draw the Head]] [[The Pirate Bay]] [[Every third man is a SUCKER]] Cameras [[International Photographic Competition]] Keyboard GitHub [[garyrust.github.io on GitHub Pages]] [[Obitalk Speed Dial]] Wikipedia [[Easy Dough Recipe (for Bread, Rolls, Pizza, &amp; More!)]] [[Easy Vegan Meals Playlist]] [[Snowwolf WF MINI Coil]] [[Yougetsignal Webtools]] [[Airfoil Tools]] [[X Æ A-12 = Zhai-Aught-Tahwantu]] [[Captain X Æ A-12 Returns 23:30]] [[PROJECT ACCESS, INC. NONPROFIT ORGANIZATION]] SHEEPIT [[How to use Remote Desktop]]" modified="20201113060324943" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200415065902661" modified="20200713182907004" title="$:/temp/advancedsearch">
@@ -11679,6 +11682,132 @@ https://www.obitalk.com/obinet/pg/obhdev/speeddial
 [[Find Your Local Food Bank|https://www.feedingamerica.org/find-your-local-foodbank]]&lt;br&gt;
 [[PROJECT ACCESS, INC. NONPROFIT ORGANIZATION|https://www.project-access.org/residents/]]&lt;br&gt;
 &lt;iframe width=100% height=&quot;700&quot; src=&quot;https://www.project-access.org/residents/&quot; frameborder=&quot;0&quot; allow=&quot;autoplay; encrypted-media&quot; allowfullscreen&gt;&lt;/iframe&gt;&lt;br&gt;</pre>
+</div>
+<div created="20201113055639668" modified="20201113060332698" tags="Phone Computer" title="scrcpy screen capture">
+<pre>[[How to run scrcpy over WiFi and Wirelessly control Android from PC|https://youtu.be/tz94J0GUKfc]]&lt;br&gt;
+&lt;iframe width=&quot;800&quot; height=&quot;450&quot; src=&quot;https://www.youtube.com/embed/tz94J0GUKfc&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;&lt;br&gt;
+&lt;xmp&gt;
+Phone Address = 192.168.xx.xx
+adb kill-server
+=====================
+Connect usb cable
+Allow on phone
+
+On Linux
+adb tcpip 5555
+Allow on phone
+
+On Linux
+adb connect 192.168.xx.xx:5555
+Allow on phone
+
+Disonnect usb cable
+
+On Linux
+scrcpy
+
+=====================
+adb kill-server
+adb devices
+adb usb
+=====================
+adb connect usb
+=====================
+https://github.com/Genymobile/scrcpy#wireless
+Connection
+Wireless
+
+
+Scrcpy uses adb to communicate with the device, 
+and adb can connect to a device over TCP/IP:
+
+Connect the device to the same Wi-Fi as your computer.
+Get your device IP address (in Settings → About phone → Status).
+Enable adb over TCP/IP on your device: adb tcpip 5555.
+Unplug your device.
+Connect to your device: adb connect DEVICE_IP:5555 (replace DEVICE_IP).
+Run scrcpy as usual.
+It may be useful to decrease the bit-rate and the definition:
+
+scrcpy --bit-rate 2M --max-size 800
+scrcpy -b2M -m800  # short version
+=====================
+Rotation
+The window may be rotated:
+
+scrcpy --rotation 1
+Possibles values are:
+
+0: no rotation
+1: 90 degrees counterclockwise
+2: 180 degrees
+3: 90 degrees clockwise
+The rotation can also be changed dynamically with 
+MOD+← (left) and MOD+→ (right).
+
+Note that scrcpy manages 3 different rotations:
+
+MOD+r requests the device to switch between portrait 
+and landscape (the current running app may refuse, 
+if it does support the requested orientation).
+--lock-video-orientation changes the mirroring 
+orientation (the orientation of the video sent from 
+the device to the computer). This affects the recording.
+--rotation (or MOD+←/MOD+→) rotates only the window content. 
+This affects only the display, not the recording.
+=====================
+Audio forwarding
+Audio is not forwarded by scrcpy. Use sndcpy.
+
+Also see issue #14.
+=====================
+Shortcuts
+In the following list, MOD is the shortcut modifier. 
+By default, it's (left) Alt or (left) Super.
+
+It can be changed using --shortcut-mod. 
+Possible keys are lctrl, rctrl, lalt, ralt, lsuper and rsuper. 
+For example:
+
+# use RCtrl for shortcuts
+scrcpy --shortcut-mod=rctrl
+
+# use either LCtrl+LAlt or LSuper for shortcuts
+scrcpy --shortcut-mod=lctrl+lalt,lsuper
+Super is typically the Windows or Cmd key.
+
+Action	Shortcut
+Switch fullscreen mode	MOD+f
+Rotate display left	MOD+← (left)
+Rotate display right	MOD+→ (right)
+Resize window to 1:1 (pixel-perfect)	MOD+g
+Resize window to remove black borders	MOD+w | Double-click¹
+Click on HOME	MOD+h | Middle-click
+Click on BACK	MOD+b | Right-click²
+Click on APP_SWITCH	MOD+s
+Click on MENU (unlock screen)	MOD+m
+Click on VOLUME_UP	MOD+↑ (up)
+Click on VOLUME_DOWN	MOD+↓ (down)
+Click on POWER	MOD+p
+Power on	Right-click²
+Turn device screen off (keep mirroring)	MOD+o
+Turn device screen on	MOD+Shift+o
+Rotate device screen	MOD+r
+Expand notification panel	MOD+n
+Collapse notification panel	MOD+Shift+n
+Copy to clipboard³	MOD+c
+Cut to clipboard³	MOD+x
+Synchronize clipboards and paste³	MOD+v
+Inject computer clipboard text	MOD+Shift+v
+Enable/disable FPS counter (on stdout)	MOD+i
+Pinch-to-zoom	Ctrl+click-and-move
+¹Double-click on black borders to remove them.
+²Right-click turns the screen on if it was off, presses BACK otherwise.
+³Only on Android &gt;= 7.
+
+All Ctrl+key shortcuts are forwarded to the device, 
+so they are handled by the active application.
+&lt;/xmp&gt;</pre>
 </div>
 <div created="20201021102246646" modified="20201022031540407" tags="Computer Blender Graphics" title="SHEEPIT">
 <pre>[[SHEEPIT Profile|https://www.sheepit-renderfarm.com/account.php?mode=profile]] - [[Forum|https://www.sheepit-renderfarm.com/forum/]] - [[Discord|https://discord.com/invite/7R7rNqP]]&lt;br&gt;
