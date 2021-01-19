@@ -10141,7 +10141,7 @@ Error message and password prompt
 <div created="20200415225849375" modified="20201207123821594" title="$:/state/showeditpreview">
 <pre>yes</pre>
 </div>
-<div created="20200416000753699" modified="20210114121625030" title="$:/state/sidebar">
+<div created="20200416000753699" modified="20210119100422998" title="$:/state/sidebar">
 <pre>yes</pre>
 </div>
 <div created="20200415062333650" modified="20201112195829961" title="$:/state/tab-1749438307">
@@ -11507,10 +11507,37 @@ https://github.com/programminghero1/audiobook&lt;br&gt;</pre>
 [[CASCADEUR -- AWESOME Physics Based Animation Software|https://youtu.be/49lgJMtIw-Y]]&lt;br&gt;
 &lt;iframe width=&quot;800&quot; height=&quot;450&quot; src=&quot;https://www.youtube.com/embed/49lgJMtIw-Y&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;&lt;br&gt;</pre>
 </div>
-<div created="20201226092156328" modified="20201226092656389" tags="Computer Software Help TableOfContents" title="Command execution over SSH">
-<pre>[[Command execution over SSH|https://www.linuxtechi.com/execute-linux-commands-remote-system-over-ssh/]]&lt;br&gt;
+<div created="20201226092156328" modified="20210119100427121" tags="Computer Software Help TableOfContents" title="Command execution over SSH">
+<pre>&lt;xmp&gt;
+1) Generate public-private key pair
+
+SSH provides ssh-keygen utility which can be used to generate key pairs on local machine.
+
+$ ssh-keygen
+Generating public/private rsa key pair.
+Enter file in which to save the key (/home/linuxtechi/.ssh/id_rsa): #press enter
+Enter passphrase (empty for no passphrase):                         #press enter
+Enter same passphrase again:                                        #press enter
+Your identification has been saved in /home/linuxtechi/.ssh/id_rsa.
+Your public key has been saved in /home/linuxtechi/.ssh/id_rsa.pub.
+Above output shows that generated key pairs are stored under ~/.ssh directory.
+
+2)  Add public key to ~/.ssh/authorized_keys file on remote host
+
+Simple way to do this is, using ssh-copy-id command.
+
+$ ssh-copy-id -i ~/.ssh/id_rsa.pub garyrust@192.168.11.38
+In above command:
+
+-i option indicates identity file
+~/.ssh/id_rsa.pub is identity file
+remaining text is remote user and remote server IP
+NOTE: Never share your private key with anyone.
+&lt;/xmp&gt;
+[[Command execution over SSH|https://www.linuxtechi.com/execute-linux-commands-remote-system-over-ssh/]]&lt;br&gt;
 &lt;iframe width=100% height=&quot;700&quot; src=&quot;https://www.linuxtechi.com/execute-linux-commands-remote-system-over-ssh/&quot; frameborder=&quot;0&quot; allow=&quot;autoplay; encrypted-media&quot; allowfullscreen&gt;&lt;/iframe&gt;&lt;br&gt;''[[How to copy file remotely via SSH|https://www.simplified.guide/ssh/copy-file]]''&lt;br&gt;
-&lt;iframe width=100% height=&quot;700&quot; src=&quot;https://www.simplified.guide/ssh/copy-file&quot; frameborder=&quot;0&quot; allow=&quot;autoplay; encrypted-media&quot; allowfullscreen&gt;&lt;/iframe&gt;&lt;br&gt;</pre>
+&lt;iframe width=100% height=&quot;700&quot; src=&quot;https://www.simplified.guide/ssh/copy-file&quot; frameborder=&quot;0&quot; allow=&quot;autoplay; encrypted-media&quot; allowfullscreen&gt;&lt;/iframe&gt;&lt;br&gt;
+</pre>
 </div>
 <div created="20200524070809116" modified="20200524155158996" tags="Computer Help" title="Cox Communications IP Addresses">
 <pre>https://www.whatismyip.com/ - https://www.duckdns.org/domains&lt;br&gt;
