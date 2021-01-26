@@ -9731,7 +9731,7 @@ Error message and password prompt
 <div created="20210114130211728" modified="20210122141548127" title="$:/state/showeditpreview">
 <pre>yes</pre>
 </div>
-<div created="20210114144036178" modified="20210126022641067" title="$:/state/sidebar">
+<div created="20210114144036178" modified="20210126033138576" title="$:/state/sidebar">
 <pre>yes</pre>
 </div>
 <div created="20200713154548821" modified="20210114142006575" title="$:/state/tab-1749438307">
@@ -9749,7 +9749,7 @@ Error message and password prompt
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20210126013241413" list="[[Getting Started with ShapeShift and KeepKey]]" modified="20210126013241413" title="$:/StoryList">
+<div created="20210126013241413" list="[[Getting Started with ShapeShift and KeepKey]]" modified="20210126033343373" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -10033,7 +10033,7 @@ src=&quot;../img/3Q8ZY1ZLKsvp5oxayVZTnJ6cDEPPAH1LGr.png&quot;&gt;&lt;br&gt;
 &lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/videoseries?list=PLPj3KCksGbSZKreZoGd9qMwCVoi4Cn7BS&quot; frameborder=&quot;0&quot; allow=&quot;autoplay; encrypted-media&quot; allowfullscreen&gt;&lt;/iframe&gt;
 </pre>
 </div>
-<div created="20210117131019767" modified="20210126022646587" tags="Computer Crypto Help" title="Getting Started with ShapeShift and KeepKey">
+<div created="20210117131019767" modified="20210126033228029" tags="Computer Crypto Help" title="Getting Started with ShapeShift and KeepKey">
 <pre>''Sign In: https://beta.shapeshift.com/dashboard''&lt;br&gt;
 ''Also see [[Crypto Guide|https://kzitem.info/rock/EviBQwLv-yfv3BErm0ojHg]] - [[Peekier Keepkey Setup + Challenges|https://peekier.com/#!2019+Keepkey+Setup+%2B+Challenges.+(Wallets+not+Loading%2C+Keepkey+not+Pairing+With+Shapeshift)]]''&lt;br&gt;
 [[Keepkey Setup + Challenges. (Keepkey not Pairing With Shapeshift)|https://youtu.be/2clheEgotYE]]&lt;br&gt;
@@ -10046,6 +10046,28 @@ src=&quot;../img/3Q8ZY1ZLKsvp5oxayVZTnJ6cDEPPAH1LGr.png&quot;&gt;&lt;br&gt;
 Why Would I Want a Verified Account? &lt;br&gt;
 How Much of My Personal Information &lt;br&gt;
 Do I Need to Provide?&lt;br&gt;''
+
+
+[[KeepKey Wallet Not Recognized by Linux|https://keepkey.zendesk.com/hc/en-us/articles/360001529404-KeepKey-Wallet-Not-Recognized-by-Linux]]&lt;br&gt;
+Add the following UDEV rules to /etc/udev/rules.d/51-usb-keepkey.rules:&lt;br&gt;
+&lt;xmp&gt;
+&lt;div style = &quot;width: 600px; height: 450px; line-height: 3em; overflow:scroll; border: thin #000 solid; padding: 5px;&quot;&gt;
+# KeepKey: Your Private Bitcoin Vault
+# http://www.keepkey.com/
+# Put this file into /usr/lib/udev/rules.d or /etc/udev/rules.d
+
+# KeepKey HID Firmware/Bootloader
+SUBSYSTEM==&quot;usb&quot;, ATTR{idVendor}==&quot;2b24&quot;, ATTR{idProduct}==&quot;0001&quot;, MODE=&quot;0666&quot;, GROUP=&quot;plugdev&quot;, TAG+=&quot;uaccess&quot;, TAG+=&quot;udev-acl&quot;, SYMLINK+=&quot;keepkey%n&quot;
+KERNEL==&quot;hidraw*&quot;, ATTRS{idVendor}==&quot;2b24&quot;, ATTRS{idProduct}==&quot;0001&quot;,  MODE=&quot;0666&quot;, GROUP=&quot;plugdev&quot;, TAG+=&quot;uaccess&quot;, TAG+=&quot;udev-acl&quot;
+
+# KeepKey WebUSB Firmware/Bootloader
+SUBSYSTEM==&quot;usb&quot;, ATTR{idVendor}==&quot;2b24&quot;, ATTR{idProduct}==&quot;0002&quot;, MODE=&quot;0666&quot;, GROUP=&quot;plugdev&quot;, TAG+=&quot;uaccess&quot;, TAG+=&quot;udev-acl&quot;, SYMLINK+=&quot;keepkey%n&quot;
+KERNEL==&quot;hidraw*&quot;, ATTRS{idVendor}==&quot;2b24&quot;, ATTRS{idProduct}==&quot;0002&quot;,  MODE=&quot;0666&quot;, GROUP=&quot;plugdev&quot;, TAG+=&quot;uaccess&quot;, TAG+=&quot;udev-acl&quot;
+&lt;/div&gt;
+&lt;/xmp&gt;
+Then run sudo udevadm control --reload-rules. &lt;br&gt;
+Unplug &amp; replug your device. You do not need to restart your machine.&lt;br&gt;
+
 
 
 [[Shapeshift Crypto Software|https://shapeshift.com/dex]]&lt;br&gt;
