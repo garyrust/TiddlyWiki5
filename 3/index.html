@@ -453,6 +453,8 @@ Error message and password prompt
 
 <li>Cascadeur - physics-based animation software</li>
 
+<li>Cloning Encrypted SSD to larger SSD</li>
+
 <li>Command execution over SSH</li>
 
 <li>Cox Communications IP Addresses</li>
@@ -10012,7 +10014,7 @@ Error message and password prompt
     }
 }</pre>
 </div>
-<div created="20200415073616667" modified="20210119111723659" title="$:/DefaultTiddlers">
+<div created="20200415073616667" modified="20210205190044889" title="$:/DefaultTiddlers">
 <pre>[[Table Of Contents]]
 [[Start]]
 [[Midnight Commander]]
@@ -10024,6 +10026,7 @@ Error message and password prompt
 [[Wxpython GUI Programming]]
 [[Full Disk Encryption Howto 2019]]
 [[TimeShift’ Adds LUKS-encrypted Partition Support]]
+[[Cloning Encrypted SSD to larger SSD]]
 [[How to Install LAMP Stack on Ubuntu 20.04]]
 [[WireGuard VPN]]
 [[How to Make Your Own VPN]]
@@ -10144,7 +10147,7 @@ Error message and password prompt
 <div created="20200415225849375" modified="20201207123821594" title="$:/state/showeditpreview">
 <pre>yes</pre>
 </div>
-<div created="20200416000753699" modified="20210119104024419" title="$:/state/sidebar">
+<div created="20200416000753699" modified="20210205185924566" title="$:/state/sidebar">
 <pre>yes</pre>
 </div>
 <div created="20200415062333650" modified="20201112195829961" title="$:/state/tab-1749438307">
@@ -10168,7 +10171,7 @@ Error message and password prompt
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div list="[[Table Of Contents]] Start [[Midnight Commander]] [[Bash Shell Scripting]] [[Command execution over SSH]] [[Ansible Playlist]] [[Python for Everybody]] [[Python programming for the absolute beginner]] [[Wxpython GUI Programming]] [[Full Disk Encryption Howto 2019]] [[TimeShift’ Adds LUKS-encrypted Partition Support]] [[How to Install LAMP Stack on Ubuntu 20.04]] [[WireGuard VPN]] [[How to Make Your Own VPN]] [[Running a VPN Server with OpenVPN and Stunnel]] [[Moving on from Mu]] [[Nextcloud Installation on Raspberry Pi]] [[Raspberry Pi Zero Cryptocurrency Hardware Wallet]] [[Introduction to PiSugar]] [[Raspberry Pi 4 8GB &amp; USB Boot]] [[Raspberry Pi SATA RAID NAS]] [[Amazon Alexa on a Raspberry Pi]] [[Berryboot Images]] [[My Gallery on Github]] [[Build Your Own Audiobooks With Just 12 Lines Of Python]] [[Image Map Generator]] [[Cascadeur - physics-based animation software]] [[OpenAI GPT-3]] [[How to Use the awk Command on Linux]] [[Crontab – Quick Reference]] [[MX TOOLS, BACKUP, AND SYSTEMBACK]] [[Use Your Echo Device as a Bluetooth Speaker]] [[X2GO: Linux Remote Desktop with Ubuntu On The Raspberry Pi]] [[Windows 10 for Power Users – Windows 10 Ameliorated]] Proxmox [[Install Windows 10 on Proxmox]] [[Obitalk Speed Dial]] [[Zoiper Voice over IP App]] [[Here’s What’s New in Ubuntu 20.04 - ZFS]] [[ZFS Garbage collection]] Wikipedia [[How to use Remote Desktop]]" title="$:/StoryList">
+<div created="20210205190010226" list="[[Cloning Encrypted SSD to larger SSD]] [[Table Of Contents]] Start [[Midnight Commander]] [[Bash Shell Scripting]] [[Command execution over SSH]] [[Ansible Playlist]] [[Python for Everybody]] [[Python programming for the absolute beginner]] [[Wxpython GUI Programming]] [[Full Disk Encryption Howto 2019]] [[TimeShift’ Adds LUKS-encrypted Partition Support]] [[How to Install LAMP Stack on Ubuntu 20.04]] [[WireGuard VPN]] [[How to Make Your Own VPN]] [[Running a VPN Server with OpenVPN and Stunnel]] [[Moving on from Mu]] [[Nextcloud Installation on Raspberry Pi]] [[Raspberry Pi Zero Cryptocurrency Hardware Wallet]] [[Introduction to PiSugar]] [[Raspberry Pi 4 8GB &amp; USB Boot]] [[Raspberry Pi SATA RAID NAS]] [[Amazon Alexa on a Raspberry Pi]] [[Berryboot Images]] [[My Gallery on Github]] [[Build Your Own Audiobooks With Just 12 Lines Of Python]] [[Image Map Generator]] [[Cascadeur - physics-based animation software]] [[OpenAI GPT-3]] [[How to Use the awk Command on Linux]] [[Crontab – Quick Reference]] [[MX TOOLS, BACKUP, AND SYSTEMBACK]] [[Use Your Echo Device as a Bluetooth Speaker]] [[X2GO: Linux Remote Desktop with Ubuntu On The Raspberry Pi]] [[Windows 10 for Power Users – Windows 10 Ameliorated]] Proxmox [[Install Windows 10 on Proxmox]] [[Obitalk Speed Dial]] [[Zoiper Voice over IP App]] [[Here’s What’s New in Ubuntu 20.04 - ZFS]] [[ZFS Garbage collection]] Wikipedia [[How to use Remote Desktop]]" modified="20210205190059636" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200415065902661" modified="20200529000602524" title="$:/temp/advancedsearch">
@@ -11509,6 +11512,29 @@ https://github.com/programminghero1/audiobook&lt;br&gt;</pre>
 &lt;iframe width=&quot;800&quot; height=&quot;800&quot; src=&quot;https://cascadeur.com/download&quot; frameborder=&quot;0&quot; allow=&quot;autoplay; encrypted-media&quot; allowfullscreen&gt;&lt;/iframe&gt;&lt;br&gt;
 [[CASCADEUR -- AWESOME Physics Based Animation Software|https://youtu.be/49lgJMtIw-Y]]&lt;br&gt;
 &lt;iframe width=&quot;800&quot; height=&quot;450&quot; src=&quot;https://www.youtube.com/embed/49lgJMtIw-Y&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;&lt;br&gt;</pre>
+</div>
+<div created="20210205185512477" modified="20210205190106579" tags="Computer Hardware TableOfContents Help" title="Cloning Encrypted SSD to larger SSD">
+<pre>[[Cloning Encrypted SSD to larger SSD|https://askubuntu.com/questions/761763/cloning-encrypted-ssd-to-larger-ssd]]&lt;br&gt;
+&lt;xmp&gt;
+As of todays date (Oct 27th 2019) I can assert the easiest method 
+for others trying to clone a full disc encrypted system (LVM on LUKS) 
+will be a combination of clonezilla and gparted.
+
+Use a live USB of clonezilla and drop to a shell when first booted, 
+decrypt both disks with cryptsetup -v luksOpen /dev/sdX unique-name 
+for each disk.
+
+Re-enter clonezilla's menu by exiting the shell prompt 
+(Ctrl -D or just exit)
+
+Then start a disk-to-disk transfer, for my 2 SSD's (one hooked up by 
+usb external caddy) of 500Gb and 1Tb it took around 3 hours.
+
+Reboot to the newly cloned disk to check it functions then boot from 
+a gparted live cd / usb. As of Gparted 0.28 it now supports resizing 
+luks partitions, grow the partition after decrypting and voila!
+&lt;/xmp&gt;
+</pre>
 </div>
 <div created="20201226092156328" modified="20210119104038523" tags="Computer Software Help TableOfContents" title="Command execution over SSH">
 <pre>&lt;xmp&gt;
