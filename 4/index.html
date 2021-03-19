@@ -205,6 +205,8 @@ Error message and password prompt
 
 <li>Beelink GT-R AMD Ryzen 5 3550H Mini PC</li>
 
+<li>Build a home lab server with Virtualbox, Webmin and Portainer</li>
+
 <li>Dell PowerEdge R710 Server</li>
 
 <li>Docker Containers 101</li>
@@ -9684,7 +9686,7 @@ Error message and password prompt
     }
 }</pre>
 </div>
-<div created="20200713161343807" modified="20210306024616648" title="$:/DefaultTiddlers">
+<div created="20200713161343807" modified="20210319233029605" title="$:/DefaultTiddlers">
 <pre>[[Table Of Contents]]
 [[FrameBrowser-Widget]]
 [[Start]]
@@ -9693,6 +9695,8 @@ Error message and password prompt
 [[Dell PowerEdge R710 Server]]
 [[Refurbished Computers]]
 [[DockSTARTer]]
+[[Build a home lab server with Virtualbox, Webmin and Portainer]]
+
 [[OpenNIC]]
 [[Install Tor proxy on Ubuntu 20.04 Linux]]
 [[LUKS: Disk Encryption]]
@@ -9785,7 +9789,7 @@ Error message and password prompt
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div list="[[Table Of Contents]] FrameBrowser-Widget Start [[HP EliteDesk 705 G1 - mini desktop Specs]] [[Beelink GT-R AMD Ryzen 5 3550H Mini PC]] [[Dell PowerEdge R710 Server]] [[Refurbished Computers]] DockSTARTer OpenNIC [[Install Tor proxy on Ubuntu 20.04 Linux]] [[LUKS: Disk Encryption]] [[Encrypted Berryboot way too easy]] [[Software Defined Radio (SDR)]] [[This Linux PC Runs macOS Faster Than a Real Mac]] Proxmox [[Logical Volume Manager]] [[MAKING CONSISTENT BACKUPS WITH LVM]] [[Learn Virtual Machines RIGHT NOW]] [[KVM Virtual Machines]] [[LXD Virtual Machines Runing Perfectly In Raspberry Pi 4]] [[How to use LXD to deploy containers]] [[Linux Containers with OpenWrt]] [[Introduction to LXD projects]] [[LXD - Try it online]] [[Introduction to Microservices, Docker, and Kubernetes]] [[Kubernetes on Ubuntu 20.04 Focal Fossa Linux]] [[Docker Containers 101]] [[Run Raspbian with qemu and virt-manager]] [[How To extend/increase KVM Virtual Machine (VM) disk size]] [[VirtualBox Meets Docker]] [[How to Install Nextcloud on Ubuntu]] [[USB Ports, Cables, &amp; Connectors]] [[How to Boot From a USB Drive in VirtualBox]] [[HDMI, DisplayPort, DVI, VGA, Thunderbolt - Video Port Comparison]] [[1-Minute Wonder: Incredible PBX &amp; Fax 2020 for Raspberry Pi]] Wikipedia [[How to use Remote Desktop]]" title="$:/StoryList">
+<div created="20210319232936893" list="[[Build a home lab server with Virtualbox, Webmin and Portainer]] [[Table Of Contents]] FrameBrowser-Widget Start GettingStarted [[HP EliteDesk 705 G1 - mini desktop Specs]] [[Beelink GT-R AMD Ryzen 5 3550H Mini PC]] [[Dell PowerEdge R710 Server]] [[Refurbished Computers]] DockSTARTer OpenNIC [[Install Tor proxy on Ubuntu 20.04 Linux]] [[LUKS: Disk Encryption]] [[Encrypted Berryboot way too easy]] [[Software Defined Radio (SDR)]] [[This Linux PC Runs macOS Faster Than a Real Mac]] Proxmox [[Logical Volume Manager]] [[MAKING CONSISTENT BACKUPS WITH LVM]] [[Learn Virtual Machines RIGHT NOW]] [[KVM Virtual Machines]] [[LXD Virtual Machines Runing Perfectly In Raspberry Pi 4]] [[How to use LXD to deploy containers]] [[Linux Containers with OpenWrt]] [[Introduction to LXD projects]] [[LXD - Try it online]] [[Introduction to Microservices, Docker, and Kubernetes]] [[Kubernetes on Ubuntu 20.04 Focal Fossa Linux]] [[Docker Containers 101]] [[Run Raspbian with qemu and virt-manager]] [[How To extend/increase KVM Virtual Machine (VM) disk size]] [[VirtualBox Meets Docker]] [[How to Install Nextcloud on Ubuntu]] [[USB Ports, Cables, &amp; Connectors]] [[How to Boot From a USB Drive in VirtualBox]] [[HDMI, DisplayPort, DVI, VGA, Thunderbolt - Video Port Comparison]] [[1-Minute Wonder: Incredible PBX &amp; Fax 2020 for Raspberry Pi]] Wikipedia [[How to use Remote Desktop]]" modified="20210319233255416" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -10013,6 +10017,93 @@ Also see [[LXD Getting started - command line|https://linuxcontainers.org/lxd/ge
 &lt;iframe width=&quot;800&quot; height=&quot;450&quot; src=&quot;https://www.youtube.com/embed/joLJyCnOP3A&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;&lt;br&gt;
 
 </pre>
+</div>
+<div created="20210319232805954" modified="20210319233411490" tags="Computer Hardware Software Container" title="Build a home lab server with Virtualbox, Webmin and Portainer">
+<pre>[[Build a home lab server with Virtualbox, Webmin and Portainer|https://youtu.be/cTufqsBbXOU]]&lt;br&gt;
+&lt;iframe width=&quot;800&quot; height=&quot;450&quot; src=&quot;https://www.youtube.com/embed/cTufqsBbXOU&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;&lt;br&gt;
+&lt;xmp&gt;
+OneMarcFifty
+8.52K subscribers
+We will use a small form factor PC with an i5 6500T CPU as a tiny home
+server. For virtualization and Containerization we will install 
+Virtualbox and Docker on the server and Webmin as a Linux 
+Administration GUI. In order to access Virtualbox remotely we will 
+use Remotebox. This virtualbox headless server will have Portainer, 
+Webmin and Remotebox as Graphical User Interfaces.
+
+
+I am using a Dell OptiPlex 3040 USFF Micro PC i5-6500T but similar 
+PCs (roughly the same price point) would be the Lenovo Thinkcentre 
+M910q Tiny or the HP EliteDesk 800G2 USFF
+
+
+0:00​ describing the project
+0:52​ intro jingle
+
+1:02​ TLDR/TLDW - please use the chapter markers
+1:18​ how to stay on a budget
+1:42​ installing the operating system (Linux Ubuntu Server 20)
+3:27​ install a GUI for Linux - Webmin
+5:15​ make the PC a headless server
+5:56​ Installing Virtualbox and Docker
+7:27​ Updating and rebooting
+8:26​ installing Portainer as a GUI for Docker
+10:05​ tweak the virtualbox Web Services
+12:34​ Remotebox as a remote GUI for VirtualBox
+14:03​ Installing Windows 10 in the first Virtual Machine
+16:14​ Wrap up and Outro
+
+
+The webmin download page is here : 
+https://www.webmin.com/download.html​
+
+
+
+To install webmin:
+
+
+wget https://prdownloads.sourceforge​.net/
+webadmin/webmin_1.962_all.deb
+# ONE LINE
+sudo dpkg -i webmin_1.962_all.deb 
+sudo apt -f install
+
+
+
+The content for the vboxweb.service unit file needs to be as follows:
+
+
+=======================================================
+
+[Unit]
+Description=Virtual Box Web Service
+After=network.target
+
+
+[Service]
+Type=forking
+User=virtual
+Group=vboxusers
+ExecStart=/usr/bin/vboxwebsrv --pidfile /home/virtual/vboxweb.pid 
+--host=0.0.0.0 --background
+# ONE LINE
+PIDFile=/home/virtual/vboxweb.pid
+
+
+[Install]
+WantedBy=multi-user.target
+
+
+=======================================================
+
+
+
+
+
+I have also documented this here: https://bit.ly/3bZjXmS
+&lt;/xmp&gt;
+[[How To Install The Proxmox VE 6.2 Hypervisor On Oracle VM VirtualBox|https://billysoftacademy.com/how-to-install-the-proxmox-ve-6-2-hypervisor-on-oracle-vm-virtualbox-6-1-in-10-minutes-or-less/]]&lt;br&gt;
+&lt;iframe width=100% height=&quot;700&quot; src=&quot;https://billysoftacademy.com/how-to-install-the-proxmox-ve-6-2-hypervisor-on-oracle-vm-virtualbox-6-1-in-10-minutes-or-less/&quot; frameborder=&quot;0&quot; allow=&quot;autoplay; encrypted-media&quot; allowfullscreen&gt;&lt;/iframe&gt;&lt;br&gt;</pre>
 </div>
 <div created="20201111103415701" modified="20201128221519334" tags="Computer Learning TableOfContents Virtualization Hardware" title="Dell PowerEdge R710 Server">
 <pre>&lt;html&gt;
