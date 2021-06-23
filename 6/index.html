@@ -171,6 +171,8 @@ Error message and password prompt
 
 <li>$:/plugins/tiddlywiki/codemirror</li>
 
+<li>$:/plugins/tiddlywiki/evernote</li>
+
 <li>$:/SiteSubtitle</li>
 
 <li>$:/SiteTitle</li>
@@ -180,6 +182,8 @@ Error message and password prompt
 <li>$:/state/image-picker/system--241587232</li>
 
 <li>$:/state/image-picker/system-1838111184</li>
+
+<li>$:/state/plugin-info--906510658-$:/plugins/tiddlywiki/codemirror--1798174986</li>
 
 <li>$:/state/showeditpreview</li>
 
@@ -10228,6 +10232,26 @@ Error message and password prompt
     }
 }</pre>
 </div>
+<div dependents="" description="Evernote migration tools" list="readme docs" name="Evernote" plugin-type="plugin" title="$:/plugins/tiddlywiki/evernote" type="application/json" version="5.1.22">
+<pre>{
+    &quot;tiddlers&quot;: {
+        &quot;$:/plugins/tiddlywiki/evernote/docs&quot;: {
+            &quot;title&quot;: &quot;$:/plugins/tiddlywiki/evernote/docs&quot;,
+            &quot;text&quot;: &quot;! Introduction\n\n&quot;
+        },
+        &quot;$:/plugins/tiddlywiki/evernote/modules/enex-deserializer.js&quot;: {
+            &quot;title&quot;: &quot;$:/plugins/tiddlywiki/evernote/modules/enex-deserializer.js&quot;,
+            &quot;text&quot;: &quot;/*\\\ntitle: $:/plugins/tiddlywiki/evernote/modules/enex-deserializer.js\ntype: application/javascript\nmodule-type: tiddlerdeserializer\n\nENEX file deserializer\n\nFor details see: https://blog.evernote.com/tech/2013/08/08/evernote-export-format-enex/\n\n\\*/\n(function(){\n\n/*jslint node: true, browser: true */\n/*global $tw: false */\n\&quot;use strict\&quot;;\n\n// DOMParser = require(\&quot;$:/plugins/tiddlywiki/xmldom/dom-parser\&quot;).DOMParser;\n\n/*\nParse an ENEX file into tiddlers\n*/\nexports[\&quot;application/enex+xml\&quot;] = function(text,fields) {\n\t// Collect output tiddlers in an array\n\tvar results = [];\n\t// Parse the XML document\n\tvar parser = new DOMParser(),\n\t\tdoc = parser.parseFromString(text,\&quot;application/xml\&quot;);\n\t// Output a report tiddler with information about the import\n\tvar enex = doc.querySelector(\&quot;en-export\&quot;);\n\tresults.push({\n\t\ttitle: \&quot;Evernote Import Report\&quot;,\n\t\ttext: \&quot;Evernote file imported on \&quot; + enex.getAttribute(\&quot;export-date\&quot;) + \&quot; from \&quot; + enex.getAttribute(\&quot;application\&quot;) + \&quot; (\&quot; + enex.getAttribute(\&quot;version\&quot;) + \&quot;)\&quot;\n\t})\n\t// Get all the \&quot;note\&quot; nodes\n\tvar noteNodes = doc.querySelectorAll(\&quot;note\&quot;);\n\t$tw.utils.each(noteNodes,function(noteNode) {\n\t\tvar result = {\n\t\t\ttitle: getTextContent(noteNode,\&quot;title\&quot;),\n\t\t\ttype: \&quot;text/html\&quot;,\n\t\t\ttags: [],\n\t\t\ttext: getTextContent(noteNode,\&quot;content\&quot;),\n\t\t\tmodified: convertDate(getTextContent(noteNode,\&quot;created\&quot;)),\n\t\t\tcreated:  convertDate(getTextContent(noteNode,\&quot;created\&quot;))\n\n\t\t};\n\t\t$tw.utils.each(noteNode.querySelectorAll(\&quot;tag\&quot;),function(tagNode) {\n\t\t\tresult.tags.push(tagNode.textContent);\n\t\t});\n\t\t// If there's an update date, set modifiy date accordingly\n\t\tvar update = getTextContent(noteNode,\&quot;updated\&quot;);\n\t\tif(update) {\n\t\t\tresult.modified = convertDate(update);\n\t\t}\n\t\t$tw.utils.each(noteNode.querySelectorAll(\&quot;note-attributes&gt;*\&quot;),function(attrNode) {\n\t\t\tresult[attrNode.tagName] = attrNode.textContent;\n\t\t});\n\t\tresults.push(result);\n\t\t$tw.utils.each(noteNode.querySelectorAll(\&quot;resource\&quot;),function(resourceNode) {\n\t\t\tresults.push({\n\t\t\t\ttitle: getTextContent(resourceNode,\&quot;resource-attributes&gt;file-name\&quot;),\n\t\t\t\ttype: getTextContent(resourceNode,\&quot;mime\&quot;),\n\t\t\t\twidth: getTextContent(resourceNode,\&quot;width\&quot;),\n\t\t\t\theight: getTextContent(resourceNode,\&quot;height\&quot;),\n\t\t\t\ttext: getTextContent(resourceNode,\&quot;data\&quot;)\n\t\t\t});\n\t\t});\n\t});\n\t// Return the output tiddlers\n\treturn results;\n};\n\nfunction getTextContent(node,selector) {\n\treturn (node.querySelector(selector) || {}).textContent;\n}\n\nfunction convertDate(isoDate) {\n\treturn (isoDate || \&quot;\&quot;).replace(\&quot;T\&quot;,\&quot;\&quot;).replace(\&quot;Z\&quot;,\&quot;\&quot;) + \&quot;000\&quot;\n}\n\n})();\n&quot;,
+            &quot;type&quot;: &quot;application/javascript&quot;,
+            &quot;module-type&quot;: &quot;tiddlerdeserializer&quot;
+        },
+        &quot;$:/plugins/tiddlywiki/evernote/readme&quot;: {
+            &quot;title&quot;: &quot;$:/plugins/tiddlywiki/evernote/readme&quot;,
+            &quot;text&quot;: &quot;This plugin contains tool to assist migration of content from Evernote ENEX files.\n\n!! Instructions\n\n# Download or save your ENEX file from Evernote\n# Rename the file to have an `.enex` extension\n# Drag the file into the TiddlyWiki browser window\n## Alternatively, click the \&quot;Import\&quot; button in the \&quot;Tools\&quot; sidebar tab\n# Review and accept the converted tiddlers\n&quot;
+        }
+    }
+}</pre>
+</div>
 <div created="20200713155003016" modified="20201109014517502" title="$:/SiteSubtitle">
 <pre>&lt;a style=&quot;color: rgb(255, 255, 51);&quot; href=&quot;https://github.com/garyrust/TiddlyWiki5&quot; target=&quot;_blank&quot;&gt;garyrust / Tiddlywiki5&lt;/a&gt;&lt;span style=&quot;color: rgb(255, 255, 51);&quot;&gt; on GitHub&amp;nbsp; &lt;br&gt; Go To Page - &lt;/span&gt;&lt;a style=&quot;color: rgb(255, 255, 51);&quot; href=&quot;/TiddlyWiki5/1/&quot; target=&quot;_top&quot;&gt;1&lt;/a&gt;&lt;span style=&quot;color: rgb(255, 255, 51);&quot;&gt; - &lt;/span&gt;&lt;a style=&quot;color: rgb(255, 255, 51);&quot; href=&quot;/TiddlyWiki5/2/&quot; target=&quot;_top&quot;&gt;2&lt;/a&gt;&lt;span style=&quot;color: rgb(255, 255, 51);&quot;&gt; - &lt;/span&gt;&lt;a style=&quot;color: rgb(255, 255, 51);&quot; href=&quot;/TiddlyWiki5/3/&quot; target=&quot;_top&quot;&gt;3&lt;/a&gt;&lt;span style=&quot;color: rgb(255, 255, 51);&quot;&gt; - &lt;/span&gt;&lt;a style=&quot;color: rgb(255, 255, 51);&quot; href=&quot;/TiddlyWiki5/4/&quot; target=&quot;_top&quot;&gt;4&lt;/a&gt;&lt;span style=&quot;color: rgb(255, 255, 51);&quot;&gt; - &lt;/span&gt;&lt;a style=&quot;color: rgb(255, 255, 51);&quot; href=&quot;/TiddlyWiki5/5/&quot; target=&quot;_top&quot;&gt;5&lt;/a&gt;&lt;span style=&quot;color: rgb(255, 255, 51);&quot;&gt; - &lt;/span&gt;&lt;a style=&quot;color: rgb(255, 255, 51);&quot; href=&quot;/TiddlyWiki5/6/&quot; target=&quot;_top&quot;&gt;6&lt;/a&gt;&lt;br&gt; &lt;br&gt;</pre>
 </div>
@@ -10242,6 +10266,9 @@ Error message and password prompt
 </div>
 <div created="20201027140424562" modified="20201027140424562" title="$:/state/image-picker/system-1838111184">
 <pre>show</pre>
+</div>
+<div created="20210623150855417" modified="20210623151051890" title="$:/state/plugin-info--906510658-$:/plugins/tiddlywiki/codemirror--1798174986">
+<pre>contents</pre>
 </div>
 <div created="20200714084909473" modified="20210126001718780" title="$:/state/showeditpreview">
 <pre>yes</pre>
@@ -10264,7 +10291,7 @@ Error message and password prompt
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>yes</pre>
 </div>
-<div created="20210623150522784" list="$:/ControlPanel [[Table Of Contents]] Start [[Green Hornet - Blender Project]] [[How to Convert a PDF to an Audiobook]] [[Universe, an AI platform]] [[Manolis Kellis 5 / 141 Playlist]] [[Blender Guru]] [[All 80+ Blender material nodes]] [[Digital Sculpting Timelapse Playlist]] [[Blender 2.83 Grease Pencil: Comic style]] [[Learn Grease pencil in Blender 2.82]] [[Blender 2D/3D drawing with greasepencil]] [[Turn a 2D painting into 3D environment]] [[How to Set Up a Graphics Tablet - Blender 2.8 &amp; 2.79]] [[2019 Huion KAMVAS 16 Drawing Pen Display Monitor Graphic Monitor]] [[Upgrade kernel to latest version on Ubuntu 20.04]] [[How to Draw the Head]] FreeCAD [[Obitalk Speed Dial]] [[Configuring an OBi100, OBi110, OBi202, OBi200, OBi302, and OBi300 ATA]] Wikipedia [[International Photographic Competition]] [[How to use Remote Desktop]]" modified="20210623150522784" title="$:/StoryList">
+<div created="20210623150810071" list="$:/ControlPanel [[Table Of Contents]] Start [[Green Hornet - Blender Project]] [[How to Convert a PDF to an Audiobook]] [[Universe, an AI platform]] [[Manolis Kellis 5 / 141 Playlist]] [[Blender Guru]] [[All 80+ Blender material nodes]] [[Digital Sculpting Timelapse Playlist]] [[Blender 2.83 Grease Pencil: Comic style]] [[Learn Grease pencil in Blender 2.82]] [[Blender 2D/3D drawing with greasepencil]] [[Turn a 2D painting into 3D environment]] [[How to Set Up a Graphics Tablet - Blender 2.8 &amp; 2.79]] [[2019 Huion KAMVAS 16 Drawing Pen Display Monitor Graphic Monitor]] [[Upgrade kernel to latest version on Ubuntu 20.04]] [[How to Draw the Head]] FreeCAD [[Obitalk Speed Dial]] [[Configuring an OBi100, OBi110, OBi202, OBi200, OBi302, and OBi300 ATA]] Wikipedia [[International Photographic Competition]] [[How to use Remote Desktop]]" modified="20210623150816601" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -11275,7 +11302,7 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div author="JeremyRuston" core-version="&gt;=5.0.0" created="20210623150552085" dependents="" description="Basic theme" modified="20210623150552085" name="Vanilla" original-plugin-type="theme" original-tags="" original-title="$:/themes/tiddlywiki/vanilla" original-type="application/json" plugin-priority="0" requires-reload="no" server-url="https://tiddlywiki.com/library/v5.1.22/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/themes/tiddlywiki/vanilla" type="text/vnd.tiddlywiki" version="5.1.22">
 <pre></pre>
 </div>
-<div created="20210623150551965" modified="20210623150551965" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html" url="https://tiddlywiki.com/library/v5.1.22/index.html">
+<div created="20210623151722979" modified="20210623151722979" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html" url="https://tiddlywiki.com/library/v5.1.22/index.html">
 <pre>loaded</pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.22">
