@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+<title>Page 170</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<style type="text/css">
+<!--
+	p {margin: 0; padding: 0;}	.ft00{font-size:11px;font-family:DejaVuSans;color:#000000;}
+	.ft01{font-size:10px;font-family:DejaVuSans;color:#000000;}
+	.ft02{font-size:10px;font-family:DejaVuSans;color:#a21313;}
+	.ft03{font-size:10px;font-family:DejaVuSansMono;color:#000000;}
+	.ft04{font-size:10px;font-family:DejaVuSansMono;color:#a21313;}
+	.ft05{font-size:10px;line-height:15px;font-family:DejaVuSans;color:#000000;}
+	.ft06{font-size:10px;line-height:14px;font-family:DejaVuSans;color:#000000;}
+-->
+</style>
+</head>
+<body bgcolor="#A0A0A0" vlink="blue" link="blue">
+<div id="page170-div" style="position:relative;width:892px;height:1263px;">
+<img width="892" height="1263" src="ALL-07052021170.png" alt="background image"/>
+<p style="position:absolute;top:55px;left:272px;white-space:nowrap" class="ft00">Writing&#160;CodeMirror&#160;Modes</p>
+<p style="position:absolute;top:81px;left:272px;white-space:nowrap" class="ft05">Modes&#160;typically&#160;consist&#160;of&#160;a&#160;single&#160;JavaScript&#160;file.&#160;This&#160;file&#160;defines,&#160;in&#160;the<br/>simplest&#160;case,&#160;a&#160;lexer&#160;(tokenizer)&#160;for&#160;your&#160;language—a&#160;function&#160;that&#160;takes<br/>a&#160;character&#160;stream&#160;as&#160;input,&#160;advances&#160;it&#160;past&#160;a&#160;token,&#160;and&#160;returns&#160;a&#160;style<br/>for&#160;that&#160;token.&#160;More&#160;advanced&#160;modes&#160;can&#160;also&#160;handle&#160;indentation&#160;for&#160;the<br/>language.</p>
+<p style="position:absolute;top:167px;left:272px;white-space:nowrap" class="ft05">This&#160;section&#160;describes&#160;the&#160;low-level&#160;mode&#160;interface.&#160;Many&#160;modes&#160;are<br/>written&#160;directly&#160;against&#160;this,&#160;since&#160;it&#160;offers&#160;a&#160;lot&#160;of&#160;control,&#160;but&#160;for&#160;a&#160;quick<br/>mode&#160;definition,&#160;you&#160;might&#160;want&#160;to&#160;use&#160;the&#160;</p>
+<p style="position:absolute;top:197px;left:493px;white-space:nowrap" class="ft02">simple&#160;mode&#160;addon</p>
+<p style="position:absolute;top:197px;left:593px;white-space:nowrap" class="ft01">.</p>
+<p style="position:absolute;top:222px;left:272px;white-space:nowrap" class="ft01">The&#160;mode&#160;script&#160;should&#160;call&#160;</p>
+<p style="position:absolute;top:222px;left:415px;white-space:nowrap" class="ft03">CodeMirror.defineMode</p>
+<p style="position:absolute;top:222px;left:543px;white-space:nowrap" class="ft01">&#160;to&#160;register&#160;itself</p>
+<p style="position:absolute;top:237px;left:272px;white-space:nowrap" class="ft05">with&#160;CodeMirror.&#160;This&#160;function&#160;takes&#160;two&#160;arguments.&#160;The&#160;first&#160;should&#160;be<br/>the&#160;name&#160;of&#160;the&#160;mode,&#160;for&#160;which&#160;you&#160;should&#160;use&#160;a&#160;lowercase&#160;string,<br/>preferably&#160;one&#160;that&#160;is&#160;also&#160;the&#160;name&#160;of&#160;the&#160;files&#160;that&#160;define&#160;the&#160;mode&#160;(i.e.</p>
+<p style="position:absolute;top:282px;left:273px;white-space:nowrap" class="ft03">&#34;xml&#34;</p>
+<p style="position:absolute;top:282px;left:304px;white-space:nowrap" class="ft01">&#160;is&#160;defined&#160;in&#160;</p>
+<p style="position:absolute;top:282px;left:373px;white-space:nowrap" class="ft03">xml.js</p>
+<p style="position:absolute;top:282px;left:411px;white-space:nowrap" class="ft01">).&#160;The&#160;second&#160;argument&#160;should&#160;be&#160;a&#160;function</p>
+<p style="position:absolute;top:298px;left:272px;white-space:nowrap" class="ft01">that,&#160;given&#160;a&#160;CodeMirror&#160;configuration&#160;object&#160;(the&#160;thing&#160;passed&#160;to&#160;the</p>
+<p style="position:absolute;top:313px;left:273px;white-space:nowrap" class="ft03">CodeMirror</p>
+<p style="position:absolute;top:313px;left:335px;white-space:nowrap" class="ft01">&#160;function)&#160;and&#160;an&#160;optional&#160;mode&#160;configuration&#160;object&#160;(as&#160;in</p>
+<p style="position:absolute;top:328px;left:272px;white-space:nowrap" class="ft01">the&#160;</p>
+<p style="position:absolute;top:328px;left:293px;white-space:nowrap" class="ft04">mode</p>
+<p style="position:absolute;top:328px;left:318px;white-space:nowrap" class="ft01">&#160;option),&#160;returns&#160;a&#160;mode&#160;object.</p>
+<p style="position:absolute;top:353px;left:272px;white-space:nowrap" class="ft01">Typically,&#160;you&#160;should&#160;use&#160;this&#160;second&#160;argument&#160;to&#160;</p>
+<p style="position:absolute;top:353px;left:529px;white-space:nowrap" class="ft03">defineMode</p>
+<p style="position:absolute;top:353px;left:591px;white-space:nowrap" class="ft01">&#160;as&#160;your</p>
+<p style="position:absolute;top:368px;left:272px;white-space:nowrap" class="ft05">module&#160;scope&#160;function&#160;(modes&#160;should&#160;not&#160;leak&#160;anything&#160;into&#160;the&#160;global<br/>scope!),&#160;i.e.&#160;write&#160;your&#160;whole&#160;mode&#160;inside&#160;this&#160;function.</p>
+<p style="position:absolute;top:408px;left:272px;white-space:nowrap" class="ft01">The&#160;main&#160;responsibility&#160;of&#160;a&#160;mode&#160;script&#160;is&#160;</p>
+<p style="position:absolute;top:408px;left:489px;white-space:nowrap" class="ft01">parsing&#160;&#160;the&#160;content&#160;of&#160;the</p>
+<p style="position:absolute;top:423px;left:272px;white-space:nowrap" class="ft05">editor.&#160;Depending&#160;on&#160;the&#160;language&#160;and&#160;the&#160;amount&#160;of&#160;functionality<br/>desired,&#160;this&#160;can&#160;be&#160;done&#160;in&#160;really&#160;easy&#160;or&#160;extremely&#160;complicated&#160;ways.<br/>Some&#160;parsers&#160;can&#160;be&#160;stateless,&#160;meaning&#160;that&#160;they&#160;look&#160;at&#160;one&#160;element<br/>(</p>
+<p style="position:absolute;top:468px;left:276px;white-space:nowrap" class="ft01">token&#160;)&#160;of&#160;the&#160;code&#160;at&#160;a&#160;time,&#160;with&#160;no&#160;memory&#160;of&#160;what&#160;came&#160;before.</p>
+<p style="position:absolute;top:484px;left:272px;white-space:nowrap" class="ft05">Most,&#160;however,&#160;will&#160;need&#160;to&#160;remember&#160;something.&#160;This&#160;is&#160;done&#160;by&#160;using&#160;a<br/>state&#160;object&#160;,&#160;which&#160;is&#160;an&#160;object&#160;that&#160;is&#160;always&#160;passed&#160;when&#160;reading&#160;a<br/>token,&#160;and&#160;which&#160;can&#160;be&#160;mutated&#160;by&#160;the&#160;tokenizer.</p>
+<p style="position:absolute;top:539px;left:272px;white-space:nowrap" class="ft01">Modes&#160;that&#160;use&#160;a&#160;state&#160;must&#160;define&#160;a&#160;</p>
+<p style="position:absolute;top:539px;left:464px;white-space:nowrap" class="ft03">startState</p>
+<p style="position:absolute;top:539px;left:526px;white-space:nowrap" class="ft01">&#160;method&#160;on&#160;their&#160;mode</p>
+<p style="position:absolute;top:554px;left:272px;white-space:nowrap" class="ft05">object.&#160;This&#160;is&#160;a&#160;function&#160;of&#160;no&#160;arguments&#160;that&#160;produces&#160;a&#160;state&#160;object&#160;to<br/>be&#160;used&#160;at&#160;the&#160;start&#160;of&#160;a&#160;document.</p>
+<p style="position:absolute;top:594px;left:272px;white-space:nowrap" class="ft01">The&#160;most&#160;important&#160;part&#160;of&#160;a&#160;mode&#160;object&#160;is&#160;its&#160;</p>
+<p style="position:absolute;top:594px;left:514px;white-space:nowrap" class="ft03">token(stream,&#160;state)</p>
+<p style="position:absolute;top:609px;left:272px;white-space:nowrap" class="ft05">method.&#160;All&#160;modes&#160;must&#160;define&#160;this&#160;method.&#160;It&#160;should&#160;read&#160;one&#160;token<br/>from&#160;the&#160;stream&#160;it&#160;is&#160;given&#160;as&#160;an&#160;argument,&#160;optionally&#160;update&#160;its&#160;state,<br/>and&#160;return&#160;a&#160;style&#160;string,&#160;or&#160;</p>
+<p style="position:absolute;top:640px;left:415px;white-space:nowrap" class="ft03">null</p>
+<p style="position:absolute;top:640px;left:440px;white-space:nowrap" class="ft01">&#160;for&#160;tokens&#160;that&#160;do&#160;not&#160;have&#160;to&#160;be&#160;styled.</p>
+<p style="position:absolute;top:655px;left:272px;white-space:nowrap" class="ft05">For&#160;your&#160;styles,&#160;you&#160;are&#160;encouraged&#160;to&#160;use&#160;the&#160;'standard'&#160;names&#160;defined<br/>in&#160;the&#160;themes&#160;(without&#160;the&#160;</p>
+<p style="position:absolute;top:670px;left:410px;white-space:nowrap" class="ft03">cm-</p>
+<p style="position:absolute;top:670px;left:430px;white-space:nowrap" class="ft01">&#160;prefix).&#160;If&#160;that&#160;fails,&#160;it&#160;is&#160;also&#160;possible&#160;to</p>
+<p style="position:absolute;top:685px;left:272px;white-space:nowrap" class="ft01">come&#160;up&#160;with&#160;your&#160;own&#160;and&#160;write&#160;your&#160;own&#160;CSS&#160;theme&#160;file.</p>
+<p style="position:absolute;top:710px;left:272px;white-space:nowrap" class="ft01">A&#160;typical&#160;token&#160;string&#160;would&#160;be&#160;</p>
+<p style="position:absolute;top:710px;left:432px;white-space:nowrap" class="ft03">&#34;variable&#34;</p>
+<p style="position:absolute;top:710px;left:494px;white-space:nowrap" class="ft01">&#160;or&#160;</p>
+<p style="position:absolute;top:710px;left:512px;white-space:nowrap" class="ft03">&#34;comment&#34;</p>
+<p style="position:absolute;top:710px;left:568px;white-space:nowrap" class="ft01">.&#160;Multiple&#160;styles</p>
+<p style="position:absolute;top:725px;left:272px;white-space:nowrap" class="ft01">can&#160;be&#160;returned&#160;(separated&#160;by&#160;spaces),&#160;for&#160;example&#160;</p>
+<p style="position:absolute;top:725px;left:539px;white-space:nowrap" class="ft03">&#34;string&#160;error&#34;</p>
+<p style="position:absolute;top:725px;left:625px;white-space:nowrap" class="ft01">&#160;for</p>
+<p style="position:absolute;top:740px;left:272px;white-space:nowrap" class="ft05">a&#160;thing&#160;that&#160;looks&#160;like&#160;a&#160;string&#160;but&#160;is&#160;invalid&#160;somehow&#160;(say,&#160;missing&#160;its<br/>closing&#160;quote).&#160;When&#160;a&#160;style&#160;is&#160;prefixed&#160;by&#160;</p>
+<p style="position:absolute;top:755px;left:491px;white-space:nowrap" class="ft03">&#34;line-&#34;</p>
+<p style="position:absolute;top:755px;left:535px;white-space:nowrap" class="ft01">&#160;or&#160;</p>
+<p style="position:absolute;top:755px;left:552px;white-space:nowrap" class="ft03">&#34;line-</p>
+<p style="position:absolute;top:770px;left:272px;white-space:nowrap" class="ft03">background-&#34;</p>
+<p style="position:absolute;top:770px;left:345px;white-space:nowrap" class="ft01">,&#160;the&#160;style&#160;will&#160;be&#160;applied&#160;to&#160;the&#160;whole&#160;line,&#160;analogous&#160;to</p>
+<p style="position:absolute;top:785px;left:272px;white-space:nowrap" class="ft01">what&#160;the&#160;</p>
+<p style="position:absolute;top:785px;left:320px;white-space:nowrap" class="ft04">addLineClass</p>
+<p style="position:absolute;top:785px;left:394px;white-space:nowrap" class="ft01">&#160;method&#160;does—styling&#160;the&#160;</p>
+<p style="position:absolute;top:785px;left:531px;white-space:nowrap" class="ft03">&#34;text&#34;</p>
+<p style="position:absolute;top:785px;left:569px;white-space:nowrap" class="ft01">&#160;in&#160;the&#160;simple</p>
+<p style="position:absolute;top:801px;left:272px;white-space:nowrap" class="ft01">case,&#160;and&#160;the&#160;</p>
+<p style="position:absolute;top:801px;left:344px;white-space:nowrap" class="ft03">&#34;background&#34;</p>
+<p style="position:absolute;top:801px;left:418px;white-space:nowrap" class="ft01">&#160;element&#160;when&#160;</p>
+<p style="position:absolute;top:801px;left:498px;white-space:nowrap" class="ft03">&#34;line-background-&#34;</p>
+<p style="position:absolute;top:801px;left:608px;white-space:nowrap" class="ft01">&#160;is</p>
+<p style="position:absolute;top:816px;left:272px;white-space:nowrap" class="ft01">prefixed.</p>
+<p style="position:absolute;top:841px;left:272px;white-space:nowrap" class="ft01">The&#160;stream&#160;object&#160;that's&#160;passed&#160;to&#160;</p>
+<p style="position:absolute;top:841px;left:451px;white-space:nowrap" class="ft03">token</p>
+<p style="position:absolute;top:841px;left:483px;white-space:nowrap" class="ft01">&#160;encapsulates&#160;a&#160;line&#160;of&#160;code</p>
+<p style="position:absolute;top:856px;left:272px;white-space:nowrap" class="ft05">(tokens&#160;may&#160;never&#160;span&#160;lines)&#160;and&#160;our&#160;current&#160;position&#160;in&#160;that&#160;line.&#160;It&#160;has<br/>the&#160;following&#160;API:</p>
+<p style="position:absolute;top:896px;left:273px;white-space:nowrap" class="ft03">eol()&#160;→&#160;boolean</p>
+<p style="position:absolute;top:911px;left:287px;white-space:nowrap" class="ft01">Returns&#160;true&#160;only&#160;if&#160;the&#160;stream&#160;is&#160;at&#160;the&#160;end&#160;of&#160;the&#160;line.</p>
+<p style="position:absolute;top:936px;left:273px;white-space:nowrap" class="ft03">sol()&#160;→&#160;boolean</p>
+<p style="position:absolute;top:951px;left:287px;white-space:nowrap" class="ft01">Returns&#160;true&#160;only&#160;if&#160;the&#160;stream&#160;is&#160;at&#160;the&#160;start&#160;of&#160;the&#160;line.</p>
+<p style="position:absolute;top:977px;left:273px;white-space:nowrap" class="ft03">peek()&#160;→&#160;string</p>
+<p style="position:absolute;top:992px;left:287px;white-space:nowrap" class="ft05">Returns&#160;the&#160;next&#160;character&#160;in&#160;the&#160;stream&#160;without&#160;advancing&#160;it.&#160;Will<br/>return&#160;a&#160;</p>
+<p style="position:absolute;top:1007px;left:332px;white-space:nowrap" class="ft03">null</p>
+<p style="position:absolute;top:1007px;left:357px;white-space:nowrap" class="ft01">&#160;at&#160;the&#160;end&#160;of&#160;the&#160;line.</p>
+<p style="position:absolute;top:1032px;left:273px;white-space:nowrap" class="ft03">next()&#160;→&#160;string</p>
+<p style="position:absolute;top:1047px;left:287px;white-space:nowrap" class="ft01">Returns&#160;the&#160;next&#160;character&#160;in&#160;the&#160;stream&#160;and&#160;advances&#160;it.&#160;Also&#160;returns</p>
+<p style="position:absolute;top:1062px;left:288px;white-space:nowrap" class="ft03">null</p>
+<p style="position:absolute;top:1062px;left:313px;white-space:nowrap" class="ft01">&#160;when&#160;no&#160;more&#160;characters&#160;are&#160;available.</p>
+<p style="position:absolute;top:1087px;left:273px;white-space:nowrap" class="ft03">eat(match:&#160;string|regexp|function(char:&#160;string)&#160;→&#160;boolean)&#160;→</p>
+<p style="position:absolute;top:1102px;left:292px;white-space:nowrap" class="ft03">string</p>
+<p style="position:absolute;top:1118px;left:288px;white-space:nowrap" class="ft03">match</p>
+<p style="position:absolute;top:1118px;left:319px;white-space:nowrap" class="ft01">&#160;can&#160;be&#160;a&#160;character,&#160;a&#160;regular&#160;expression,&#160;or&#160;a&#160;function&#160;that</p>
+<p style="position:absolute;top:1133px;left:287px;white-space:nowrap" class="ft05">takes&#160;a&#160;character&#160;and&#160;returns&#160;a&#160;boolean.&#160;If&#160;the&#160;next&#160;character&#160;in&#160;the<br/>stream&#160;'matches'&#160;the&#160;given&#160;argument,&#160;it&#160;is&#160;consumed&#160;and&#160;returned.<br/>Otherwise,&#160;</p>
+<p style="position:absolute;top:1163px;left:345px;white-space:nowrap" class="ft03">undefined</p>
+<p style="position:absolute;top:1163px;left:401px;white-space:nowrap" class="ft01">&#160;is&#160;returned.</p>
+</div>
+</body>
+</html>

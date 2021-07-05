@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+<title>Page 149</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<style type="text/css">
+<!--
+	p {margin: 0; padding: 0;}	.ft00{font-size:10px;font-family:DejaVuSansMono;color:#000000;}
+	.ft01{font-size:10px;font-family:DejaVuSans;color:#000000;}
+	.ft02{font-size:10px;font-family:DejaVuSans;color:#a21313;}
+	.ft03{font-size:10px;font-family:DejaVuSansMono;color:#a21313;}
+	.ft04{font-size:11px;font-family:DejaVuSans;color:#000000;}
+	.ft05{font-size:10px;line-height:15px;font-family:DejaVuSansMono;color:#000000;}
+	.ft06{font-size:10px;line-height:15px;font-family:DejaVuSans;color:#000000;}
+-->
+</style>
+</head>
+<body bgcolor="#A0A0A0" vlink="blue" link="blue">
+<div id="page149-div" style="position:relative;width:892px;height:1263px;">
+<img width="892" height="1263" src="ALL-07052021149.png" alt="background image"/>
+<p style="position:absolute;top:55px;left:273px;white-space:nowrap" class="ft00">doc.lastLine()&#160;→&#160;integer</p>
+<p style="position:absolute;top:70px;left:287px;white-space:nowrap" class="ft01">Get&#160;the&#160;number&#160;of&#160;last&#160;line&#160;in&#160;the&#160;editor.&#160;This&#160;will&#160;usually&#160;be</p>
+<p style="position:absolute;top:86px;left:288px;white-space:nowrap" class="ft00">doc.lineCount()&#160;-&#160;1</p>
+<p style="position:absolute;top:86px;left:404px;white-space:nowrap" class="ft01">,&#160;but&#160;for&#160;</p>
+<p style="position:absolute;top:86px;left:448px;white-space:nowrap" class="ft02">linked&#160;sub-views</p>
+<p style="position:absolute;top:86px;left:531px;white-space:nowrap" class="ft01">,&#160;it&#160;might&#160;return&#160;other</p>
+<p style="position:absolute;top:101px;left:287px;white-space:nowrap" class="ft01">values.</p>
+<p style="position:absolute;top:126px;left:273px;white-space:nowrap" class="ft00">doc.getLineHandle(num:&#160;integer)&#160;→&#160;LineHandle</p>
+<p style="position:absolute;top:141px;left:287px;white-space:nowrap" class="ft01">Fetches&#160;the&#160;line&#160;handle&#160;for&#160;the&#160;given&#160;line&#160;number.</p>
+<p style="position:absolute;top:166px;left:273px;white-space:nowrap" class="ft00">doc.getLineNumber(handle:&#160;LineHandle)&#160;→&#160;integer</p>
+<p style="position:absolute;top:181px;left:287px;white-space:nowrap" class="ft01">Given&#160;a&#160;line&#160;handle,&#160;returns&#160;the&#160;current&#160;position&#160;of&#160;that&#160;line&#160;(or&#160;</p>
+<p style="position:absolute;top:181px;left:609px;white-space:nowrap" class="ft00">null</p>
+<p style="position:absolute;top:196px;left:287px;white-space:nowrap" class="ft01">when&#160;it&#160;is&#160;no&#160;longer&#160;in&#160;the&#160;document).</p>
+<p style="position:absolute;top:221px;left:273px;white-space:nowrap" class="ft05">doc.eachLine(f:&#160;(line:&#160;LineHandle))<br/>doc.eachLine(start:&#160;integer,&#160;end:&#160;integer,&#160;f:&#160;(line:</p>
+<p style="position:absolute;top:252px;left:292px;white-space:nowrap" class="ft00">LineHandle))</p>
+<p style="position:absolute;top:267px;left:287px;white-space:nowrap" class="ft01">Iterate&#160;over&#160;the&#160;whole&#160;document,&#160;or&#160;if&#160;</p>
+<p style="position:absolute;top:267px;left:483px;white-space:nowrap" class="ft00">start</p>
+<p style="position:absolute;top:267px;left:515px;white-space:nowrap" class="ft01">&#160;and&#160;</p>
+<p style="position:absolute;top:267px;left:541px;white-space:nowrap" class="ft00">end</p>
+<p style="position:absolute;top:267px;left:561px;white-space:nowrap" class="ft01">&#160;line&#160;numbers</p>
+<p style="position:absolute;top:282px;left:287px;white-space:nowrap" class="ft01">are&#160;given,&#160;the&#160;range&#160;from&#160;</p>
+<p style="position:absolute;top:282px;left:421px;white-space:nowrap" class="ft00">start</p>
+<p style="position:absolute;top:282px;left:452px;white-space:nowrap" class="ft01">&#160;up&#160;to&#160;(not&#160;including)&#160;</p>
+<p style="position:absolute;top:282px;left:562px;white-space:nowrap" class="ft00">end</p>
+<p style="position:absolute;top:282px;left:582px;white-space:nowrap" class="ft01">,&#160;and&#160;call&#160;</p>
+<p style="position:absolute;top:282px;left:632px;white-space:nowrap" class="ft00">f</p>
+<p style="position:absolute;top:297px;left:287px;white-space:nowrap" class="ft01">for&#160;each&#160;line,&#160;passing&#160;the&#160;line&#160;handle.&#160;</p>
+<p style="position:absolute;top:297px;left:480px;white-space:nowrap" class="ft00">eachLine</p>
+<p style="position:absolute;top:297px;left:530px;white-space:nowrap" class="ft01">&#160;stops&#160;iterating&#160;if&#160;</p>
+<p style="position:absolute;top:297px;left:620px;white-space:nowrap" class="ft00">f</p>
+<p style="position:absolute;top:312px;left:287px;white-space:nowrap" class="ft06">returns&#160;truthy&#160;value.&#160;This&#160;is&#160;a&#160;faster&#160;way&#160;to&#160;visit&#160;a&#160;range&#160;of&#160;line<br/>handlers&#160;than&#160;calling&#160;</p>
+<p style="position:absolute;top:327px;left:397px;white-space:nowrap" class="ft03">getLineHandle</p>
+<p style="position:absolute;top:327px;left:477px;white-space:nowrap" class="ft01">&#160;for&#160;each&#160;of&#160;them.&#160;Note&#160;that&#160;line</p>
+<p style="position:absolute;top:342px;left:287px;white-space:nowrap" class="ft01">handles&#160;have&#160;a&#160;</p>
+<p style="position:absolute;top:342px;left:368px;white-space:nowrap" class="ft00">text</p>
+<p style="position:absolute;top:342px;left:393px;white-space:nowrap" class="ft01">&#160;property&#160;containing&#160;the&#160;line's&#160;content&#160;(as&#160;a</p>
+<p style="position:absolute;top:357px;left:287px;white-space:nowrap" class="ft01">string).</p>
+<p style="position:absolute;top:382px;left:273px;white-space:nowrap" class="ft00">doc.markClean()</p>
+<p style="position:absolute;top:397px;left:287px;white-space:nowrap" class="ft06">Set&#160;the&#160;editor&#160;content&#160;as&#160;'clean',&#160;a&#160;flag&#160;that&#160;it&#160;will&#160;retain&#160;until&#160;it&#160;is<br/>edited,&#160;and&#160;which&#160;will&#160;be&#160;set&#160;again&#160;when&#160;such&#160;an&#160;edit&#160;is&#160;undone&#160;again.<br/>Useful&#160;to&#160;track&#160;whether&#160;the&#160;content&#160;needs&#160;to&#160;be&#160;saved.&#160;This&#160;function&#160;is<br/>deprecated&#160;in&#160;favor&#160;of&#160;</p>
+<p style="position:absolute;top:443px;left:403px;white-space:nowrap" class="ft03">changeGeneration</p>
+<p style="position:absolute;top:443px;left:501px;white-space:nowrap" class="ft01">,&#160;which&#160;allows&#160;multiple</p>
+<p style="position:absolute;top:458px;left:287px;white-space:nowrap" class="ft01">subsystems&#160;to&#160;track&#160;different&#160;notions&#160;of&#160;cleanness&#160;without&#160;interfering.</p>
+<p style="position:absolute;top:483px;left:273px;white-space:nowrap" class="ft00">doc.changeGeneration(?closeEvent:&#160;boolean)&#160;→&#160;integer</p>
+<p style="position:absolute;top:498px;left:287px;white-space:nowrap" class="ft01">Returns&#160;a&#160;number&#160;that&#160;can&#160;later&#160;be&#160;passed&#160;to&#160;</p>
+<p style="position:absolute;top:498px;left:521px;white-space:nowrap" class="ft03">isClean</p>
+<p style="position:absolute;top:498px;left:565px;white-space:nowrap" class="ft01">&#160;to&#160;test&#160;whether</p>
+<p style="position:absolute;top:513px;left:287px;white-space:nowrap" class="ft01">any&#160;edits&#160;were&#160;made&#160;(and&#160;not&#160;undone)&#160;in&#160;the&#160;meantime.&#160;If</p>
+<p style="position:absolute;top:528px;left:288px;white-space:nowrap" class="ft00">closeEvent</p>
+<p style="position:absolute;top:528px;left:350px;white-space:nowrap" class="ft01">&#160;is&#160;true,&#160;the&#160;current&#160;history&#160;event&#160;will&#160;be&#160;‘closed’,&#160;meaning</p>
+<p style="position:absolute;top:543px;left:287px;white-space:nowrap" class="ft06">it&#160;can't&#160;be&#160;combined&#160;with&#160;further&#160;changes&#160;(rapid&#160;typing&#160;or&#160;deleting<br/>events&#160;are&#160;typically&#160;combined).</p>
+<p style="position:absolute;top:584px;left:273px;white-space:nowrap" class="ft00">doc.isClean(?generation:&#160;integer)&#160;→&#160;boolean</p>
+<p style="position:absolute;top:599px;left:287px;white-space:nowrap" class="ft06">Returns&#160;whether&#160;the&#160;document&#160;is&#160;currently&#160;clean&#160;—&#160;not&#160;modified&#160;since<br/>initialization&#160;or&#160;the&#160;last&#160;call&#160;to&#160;</p>
+<p style="position:absolute;top:614px;left:441px;white-space:nowrap" class="ft03">markClean</p>
+<p style="position:absolute;top:614px;left:496px;white-space:nowrap" class="ft01">&#160;if&#160;no&#160;argument&#160;is&#160;passed,&#160;or</p>
+<p style="position:absolute;top:629px;left:287px;white-space:nowrap" class="ft01">since&#160;the&#160;matching&#160;call&#160;to&#160;</p>
+<p style="position:absolute;top:629px;left:421px;white-space:nowrap" class="ft03">changeGeneration</p>
+<p style="position:absolute;top:629px;left:519px;white-space:nowrap" class="ft01">&#160;if&#160;a&#160;generation&#160;value&#160;is</p>
+<p style="position:absolute;top:644px;left:287px;white-space:nowrap" class="ft01">given.</p>
+<p style="position:absolute;top:670px;left:272px;white-space:nowrap" class="ft04">Cursor&#160;and&#160;selection&#160;methods</p>
+<p style="position:absolute;top:697px;left:273px;white-space:nowrap" class="ft00">doc.getSelection(?lineSep:&#160;string)&#160;→&#160;string</p>
+<p style="position:absolute;top:713px;left:287px;white-space:nowrap" class="ft06">Get&#160;the&#160;currently&#160;selected&#160;code.&#160;Optionally&#160;pass&#160;a&#160;line&#160;separator&#160;to&#160;put<br/>between&#160;the&#160;lines&#160;in&#160;the&#160;output.&#160;When&#160;multiple&#160;selections&#160;are&#160;present,<br/>they&#160;are&#160;concatenated&#160;with&#160;instances&#160;of&#160;</p>
+<p style="position:absolute;top:743px;left:494px;white-space:nowrap" class="ft00">lineSep</p>
+<p style="position:absolute;top:743px;left:537px;white-space:nowrap" class="ft01">&#160;in&#160;between.</p>
+<p style="position:absolute;top:768px;left:273px;white-space:nowrap" class="ft00">doc.getSelections(?lineSep:&#160;string)&#160;→&#160;array&lt;string&gt;</p>
+<p style="position:absolute;top:783px;left:287px;white-space:nowrap" class="ft06">Returns&#160;an&#160;array&#160;containing&#160;a&#160;string&#160;for&#160;each&#160;selection,&#160;representing<br/>the&#160;content&#160;of&#160;the&#160;selections.</p>
+<p style="position:absolute;top:823px;left:273px;white-space:nowrap" class="ft00">doc.replaceSelection(replacement:&#160;string,&#160;?select:&#160;string)</p>
+<p style="position:absolute;top:838px;left:287px;white-space:nowrap" class="ft06">Replace&#160;the&#160;selection(s)&#160;with&#160;the&#160;given&#160;string.&#160;By&#160;default,&#160;the&#160;new<br/>selection&#160;ends&#160;up&#160;after&#160;the&#160;inserted&#160;text.&#160;The&#160;optional&#160;</p>
+<p style="position:absolute;top:853px;left:563px;white-space:nowrap" class="ft00">select</p>
+<p style="position:absolute;top:868px;left:287px;white-space:nowrap" class="ft01">argument&#160;can&#160;be&#160;used&#160;to&#160;change&#160;this—passing&#160;</p>
+<p style="position:absolute;top:868px;left:529px;white-space:nowrap" class="ft00">&#34;around&#34;</p>
+<p style="position:absolute;top:868px;left:578px;white-space:nowrap" class="ft01">&#160;will&#160;cause</p>
+<p style="position:absolute;top:884px;left:287px;white-space:nowrap" class="ft01">the&#160;new&#160;text&#160;to&#160;be&#160;selected,&#160;passing&#160;</p>
+<p style="position:absolute;top:884px;left:475px;white-space:nowrap" class="ft00">&#34;start&#34;</p>
+<p style="position:absolute;top:884px;left:518px;white-space:nowrap" class="ft01">&#160;will&#160;collapse&#160;the</p>
+<p style="position:absolute;top:899px;left:287px;white-space:nowrap" class="ft01">selection&#160;to&#160;the&#160;start&#160;of&#160;the&#160;inserted&#160;text.</p>
+<p style="position:absolute;top:924px;left:273px;white-space:nowrap" class="ft00">doc.replaceSelections(replacements:&#160;array&lt;string&gt;,&#160;?select:</p>
+<p style="position:absolute;top:939px;left:292px;white-space:nowrap" class="ft00">string)</p>
+<p style="position:absolute;top:954px;left:287px;white-space:nowrap" class="ft06">The&#160;length&#160;of&#160;the&#160;given&#160;array&#160;should&#160;be&#160;the&#160;same&#160;as&#160;the&#160;number&#160;of<br/>active&#160;selections.&#160;Replaces&#160;the&#160;content&#160;of&#160;the&#160;selections&#160;with&#160;the<br/>strings&#160;in&#160;the&#160;array.&#160;The&#160;</p>
+<p style="position:absolute;top:984px;left:412px;white-space:nowrap" class="ft00">select</p>
+<p style="position:absolute;top:984px;left:450px;white-space:nowrap" class="ft01">&#160;argument&#160;works&#160;the&#160;same&#160;as&#160;in</p>
+<p style="position:absolute;top:999px;left:288px;white-space:nowrap" class="ft03">replaceSelection</p>
+<p style="position:absolute;top:999px;left:386px;white-space:nowrap" class="ft01">.</p>
+<p style="position:absolute;top:1024px;left:273px;white-space:nowrap" class="ft00">doc.getCursor(?start:&#160;string)&#160;→&#160;{line,&#160;ch}</p>
+<p style="position:absolute;top:1040px;left:287px;white-space:nowrap" class="ft01">Retrieve&#160;one&#160;end&#160;of&#160;the&#160;</p>
+<p style="position:absolute;top:1039px;left:409px;white-space:nowrap" class="ft01">primary&#160;&#160;selection.&#160;</p>
+<p style="position:absolute;top:1040px;left:506px;white-space:nowrap" class="ft00">start</p>
+<p style="position:absolute;top:1040px;left:537px;white-space:nowrap" class="ft01">&#160;is&#160;an&#160;optional&#160;string</p>
+<p style="position:absolute;top:1055px;left:287px;white-space:nowrap" class="ft01">indicating&#160;which&#160;end&#160;of&#160;the&#160;selection&#160;to&#160;return.&#160;It&#160;may&#160;be&#160;</p>
+<p style="position:absolute;top:1055px;left:578px;white-space:nowrap" class="ft00">&#34;from&#34;</p>
+<p style="position:absolute;top:1055px;left:616px;white-space:nowrap" class="ft01">,</p>
+<p style="position:absolute;top:1070px;left:288px;white-space:nowrap" class="ft00">&#34;to&#34;</p>
+<p style="position:absolute;top:1070px;left:313px;white-space:nowrap" class="ft01">,&#160;</p>
+<p style="position:absolute;top:1070px;left:321px;white-space:nowrap" class="ft00">&#34;head&#34;</p>
+<p style="position:absolute;top:1070px;left:359px;white-space:nowrap" class="ft01">&#160;(the&#160;side&#160;of&#160;the&#160;selection&#160;that&#160;moves&#160;when&#160;you&#160;press</p>
+<p style="position:absolute;top:1085px;left:287px;white-space:nowrap" class="ft01">shift+arrow),&#160;or&#160;</p>
+<p style="position:absolute;top:1085px;left:371px;white-space:nowrap" class="ft00">&#34;anchor&#34;</p>
+<p style="position:absolute;top:1085px;left:421px;white-space:nowrap" class="ft01">&#160;(the&#160;fixed&#160;side&#160;of&#160;the&#160;selection).&#160;Omitting</p>
+<p style="position:absolute;top:1100px;left:287px;white-space:nowrap" class="ft01">the&#160;argument&#160;is&#160;the&#160;same&#160;as&#160;passing&#160;</p>
+<p style="position:absolute;top:1100px;left:478px;white-space:nowrap" class="ft00">&#34;head&#34;</p>
+<p style="position:absolute;top:1100px;left:516px;white-space:nowrap" class="ft01">.&#160;A&#160;</p>
+<p style="position:absolute;top:1100px;left:533px;white-space:nowrap" class="ft00">{line,&#160;ch}</p>
+<p style="position:absolute;top:1100px;left:595px;white-space:nowrap" class="ft01">&#160;object</p>
+<p style="position:absolute;top:1115px;left:287px;white-space:nowrap" class="ft01">will&#160;be&#160;returned.</p>
+<p style="position:absolute;top:1140px;left:273px;white-space:nowrap" class="ft00">doc.listSelections()&#160;→&#160;array&lt;{anchor,&#160;head}&gt;</p>
+<p style="position:absolute;top:1155px;left:287px;white-space:nowrap" class="ft06">Retrieves&#160;a&#160;list&#160;of&#160;all&#160;current&#160;selections.&#160;These&#160;will&#160;always&#160;be&#160;sorted,<br/>and&#160;never&#160;overlap&#160;(overlapping&#160;selections&#160;are&#160;merged).&#160;Each&#160;object&#160;in</p>
+</div>
+</body>
+</html>

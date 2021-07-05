@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+<title>Page 253</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<style type="text/css">
+<!--
+	p {margin: 0; padding: 0;}	.ft00{font-size:8px;font-family:DejaVuSans;color:#333333;}
+	.ft01{font-size:8px;font-family:BitstreamVeraSansMono;color:#333333;}
+	.ft02{font-size:10px;font-family:DejaVuSans;color:#333333;}
+	.ft03{font-size:8px;font-family:DejaVuSans;color:#2b73b7;}
+	.ft04{font-size:8px;font-family:DejaVuSans;color:#008800;}
+	.ft05{font-size:9px;font-family:DejaVuSans;color:#333333;}
+	.ft06{font-size:8px;line-height:11px;font-family:DejaVuSans;color:#333333;}
+-->
+</style>
+</head>
+<body bgcolor="#A0A0A0" vlink="blue" link="blue">
+<div id="page253-div" style="position:relative;width:892px;height:1263px;">
+<img width="892" height="1263" src="ALL-07052021253.png" alt="background image"/>
+<p style="position:absolute;top:55px;left:221px;white-space:nowrap" class="ft06">Rationale&#160;for&#160;the&#160;change&#160;is&#160;that&#160;PHP&#160;upgrades&#160;are&#160;often&#160;problematic,&#160;as&#160;software&#160;requires&#160;certain&#160;versions&#160;of&#160;the&#160;language,&#160;and<br/>because&#160;of&#160;that&#160;we'd&#160;still&#160;had&#160;to&#160;create&#160;versioned&#160;packages,&#160;creating&#160;needless&#160;work&#160;for&#160;admins&#160;to&#160;bump&#160;back&#160;and&#160;forth&#160;from<br/>unversioned&#160;to&#160;versioned&#160;packages.&#160;Making&#160;the&#160;switch&#160;now&#160;avoids&#160;that&#160;work&#160;and&#160;leaves&#160;the&#160;decision&#160;what&#160;PHP&#160;flavour&#160;to&#160;choose<br/>solely&#160;to&#160;the&#160;user.</p>
+<p style="position:absolute;top:115px;left:221px;white-space:nowrap" class="ft00">To&#160;do&#160;the&#160;upgrade,&#160;you&#160;should&#160;run&#160;</p>
+<p style="position:absolute;top:115px;left:376px;white-space:nowrap" class="ft01">poldek&#160;-u&#160;php53-common</p>
+<p style="position:absolute;top:115px;left:492px;white-space:nowrap" class="ft00">&#160;or&#160;</p>
+<p style="position:absolute;top:115px;left:507px;white-space:nowrap" class="ft01">php55-common</p>
+<p style="position:absolute;top:115px;left:571px;white-space:nowrap" class="ft00">.</p>
+<p style="position:absolute;top:139px;left:221px;white-space:nowrap" class="ft00">If&#160;you&#160;get&#160;wrong&#160;results&#160;(installing&#160;5.5&#160;but&#160;getting&#160;5.3&#160;packages),&#160;then&#160;add&#160;</p>
+<p style="position:absolute;top:139px;left:552px;white-space:nowrap" class="ft01">--ignore=*php53*</p>
+<p style="position:absolute;top:139px;left:637px;white-space:nowrap" class="ft00">&#160;to&#160;remove&#160;offending&#160;package&#160;that</p>
+<p style="position:absolute;top:151px;left:221px;white-space:nowrap" class="ft00">lacks&#160;dependencies.</p>
+<p style="position:absolute;top:175px;left:221px;white-space:nowrap" class="ft02"><b>2nd&#160;January&#160;2014:&#160;Updated&#160;kernel&#160;packages&#160;for&#160;2013&#160;snapshot&#160;and&#160;main&#160;PLD&#160;Th&#160;line</b></p>
+<p style="position:absolute;top:196px;left:221px;white-space:nowrap" class="ft06">Due&#160;to&#160;a&#160;bug&#160;in&#160;our&#160;packaging&#160;system,&#160;x86_64&#160;kernels&#160;in&#160;2013&#160;snapshot&#160;and&#160;main&#160;Th&#160;line&#160;suported&#160;only&#160;8&#160;CPUs.&#160;An&#160;updated&#160;and<br/>fixed&#160;kernel&#160;package&#160;set&#160;(with&#160;support&#160;for&#160;up&#160;to&#160;512&#160;CPUS)&#160;is&#160;available&#160;in&#160;2013/updates&#160;and&#160;main&#160;PLD&#160;Th&#160;ftp&#160;repositories.</p>
+<p style="position:absolute;top:231px;left:221px;white-space:nowrap" class="ft02"><b>31st&#160;December&#160;2013:&#160;PLD&#160;Th&#160;2013&#160;snapshot&#160;released</b></p>
+<p style="position:absolute;top:253px;left:221px;white-space:nowrap" class="ft00">Today&#160;we&#160;released&#160;the&#160;second&#160;snapshot&#160;of&#160;PLD/Linux&#160;Th,&#160;called&#160;2013.&#160;It&#160;is&#160;available&#160;on&#160;</p>
+<p style="position:absolute;top:253px;left:618px;white-space:nowrap" class="ft03">ftp://ftp.pld-linux.org/dists/th/2013/PLD/</p>
+<p style="position:absolute;top:265px;left:221px;white-space:nowrap" class="ft00">and&#160;as&#160;poldek&#160;sources&#160;th-2013.&#160;Please&#160;give&#160;mirrors&#160;24&#160;hours&#160;to&#160;synchronize.</p>
+<p style="position:absolute;top:289px;left:221px;white-space:nowrap" class="ft00">The&#160;main&#160;highlights&#160;of&#160;this&#160;release&#160;are:</p>
+<p style="position:absolute;top:314px;left:247px;white-space:nowrap" class="ft06">RPM&#160;5.4.14<br/>kernels&#160;3.4.75&#160;and&#160;3.10.25<br/>GCC&#160;4.8.2<br/>glibc&#160;2.18<br/>Perl&#160;5.18.1<br/>Apache&#160;httpd&#160;2.4.7<br/>Samba&#160;4.1.3&#160;with&#160;Active&#160;Directory&#160;functionality<br/>CUPS&#160;1.7<br/>libreoffice&#160;4.1.3.2<br/>GNOME&#160;3.10<br/>KDE&#160;4.10<br/>MATE&#160;Desktop&#160;Environment&#160;1.6</p>
+<p style="position:absolute;top:469px;left:221px;white-space:nowrap" class="ft02"><b>18th&#160;November&#160;2013:&#160;PLD&#160;New&#160;Rescue</b></p>
+<p style="position:absolute;top:490px;left:221px;white-space:nowrap" class="ft00">Jacek&#160;Konieczny&#160;(jajcus)&#160;</p>
+<p style="position:absolute;top:490px;left:341px;white-space:nowrap" class="ft03">announced</p>
+<p style="position:absolute;top:490px;left:389px;white-space:nowrap" class="ft00">&#160;availability&#160;of&#160;new&#160;</p>
+<p style="position:absolute;top:490px;left:486px;white-space:nowrap" class="ft03">PLD&#160;Rescue&#160;CD&#160;project</p>
+<p style="position:absolute;top:490px;left:587px;white-space:nowrap" class="ft00">.</p>
+<p style="position:absolute;top:514px;left:221px;white-space:nowrap" class="ft00">See&#160;and&#160;it&#160;already&#160;has&#160;had&#160;</p>
+<p style="position:absolute;top:514px;left:353px;white-space:nowrap" class="ft03">two&#160;releases</p>
+<p style="position:absolute;top:514px;left:408px;white-space:nowrap" class="ft00">.</p>
+<p style="position:absolute;top:538px;left:221px;white-space:nowrap" class="ft02"><b>27th&#160;August&#160;2013:&#160;New&#160;web&#160;interface&#160;for&#160;PLD&#160;git&#160;repositories</b></p>
+<p style="position:absolute;top:559px;left:221px;white-space:nowrap" class="ft00">There&#160;is&#160;now&#160;a&#160;cgit&#160;instance&#160;installed&#160;and&#160;configured&#160;on&#160;</p>
+<p style="position:absolute;top:559px;left:481px;white-space:nowrap" class="ft03">http://git.pld-linux.org/</p>
+<p style="position:absolute;top:559px;left:581px;white-space:nowrap" class="ft00">.&#160;So&#160;if&#160;for&#160;some&#160;reason&#160;you&#160;don't&#160;like&#160;the&#160;gitweb</p>
+<p style="position:absolute;top:571px;left:221px;white-space:nowrap" class="ft00">engine&#160;you&#160;can&#160;check&#160;the&#160;alternative&#160;at:&#160;</p>
+<p style="position:absolute;top:571px;left:413px;white-space:nowrap" class="ft03">http://git.pld-linux.org/cgi-bin/cgit.cgi</p>
+<p style="position:absolute;top:595px;left:221px;white-space:nowrap" class="ft00">-&#160;Kacper&#160;Kornet&#160;(draenog)&#160;</p>
+<p style="position:absolute;top:595px;left:350px;white-space:nowrap" class="ft03">[ANN]&#160;New&#160;web&#160;interface&#160;for&#160;PLD&#160;git&#160;repositories</p>
+<p style="position:absolute;top:619px;left:221px;white-space:nowrap" class="ft02"><b>7th&#160;August&#160;2013:&#160;VM&#160;images</b></p>
+<p style="position:absolute;top:640px;left:221px;white-space:nowrap" class="ft04">There&#160;are</p>
+<p style="position:absolute;top:640px;left:263px;white-space:nowrap" class="ft00">&#160;regularly&#160;built&#160;PLD&#160;VM&#160;images.&#160;Available&#160;as&#160;</p>
+<p style="position:absolute;top:640px;left:460px;white-space:nowrap" class="ft04">vagrant</p>
+<p style="position:absolute;top:640px;left:494px;white-space:nowrap" class="ft00">&#160;</p>
+<p style="position:absolute;top:640px;left:497px;white-space:nowrap" class="ft01">.box</p>
+<p style="position:absolute;top:640px;left:518px;white-space:nowrap" class="ft00">&#160;and&#160;</p>
+<p style="position:absolute;top:640px;left:552px;white-space:nowrap" class="ft03">VirtualBox</p>
+<p style="position:absolute;top:640px;left:597px;white-space:nowrap" class="ft00">&#160;</p>
+<p style="position:absolute;top:640px;left:600px;white-space:nowrap" class="ft01">.ova</p>
+<p style="position:absolute;top:640px;left:621px;white-space:nowrap" class="ft00">&#160;files,&#160;and&#160;easily&#160;convertible&#160;to&#160;other</p>
+<p style="position:absolute;top:652px;left:221px;white-space:nowrap" class="ft00">formats.</p>
+<p style="position:absolute;top:676px;left:221px;white-space:nowrap" class="ft02"><b>7th&#160;June&#160;2013:&#160;Apache&#160;2.4&#160;in&#160;Th</b></p>
+<p style="position:absolute;top:697px;left:221px;white-space:nowrap" class="ft00">Apache&#160;2.4&#160;has&#160;landed&#160;Th&#160;main&#160;repository.&#160;See&#160;</p>
+<p style="position:absolute;top:697px;left:432px;white-space:nowrap" class="ft04">Apache</p>
+<p style="position:absolute;top:697px;left:465px;white-space:nowrap" class="ft00">&#160;for&#160;migration&#160;notes.</p>
+<p style="position:absolute;top:721px;left:221px;white-space:nowrap" class="ft02"><b>12th&#160;December&#160;2012:&#160;RPM5&#160;in&#160;Th</b></p>
+<p style="position:absolute;top:743px;left:221px;white-space:nowrap" class="ft00">PLD&#160;Th&#160;migrated&#160;from&#160;unmaintained&#160;rpm&#160;4.5&#160;to&#160;rpm&#160;5.4.x&#160;from&#160;</p>
+<p style="position:absolute;top:743px;left:513px;white-space:nowrap" class="ft03">rpm5.org</p>
+<p style="position:absolute;top:743px;left:554px;white-space:nowrap" class="ft00">.</p>
+<p style="position:absolute;top:755px;left:221px;white-space:nowrap" class="ft00">Information&#160;about&#160;important&#160;changes&#160;is&#160;available&#160;here:&#160;</p>
+<p style="position:absolute;top:755px;left:467px;white-space:nowrap" class="ft04">RPM&#160;5&#160;quick&#160;guide</p>
+<p style="position:absolute;top:778px;left:221px;white-space:nowrap" class="ft02"><b>3rd&#160;October&#160;2012</b></p>
+<p style="position:absolute;top:799px;left:221px;white-space:nowrap" class="ft00">The&#160;6&#160;year&#160;old&#160;unmaintained&#160;MoinMoin&#160;installation&#160;at&#160;</p>
+<p style="position:absolute;top:799px;left:470px;white-space:nowrap" class="ft03">http://www.pld-linux.org/</p>
+<p style="position:absolute;top:799px;left:579px;white-space:nowrap" class="ft00">&#160;is&#160;replaced&#160;with&#160;fresh&#160;DokuWiki&#160;installation.</p>
+<p style="position:absolute;top:824px;left:221px;white-space:nowrap" class="ft00">Authentication&#160;is&#160;based&#160;on&#160;CVS&#160;password&#160;login&#160;hashes.</p>
+<p style="position:absolute;top:847px;left:221px;white-space:nowrap" class="ft02"><b>1st&#160;September&#160;2012:&#160;PLD&#160;Th&#160;2012&#160;snapshot&#160;released</b></p>
+<p style="position:absolute;top:868px;left:221px;white-space:nowrap" class="ft00">Today&#160;we&#160;released&#160;the&#160;first&#160;snapshot&#160;of&#160;PLD/Linux&#160;Th,&#160;called&#160;2012.&#160;It&#160;is&#160;available&#160;on&#160;</p>
+<p style="position:absolute;top:868px;left:604px;white-space:nowrap" class="ft03">ftp://ftp.pld-linux.org/dists/th/2012/PLD/</p>
+<p style="position:absolute;top:868px;left:779px;white-space:nowrap" class="ft00">&#160;and&#160;as</p>
+<p style="position:absolute;top:880px;left:221px;white-space:nowrap" class="ft00">poldek&#160;sources&#160;th-2012.&#160;Please&#160;give&#160;mirrors&#160;24&#160;hours&#160;to&#160;synchronize.</p>
+<p style="position:absolute;top:905px;left:221px;white-space:nowrap" class="ft00">The&#160;main&#160;highlights&#160;of&#160;this&#160;release&#160;are:</p>
+<p style="position:absolute;top:929px;left:247px;white-space:nowrap" class="ft06">kernel&#160;3.0.42&#160;with&#160;grsecurity&#160;support&#160;and&#160;3.4.10&#160;without&#160;grsecurity<br/>basic&#160;systemd&#160;support&#160;(systemd&#160;works,&#160;but&#160;a&#160;lot&#160;of&#160;services&#160;do&#160;not&#160;have&#160;native&#160;units)<br/>GCC&#160;4.7.1<br/>glibc&#160;2.16<br/>java-sun&#160;1.6&#160;thus&#160;safe&#160;from&#160;recent&#160;exploits&#160;<br/>libreoffice&#160;3.6.0.4<br/>iceweasel/icedove&#160;15.0&#160;and&#160;iceape&#160;2.12<br/>XFCE&#160;4.10<br/>GNOME&#160;3.4<br/>KDE&#160;4.9.0</p>
+<p style="position:absolute;top:1060px;left:221px;white-space:nowrap" class="ft02"><b>16th&#160;July&#160;2012:&#160;New&#160;Release&#160;Manager&#160;and&#160;git&#160;migration</b></p>
+<p style="position:absolute;top:1082px;left:221px;white-space:nowrap" class="ft00">Two&#160;major&#160;changes&#160;happened&#160;during&#160;the&#160;past&#160;few&#160;weeks:</p>
+<p style="position:absolute;top:1106px;left:221px;white-space:nowrap" class="ft06">1.&#160;A&#160;new&#160;Release&#160;Manager&#160;has&#160;been&#160;elected&#160;for&#160;PLD's&#160;main&#160;branch&#160;(TH).&#160;Jan&#160;Rękorajski&#160;took&#160;over&#160;after&#160;Arkadiusz&#160;Miśkiewicz,&#160;who<br/>previously&#160;held&#160;the&#160;position&#160;for&#160;many&#160;years,&#160;resigned&#160;over&#160;a&#160;month&#160;ago.&#160;In&#160;the&#160;words&#160;of&#160;the&#160;new&#160;RM,&#160;he's&#160;</p>
+<p style="position:absolute;top:1118px;left:689px;white-space:nowrap" class="ft05">not&#160;going&#160;to&#160;make&#160;drastic</p>
+<p style="position:absolute;top:1130px;left:221px;white-space:nowrap" class="ft05">changes&#160;[to]&#160;the&#160;current&#160;continuous&#160;development&#160;model</p>
+<p style="position:absolute;top:1130px;left:470px;white-space:nowrap" class="ft00">.</p>
+<p style="position:absolute;top:1154px;left:221px;white-space:nowrap" class="ft06">2.&#160;After&#160;too&#160;many&#160;years&#160;with&#160;CVS,&#160;the&#160;main&#160;package&#160;repository&#160;has&#160;finally&#160;been&#160;switched&#160;to&#160;a&#160;modern&#160;distributed&#160;version&#160;control<br/>system&#160;–&#160;git.&#160;Developers&#160;should&#160;refer&#160;to&#160;relevant&#160;</p>
+<p style="position:absolute;top:1166px;left:450px;white-space:nowrap" class="ft03">list&#160;threads</p>
+<p style="position:absolute;top:1166px;left:499px;white-space:nowrap" class="ft00">.&#160;Simultaneously&#160;a&#160;near&#160;real-time&#160;mirror&#160;has&#160;been&#160;created&#160;on&#160;the&#160;well</p>
+</div>
+</body>
+</html>

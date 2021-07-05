@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+<title>Page 74</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<style type="text/css">
+<!--
+	p {margin: 0; padding: 0;}	.ft00{font-size:8px;font-family:DejaVuSansMono;color:#000000;}
+	.ft01{font-size:9px;font-family:DejaVuSansMono;color:#000000;}
+	.ft02{font-size:8px;font-family:DejaVuSerif;color:#000000;}
+	.ft03{font-size:10px;font-family:DejaVuSerif;color:#00008b;}
+	.ft04{font-size:10px;font-family:DejaVuSerif;color:#000000;}
+	.ft05{font-size:9px;font-family:DejaVuSansMono;color:#000000;}
+	.ft06{font-size:10px;font-family:DejaVuSansMono;color:#000000;}
+	.ft07{font-size:9px;font-family:DejaVuSansMono;color:#303030;}
+	.ft08{font-size:10px;font-family:DejaVuSansMono;color:#000000;}
+	.ft09{font-size:10px;font-family:DejaVuSerif;color:#0000ee;}
+	.ft010{font-size:8px;line-height:10px;font-family:DejaVuSansMono;color:#000000;}
+	.ft011{font-size:10px;line-height:11px;font-family:DejaVuSerif;color:#000000;}
+	.ft012{font-size:9px;line-height:11px;font-family:DejaVuSansMono;color:#000000;}
+	.ft013{font-size:9px;line-height:11px;font-family:DejaVuSansMono;color:#303030;}
+-->
+</style>
+</head>
+<body bgcolor="#A0A0A0" vlink="blue" link="blue">
+<div id="page74-div" style="position:relative;width:892px;height:1263px;">
+<img width="892" height="1263" src="ALL-07052021074.png" alt="background image"/>
+<p style="position:absolute;top:54px;left:59px;white-space:nowrap" class="ft010">&#160;&#160;if&#160;[&#160;-n&#160;&#34;$XAUTH&#34;&#160;];&#160;<br/>&#160;&#160;&#160;&#160;</p>
+<p style="position:absolute;top:64px;left:80px;white-space:nowrap" class="ft01">#&#160;matters&#160;whether&#160;environment&#160;variable&#160;is&#160;unset&#160;or&#160;empty;&#160;not&#160;set:&#160;should&#160;not&#160;exist.</p>
+<p style="position:absolute;top:75px;left:59px;white-space:nowrap" class="ft010">&#160;&#160;&#160;&#160;then&#160;sudo&#160;-n&#160;-u&#160;$(logname)&#160;env&#160;XAUTHORITY=&#34;$XAUTH&#34;&#160;/usr/bin/xauth&#160;extract&#160;-&#160;$DISPLAY&#160;|&#160;xauth&#160;merge&#160;-<br/>&#160;&#160;&#160;&#160;else&#160;sudo&#160;-n&#160;-u&#160;$(logname)&#160;/usr/bin/xauth&#160;extract&#160;-&#160;$DISPLAY&#160;|&#160;xauth&#160;merge&#160;-<br/>&#160;&#160;fi<br/>else&#160;<br/>&#160;&#160;if&#160;[&#160;-z&#160;&#34;$XAUTH&#34;&#160;];&#160;then&#160;export&#160;XAUTH=&#34;$XAUTHORITY&#34;<br/>&#160;&#160;elif&#160;[&#160;-z&#160;&#34;$XAUTHORITY&#34;&#160;];&#160;then&#160;export&#160;XAUTHORITY=&#34;$XAUTH&#34;<br/>&#160;&#160;fi<br/>&#160;&#160;fi</p>
+<p style="position:absolute;top:161px;left:59px;white-space:nowrap" class="ft02">by&#160;Elm.Stb.(c);&#160;usable&#160;under&#160;C-FSL&#160;v1.0&#160;under&#160;https://www.elstel.org/license.</p>
+<p style="position:absolute;top:189px;left:59px;white-space:nowrap" class="ft03"><b>xchroot&#160;and&#160;read&#160;only&#160;roots&#160;(aufs,unionfs)</b></p>
+<p style="position:absolute;top:213px;left:74px;white-space:nowrap" class="ft04">xchroot&#160;&#160;is&#160;&#160;also&#160;&#160;handy&#160;&#160;if&#160;&#160;you&#160;&#160;wanna&#160;&#160;leave&#160;&#160;your&#160;&#160;target&#160;&#160;chroot&#160;&#160;environment&#160;&#160;untouched&#160;&#160;for&#160;&#160;any&#160;&#160;kind&#160;&#160;of&#160;&#160;reason.&#160;&#160;This&#160;&#160;may&#160;&#160;be&#160;&#160;a&#160;&#160;necessity&#160;&#160;if&#160;&#160;your&#160;&#160;chroot</p>
+<p style="position:absolute;top:225px;left:59px;white-space:nowrap" class="ft011">environment&#160;is&#160;located&#160;on&#160;a&#160;read&#160;only&#160;media&#160;like&#160;your&#160;cdrom&#160;drive.&#160;Simply&#160;use&#160;the&#160;--aufs/-a&#160;or&#160;--unionfs&#160;option&#160;and&#160;be&#160;sure&#160;that&#160;either&#160;aufs&#160;or&#160;unionfs&#160;is<br/>installed.</p>
+<p style="position:absolute;top:259px;left:59px;white-space:nowrap" class="ft05"><b>&gt;&#160;xchroot&#160;--aufs&#160;/dst/debian&#160;</b></p>
+<p style="position:absolute;top:280px;left:74px;white-space:nowrap" class="ft04">Readonly&#160;access&#160;is&#160;established&#160;like&#160;this:&#160;Changed&#160;files&#160;are&#160;copied&#160;to&#160;/tmp/xchroot/{aufs/unionfs}-$rootname-$$&#160;where&#160;$$&#160;is&#160;the&#160;pid&#160;of&#160;the&#160;invoker&#160;and</p>
+<p style="position:absolute;top:292px;left:59px;white-space:nowrap" class="ft011">$rootname&#160;the&#160;name&#160;of&#160;the&#160;directory&#160;you&#160;are&#160;chrooting-into.&#160;The&#160;mount&#160;point&#160;of&#160;the&#160;two&#160;combined&#160;directories&#160;(ro+rw)&#160;is&#160;/tmp/xchroot/mount-$rootname-<br/>$$.</p>
+<p style="position:absolute;top:326px;left:74px;white-space:nowrap" class="ft04">It&#160;is&#160;a&#160;totally&#160;new&#160;feature&#160;of&#160;xchroot-2.3&#160;that&#160;you&#160;can&#160;also&#160;save&#160;the&#160;temporary&#160;changes&#160;you&#160;have&#160;made&#160;to&#160;your&#160;chroot-environment&#160;into&#160;a&#160;squashfs-image.</p>
+<p style="position:absolute;top:338px;left:59px;white-space:nowrap" class="ft011">Squashfs&#160;images&#160;for&#160;unionfs&#160;and&#160;aufs&#160;will&#160;differ&#160;in&#160;the&#160;naming&#160;and&#160;storage&#160;of&#160;whiteout&#160;files.&#160;Whiteout&#160;files&#160;are&#160;hidden&#160;files&#160;that&#160;make&#160;a&#160;file&#160;of&#160;the&#160;ro-root<br/>appear&#160;deleted.&#160;xchroot&#160;will&#160;ask&#160;you&#160;for&#160;unsafed&#160;changes&#160;on&#160;exit;&#160;optionally&#160;you&#160;can&#160;specify&#160;the&#160;--save&#160;my-unionfs.squashfs&#160;--noask&#160;options&#160;to&#160;make&#160;that<br/>automatically&#160;and&#160;prevent&#160;any&#160;direct&#160;user&#160;interactions&#160;(keyboard&#160;usage).&#160;Use&#160;the&#160;--restore&#160;option&#160;on&#160;a&#160;saved&#160;image:</p>
+<p style="position:absolute;top:384px;left:59px;white-space:nowrap" class="ft05"><b>&gt;&#160;xchroot&#160;--aufs&#160;--restore&#160;my-aufs.squashfs&#160;/dst/debian&#160;</b></p>
+<p style="position:absolute;top:406px;left:74px;white-space:nowrap" class="ft04">When&#160;restoring&#160;elder&#160;changes&#160;an&#160;additional&#160;ro-branch&#160;mounted&#160;under&#160;/tmp/xchroot/squashfs-$rootname-$$&#160;will&#160;be&#160;established.&#160;You&#160;may&#160;need&#160;to&#160;know</p>
+<p style="position:absolute;top:418px;left:59px;white-space:nowrap" class="ft04">about&#160;&#160;/tmp/xchroot&#160;&#160;whenever&#160;&#160;you&#160;&#160;issue&#160;&#160;a&#160;</p>
+<p style="position:absolute;top:418px;left:284px;white-space:nowrap" class="ft06"><b>killall&#160;&#160;xchroot</b></p>
+<p style="position:absolute;top:418px;left:377px;white-space:nowrap" class="ft04">&#160;&#160;because&#160;&#160;then&#160;&#160;it&#160;&#160;will&#160;&#160;terminate&#160;&#160;immediately&#160;&#160;after&#160;&#160;listing&#160;&#160;the&#160;&#160;processes&#160;&#160;still&#160;&#160;running&#160;&#160;in&#160;&#160;the</p>
+<p style="position:absolute;top:430px;left:59px;white-space:nowrap" class="ft04">chroot-environment&#160;without&#160;performing&#160;the&#160;standard&#160;cleanup&#160;tasks.&#160;Do&#160;not&#160;kill&#160;these&#160;processes&#160;manually;&#160;use&#160;</p>
+<p style="position:absolute;top:430px;left:639px;white-space:nowrap" class="ft06"><b>xchroot&#160;[--aufs/--unionfs&#160;[--restore</b></p>
+<p style="position:absolute;top:441px;left:59px;white-space:nowrap" class="ft06"><b>xy]]&#160;cleanup&#160;$rootdir</b></p>
+<p style="position:absolute;top:441px;left:186px;white-space:nowrap" class="ft04">&#160;instead.&#160;It&#160;is&#160;recommended&#160;to&#160;specify&#160;the&#160;same&#160;options&#160;as&#160;before&#160;by&#160;only&#160;adding&#160;the&#160;keyword&#160;'cleanup'&#160;before&#160;your&#160;root&#160;directory.</p>
+<p style="position:absolute;top:463px;left:74px;white-space:nowrap" class="ft04">When&#160;using&#160;aufs&#160;you&#160;may&#160;want&#160;to&#160;mount&#160;/tmp&#160;or&#160;/tmp/xchroot&#160;to&#160;a&#160;tmpfs&#160;in&#160;ram&#160;especially&#160;when&#160;you&#160;are&#160;using&#160;a&#160;SSD&#160;or&#160;flashdisk&#160;because&#160;aufs&#160;needs</p>
+<p style="position:absolute;top:475px;left:59px;white-space:nowrap" class="ft011">some&#160;&#160;volatile&#160;&#160;files&#160;&#160;like&#160;&#160;the&#160;&#160;inode&#160;&#160;translation&#160;&#160;table.&#160;&#160;If&#160;&#160;you&#160;&#160;do&#160;&#160;not&#160;&#160;want&#160;&#160;to&#160;&#160;pack&#160;&#160;your&#160;&#160;changes&#160;&#160;into&#160;&#160;ram&#160;&#160;then&#160;&#160;you&#160;&#160;may&#160;&#160;want&#160;&#160;to&#160;&#160;use&#160;&#160;--unionopts&#160;&#160;xino=..&#160;&#160;to<br/>relocate&#160;&#160;the&#160;&#160;inode&#160;&#160;translation&#160;&#160;table&#160;&#160;to&#160;&#160;a&#160;&#160;proper&#160;&#160;ramfs.&#160;&#160;Caution&#160;&#160;should&#160;&#160;be&#160;&#160;given&#160;&#160;with&#160;&#160;tmpfs.&#160;&#160;It&#160;&#160;makes&#160;&#160;the&#160;&#160;inode&#160;&#160;numbers&#160;&#160;wrap&#160;&#160;around&#160;&#160;if&#160;&#160;many&#160;&#160;files&#160;&#160;are<br/>created&#160;and&#160;deleted&#160;which&#160;can&#160;make&#160;aufs&#160;err.&#160;At&#160;the&#160;time&#160;of&#160;publishing&#160;xchroot&#160;it&#160;was&#160;not&#160;known&#160;if&#160;ramfs&#160;was&#160;affected&#160;by&#160;a&#160;similar&#160;problem.</p>
+<p style="position:absolute;top:521px;left:59px;white-space:nowrap" class="ft012"><b>&gt;&#160;mount&#160;-t&#160;ramfs&#160;/dev/ram7&#160;/tmp/xchroot<br/>&gt;&#160;mount&#160;-t&#160;tmpfs&#160;none&#160;/tmp</b></p>
+<p style="position:absolute;top:533px;left:206px;white-space:nowrap" class="ft07">&#160;</p>
+<p style="position:absolute;top:532px;left:212px;white-space:nowrap" class="ft07">(not&#160;so&#160;recommended)</p>
+<p style="position:absolute;top:554px;left:74px;white-space:nowrap" class="ft04">If&#160;you&#160;wanna&#160;be&#160;absolutely&#160;sure&#160;not&#160;to&#160;confuse&#160;aufs&#160;you&#160;may&#160;also&#160;create&#160;an&#160;ext2&#160;image&#160;in&#160;ram&#160;and&#160;mount&#160;it&#160;to&#160;/tmp/xchroot.</p>
+<p style="position:absolute;top:576px;left:74px;white-space:nowrap" class="ft04">Note&#160;that&#160;some&#160;kind&#160;of&#160;partitions&#160;like&#160;ext4&#160;partitions&#160;are&#160;not&#160;mountable&#160;if&#160;burnt&#160;to&#160;read&#160;only&#160;media&#160;because&#160;they&#160;seem&#160;only&#160;having&#160;been&#160;designed&#160;for&#160;rw-</p>
+<p style="position:absolute;top:588px;left:59px;white-space:nowrap" class="ft011">media&#160;always&#160;writing&#160;the&#160;last&#160;mount&#160;time.&#160;If&#160;you&#160;want&#160;to&#160;burn&#160;a&#160;root&#160;to&#160;blue&#160;ray&#160;in&#160;order&#160;to&#160;access&#160;it&#160;later&#160;on&#160;with&#160;xchroot&#160;use&#160;ext2&#160;or&#160;JFS&#160;a&#160;fully&#160;fast&#160;and<br/>compatible&#160;filesystem&#160;also&#160;supported&#160;by&#160;OS/2&#160;and&#160;eComstation</p>
+<p style="position:absolute;top:629px;left:59px;white-space:nowrap" class="ft03"><b>xchroot&#160;and&#160;changeable&#160;media</b></p>
+<p style="position:absolute;top:653px;left:74px;white-space:nowrap" class="ft04">xchroot&#160;&#160;does&#160;&#160;also&#160;&#160;mount&#160;&#160;changeable&#160;&#160;media&#160;&#160;under&#160;&#160;/media&#160;&#160;into&#160;&#160;your&#160;&#160;chroot&#160;&#160;environment.&#160;&#160;While&#160;&#160;this&#160;&#160;has&#160;&#160;proven&#160;&#160;to&#160;&#160;be&#160;&#160;practical&#160;&#160;in&#160;&#160;many&#160;&#160;situations&#160;&#160;you</p>
+<p style="position:absolute;top:665px;left:59px;white-space:nowrap" class="ft04">have&#160;to&#160;take&#160;special&#160;care&#160;when&#160;removing&#160;your&#160;changeable&#160;media&#160;during&#160;an&#160;xchroot&#160;session.&#160;Make&#160;sure&#160;that&#160;all&#160;mount&#160;points&#160;are&#160;unmounted&#160;i.e.&#160;</p>
+<p style="position:absolute;top:665px;left:798px;white-space:nowrap" class="ft06"><b>/media/xx,</b></p>
+<p style="position:absolute;top:677px;left:59px;white-space:nowrap" class="ft06"><b>/chroot/media/xxx&#160;&#160;etc.</b></p>
+<p style="position:absolute;top:677px;left:194px;white-space:nowrap" class="ft04">.&#160;&#160;You&#160;&#160;can&#160;&#160;check&#160;&#160;for&#160;&#160;all&#160;&#160;removable&#160;&#160;media&#160;&#160;mounts&#160;&#160;by&#160;&#160;issuing&#160;&#160;sth.&#160;&#160;like&#160;</p>
+<p style="position:absolute;top:677px;left:568px;white-space:nowrap" class="ft06"><b>mount&#160;&#160;|&#160;&#160;grep&#160;&#160;sd[^ab]</b></p>
+<p style="position:absolute;top:677px;left:696px;white-space:nowrap" class="ft04">&#160;&#160;given&#160;&#160;that&#160;&#160;you&#160;&#160;have&#160;&#160;two&#160;&#160;non-</p>
+<p style="position:absolute;top:689px;left:59px;white-space:nowrap" class="ft04">removable&#160;disks&#160;called&#160;sda&#160;and&#160;sdb.&#160;Note&#160;that&#160;/media-mounting&#160;is&#160;currently&#160;only&#160;done&#160;on&#160;startup.</p>
+<p style="position:absolute;top:719px;left:59px;white-space:nowrap" class="ft03"><b>How&#160;to&#160;create&#160;a&#160;chroot&#160;environment</b></p>
+<p style="position:absolute;top:743px;left:74px;white-space:nowrap" class="ft04">You&#160;may&#160;simply&#160;use&#160;an&#160;old&#160;system&#160;installation&#160;as&#160;chroot&#160;environment&#160;instead&#160;of&#160;booting&#160;into&#160;it&#160;via&#160;qemu-kvm,&#160;VMWare&#160;or&#160;VirtualBox.&#160;On&#160;the&#160;other&#160;hand</p>
+<p style="position:absolute;top:755px;left:59px;white-space:nowrap" class="ft011">it&#160;is&#160;not&#160;difficult&#160;to&#160;create&#160;an&#160;own&#160;minimal&#160;chroot&#160;environment&#160;that&#160;does&#160;only&#160;contain&#160;the&#160;necessary&#160;packages&#160;to&#160;run&#160;a&#160;certain&#160;software&#160;or&#160;to&#160;compile&#160;a<br/>certain&#160;package</p>
+<p style="position:absolute;top:789px;left:74px;white-space:nowrap" class="ft04">In&#160;Debian&#160;use&#160;</p>
+<p style="position:absolute;top:789px;left:148px;white-space:nowrap" class="ft06"><b>debootstrap</b></p>
+<p style="position:absolute;top:789px;left:214px;white-space:nowrap" class="ft04">&#160;to&#160;initialize&#160;a&#160;new&#160;root</p>
+<p style="position:absolute;top:811px;left:59px;white-space:nowrap" class="ft05"><b>&gt;&#160;debootstrap&#160;lenny&#160;/var/xchroot/suse11.2&#160;http://debian.uni-klu.ac.at/debian</b></p>
+<p style="position:absolute;top:833px;left:74px;white-space:nowrap" class="ft04">In&#160;Suse&#160;use&#160;</p>
+<p style="position:absolute;top:833px;left:136px;white-space:nowrap" class="ft06"><b>zypper</b></p>
+<p style="position:absolute;top:833px;left:173px;white-space:nowrap" class="ft04">&#160;with&#160;the&#160;</p>
+<p style="position:absolute;top:833px;left:221px;white-space:nowrap" class="ft06"><b>--root</b></p>
+<p style="position:absolute;top:833px;left:257px;white-space:nowrap" class="ft04">&#160;option&#160;to&#160;add&#160;repositories&#160;and&#160;install&#160;software:</p>
+<p style="position:absolute;top:855px;left:59px;white-space:nowrap" class="ft012"><b>&gt;&#160;mkdir&#160;/var/xchroot/suse11.2<br/>&gt;&#160;mount&#160;/dev/sr0&#160;/media/dvd<br/>&gt;&#160;zypper&#160;--root&#160;/xchroot/suse11.2&#160;ar&#160;/media/dvd/&#160;dvd</b></p>
+<p style="position:absolute;top:889px;left:59px;white-space:nowrap" class="ft013">Repository&#160;'dvd'&#160;wird&#160;hinzugefügt&#160;[fertig]<br/>Repository&#160;'dvd'&#160;erfolgreich&#160;hinzugefügt<br/>Aktiviert:&#160;Ja<br/>Autoaktualisierung:&#160;Nein<br/>URI:&#160;dir:///media/dvd</p>
+<p style="position:absolute;top:945px;left:59px;white-space:nowrap" class="ft05"><b>&gt;&#160;zypper&#160;--root&#160;/xchroot/suse11.2&#160;lr</b></p>
+<p style="position:absolute;top:956px;left:59px;white-space:nowrap" class="ft013">#&#160;|&#160;Alias&#160;|&#160;Name&#160;|&#160;Aktiviert&#160;|&#160;Aktualisieren<br/>--+-------+------+-----------+--------------<br/>1&#160;|&#160;dvd&#160;&#160;&#160;|&#160;dvd&#160;&#160;|&#160;Ja&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;|&#160;Nein</p>
+<p style="position:absolute;top:990px;left:59px;white-space:nowrap" class="ft05"><b>&gt;&#160;zypper&#160;--root&#160;/xchroot/suse11.2&#160;in&#160;rpm&#160;zypper&#160;xterm</b></p>
+<p style="position:absolute;top:1043px;left:59px;white-space:nowrap" class="ft03"><b>Making&#160;audio&#160;support&#160;work</b></p>
+<p style="position:absolute;top:1067px;left:74px;white-space:nowrap" class="ft04">For&#160;audio&#160;under&#160;Linux&#160;alsa&#160;is&#160;usually&#160;used&#160;for&#160;the&#160;hardware&#160;layer&#160;and&#160;pulseaudio&#160;as&#160;a&#160;software&#160;daemon.&#160;You&#160;may&#160;not&#160;hear&#160;any&#160;audio&#160;if&#160;the&#160;volume&#160;for</p>
+<p style="position:absolute;top:1079px;left:59px;white-space:nowrap" class="ft04">the&#160;&#160;specified&#160;&#160;source&#160;&#160;is&#160;&#160;set&#160;&#160;to&#160;&#160;zero&#160;&#160;or&#160;&#160;if&#160;&#160;the&#160;&#160;wrong&#160;&#160;output&#160;&#160;target&#160;&#160;is&#160;&#160;selected&#160;&#160;for&#160;&#160;your&#160;&#160;application.&#160;&#160;Use&#160;</p>
+<p style="position:absolute;top:1079px;left:608px;white-space:nowrap" class="ft06"><b>alsamixer</b></p>
+<p style="position:absolute;top:1079px;left:662px;white-space:nowrap" class="ft04">&#160;&#160;and&#160;</p>
+<p style="position:absolute;top:1079px;left:691px;white-space:nowrap" class="ft06"><b>pavucontrol</b></p>
+<p style="position:absolute;top:1079px;left:758px;white-space:nowrap" class="ft04">&#160;&#160;to&#160;&#160;fix&#160;&#160;such&#160;&#160;issues.</p>
+<p style="position:absolute;top:1091px;left:59px;white-space:nowrap" class="ft06"><b>pavucontrol</b></p>
+<p style="position:absolute;top:1091px;left:126px;white-space:nowrap" class="ft04">&#160;is&#160;for&#160;pulseaudio&#160;and&#160;additionally&#160;lets&#160;you&#160;select&#160;the&#160;audio&#160;sink&#160;for&#160;your&#160;application.&#160;If&#160;/run/user/1000/pulse&#160;has&#160;wrong&#160;permissions&#160;the&#160;volume</p>
+<p style="position:absolute;top:1103px;left:59px;white-space:nowrap" class="ft04">utilities&#160;may&#160;not&#160;start.&#160;However&#160;this&#160;is&#160;fixed&#160;automatically&#160;by&#160;xchroot&#160;for&#160;the&#160;guest&#160;system.</p>
+<p style="position:absolute;top:1125px;left:74px;white-space:nowrap" class="ft04">Now&#160;&#160;the&#160;&#160;pulseaudio&#160;&#160;client&#160;&#160;starts&#160;&#160;the&#160;&#160;pulseaudio&#160;&#160;daemon&#160;&#160;for&#160;&#160;sound&#160;&#160;output&#160;&#160;on&#160;&#160;demand.&#160;&#160;It&#160;&#160;is&#160;&#160;started&#160;&#160;as&#160;&#160;user.&#160;&#160;Have&#160;&#160;a&#160;&#160;look&#160;&#160;at</p>
+<p style="position:absolute;top:1137px;left:59px;white-space:nowrap" class="ft08">/dst/yourchroot/etc/pulse/client.conf</p>
+<p style="position:absolute;top:1137px;left:283px;white-space:nowrap" class="ft04">&#160;for&#160;this&#160;purpose:</p>
+<p style="position:absolute;top:1159px;left:59px;white-space:nowrap" class="ft013">&#160;default-sink&#160;=&#160;alsa_output.pci-0000_04_07.0.analog-stereo<br/>&#160;default-source&#160;=&#160;alsa_output.pci-0000_04_07.0.analog-stereo.monitor</p>
+<p style="position:absolute;top:177px;left:674px;white-space:nowrap" class="ft09">up</p>
+<p style="position:absolute;top:177px;left:687px;white-space:nowrap" class="ft04">&#160;</p>
+<p style="position:absolute;top:177px;left:690px;white-space:nowrap" class="ft09">down</p>
+<p style="position:absolute;top:177px;left:718px;white-space:nowrap" class="ft04">&#160;</p>
+<p style="position:absolute;top:177px;left:721px;white-space:nowrap" class="ft09">Directory</p>
+<p style="position:absolute;top:177px;left:769px;white-space:nowrap" class="ft04">Menu</p>
+<p style="position:absolute;top:618px;left:674px;white-space:nowrap" class="ft09">up</p>
+<p style="position:absolute;top:618px;left:687px;white-space:nowrap" class="ft04">&#160;</p>
+<p style="position:absolute;top:618px;left:690px;white-space:nowrap" class="ft09">down</p>
+<p style="position:absolute;top:618px;left:718px;white-space:nowrap" class="ft04">&#160;</p>
+<p style="position:absolute;top:618px;left:721px;white-space:nowrap" class="ft09">Directory</p>
+<p style="position:absolute;top:618px;left:769px;white-space:nowrap" class="ft04">Menu</p>
+<p style="position:absolute;top:707px;left:674px;white-space:nowrap" class="ft09">up</p>
+<p style="position:absolute;top:707px;left:687px;white-space:nowrap" class="ft04">&#160;</p>
+<p style="position:absolute;top:707px;left:690px;white-space:nowrap" class="ft09">down</p>
+<p style="position:absolute;top:707px;left:718px;white-space:nowrap" class="ft04">&#160;</p>
+<p style="position:absolute;top:707px;left:721px;white-space:nowrap" class="ft09">Directory</p>
+<p style="position:absolute;top:707px;left:769px;white-space:nowrap" class="ft04">Menu</p>
+<p style="position:absolute;top:1031px;left:674px;white-space:nowrap" class="ft09">up</p>
+<p style="position:absolute;top:1031px;left:687px;white-space:nowrap" class="ft04">&#160;</p>
+<p style="position:absolute;top:1031px;left:690px;white-space:nowrap" class="ft09">down</p>
+<p style="position:absolute;top:1031px;left:718px;white-space:nowrap" class="ft04">&#160;</p>
+<p style="position:absolute;top:1031px;left:721px;white-space:nowrap" class="ft09">Directory</p>
+<p style="position:absolute;top:1031px;left:769px;white-space:nowrap" class="ft04">Menu</p>
+</div>
+</body>
+</html>

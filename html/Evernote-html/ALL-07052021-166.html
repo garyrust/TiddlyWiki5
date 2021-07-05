@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+<title>Page 166</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<style type="text/css">
+<!--
+	p {margin: 0; padding: 0;}	.ft00{font-size:10px;font-family:DejaVuSans;color:#000000;}
+	.ft01{font-size:10px;font-family:DejaVuSansMono;color:#000000;}
+	.ft02{font-size:10px;font-family:DejaVuSans;color:#a21313;}
+	.ft03{font-size:10px;font-family:DejaVuSansMono;color:#a21313;}
+	.ft04{font-size:10px;line-height:15px;font-family:DejaVuSans;color:#000000;}
+-->
+</style>
+</head>
+<body bgcolor="#A0A0A0" vlink="blue" link="blue">
+<div id="page166-div" style="position:relative;width:892px;height:1263px;">
+<img width="892" height="1263" src="ALL-07052021166.png" alt="background image"/>
+<p style="position:absolute;top:55px;left:287px;white-space:nowrap" class="ft04">The&#160;schema&#160;info&#160;should&#160;be&#160;an&#160;object&#160;mapping&#160;tag&#160;names&#160;to<br/>information&#160;about&#160;these&#160;tags,&#160;with&#160;optionally&#160;a&#160;</p>
+<p style="position:absolute;top:70px;left:527px;white-space:nowrap" class="ft01">&#34;!top&#34;</p>
+<p style="position:absolute;top:70px;left:565px;white-space:nowrap" class="ft00">&#160;property</p>
+<p style="position:absolute;top:86px;left:287px;white-space:nowrap" class="ft04">containing&#160;a&#160;list&#160;of&#160;the&#160;names&#160;of&#160;valid&#160;top-level&#160;tags.&#160;The&#160;values&#160;of&#160;the<br/>properties&#160;should&#160;be&#160;objects&#160;with&#160;optional&#160;properties&#160;</p>
+<p style="position:absolute;top:101px;left:558px;white-space:nowrap" class="ft01">children</p>
+<p style="position:absolute;top:101px;left:607px;white-space:nowrap" class="ft00">&#160;(an</p>
+<p style="position:absolute;top:116px;left:287px;white-space:nowrap" class="ft04">array&#160;of&#160;valid&#160;child&#160;element&#160;names,&#160;omit&#160;to&#160;simply&#160;allow&#160;all&#160;tags&#160;to<br/>appear)&#160;and&#160;</p>
+<p style="position:absolute;top:131px;left:353px;white-space:nowrap" class="ft01">attrs</p>
+<p style="position:absolute;top:131px;left:384px;white-space:nowrap" class="ft00">&#160;(an&#160;object&#160;mapping&#160;attribute&#160;names&#160;to&#160;</p>
+<p style="position:absolute;top:131px;left:587px;white-space:nowrap" class="ft01">null</p>
+<p style="position:absolute;top:131px;left:613px;white-space:nowrap" class="ft00">&#160;for</p>
+<p style="position:absolute;top:146px;left:287px;white-space:nowrap" class="ft04">free-form&#160;attributes,&#160;and&#160;an&#160;array&#160;of&#160;valid&#160;values&#160;for&#160;restricted<br/>attributes).<br/>The&#160;hint&#160;options&#160;accept&#160;an&#160;additional&#160;property:</p>
+<p style="position:absolute;top:191px;left:288px;white-space:nowrap" class="ft01">matchInMiddle:&#160;boolean</p>
+<p style="position:absolute;top:206px;left:302px;white-space:nowrap" class="ft04">Determines&#160;whether&#160;typed&#160;characters&#160;are&#160;matched&#160;anywhere&#160;in<br/>completions,&#160;not&#160;just&#160;at&#160;the&#160;beginning.&#160;Defaults&#160;to&#160;false.</p>
+<p style="position:absolute;top:236px;left:287px;white-space:nowrap" class="ft02">Demo&#160;here</p>
+<p style="position:absolute;top:236px;left:343px;white-space:nowrap" class="ft00">.</p>
+<p style="position:absolute;top:262px;left:273px;white-space:nowrap" class="ft03">hint/html-hint.js</p>
+<p style="position:absolute;top:277px;left:287px;white-space:nowrap" class="ft00">Provides&#160;schema&#160;info&#160;to&#160;the&#160;</p>
+<p style="position:absolute;top:277px;left:430px;white-space:nowrap" class="ft02">xml-hint</p>
+<p style="position:absolute;top:277px;left:472px;white-space:nowrap" class="ft00">&#160;addon&#160;for&#160;HTML&#160;documents.</p>
+<p style="position:absolute;top:292px;left:287px;white-space:nowrap" class="ft00">Defines&#160;a&#160;schema&#160;object&#160;</p>
+<p style="position:absolute;top:292px;left:415px;white-space:nowrap" class="ft01">CodeMirror.htmlSchema</p>
+<p style="position:absolute;top:292px;left:544px;white-space:nowrap" class="ft00">&#160;that&#160;you&#160;can&#160;pass</p>
+<p style="position:absolute;top:307px;left:287px;white-space:nowrap" class="ft00">to&#160;as&#160;a&#160;</p>
+<p style="position:absolute;top:307px;left:325px;white-space:nowrap" class="ft01">schemaInfo</p>
+<p style="position:absolute;top:307px;left:387px;white-space:nowrap" class="ft00">&#160;option,&#160;and&#160;a&#160;</p>
+<p style="position:absolute;top:307px;left:461px;white-space:nowrap" class="ft01">CodeMirror.hint.html</p>
+<p style="position:absolute;top:307px;left:583px;white-space:nowrap" class="ft00">&#160;hinting</p>
+<p style="position:absolute;top:322px;left:287px;white-space:nowrap" class="ft00">function&#160;that&#160;automatically&#160;calls&#160;</p>
+<p style="position:absolute;top:322px;left:453px;white-space:nowrap" class="ft01">CodeMirror.hint.xml</p>
+<p style="position:absolute;top:322px;left:570px;white-space:nowrap" class="ft00">&#160;with&#160;this</p>
+<p style="position:absolute;top:337px;left:287px;white-space:nowrap" class="ft00">schema&#160;data.&#160;See&#160;the&#160;</p>
+<p style="position:absolute;top:337px;left:400px;white-space:nowrap" class="ft02">demo</p>
+<p style="position:absolute;top:337px;left:428px;white-space:nowrap" class="ft00">.</p>
+<p style="position:absolute;top:362px;left:273px;white-space:nowrap" class="ft03">hint/css-hint.js</p>
+<p style="position:absolute;top:377px;left:287px;white-space:nowrap" class="ft00">A&#160;hinting&#160;function&#160;for&#160;CSS,&#160;SCSS,&#160;or&#160;LESS&#160;code.&#160;Defines</p>
+<p style="position:absolute;top:392px;left:288px;white-space:nowrap" class="ft01">CodeMirror.hint.css</p>
+<p style="position:absolute;top:392px;left:404px;white-space:nowrap" class="ft00">.</p>
+<p style="position:absolute;top:418px;left:273px;white-space:nowrap" class="ft03">hint/anyword-hint.js</p>
+<p style="position:absolute;top:433px;left:287px;white-space:nowrap" class="ft00">A&#160;very&#160;simple&#160;hinting&#160;function&#160;(</p>
+<p style="position:absolute;top:433px;left:446px;white-space:nowrap" class="ft01">CodeMirror.hint.anyword</p>
+<p style="position:absolute;top:433px;left:587px;white-space:nowrap" class="ft00">)&#160;that</p>
+<p style="position:absolute;top:448px;left:287px;white-space:nowrap" class="ft04">simply&#160;looks&#160;for&#160;words&#160;in&#160;the&#160;nearby&#160;code&#160;and&#160;completes&#160;to&#160;those.<br/>Takes&#160;two&#160;optional&#160;options,&#160;</p>
+<p style="position:absolute;top:463px;left:430px;white-space:nowrap" class="ft01">word</p>
+<p style="position:absolute;top:463px;left:455px;white-space:nowrap" class="ft00">,&#160;a&#160;regular&#160;expression&#160;that&#160;matches</p>
+<p style="position:absolute;top:478px;left:287px;white-space:nowrap" class="ft00">words&#160;(sequences&#160;of&#160;one&#160;or&#160;more&#160;character),&#160;and&#160;</p>
+<p style="position:absolute;top:478px;left:540px;white-space:nowrap" class="ft01">range</p>
+<p style="position:absolute;top:478px;left:572px;white-space:nowrap" class="ft00">,&#160;which</p>
+<p style="position:absolute;top:493px;left:287px;white-space:nowrap" class="ft04">defines&#160;how&#160;many&#160;lines&#160;the&#160;addon&#160;should&#160;scan&#160;when&#160;completing<br/>(defaults&#160;to&#160;500).</p>
+<p style="position:absolute;top:533px;left:273px;white-space:nowrap" class="ft03">hint/sql-hint.js</p>
+<p style="position:absolute;top:548px;left:287px;white-space:nowrap" class="ft00">A&#160;simple&#160;SQL&#160;hinter.&#160;Defines&#160;</p>
+<p style="position:absolute;top:548px;left:435px;white-space:nowrap" class="ft01">CodeMirror.hint.sql</p>
+<p style="position:absolute;top:548px;left:551px;white-space:nowrap" class="ft00">.&#160;Takes&#160;two</p>
+<p style="position:absolute;top:563px;left:287px;white-space:nowrap" class="ft00">optional&#160;options,&#160;</p>
+<p style="position:absolute;top:563px;left:375px;white-space:nowrap" class="ft01">tables</p>
+<p style="position:absolute;top:563px;left:413px;white-space:nowrap" class="ft00">,&#160;a&#160;object&#160;with&#160;table&#160;names&#160;as&#160;keys&#160;and&#160;array</p>
+<p style="position:absolute;top:579px;left:287px;white-space:nowrap" class="ft00">of&#160;respective&#160;column&#160;names&#160;as&#160;values,&#160;and&#160;</p>
+<p style="position:absolute;top:579px;left:510px;white-space:nowrap" class="ft01">defaultTable</p>
+<p style="position:absolute;top:579px;left:583px;white-space:nowrap" class="ft00">,&#160;a&#160;string</p>
+<p style="position:absolute;top:594px;left:287px;white-space:nowrap" class="ft00">corresponding&#160;to&#160;a&#160;table&#160;name&#160;in&#160;</p>
+<p style="position:absolute;top:594px;left:459px;white-space:nowrap" class="ft01">tables</p>
+<p style="position:absolute;top:594px;left:496px;white-space:nowrap" class="ft00">&#160;for&#160;autocompletion.</p>
+<p style="position:absolute;top:619px;left:273px;white-space:nowrap" class="ft03">search/match-highlighter.js</p>
+<p style="position:absolute;top:634px;left:287px;white-space:nowrap" class="ft00">Adds&#160;a&#160;</p>
+<p style="position:absolute;top:634px;left:325px;white-space:nowrap" class="ft01">highlightSelectionMatches</p>
+<p style="position:absolute;top:634px;left:478px;white-space:nowrap" class="ft00">&#160;option&#160;that&#160;can&#160;be&#160;enabled&#160;to</p>
+<p style="position:absolute;top:649px;left:287px;white-space:nowrap" class="ft04">highlight&#160;all&#160;instances&#160;of&#160;a&#160;currently&#160;selected&#160;word.&#160;Can&#160;be&#160;set&#160;either<br/>to&#160;true&#160;or&#160;to&#160;an&#160;object&#160;containing&#160;the&#160;following&#160;options:&#160;</p>
+<p style="position:absolute;top:664px;left:570px;white-space:nowrap" class="ft01">minChars</p>
+<p style="position:absolute;top:664px;left:619px;white-space:nowrap" class="ft00">,&#160;for</p>
+<p style="position:absolute;top:679px;left:287px;white-space:nowrap" class="ft04">the&#160;minimum&#160;amount&#160;of&#160;selected&#160;characters&#160;that&#160;triggers&#160;a&#160;highlight<br/>(default&#160;2),&#160;</p>
+<p style="position:absolute;top:694px;left:347px;white-space:nowrap" class="ft01">style</p>
+<p style="position:absolute;top:694px;left:379px;white-space:nowrap" class="ft00">,&#160;for&#160;the&#160;style&#160;to&#160;be&#160;used&#160;to&#160;highlight&#160;the&#160;matches</p>
+<p style="position:absolute;top:709px;left:287px;white-space:nowrap" class="ft00">(default&#160;</p>
+<p style="position:absolute;top:709px;left:330px;white-space:nowrap" class="ft01">&#34;matchhighlight&#34;</p>
+<p style="position:absolute;top:709px;left:429px;white-space:nowrap" class="ft00">,&#160;which&#160;will&#160;correspond&#160;to&#160;CSS&#160;class&#160;</p>
+<p style="position:absolute;top:709px;left:613px;white-space:nowrap" class="ft01">cm-</p>
+<p style="position:absolute;top:724px;left:287px;white-space:nowrap" class="ft01">matchhighlight</p>
+<p style="position:absolute;top:724px;left:373px;white-space:nowrap" class="ft00">),&#160;</p>
+<p style="position:absolute;top:724px;left:384px;white-space:nowrap" class="ft01">trim</p>
+<p style="position:absolute;top:724px;left:410px;white-space:nowrap" class="ft00">,&#160;which&#160;controls&#160;whether&#160;whitespace&#160;is</p>
+<p style="position:absolute;top:740px;left:287px;white-space:nowrap" class="ft00">trimmed&#160;from&#160;the&#160;selection,&#160;and&#160;</p>
+<p style="position:absolute;top:740px;left:454px;white-space:nowrap" class="ft01">showToken</p>
+<p style="position:absolute;top:740px;left:510px;white-space:nowrap" class="ft00">&#160;which&#160;can&#160;be&#160;set&#160;to&#160;</p>
+<p style="position:absolute;top:740px;left:616px;white-space:nowrap" class="ft01">true</p>
+<p style="position:absolute;top:755px;left:287px;white-space:nowrap" class="ft04">or&#160;to&#160;a&#160;regexp&#160;matching&#160;the&#160;characters&#160;that&#160;make&#160;up&#160;a&#160;word.&#160;When<br/>enabled,&#160;it&#160;causes&#160;the&#160;current&#160;word&#160;to&#160;be&#160;highlighted&#160;when&#160;nothing&#160;is<br/>selected&#160;(defaults&#160;to&#160;off).&#160;Demo&#160;</p>
+<p style="position:absolute;top:785px;left:450px;white-space:nowrap" class="ft02">here</p>
+<p style="position:absolute;top:785px;left:473px;white-space:nowrap" class="ft00">.</p>
+<p style="position:absolute;top:810px;left:273px;white-space:nowrap" class="ft03">lint/lint.js</p>
+<p style="position:absolute;top:825px;left:287px;white-space:nowrap" class="ft04">Defines&#160;an&#160;interface&#160;component&#160;for&#160;showing&#160;linting&#160;warnings,&#160;with<br/>pluggable&#160;warning&#160;sources&#160;(see&#160;</p>
+<p style="position:absolute;top:840px;left:451px;white-space:nowrap" class="ft03">html-lint.js</p>
+<p style="position:absolute;top:840px;left:525px;white-space:nowrap" class="ft00">,&#160;</p>
+<p style="position:absolute;top:840px;left:533px;white-space:nowrap" class="ft03">json-lint.js</p>
+<p style="position:absolute;top:840px;left:607px;white-space:nowrap" class="ft00">,</p>
+<p style="position:absolute;top:855px;left:288px;white-space:nowrap" class="ft03">javascript-lint.js</p>
+<p style="position:absolute;top:855px;left:398px;white-space:nowrap" class="ft00">,&#160;</p>
+<p style="position:absolute;top:855px;left:406px;white-space:nowrap" class="ft03">coffeescript-lint.js</p>
+<p style="position:absolute;top:855px;left:528px;white-space:nowrap" class="ft00">,&#160;and&#160;</p>
+<p style="position:absolute;top:855px;left:558px;white-space:nowrap" class="ft03">css-lint.js</p>
+<p style="position:absolute;top:855px;left:626px;white-space:nowrap" class="ft00">&#160;in</p>
+<p style="position:absolute;top:870px;left:287px;white-space:nowrap" class="ft00">the&#160;same&#160;directory).&#160;Defines&#160;a&#160;</p>
+<p style="position:absolute;top:870px;left:444px;white-space:nowrap" class="ft01">lint</p>
+<p style="position:absolute;top:870px;left:470px;white-space:nowrap" class="ft00">&#160;option&#160;that&#160;can&#160;be&#160;set&#160;to&#160;an</p>
+<p style="position:absolute;top:885px;left:287px;white-space:nowrap" class="ft00">annotation&#160;source&#160;(for&#160;example&#160;</p>
+<p style="position:absolute;top:885px;left:450px;white-space:nowrap" class="ft01">CodeMirror.lint.javascript</p>
+<p style="position:absolute;top:885px;left:609px;white-space:nowrap" class="ft00">),&#160;to&#160;an</p>
+<p style="position:absolute;top:901px;left:287px;white-space:nowrap" class="ft00">options&#160;object&#160;(in&#160;which&#160;case&#160;the&#160;</p>
+<p style="position:absolute;top:901px;left:457px;white-space:nowrap" class="ft01">getAnnotations</p>
+<p style="position:absolute;top:901px;left:543px;white-space:nowrap" class="ft00">&#160;field&#160;is&#160;used&#160;as</p>
+<p style="position:absolute;top:916px;left:287px;white-space:nowrap" class="ft00">annotation&#160;source),&#160;or&#160;simply&#160;to&#160;</p>
+<p style="position:absolute;top:916px;left:452px;white-space:nowrap" class="ft01">true</p>
+<p style="position:absolute;top:916px;left:478px;white-space:nowrap" class="ft00">.&#160;When&#160;no&#160;annotation&#160;source&#160;is</p>
+<p style="position:absolute;top:931px;left:287px;white-space:nowrap" class="ft00">specified,&#160;</p>
+<p style="position:absolute;top:931px;left:339px;white-space:nowrap" class="ft03">getHelper</p>
+<p style="position:absolute;top:931px;left:395px;white-space:nowrap" class="ft00">&#160;with&#160;type&#160;</p>
+<p style="position:absolute;top:931px;left:450px;white-space:nowrap" class="ft01">&#34;lint&#34;</p>
+<p style="position:absolute;top:931px;left:487px;white-space:nowrap" class="ft00">&#160;is&#160;used&#160;to&#160;find&#160;an&#160;annotation</p>
+<p style="position:absolute;top:946px;left:287px;white-space:nowrap" class="ft04">function.&#160;An&#160;annotation&#160;source&#160;function&#160;should,&#160;when&#160;given&#160;a<br/>document&#160;string,&#160;an&#160;options&#160;object,&#160;and&#160;an&#160;editor&#160;instance,&#160;return&#160;an<br/>array&#160;of&#160;</p>
+<p style="position:absolute;top:976px;left:331px;white-space:nowrap" class="ft01">{message,&#160;severity,&#160;from,&#160;to}</p>
+<p style="position:absolute;top:976px;left:507px;white-space:nowrap" class="ft00">&#160;objects&#160;representing</p>
+<p style="position:absolute;top:991px;left:287px;white-space:nowrap" class="ft00">problems.&#160;When&#160;the&#160;function&#160;has&#160;an&#160;</p>
+<p style="position:absolute;top:991px;left:474px;white-space:nowrap" class="ft01">async</p>
+<p style="position:absolute;top:991px;left:506px;white-space:nowrap" class="ft00">&#160;property&#160;with&#160;a&#160;truthy</p>
+<p style="position:absolute;top:1006px;left:287px;white-space:nowrap" class="ft04">value,&#160;it&#160;will&#160;be&#160;called&#160;with&#160;an&#160;additional&#160;second&#160;argument,&#160;which&#160;is&#160;a<br/>callback&#160;to&#160;pass&#160;the&#160;array&#160;to.&#160;The&#160;linting&#160;function&#160;can&#160;also&#160;return&#160;a<br/>promise,&#160;in&#160;that&#160;case&#160;the&#160;linter&#160;will&#160;only&#160;be&#160;executed&#160;when&#160;the&#160;promise<br/>resolves.&#160;By&#160;default,&#160;the&#160;linter&#160;will&#160;run&#160;(debounced)&#160;whenever&#160;the<br/>document&#160;is&#160;changed.&#160;You&#160;can&#160;pass&#160;a&#160;</p>
+<p style="position:absolute;top:1067px;left:482px;white-space:nowrap" class="ft01">lintOnChange:&#160;false</p>
+<p style="position:absolute;top:1067px;left:598px;white-space:nowrap" class="ft00">&#160;option&#160;to</p>
+<p style="position:absolute;top:1082px;left:287px;white-space:nowrap" class="ft00">disable&#160;that.&#160;You&#160;can&#160;pass&#160;a&#160;</p>
+<p style="position:absolute;top:1082px;left:433px;white-space:nowrap" class="ft01">selfContain:&#160;true</p>
+<p style="position:absolute;top:1082px;left:537px;white-space:nowrap" class="ft00">&#160;option&#160;to&#160;render&#160;the</p>
+<p style="position:absolute;top:1097px;left:287px;white-space:nowrap" class="ft00">tooltip&#160;inside&#160;the&#160;editor&#160;instance.&#160;And&#160;a&#160;</p>
+<p style="position:absolute;top:1097px;left:490px;white-space:nowrap" class="ft01">highlightLines</p>
+<p style="position:absolute;top:1097px;left:576px;white-space:nowrap" class="ft00">&#160;option&#160;to&#160;add</p>
+<p style="position:absolute;top:1112px;left:287px;white-space:nowrap" class="ft00">a&#160;style&#160;to&#160;lines&#160;that&#160;contain&#160;problems.&#160;Depends&#160;on</p>
+<p style="position:absolute;top:1127px;left:288px;white-space:nowrap" class="ft01">addon/lint/lint.css</p>
+<p style="position:absolute;top:1127px;left:404px;white-space:nowrap" class="ft00">.&#160;A&#160;demo&#160;can&#160;be&#160;found&#160;</p>
+<p style="position:absolute;top:1127px;left:521px;white-space:nowrap" class="ft02">here</p>
+<p style="position:absolute;top:1127px;left:544px;white-space:nowrap" class="ft00">.</p>
+<p style="position:absolute;top:1152px;left:273px;white-space:nowrap" class="ft03">selection/mark-selection.js</p>
+<p style="position:absolute;top:1167px;left:287px;white-space:nowrap" class="ft00">Causes&#160;the&#160;selected&#160;text&#160;to&#160;be&#160;marked&#160;with&#160;the&#160;CSS&#160;class</p>
+</div>
+</body>
+</html>

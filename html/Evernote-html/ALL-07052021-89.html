@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+<title>Page 89</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<style type="text/css">
+<!--
+	p {margin: 0; padding: 0;}	.ft00{font-size:11px;font-family:DejaVuSansMono;color:#000000;}
+	.ft01{font-size:11px;font-family:DejaVuSerif;color:#000000;}
+	.ft02{font-size:13px;font-family:DejaVuSerif;color:#000000;}
+	.ft03{font-size:11px;font-family:DejaVuSerif;color:#0b61a4;}
+	.ft04{font-size:11px;line-height:13px;font-family:DejaVuSansMono;color:#000000;}
+	.ft05{font-size:11px;line-height:13px;font-family:DejaVuSerif;color:#000000;}
+	.ft06{font-size:11px;line-height:14px;font-family:DejaVuSerif;color:#000000;}
+-->
+</style>
+</head>
+<body bgcolor="#A0A0A0" vlink="blue" link="blue">
+<div id="page89-div" style="position:relative;width:892px;height:1263px;">
+<img width="892" height="1263" src="ALL-07052021089.png" alt="background image"/>
+<p style="position:absolute;top:61px;left:100px;white-space:nowrap" class="ft04">&#160;&#160;&#160;&#160;sudo&#160;schroot&#160;-c&#160;unsafe-i386<br/>&#160;&#160;&#160;&#160;apt-get&#160;update<br/>&#160;&#160;&#160;&#160;apt-get&#160;install&#160;xpra</p>
+<p style="position:absolute;top:121px;left:82px;white-space:nowrap" class="ft01">Note&#160;&#160;that&#160;&#160;the&#160;&#160;two&#160;&#160;commands&#160;&#160;from&#160;&#160;within&#160;&#160;the&#160;&#160;jail&#160;&#160;don't&#160;&#160;need&#160;&#160;a&#160;</p>
+<p style="position:absolute;top:121px;left:457px;white-space:nowrap" class="ft00">sudo</p>
+<p style="position:absolute;top:121px;left:484px;white-space:nowrap" class="ft01">&#160;&#160;prefix,&#160;&#160;as&#160;&#160;you're</p>
+<p style="position:absolute;top:135px;left:82px;white-space:nowrap" class="ft01">already&#160;root.&#160;Be&#160;sure&#160;to&#160;exit&#160;the&#160;jail&#160;when&#160;you're&#160;done.</p>
+<p style="position:absolute;top:160px;left:82px;white-space:nowrap" class="ft05">The&#160;final&#160;step&#160;in&#160;walling&#160;the&#160;jail&#160;away&#160;from&#160;your&#160;local&#160;X11&#160;server&#160;is&#160;to&#160;revoke&#160;its&#160;access<br/>to&#160;the&#160;server&#160;socket&#160;in&#160;</p>
+<p style="position:absolute;top:174px;left:218px;white-space:nowrap" class="ft00">/tmp</p>
+<p style="position:absolute;top:174px;left:245px;white-space:nowrap" class="ft01">.&#160;By&#160;default,&#160;most&#160;modern&#160;Linux&#160;distributions&#160;use&#160;a&#160;magic</p>
+<p style="position:absolute;top:187px;left:82px;white-space:nowrap" class="ft00">xhost</p>
+<p style="position:absolute;top:187px;left:116px;white-space:nowrap" class="ft01">&#160;&#160;property&#160;&#160;that&#160;&#160;allows&#160;&#160;all&#160;&#160;local&#160;&#160;processes&#160;&#160;owned&#160;&#160;by&#160;&#160;the&#160;&#160;same&#160;&#160;user&#160;&#160;as&#160;&#160;the&#160;&#160;X11</p>
+<p style="position:absolute;top:201px;left:82px;white-space:nowrap" class="ft05">server&#160;to&#160;access&#160;the&#160;server&#160;without&#160;other&#160;authentication&#160;credentials.&#160;Since&#160;the&#160;chroot<br/>jail&#160;&#160;has&#160;&#160;direct&#160;&#160;access&#160;&#160;to&#160;&#160;the&#160;&#160;server&#160;&#160;socket,&#160;&#160;we&#160;&#160;want&#160;&#160;to&#160;&#160;prevent&#160;&#160;that.&#160;&#160;You&#160;&#160;can&#160;&#160;see&#160;&#160;the<br/>permission&#160;for&#160;this&#160;by&#160;running&#160;</p>
+<p style="position:absolute;top:229px;left:260px;white-space:nowrap" class="ft00">xhost</p>
+<p style="position:absolute;top:229px;left:294px;white-space:nowrap" class="ft01">.&#160;If&#160;something&#160;like&#160;this&#160;shows&#160;up,&#160;local&#160;user&#160;access</p>
+<p style="position:absolute;top:243px;left:82px;white-space:nowrap" class="ft01">is&#160;enabled:</p>
+<p style="position:absolute;top:275px;left:100px;white-space:nowrap" class="ft04">access&#160;control&#160;enabled,&#160;only&#160;authorized&#160;clients&#160;can&#160;connect<br/>SI:localuser:elb</p>
+<p style="position:absolute;top:321px;left:82px;white-space:nowrap" class="ft01">The&#160;&#160;second&#160;&#160;line&#160;&#160;is&#160;&#160;the&#160;&#160;important&#160;&#160;one&#160;&#160;—&#160;&#160;you&#160;&#160;should&#160;</p>
+<p style="position:absolute;top:320px;left:391px;white-space:nowrap" class="ft01">always&#160;&#160;see&#160;&#160;the&#160;&#160;first!&#160;&#160;That&#160;&#160;access</p>
+<p style="position:absolute;top:335px;left:82px;white-space:nowrap" class="ft05">will&#160;need&#160;to&#160;be&#160;revoked&#160;to&#160;prevent&#160;jailed&#160;applications&#160;from&#160;accessing&#160;your&#160;X11&#160;server<br/>directly&#160;&#160;whether&#160;&#160;you&#160;&#160;want&#160;&#160;them&#160;&#160;to&#160;&#160;or&#160;&#160;not.&#160;&#160;The&#160;&#160;command&#160;&#160;to&#160;&#160;do&#160;&#160;so&#160;&#160;is&#160;</p>
+<p style="position:absolute;top:348px;left:533px;white-space:nowrap" class="ft00">xhost&#160;&#160;-</p>
+<p style="position:absolute;top:362px;left:82px;white-space:nowrap" class="ft00">SI:localuser:$USER</p>
+<p style="position:absolute;top:362px;left:204px;white-space:nowrap" class="ft01">,&#160;&#160;but&#160;&#160;if&#160;&#160;you&#160;&#160;use&#160;&#160;the&#160;&#160;scripts&#160;&#160;linked&#160;&#160;later&#160;&#160;on&#160;&#160;this&#160;&#160;page&#160;&#160;they&#160;&#160;will</p>
+<p style="position:absolute;top:376px;left:82px;white-space:nowrap" class="ft01">handle&#160;it&#160;for&#160;you.</p>
+<p style="position:absolute;top:403px;left:82px;white-space:nowrap" class="ft02"><b>Configuring&#160;the&#160;jail&#160;for&#160;Skype</b></p>
+<p style="position:absolute;top:432px;left:82px;white-space:nowrap" class="ft05">Having&#160;created&#160;the&#160;jail,&#160;we&#160;now&#160;want&#160;to&#160;set&#160;it&#160;up&#160;for&#160;Skype.&#160;Since&#160;I&#160;elected&#160;to&#160;handle<br/>most&#160;of&#160;the&#160;getting&#160;in&#160;and&#160;out&#160;of&#160;the&#160;jail&#160;tasks&#160;external&#160;to&#160;the&#160;jail&#160;(more&#160;on&#160;that&#160;later),<br/>that&#160;&#160;basically&#160;&#160;means&#160;&#160;two&#160;&#160;steps:&#160;&#160;fetching&#160;&#160;and&#160;&#160;installing&#160;&#160;Skype's&#160;&#160;prerequisites,&#160;&#160;and<br/>installing&#160;Skype&#160;itself.</p>
+<p style="position:absolute;top:499px;left:82px;white-space:nowrap" class="ft01">I&#160;downloaded&#160;the&#160;Skype&#160;package&#160;for&#160;my&#160;distribution,&#160;placed&#160;it&#160;in&#160;the&#160;</p>
+<p style="position:absolute;top:499px;left:481px;white-space:nowrap" class="ft00">/tmp</p>
+<p style="position:absolute;top:499px;left:508px;white-space:nowrap" class="ft01">&#160;directory&#160;for</p>
+<p style="position:absolute;top:513px;left:82px;white-space:nowrap" class="ft05">the&#160;&#160;chroot,&#160;&#160;then&#160;&#160;entered&#160;&#160;the&#160;&#160;chroot&#160;&#160;as&#160;&#160;root&#160;&#160;to&#160;&#160;install&#160;&#160;the&#160;&#160;dependencies&#160;&#160;and&#160;&#160;then&#160;&#160;the<br/>package&#160;itself:</p>
+<p style="position:absolute;top:559px;left:100px;white-space:nowrap" class="ft04">sudo&#160;schroot&#160;-c&#160;unsafe-i386<br/>apt-get&#160;install&#160;libqtgui4&#160;libasound2-plugins&#160;libxss1&#160;libxv1&#160;libqtwebkit4<br/>dpkg&#160;-i&#160;/tmp/skype-ubuntu-precise_4.2.0.13-1_i386.deb</p>
+<p style="position:absolute;top:618px;left:82px;white-space:nowrap" class="ft05">The&#160;above&#160;prerequisite&#160;list&#160;was&#160;complete&#160;for&#160;me,&#160;but&#160;if&#160;things&#160;change&#160;it&#160;may&#160;become<br/>stale.&#160;&#160;Fortunately,&#160;&#160;the&#160;&#160;package&#160;&#160;management&#160;&#160;system&#160;&#160;handles&#160;&#160;this&#160;&#160;(relatively)<br/>gracefully.&#160;If&#160;the&#160;</p>
+<p style="position:absolute;top:646px;left:181px;white-space:nowrap" class="ft00">dpkg</p>
+<p style="position:absolute;top:646px;left:208px;white-space:nowrap" class="ft01">&#160;command&#160;fails,&#160;simply&#160;run&#160;</p>
+<p style="position:absolute;top:646px;left:368px;white-space:nowrap" class="ft00">apt-get&#160;install&#160;-f</p>
+<p style="position:absolute;top:646px;left:491px;white-space:nowrap" class="ft01">&#160;to&#160;have&#160;it&#160;patch</p>
+<p style="position:absolute;top:660px;left:82px;white-space:nowrap" class="ft01">up&#160;the&#160;necessary&#160;dependencies,&#160;then&#160;re-run&#160;</p>
+<p style="position:absolute;top:660px;left:338px;white-space:nowrap" class="ft00">dpkg</p>
+<p style="position:absolute;top:660px;left:365px;white-space:nowrap" class="ft01">.</p>
+<p style="position:absolute;top:687px;left:82px;white-space:nowrap" class="ft02"><b>Gluing&#160;it&#160;all&#160;together</b></p>
+<p style="position:absolute;top:716px;left:82px;white-space:nowrap" class="ft05">Once&#160;&#160;all&#160;&#160;of&#160;&#160;this&#160;&#160;is&#160;&#160;in&#160;&#160;place,&#160;&#160;the&#160;&#160;key&#160;&#160;is&#160;&#160;gluing&#160;&#160;it&#160;&#160;all&#160;&#160;together&#160;&#160;to&#160;&#160;minimize&#160;&#160;the&#160;&#160;pain&#160;&#160;of<br/>working&#160;&#160;across&#160;&#160;the&#160;&#160;jail&#160;&#160;interface.&#160;&#160;I&#160;&#160;have&#160;&#160;created&#160;</p>
+<p style="position:absolute;top:730px;left:376px;white-space:nowrap" class="ft03">a&#160;&#160;set&#160;&#160;of&#160;&#160;scripts&#160;&#160;to&#160;&#160;manage&#160;&#160;the&#160;&#160;jail</p>
+<p style="position:absolute;top:730px;left:581px;white-space:nowrap" class="ft01">.</p>
+<p style="position:absolute;top:743px;left:82px;white-space:nowrap" class="ft05">They&#160;&#160;handle&#160;&#160;starting&#160;&#160;the&#160;&#160;jail,&#160;&#160;starting&#160;&#160;the&#160;&#160;Xpra&#160;&#160;server&#160;&#160;on&#160;&#160;the&#160;&#160;jail&#160;&#160;side&#160;&#160;and&#160;&#160;the&#160;&#160;Xpra<br/>client&#160;on&#160;the&#160;local&#160;side,&#160;plumbing&#160;apps&#160;through&#160;Xpra,&#160;and&#160;shutting&#160;the&#160;jail&#160;down&#160;when<br/>you're&#160;&#160;done.&#160;&#160;I&#160;&#160;am&#160;&#160;not&#160;&#160;going&#160;&#160;to&#160;&#160;document&#160;&#160;how&#160;&#160;they&#160;&#160;work,&#160;&#160;and&#160;&#160;if&#160;&#160;they&#160;&#160;break&#160;&#160;you&#160;&#160;can<br/>keep&#160;&#160;both&#160;&#160;pieces&#160;&#160;—&#160;&#160;but&#160;&#160;they're&#160;&#160;working&#160;&#160;for&#160;&#160;me,&#160;&#160;and&#160;&#160;I'd&#160;&#160;be&#160;&#160;happy&#160;&#160;to&#160;&#160;answer&#160;&#160;specific<br/>questions.</p>
+<p style="position:absolute;top:824px;left:82px;white-space:nowrap" class="ft01">The&#160;&#160;poor&#160;&#160;man's&#160;&#160;guide&#160;&#160;to&#160;&#160;setting&#160;&#160;them&#160;&#160;up&#160;&#160;is&#160;&#160;this:&#160;&#160;Copy&#160;</p>
+<p style="position:absolute;top:824px;left:415px;white-space:nowrap" class="ft00">start-unsafe</p>
+<p style="position:absolute;top:824px;left:497px;white-space:nowrap" class="ft01">,&#160;</p>
+<p style="position:absolute;top:824px;left:506px;white-space:nowrap" class="ft00">stop-unsafe</p>
+<p style="position:absolute;top:824px;left:581px;white-space:nowrap" class="ft01">,</p>
+<p style="position:absolute;top:838px;left:82px;white-space:nowrap" class="ft01">and&#160;</p>
+<p style="position:absolute;top:838px;left:107px;white-space:nowrap" class="ft00">unsafe-exec</p>
+<p style="position:absolute;top:838px;left:182px;white-space:nowrap" class="ft01">&#160;to&#160;somewhere&#160;in&#160;your&#160;path&#160;on&#160;the&#160;host&#160;machine.&#160;Put&#160;</p>
+<p style="position:absolute;top:838px;left:493px;white-space:nowrap" class="ft00">withxpra</p>
+<p style="position:absolute;top:838px;left:548px;white-space:nowrap" class="ft01">&#160;in&#160;the</p>
+<p style="position:absolute;top:852px;left:82px;white-space:nowrap" class="ft01">chroot&#160;&#160;jail&#160;&#160;in&#160;</p>
+<p style="position:absolute;top:852px;left:168px;white-space:nowrap" class="ft00">~/bin</p>
+<p style="position:absolute;top:852px;left:202px;white-space:nowrap" class="ft01">&#160;&#160;(specifically&#160;&#160;—&#160;&#160;not&#160;&#160;just&#160;&#160;in&#160;&#160;the&#160;&#160;path!).&#160;&#160;Then,&#160;&#160;run&#160;&#160;a&#160;&#160;jailed&#160;&#160;GUI</p>
+<p style="position:absolute;top:865px;left:82px;white-space:nowrap" class="ft01">command&#160;as&#160;</p>
+<p style="position:absolute;top:865px;left:157px;white-space:nowrap" class="ft00">unsafe-exec&#160;&lt;command&gt;</p>
+<p style="position:absolute;top:865px;left:300px;white-space:nowrap" class="ft01">.&#160;For&#160;skype,&#160;that's&#160;</p>
+<p style="position:absolute;top:865px;left:407px;white-space:nowrap" class="ft00">unsafe-exec&#160;skype</p>
+<p style="position:absolute;top:865px;left:523px;white-space:nowrap" class="ft01">.</p>
+<p style="position:absolute;top:892px;left:82px;white-space:nowrap" class="ft02"><b>Final&#160;words</b></p>
+<p style="position:absolute;top:921px;left:82px;white-space:nowrap" class="ft05">This&#160;&#160;isn't&#160;&#160;an&#160;&#160;ideal&#160;&#160;solution.&#160;&#160;I&#160;&#160;don't&#160;&#160;like&#160;&#160;the&#160;&#160;(lack&#160;&#160;of)&#160;&#160;isolation&#160;&#160;it&#160;&#160;provides.&#160;&#160;It&#160;&#160;allows<br/>audio,&#160;but&#160;not&#160;video.&#160;It's&#160;unclear&#160;exactly&#160;how&#160;much&#160;trouble&#160;Skype&#160;can&#160;get&#160;into&#160;through<br/>the&#160;xpra&#160;connection.&#160;(Something&#160;like&#160;</p>
+<p style="position:absolute;top:949px;left:303px;white-space:nowrap" class="ft00">ssh&#160;-X</p>
+<p style="position:absolute;top:949px;left:345px;white-space:nowrap" class="ft01">&#160;would&#160;be&#160;more&#160;clear.)&#160;I&#160;strongly&#160;believe</p>
+<p style="position:absolute;top:963px;left:82px;white-space:nowrap" class="ft05">that&#160;&#160;a&#160;&#160;determined&#160;&#160;attacker&#160;&#160;could&#160;&#160;bust&#160;&#160;out&#160;&#160;of&#160;&#160;this&#160;&#160;chroot&#160;&#160;more&#160;&#160;or&#160;&#160;less&#160;&#160;immediately.<br/>Don't&#160;&#160;trust&#160;&#160;your&#160;&#160;familyl&#160;&#160;jewels&#160;&#160;to&#160;&#160;this&#160;&#160;solution!&#160;&#160;However,&#160;&#160;I&#160;&#160;also&#160;&#160;believe&#160;&#160;that&#160;&#160;it&#160;&#160;will<br/>protect&#160;&#160;the&#160;&#160;host&#160;&#160;machine&#160;&#160;from&#160;&#160;casual&#160;&#160;abuses&#160;&#160;of&#160;&#160;by&#160;&#160;the&#160;&#160;jailed&#160;&#160;software,&#160;&#160;and&#160;&#160;that&#160;&#160;it<br/>provides&#160;some&#160;measure&#160;of&#160;isolation&#160;in&#160;the&#160;event&#160;that&#160;the&#160;jailed&#160;software&#160;has&#160;dangerous<br/>bugs.</p>
+<p style="position:absolute;top:1043px;left:82px;white-space:nowrap" class="ft01">Running&#160;a&#160;parallel&#160;OS&#160;in&#160;</p>
+<p style="position:absolute;top:1043px;left:233px;white-space:nowrap" class="ft03">VMware</p>
+<p style="position:absolute;top:1043px;left:281px;white-space:nowrap" class="ft01">&#160;or&#160;some&#160;other&#160;audio-capable&#160;virtualization&#160;solution</p>
+<p style="position:absolute;top:1057px;left:82px;white-space:nowrap" class="ft05">would&#160;&#160;be&#160;&#160;better.&#160;&#160;Avoiding&#160;&#160;ugly&#160;&#160;proprietary&#160;&#160;software&#160;&#160;like&#160;&#160;Skype&#160;&#160;would&#160;&#160;be&#160;&#160;even&#160;&#160;better<br/>yet.</p>
+<p style="position:absolute;top:1096px;left:82px;white-space:nowrap" class="ft01">Finally,&#160;note&#160;that&#160;sound&#160;propagation&#160;with&#160;this&#160;solution&#160;</p>
+<p style="position:absolute;top:1096px;left:401px;white-space:nowrap" class="ft01">only&#160;works&#160;with&#160;clients&#160;that&#160;use</p>
+<p style="position:absolute;top:1110px;left:82px;white-space:nowrap" class="ft01">PulseAudio.&#160;That&#160;will&#160;cover&#160;a&#160;lot&#160;of&#160;clients,&#160;but&#160;not&#160;everything.</p>
+<p style="position:absolute;top:1135px;left:82px;white-space:nowrap" class="ft03">[1]</p>
+<p style="position:absolute;top:1135px;left:98px;white-space:nowrap" class="ft01">&#160;This&#160;is,&#160;of&#160;course,&#160;an&#160;exaggeration.&#160;I&#160;do&#160;not&#160;</p>
+<p style="position:absolute;top:1135px;left:355px;white-space:nowrap" class="ft01">require&#160;it&#160;for&#160;employment,&#160;and&#160;were&#160;my</p>
+<p style="position:absolute;top:1149px;left:82px;white-space:nowrap" class="ft05">convictions&#160;a&#160;bit&#160;stronger,&#160;I&#160;could&#160;almost&#160;certainly&#160;get&#160;away&#160;from&#160;it&#160;entirely.&#160;The&#160;effort<br/>of&#160;doing&#160;so,&#160;however,&#160;is&#160;somewhat&#160;higher&#160;than&#160;the&#160;effort&#160;of&#160;building&#160;a&#160;chroot&#160;jail&#160;plus</p>
+</div>
+</body>
+</html>

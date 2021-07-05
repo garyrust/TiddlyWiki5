@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+<title>Page 279</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<style type="text/css">
+<!--
+	p {margin: 0; padding: 0;}	.ft00{font-size:12px;font-family:DejaVuSerif;color:#1f0909;}
+	.ft01{font-size:10px;font-family:DejaVuSerif;color:#1f0909;}
+	.ft02{font-size:10px;font-family:DejaVuSerif;color:#065588;}
+	.ft03{font-size:8px;font-family:DejaVuSerif;color:#1f0909;}
+	.ft04{font-size:18px;font-family:DejaVuSerif;color:#1f0909;}
+	.ft05{font-size:10px;line-height:15px;font-family:DejaVuSerif;color:#1f0909;}
+-->
+</style>
+</head>
+<body bgcolor="#A0A0A0" vlink="blue" link="blue">
+<div id="page279-div" style="position:relative;width:892px;height:1263px;">
+<img width="892" height="1263" src="ALL-07052021279.png" alt="background image"/>
+<p style="position:absolute;top:54px;left:262px;white-space:nowrap" class="ft00"><b>Dockerfile</b></p>
+<p style="position:absolute;top:89px;left:262px;white-space:nowrap" class="ft01">A&#160;</p>
+<p style="position:absolute;top:89px;left:273px;white-space:nowrap" class="ft02">Dockerfile</p>
+<p style="position:absolute;top:89px;left:325px;white-space:nowrap" class="ft01">&#160;is&#160;a&#160;file&#160;with&#160;instructions&#160;for&#160;how&#160;Docker&#160;should&#160;build</p>
+<p style="position:absolute;top:104px;left:262px;white-space:nowrap" class="ft01">your&#160;image.</p>
+<p style="position:absolute;top:135px;left:262px;white-space:nowrap" class="ft05">The&#160;Dockerfile&#160;refers&#160;to&#160;a&#160;base&#160;image&#160;that&#160;is&#160;used&#160;to&#160;build&#160;the&#160;initial<br/>image&#160;layer.&#160;Popular&#160;official&#160;base&#160;images&#160;include&#160;</p>
+<p style="position:absolute;top:150px;left:516px;white-space:nowrap" class="ft02">python</p>
+<p style="position:absolute;top:150px;left:551px;white-space:nowrap" class="ft01">,&#160;</p>
+<p style="position:absolute;top:150px;left:558px;white-space:nowrap" class="ft02">ubuntu</p>
+<p style="position:absolute;top:150px;left:594px;white-space:nowrap" class="ft01">,</p>
+<p style="position:absolute;top:165px;left:262px;white-space:nowrap" class="ft01">and&#160;</p>
+<p style="position:absolute;top:165px;left:284px;white-space:nowrap" class="ft02">alpine</p>
+<p style="position:absolute;top:165px;left:316px;white-space:nowrap" class="ft01">.</p>
+<p style="position:absolute;top:195px;left:262px;white-space:nowrap" class="ft05">Additional&#160;layers&#160;can&#160;then&#160;be&#160;stacked&#160;on&#160;top&#160;of&#160;the&#160;base&#160;image&#160;layers,<br/>according&#160;to&#160;the&#160;instructions&#160;in&#160;the&#160;Dockerfile.&#160;For&#160;example,&#160;a<br/>Dockerfile&#160;for&#160;a&#160;machine&#160;learning&#160;application&#160;could&#160;tell&#160;Docker&#160;to&#160;add<br/>NumPy,&#160;Pandas,&#160;and&#160;Scikit-learn&#160;in&#160;an&#160;intermediate&#160;layer.</p>
+<p style="position:absolute;top:270px;left:262px;white-space:nowrap" class="ft05">Finally,&#160;a&#160;thin,&#160;writable&#160;layer&#160;is&#160;stacked&#160;on&#160;top&#160;of&#160;the&#160;other&#160;layers<br/>according&#160;to&#160;the&#160;Dockerfile&#160;code.&#160;(You&#160;understand&#160;that&#160;a&#160;thin&#160;layer&#160;is<br/>small&#160;in&#160;size&#160;because&#160;you&#160;intuitively&#160;understand&#160;the&#160;</p>
+<p style="position:absolute;top:300px;left:530px;white-space:nowrap" class="ft01">thin&#160;metaphor,</p>
+<p style="position:absolute;top:316px;left:262px;white-space:nowrap" class="ft01">right?)</p>
+<p style="position:absolute;top:346px;left:262px;white-space:nowrap" class="ft01">I’ll&#160;explore&#160;Dockerfiles&#160;in&#160;more&#160;depth&#160;in&#160;future&#160;articles&#160;in&#160;this&#160;series.</p>
+<p style="position:absolute;top:379px;left:262px;white-space:nowrap" class="ft00"><b>Docker&#160;Container</b></p>
+<p style="position:absolute;top:414px;left:262px;white-space:nowrap" class="ft01">A&#160;Docker&#160;image&#160;plus&#160;the&#160;command&#160;</p>
+<p style="position:absolute;top:415px;left:444px;white-space:nowrap" class="ft03">docker&#160;run&#160;image_name</p>
+<p style="position:absolute;top:414px;left:552px;white-space:nowrap" class="ft01">&#160;creates&#160;and</p>
+<p style="position:absolute;top:430px;left:262px;white-space:nowrap" class="ft01">starts&#160;a&#160;container&#160;from&#160;an&#160;image.</p>
+<p style="position:absolute;top:462px;left:262px;white-space:nowrap" class="ft00"><b>Container&#160;Registry</b></p>
+<p style="position:absolute;top:497px;left:262px;white-space:nowrap" class="ft05">If&#160;you&#160;want&#160;other&#160;people&#160;to&#160;be&#160;able&#160;to&#160;make&#160;containers&#160;from&#160;your<br/>image,&#160;you&#160;send&#160;the&#160;image&#160;to&#160;a&#160;container&#160;registry.&#160;</p>
+<p style="position:absolute;top:513px;left:523px;white-space:nowrap" class="ft02">Docker&#160;Hub</p>
+<p style="position:absolute;top:513px;left:585px;white-space:nowrap" class="ft01">&#160;is&#160;the</p>
+<p style="position:absolute;top:528px;left:262px;white-space:nowrap" class="ft01">largest&#160;registry&#160;and&#160;the&#160;default.</p>
+<p style="position:absolute;top:558px;left:262px;white-space:nowrap" class="ft05">Phew!&#160;That’s&#160;a&#160;lot&#160;of&#160;pieces.&#160;Let’s&#160;put&#160;this&#160;all&#160;together&#160;in&#160;terms&#160;of<br/>making&#160;a&#160;pizza.</p>
+<p style="position:absolute;top:608px;left:262px;white-space:nowrap" class="ft04">Cooking&#160;with&#160;Docker</p>
+<p style="position:absolute;top:867px;left:262px;white-space:nowrap" class="ft01">Landscape&#160;Metaphor</p>
+<p style="position:absolute;top:887px;left:277px;white-space:nowrap" class="ft01">The&#160;recipe&#160;is&#160;like&#160;the&#160;</p>
+<p style="position:absolute;top:887px;left:388px;white-space:nowrap" class="ft01">Dockerfile.&#160;It&#160;tells&#160;you&#160;what&#160;to&#160;do&#160;to&#160;get&#160;to</p>
+<p style="position:absolute;top:902px;left:277px;white-space:nowrap" class="ft05">your&#160;end&#160;goal.<br/>The&#160;ingredients&#160;are&#160;the&#160;</p>
+<p style="position:absolute;top:917px;left:401px;white-space:nowrap" class="ft01">layers.&#160;You’ve&#160;got&#160;crust,&#160;sauce,&#160;and&#160;cheese</p>
+<p style="position:absolute;top:933px;left:277px;white-space:nowrap" class="ft01">for&#160;this&#160;pizza.</p>
+<p style="position:absolute;top:963px;left:262px;white-space:nowrap" class="ft05">Think&#160;of&#160;the&#160;recipe&#160;and&#160;the&#160;ingredients&#160;combined&#160;as&#160;an&#160;all-in-one<br/>pizza-making-kit.&#160;It’s&#160;the&#160;</p>
+<p style="position:absolute;top:977px;left:392px;white-space:nowrap" class="ft01">Docker&#160;image.</p>
+<p style="position:absolute;top:1008px;left:262px;white-space:nowrap" class="ft05">The&#160;recipe&#160;(Dockerfile)&#160;tells&#160;us&#160;what&#160;we’re&#160;going&#160;to&#160;do.&#160;Here’s&#160;the<br/>plan:</p>
+<p style="position:absolute;top:1043px;left:277px;white-space:nowrap" class="ft05">The&#160;crust&#160;is&#160;preformed&#160;and&#160;immutable,&#160;it’s&#160;like&#160;a&#160;basic&#160;ubuntu<br/>parent&#160;image.&#160;It’s&#160;the&#160;</p>
+<p style="position:absolute;top:1058px;left:391px;white-space:nowrap" class="ft01">bottom&#160;layer&#160;and&#160;gets&#160;built&#160;first.</p>
+<p style="position:absolute;top:1073px;left:277px;white-space:nowrap" class="ft05">Then&#160;you’ll&#160;add&#160;some&#160;cheese.&#160;Adding&#160;this&#160;second&#160;layer&#160;to&#160;the&#160;pizza<br/>is&#160;like&#160;</p>
+<p style="position:absolute;top:1088px;left:310px;white-space:nowrap" class="ft01">installing&#160;an&#160;external&#160;library&#160;—&#160;for&#160;example&#160;NumPy.</p>
+<p style="position:absolute;top:1104px;left:277px;white-space:nowrap" class="ft01">Then&#160;you’ll&#160;sprinkle&#160;on&#160;some&#160;basil.&#160;The&#160;basil&#160;is&#160;like&#160;the&#160;</p>
+<p style="position:absolute;top:1103px;left:560px;white-space:nowrap" class="ft01">code&#160;in&#160;a</p>
+<p style="position:absolute;top:1118px;left:277px;white-space:nowrap" class="ft01">file&#160;that&#160;you&#160;wrote&#160;to&#160;run&#160;your&#160;app.</p>
+<p style="position:absolute;top:1149px;left:262px;white-space:nowrap" class="ft01">Alright,&#160;let’s&#160;get&#160;cooking.</p>
+</div>
+</body>
+</html>

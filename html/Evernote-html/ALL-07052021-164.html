@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+<title>Page 164</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<style type="text/css">
+<!--
+	p {margin: 0; padding: 0;}	.ft00{font-size:10px;font-family:DejaVuSans;color:#000000;}
+	.ft01{font-size:10px;font-family:DejaVuSans;color:#a21313;}
+	.ft02{font-size:10px;font-family:DejaVuSansMono;color:#a21313;}
+	.ft03{font-size:10px;font-family:DejaVuSansMono;color:#000000;}
+	.ft04{font-size:10px;line-height:15px;font-family:DejaVuSans;color:#000000;}
+-->
+</style>
+</head>
+<body bgcolor="#A0A0A0" vlink="blue" link="blue">
+<div id="page164-div" style="position:relative;width:892px;height:1263px;">
+<img width="892" height="1263" src="ALL-07052021164.png" alt="background image"/>
+<p style="position:absolute;top:55px;left:287px;white-space:nowrap" class="ft00">create&#160;such&#160;a&#160;mode.&#160;See&#160;</p>
+<p style="position:absolute;top:55px;left:415px;white-space:nowrap" class="ft01">this&#160;demo</p>
+<p style="position:absolute;top:55px;left:465px;white-space:nowrap" class="ft00">&#160;for&#160;a&#160;detailed&#160;example.</p>
+<p style="position:absolute;top:80px;left:273px;white-space:nowrap" class="ft02">mode/multiplex.js</p>
+<p style="position:absolute;top:96px;left:287px;white-space:nowrap" class="ft04">Mode&#160;combinator&#160;that&#160;can&#160;be&#160;used&#160;to&#160;easily&#160;'multiplex'&#160;between<br/>several&#160;modes.&#160;Defines&#160;</p>
+<p style="position:absolute;top:111px;left:409px;white-space:nowrap" class="ft03">CodeMirror.multiplexingMode</p>
+<p style="position:absolute;top:111px;left:574px;white-space:nowrap" class="ft00">&#160;which,&#160;when</p>
+<p style="position:absolute;top:126px;left:287px;white-space:nowrap" class="ft04">given&#160;as&#160;first&#160;argument&#160;a&#160;mode&#160;object,&#160;and&#160;as&#160;other&#160;arguments&#160;any<br/>number&#160;of&#160;</p>
+<p style="position:absolute;top:141px;left:343px;white-space:nowrap" class="ft03">{open,&#160;close,&#160;mode&#160;[,&#160;delimStyle,&#160;innerStyle,</p>
+<p style="position:absolute;top:156px;left:287px;white-space:nowrap" class="ft03">parseDelimiters]}</p>
+<p style="position:absolute;top:156px;left:391px;white-space:nowrap" class="ft00">&#160;objects,&#160;will&#160;return&#160;a&#160;mode&#160;object&#160;that&#160;starts</p>
+<p style="position:absolute;top:171px;left:287px;white-space:nowrap" class="ft04">parsing&#160;using&#160;the&#160;mode&#160;passed&#160;as&#160;first&#160;argument,&#160;but&#160;will&#160;switch&#160;to<br/>another&#160;mode&#160;as&#160;soon&#160;as&#160;it&#160;encounters&#160;a&#160;string&#160;that&#160;occurs&#160;in&#160;one&#160;of<br/>the&#160;</p>
+<p style="position:absolute;top:201px;left:308px;white-space:nowrap" class="ft03">open</p>
+<p style="position:absolute;top:201px;left:333px;white-space:nowrap" class="ft00">&#160;fields&#160;of&#160;the&#160;passed&#160;objects.&#160;When&#160;in&#160;a&#160;sub-mode,&#160;it&#160;will&#160;go</p>
+<p style="position:absolute;top:216px;left:287px;white-space:nowrap" class="ft00">back&#160;to&#160;the&#160;top&#160;mode&#160;again&#160;when&#160;the&#160;</p>
+<p style="position:absolute;top:216px;left:481px;white-space:nowrap" class="ft03">close</p>
+<p style="position:absolute;top:216px;left:512px;white-space:nowrap" class="ft00">&#160;string&#160;is&#160;encountered.</p>
+<p style="position:absolute;top:231px;left:287px;white-space:nowrap" class="ft00">Pass&#160;</p>
+<p style="position:absolute;top:231px;left:314px;white-space:nowrap" class="ft03">&#34;\n&#34;</p>
+<p style="position:absolute;top:231px;left:339px;white-space:nowrap" class="ft00">&#160;for&#160;</p>
+<p style="position:absolute;top:231px;left:361px;white-space:nowrap" class="ft03">open</p>
+<p style="position:absolute;top:231px;left:386px;white-space:nowrap" class="ft00">&#160;or&#160;</p>
+<p style="position:absolute;top:231px;left:404px;white-space:nowrap" class="ft03">close</p>
+<p style="position:absolute;top:231px;left:436px;white-space:nowrap" class="ft00">&#160;if&#160;you&#160;want&#160;to&#160;switch&#160;on&#160;a&#160;blank&#160;line.</p>
+<p style="position:absolute;top:247px;left:312px;white-space:nowrap" class="ft00">When&#160;</p>
+<p style="position:absolute;top:247px;left:345px;white-space:nowrap" class="ft03">delimStyle</p>
+<p style="position:absolute;top:247px;left:407px;white-space:nowrap" class="ft00">&#160;is&#160;specified,&#160;it&#160;will&#160;be&#160;the&#160;token&#160;style&#160;returned</p>
+<p style="position:absolute;top:262px;left:312px;white-space:nowrap" class="ft00">for&#160;the&#160;delimiter&#160;tokens&#160;(as&#160;well&#160;as&#160;</p>
+<p style="position:absolute;top:262px;left:491px;white-space:nowrap" class="ft03">[delimStyle]-open</p>
+<p style="position:absolute;top:262px;left:595px;white-space:nowrap" class="ft00">&#160;on&#160;the</p>
+<p style="position:absolute;top:277px;left:312px;white-space:nowrap" class="ft00">opening&#160;token&#160;and&#160;</p>
+<p style="position:absolute;top:277px;left:411px;white-space:nowrap" class="ft03">[delimStyle]-close</p>
+<p style="position:absolute;top:277px;left:521px;white-space:nowrap" class="ft00">&#160;on&#160;the&#160;closing&#160;token).</p>
+<p style="position:absolute;top:292px;left:312px;white-space:nowrap" class="ft00">When&#160;</p>
+<p style="position:absolute;top:292px;left:345px;white-space:nowrap" class="ft03">innerStyle</p>
+<p style="position:absolute;top:292px;left:407px;white-space:nowrap" class="ft00">&#160;is&#160;specified,&#160;it&#160;will&#160;be&#160;the&#160;token&#160;style&#160;added&#160;for</p>
+<p style="position:absolute;top:307px;left:312px;white-space:nowrap" class="ft04">each&#160;inner&#160;mode&#160;token.<br/>When&#160;</p>
+<p style="position:absolute;top:322px;left:345px;white-space:nowrap" class="ft03">parseDelimiters</p>
+<p style="position:absolute;top:322px;left:437px;white-space:nowrap" class="ft00">&#160;is&#160;true,&#160;the&#160;content&#160;of&#160;the&#160;delimiters&#160;will</p>
+<p style="position:absolute;top:337px;left:312px;white-space:nowrap" class="ft00">also&#160;be&#160;passed&#160;to&#160;the&#160;inner&#160;mode.&#160;(And&#160;</p>
+<p style="position:absolute;top:337px;left:515px;white-space:nowrap" class="ft03">delimStyle</p>
+<p style="position:absolute;top:337px;left:577px;white-space:nowrap" class="ft00">&#160;is&#160;ignored.)</p>
+<p style="position:absolute;top:352px;left:287px;white-space:nowrap" class="ft00">The&#160;outer&#160;mode&#160;will&#160;not&#160;see&#160;the&#160;content&#160;between&#160;the&#160;delimiters.&#160;See</p>
+<p style="position:absolute;top:367px;left:287px;white-space:nowrap" class="ft01">this&#160;demo</p>
+<p style="position:absolute;top:367px;left:337px;white-space:nowrap" class="ft00">&#160;for&#160;an&#160;example.</p>
+<p style="position:absolute;top:392px;left:273px;white-space:nowrap" class="ft02">hint/show-hint.js</p>
+<p style="position:absolute;top:408px;left:287px;white-space:nowrap" class="ft00">Provides&#160;a&#160;framework&#160;for&#160;showing&#160;autocompletion&#160;hints.&#160;Defines</p>
+<p style="position:absolute;top:423px;left:288px;white-space:nowrap" class="ft03">editor.showHint</p>
+<p style="position:absolute;top:423px;left:380px;white-space:nowrap" class="ft00">,&#160;which&#160;takes&#160;an&#160;optional&#160;options&#160;object,&#160;and&#160;pops</p>
+<p style="position:absolute;top:438px;left:287px;white-space:nowrap" class="ft04">up&#160;a&#160;widget&#160;that&#160;allows&#160;the&#160;user&#160;to&#160;select&#160;a&#160;completion.&#160;Finding&#160;hints&#160;is<br/>done&#160;with&#160;a&#160;hinting&#160;function&#160;(the&#160;</p>
+<p style="position:absolute;top:453px;left:456px;white-space:nowrap" class="ft03">hint</p>
+<p style="position:absolute;top:453px;left:482px;white-space:nowrap" class="ft00">&#160;option).&#160;This&#160;function&#160;takes&#160;an</p>
+<p style="position:absolute;top:468px;left:287px;white-space:nowrap" class="ft00">editor&#160;instance&#160;and&#160;an&#160;options&#160;object,&#160;and&#160;returns&#160;a&#160;</p>
+<p style="position:absolute;top:468px;left:553px;white-space:nowrap" class="ft03">{list,&#160;from,</p>
+<p style="position:absolute;top:483px;left:287px;white-space:nowrap" class="ft03">to}</p>
+<p style="position:absolute;top:483px;left:306px;white-space:nowrap" class="ft00">&#160;object,&#160;where&#160;</p>
+<p style="position:absolute;top:483px;left:382px;white-space:nowrap" class="ft03">list</p>
+<p style="position:absolute;top:483px;left:408px;white-space:nowrap" class="ft00">&#160;is&#160;an&#160;array&#160;of&#160;strings&#160;or&#160;objects&#160;(the</p>
+<p style="position:absolute;top:498px;left:287px;white-space:nowrap" class="ft00">completions),&#160;and&#160;</p>
+<p style="position:absolute;top:498px;left:382px;white-space:nowrap" class="ft03">from</p>
+<p style="position:absolute;top:498px;left:407px;white-space:nowrap" class="ft00">&#160;and&#160;</p>
+<p style="position:absolute;top:498px;left:434px;white-space:nowrap" class="ft03">to</p>
+<p style="position:absolute;top:498px;left:447px;white-space:nowrap" class="ft00">&#160;give&#160;the&#160;start&#160;and&#160;end&#160;of&#160;the&#160;token</p>
+<p style="position:absolute;top:513px;left:287px;white-space:nowrap" class="ft00">that&#160;is&#160;being&#160;completed&#160;as&#160;</p>
+<p style="position:absolute;top:513px;left:425px;white-space:nowrap" class="ft03">{line,&#160;ch}</p>
+<p style="position:absolute;top:513px;left:487px;white-space:nowrap" class="ft00">&#160;objects.&#160;An&#160;optional</p>
+<p style="position:absolute;top:528px;left:288px;white-space:nowrap" class="ft03">selectedHint</p>
+<p style="position:absolute;top:528px;left:362px;white-space:nowrap" class="ft00">&#160;property&#160;(an&#160;integer)&#160;can&#160;be&#160;added&#160;to&#160;the&#160;completion</p>
+<p style="position:absolute;top:543px;left:287px;white-space:nowrap" class="ft00">object&#160;to&#160;control&#160;the&#160;initially&#160;selected&#160;hint.</p>
+<p style="position:absolute;top:569px;left:287px;white-space:nowrap" class="ft00">If&#160;no&#160;hinting&#160;function&#160;is&#160;given,&#160;the&#160;addon&#160;will&#160;use</p>
+<p style="position:absolute;top:584px;left:288px;white-space:nowrap" class="ft03">CodeMirror.hint.auto</p>
+<p style="position:absolute;top:584px;left:410px;white-space:nowrap" class="ft00">,&#160;which&#160;calls&#160;</p>
+<p style="position:absolute;top:584px;left:476px;white-space:nowrap" class="ft02">getHelpers</p>
+<p style="position:absolute;top:584px;left:538px;white-space:nowrap" class="ft00">&#160;with&#160;the&#160;</p>
+<p style="position:absolute;top:584px;left:587px;white-space:nowrap" class="ft03">&#34;hint&#34;</p>
+<p style="position:absolute;top:599px;left:287px;white-space:nowrap" class="ft04">type&#160;to&#160;find&#160;applicable&#160;hinting&#160;functions,&#160;and&#160;tries&#160;them&#160;one&#160;by&#160;one.&#160;If<br/>that&#160;fails,&#160;it&#160;looks&#160;for&#160;a&#160;</p>
+<p style="position:absolute;top:614px;left:404px;white-space:nowrap" class="ft03">&#34;hintWords&#34;</p>
+<p style="position:absolute;top:614px;left:472px;white-space:nowrap" class="ft00">&#160;helper&#160;to&#160;fetch&#160;a&#160;list&#160;of</p>
+<p style="position:absolute;top:629px;left:287px;white-space:nowrap" class="ft00">completeable&#160;words&#160;for&#160;the&#160;mode,&#160;and&#160;uses</p>
+<p style="position:absolute;top:644px;left:288px;white-space:nowrap" class="ft03">CodeMirror.hint.fromList</p>
+<p style="position:absolute;top:644px;left:434px;white-space:nowrap" class="ft00">&#160;to&#160;complete&#160;from&#160;those.</p>
+<p style="position:absolute;top:669px;left:287px;white-space:nowrap" class="ft04">When&#160;completions&#160;aren't&#160;simple&#160;strings,&#160;they&#160;should&#160;be&#160;objects&#160;with<br/>the&#160;following&#160;properties:</p>
+<p style="position:absolute;top:699px;left:288px;white-space:nowrap" class="ft03">text:&#160;string</p>
+<p style="position:absolute;top:714px;left:302px;white-space:nowrap" class="ft00">The&#160;completion&#160;text.&#160;This&#160;is&#160;the&#160;only&#160;required&#160;property.</p>
+<p style="position:absolute;top:730px;left:288px;white-space:nowrap" class="ft03">displayText:&#160;string</p>
+<p style="position:absolute;top:745px;left:302px;white-space:nowrap" class="ft00">The&#160;text&#160;that&#160;should&#160;be&#160;displayed&#160;in&#160;the&#160;menu.</p>
+<p style="position:absolute;top:760px;left:288px;white-space:nowrap" class="ft03">className:&#160;string</p>
+<p style="position:absolute;top:775px;left:302px;white-space:nowrap" class="ft00">A&#160;CSS&#160;class&#160;name&#160;to&#160;apply&#160;to&#160;the&#160;completion's&#160;line&#160;in&#160;the&#160;menu.</p>
+<p style="position:absolute;top:790px;left:288px;white-space:nowrap" class="ft03">render:&#160;fn(Element,&#160;self,&#160;data)</p>
+<p style="position:absolute;top:805px;left:302px;white-space:nowrap" class="ft04">A&#160;method&#160;used&#160;to&#160;create&#160;the&#160;DOM&#160;structure&#160;for&#160;showing&#160;the<br/>completion&#160;by&#160;appending&#160;it&#160;to&#160;its&#160;first&#160;argument.</p>
+<p style="position:absolute;top:835px;left:288px;white-space:nowrap" class="ft03">hint:&#160;fn(CodeMirror,&#160;self,&#160;data)</p>
+<p style="position:absolute;top:850px;left:302px;white-space:nowrap" class="ft04">A&#160;method&#160;used&#160;to&#160;actually&#160;apply&#160;the&#160;completion,&#160;instead&#160;of&#160;the<br/>default&#160;behavior.</p>
+<p style="position:absolute;top:880px;left:288px;white-space:nowrap" class="ft03">from:&#160;{line,&#160;ch}</p>
+<p style="position:absolute;top:896px;left:302px;white-space:nowrap" class="ft00">Optional&#160;</p>
+<p style="position:absolute;top:896px;left:349px;white-space:nowrap" class="ft03">from</p>
+<p style="position:absolute;top:896px;left:374px;white-space:nowrap" class="ft00">&#160;position&#160;that&#160;will&#160;be&#160;used&#160;by&#160;</p>
+<p style="position:absolute;top:896px;left:524px;white-space:nowrap" class="ft03">pick()</p>
+<p style="position:absolute;top:896px;left:561px;white-space:nowrap" class="ft00">&#160;instead&#160;of&#160;the</p>
+<p style="position:absolute;top:911px;left:302px;white-space:nowrap" class="ft00">global&#160;one&#160;passed&#160;with&#160;the&#160;full&#160;list&#160;of&#160;completions.</p>
+<p style="position:absolute;top:926px;left:288px;white-space:nowrap" class="ft03">to:&#160;{line,&#160;ch}</p>
+<p style="position:absolute;top:941px;left:302px;white-space:nowrap" class="ft00">Optional&#160;</p>
+<p style="position:absolute;top:941px;left:349px;white-space:nowrap" class="ft03">to</p>
+<p style="position:absolute;top:941px;left:362px;white-space:nowrap" class="ft00">&#160;position&#160;that&#160;will&#160;be&#160;used&#160;by&#160;</p>
+<p style="position:absolute;top:941px;left:512px;white-space:nowrap" class="ft03">pick()</p>
+<p style="position:absolute;top:941px;left:549px;white-space:nowrap" class="ft00">&#160;instead&#160;of&#160;the</p>
+<p style="position:absolute;top:956px;left:302px;white-space:nowrap" class="ft00">global&#160;one&#160;passed&#160;with&#160;the&#160;full&#160;list&#160;of&#160;completions.</p>
+<p style="position:absolute;top:981px;left:287px;white-space:nowrap" class="ft04">The&#160;plugin&#160;understands&#160;the&#160;following&#160;options,&#160;which&#160;may&#160;be&#160;either<br/>passed&#160;directly&#160;in&#160;the&#160;argument&#160;to&#160;</p>
+<p style="position:absolute;top:996px;left:466px;white-space:nowrap" class="ft03">showHint</p>
+<p style="position:absolute;top:996px;left:515px;white-space:nowrap" class="ft00">,&#160;or&#160;provided&#160;by&#160;setting</p>
+<p style="position:absolute;top:1011px;left:287px;white-space:nowrap" class="ft00">an&#160;</p>
+<p style="position:absolute;top:1011px;left:304px;white-space:nowrap" class="ft03">hintOptions</p>
+<p style="position:absolute;top:1011px;left:372px;white-space:nowrap" class="ft00">&#160;editor&#160;option&#160;to&#160;an&#160;object&#160;(the&#160;former&#160;takes</p>
+<p style="position:absolute;top:1026px;left:287px;white-space:nowrap" class="ft04">precedence).&#160;The&#160;options&#160;object&#160;will&#160;also&#160;be&#160;passed&#160;along&#160;to&#160;the<br/>hinting&#160;function,&#160;which&#160;may&#160;understand&#160;additional&#160;options.</p>
+<p style="position:absolute;top:1057px;left:288px;white-space:nowrap" class="ft03">hint:&#160;function</p>
+<p style="position:absolute;top:1072px;left:302px;white-space:nowrap" class="ft00">A&#160;hinting&#160;function,&#160;as&#160;specified&#160;above.&#160;It&#160;is&#160;possible&#160;to&#160;set&#160;the</p>
+<p style="position:absolute;top:1087px;left:303px;white-space:nowrap" class="ft03">async</p>
+<p style="position:absolute;top:1087px;left:335px;white-space:nowrap" class="ft00">&#160;property&#160;on&#160;a&#160;hinting&#160;function&#160;to&#160;true,&#160;in&#160;which&#160;case&#160;it&#160;will&#160;be</p>
+<p style="position:absolute;top:1102px;left:302px;white-space:nowrap" class="ft00">called&#160;with&#160;arguments&#160;</p>
+<p style="position:absolute;top:1102px;left:418px;white-space:nowrap" class="ft03">(cm,&#160;callback,&#160;?options)</p>
+<p style="position:absolute;top:1102px;left:565px;white-space:nowrap" class="ft00">,&#160;and&#160;the</p>
+<p style="position:absolute;top:1117px;left:302px;white-space:nowrap" class="ft04">completion&#160;interface&#160;will&#160;only&#160;be&#160;popped&#160;up&#160;when&#160;the&#160;hinting<br/>function&#160;calls&#160;the&#160;callback,&#160;passing&#160;it&#160;the&#160;object&#160;holding&#160;the<br/>completions.&#160;The&#160;hinting&#160;function&#160;can&#160;also&#160;return&#160;a&#160;promise,&#160;and<br/>the&#160;completion&#160;interface&#160;will&#160;only&#160;be&#160;popped&#160;when&#160;the&#160;promise</p>
+</div>
+</body>
+</html>

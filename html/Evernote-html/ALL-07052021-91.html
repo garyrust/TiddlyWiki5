@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+<title>Page 91</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<style type="text/css">
+<!--
+	p {margin: 0; padding: 0;}	.ft00{font-size:15px;font-family:DejaVuSerif;color:#000000;}
+	.ft01{font-size:35px;font-family:DejaVuSans;color:#1d1d1b;}
+	.ft02{font-size:12px;font-family:DejaVuSans;color:#1d1d1b;}
+	.ft03{font-size:25px;font-family:DejaVuSans;color:#1d1d1b;}
+	.ft04{font-size:12px;font-family:LiberationMono;color:#1d1d1b;}
+	.ft05{font-size:10px;font-family:LiberationMono;color:#557182;}
+	.ft06{font-size:10px;font-family:LiberationMono;color:#e0e2e4;}
+	.ft07{font-size:10px;font-family:LiberationMono;color:#8cbbad;}
+	.ft08{font-size:13px;font-family:DejaVuSans;color:#1d1d1b;}
+	.ft09{font-size:12px;font-family:DejaVuSans;color:#ffffff;}
+	.ft010{font-size:8px;font-family:DejaVuSans;color:#ffffff;}
+	.ft011{font-size:8px;font-family:DejaVuSans;color:#9c9c9c;}
+	.ft012{font-size:12px;font-family:DejaVuSans;color:#9c9c9c;}
+	.ft013{font-size:10px;font-family:DejaVuSans;color:#9c9c9c;}
+	.ft014{font-size:35px;line-height:42px;font-family:DejaVuSans;color:#1d1d1b;}
+	.ft015{font-size:12px;line-height:18px;font-family:DejaVuSans;color:#1d1d1b;}
+	.ft016{font-size:8px;line-height:13px;font-family:DejaVuSans;color:#9c9c9c;}
+	.ft017{font-size:10px;line-height:15px;font-family:DejaVuSans;color:#9c9c9c;}
+-->
+</style>
+</head>
+<body bgcolor="#A0A0A0" vlink="blue" link="blue">
+<div id="page91-div" style="position:relative;width:892px;height:1263px;">
+<img width="892" height="1263" src="ALL-07052021091.png" alt="background image"/>
+<p style="position:absolute;top:67px;left:59px;white-space:nowrap" class="ft00"><b>Calling&#160;up&#160;graphic&#160;programs&#160;in&#160;a&#160;chroot&#160;environment&#160;|&#160;Linux&#160;know-how</b></p>
+<p style="position:absolute;top:184px;left:68px;white-space:nowrap" class="ft014">Calling&#160;up&#160;graphic&#160;programs&#160;in&#160;a&#160;chroot<br/>environment</p>
+<p style="position:absolute;top:275px;left:68px;white-space:nowrap" class="ft02">Sep&#160;8,&#160;2020&#160;timo</p>
+<p style="position:absolute;top:312px;left:68px;white-space:nowrap" class="ft03">Your&#160;requirement</p>
+<p style="position:absolute;top:349px;left:68px;white-space:nowrap" class="ft02">You&#160;have&#160;installed&#160;a&#160;Linux&#160;system&#160;under&#160;the&#160;</p>
+<p style="position:absolute;top:350px;left:352px;white-space:nowrap" class="ft04">/test</p>
+<p style="position:absolute;top:349px;left:390px;white-space:nowrap" class="ft02">&#160;subdirectory,&#160;or&#160;mounted&#160;the</p>
+<p style="position:absolute;top:369px;left:68px;white-space:nowrap" class="ft02">root&#160;partition&#160;of&#160;another&#160;Linux&#160;system.&#160;With&#160;the&#160;</p>
+<p style="position:absolute;top:371px;left:373px;white-space:nowrap" class="ft04">chroot&#160;/test</p>
+<p style="position:absolute;top:369px;left:464px;white-space:nowrap" class="ft02">&#160;command&#160;you</p>
+<p style="position:absolute;top:389px;left:68px;white-space:nowrap" class="ft015">can&#160;ʻswitch&#160;in’&#160;as&#160;usual&#160;and&#160;call&#160;programs.&#160;But&#160;the&#160;start&#160;of&#160;graphical&#160;programs<br/>fails,&#160;even&#160;when&#160;you&#160;set&#160;</p>
+<p style="position:absolute;top:410px;left:225px;white-space:nowrap" class="ft04">DISPLAY</p>
+<p style="position:absolute;top:408px;left:278px;white-space:nowrap" class="ft02">&#160;to&#160;</p>
+<p style="position:absolute;top:410px;left:299px;white-space:nowrap" class="ft04">:0</p>
+<p style="position:absolute;top:408px;left:314px;white-space:nowrap" class="ft02">.</p>
+<p style="position:absolute;top:437px;left:68px;white-space:nowrap" class="ft03">The&#160;problem</p>
+<p style="position:absolute;top:474px;left:68px;white-space:nowrap" class="ft015">Local&#160;programs&#160;communicate&#160;with&#160;your&#160;computer’s&#160;X&#160;server&#160;via&#160;a&#160;Unix&#160;socket&#160;in<br/>the&#160;</p>
+<p style="position:absolute;top:494px;left:93px;white-space:nowrap" class="ft04">/tmp/.X11-unix</p>
+<p style="position:absolute;top:493px;left:199px;white-space:nowrap" class="ft02">&#160;directory.&#160;In&#160;your&#160;</p>
+<p style="position:absolute;top:494px;left:315px;white-space:nowrap" class="ft04">chroot</p>
+<p style="position:absolute;top:493px;left:360px;white-space:nowrap" class="ft02">&#160;environment&#160;there&#160;is&#160;no&#160;access&#160;to</p>
+<p style="position:absolute;top:513px;left:68px;white-space:nowrap" class="ft02">this&#160;socket.</p>
+<p style="position:absolute;top:540px;left:68px;white-space:nowrap" class="ft03">The&#160;solution</p>
+<p style="position:absolute;top:577px;left:68px;white-space:nowrap" class="ft02">With&#160;a&#160;</p>
+<p style="position:absolute;top:578px;left:113px;white-space:nowrap" class="ft04">mount</p>
+<p style="position:absolute;top:577px;left:151px;white-space:nowrap" class="ft02">&#160;command&#160;you&#160;show&#160;the&#160;of&#160;the&#160;ʻouter’&#160;computer’s&#160;</p>
+<p style="position:absolute;top:578px;left:471px;white-space:nowrap" class="ft04">/tmp/.X11-unix</p>
+<p style="position:absolute;top:597px;left:68px;white-space:nowrap" class="ft02">directory&#160;in&#160;the&#160;</p>
+<p style="position:absolute;top:598px;left:169px;white-space:nowrap" class="ft04">chroot</p>
+<p style="position:absolute;top:597px;left:214px;white-space:nowrap" class="ft02">&#160;cage:</p>
+<p style="position:absolute;top:632px;left:73px;white-space:nowrap" class="ft05">root@linux#</p>
+<p style="position:absolute;top:632px;left:140px;white-space:nowrap" class="ft06">&#160;mkdir&#160;-p&#160;/</p>
+<p style="position:absolute;top:632px;left:206px;white-space:nowrap" class="ft07">test</p>
+<p style="position:absolute;top:632px;left:230px;white-space:nowrap" class="ft06">/tmp/.X11-unix</p>
+<p style="position:absolute;top:647px;left:73px;white-space:nowrap" class="ft05">root@linux#</p>
+<p style="position:absolute;top:647px;left:140px;white-space:nowrap" class="ft06">&#160;mount&#160;--</p>
+<p style="position:absolute;top:647px;left:194px;white-space:nowrap" class="ft07">bind</p>
+<p style="position:absolute;top:647px;left:218px;white-space:nowrap" class="ft06">&#160;/tmp/.X11-unix&#160;/</p>
+<p style="position:absolute;top:647px;left:321px;white-space:nowrap" class="ft07">test</p>
+<p style="position:absolute;top:647px;left:345px;white-space:nowrap" class="ft06">/tmp/.X11-unix</p>
+<p style="position:absolute;top:686px;left:68px;white-space:nowrap" class="ft02">They&#160;also&#160;allow&#160;access&#160;to&#160;the&#160;display&#160;for&#160;all&#160;local&#160;processes:</p>
+<p style="position:absolute;top:720px;left:73px;white-space:nowrap" class="ft05">user@linux&gt;</p>
+<p style="position:absolute;top:720px;left:140px;white-space:nowrap" class="ft06">&#160;xhost&#160;+&#160;</p>
+<p style="position:absolute;top:720px;left:194px;white-space:nowrap" class="ft07">local</p>
+<p style="position:absolute;top:720px;left:224px;white-space:nowrap" class="ft06">:</p>
+<p style="position:absolute;top:750px;left:68px;white-space:nowrap" class="ft02">After&#160;calling&#160;</p>
+<p style="position:absolute;top:752px;left:148px;white-space:nowrap" class="ft04">chroot&#160;/test</p>
+<p style="position:absolute;top:750px;left:239px;white-space:nowrap" class="ft02">,&#160;set&#160;the&#160;</p>
+<p style="position:absolute;top:752px;left:295px;white-space:nowrap" class="ft04">DISPLAY</p>
+<p style="position:absolute;top:750px;left:347px;white-space:nowrap" class="ft02">&#160;variable&#160;in&#160;the&#160;inner&#160;system&#160;to&#160;</p>
+<p style="position:absolute;top:752px;left:549px;white-space:nowrap" class="ft04">:0</p>
+<p style="position:absolute;top:750px;left:564px;white-space:nowrap" class="ft02">,</p>
+<p style="position:absolute;top:771px;left:68px;white-space:nowrap" class="ft02">and&#160;you&#160;can&#160;then&#160;start&#160;graphical&#160;programs:</p>
+<p style="position:absolute;top:804px;left:73px;white-space:nowrap" class="ft05">root@linux#</p>
+<p style="position:absolute;top:804px;left:140px;white-space:nowrap" class="ft06">&#160;chroot&#160;/</p>
+<p style="position:absolute;top:804px;left:194px;white-space:nowrap" class="ft07">test</p>
+<p style="position:absolute;top:819px;left:73px;white-space:nowrap" class="ft05">root@linux#</p>
+<p style="position:absolute;top:819px;left:140px;white-space:nowrap" class="ft06">&#160;</p>
+<p style="position:absolute;top:819px;left:146px;white-space:nowrap" class="ft07">export</p>
+<p style="position:absolute;top:819px;left:182px;white-space:nowrap" class="ft06">&#160;DISPLAY=:0</p>
+<p style="position:absolute;top:834px;left:73px;white-space:nowrap" class="ft05">root@linux#</p>
+<p style="position:absolute;top:834px;left:140px;white-space:nowrap" class="ft06">&#160;xterm</p>
+<p style="position:absolute;top:865px;left:68px;white-space:nowrap" class="ft02">By&#160;the&#160;way:&#160;for&#160;security&#160;reasons&#160;a&#160;TCP&#160;connection&#160;via&#160;</p>
+<p style="position:absolute;top:866px;left:411px;white-space:nowrap" class="ft04">localhost</p>
+<p style="position:absolute;top:865px;left:479px;white-space:nowrap" class="ft02">&#160;is&#160;switched&#160;off</p>
+<p style="position:absolute;top:885px;left:68px;white-space:nowrap" class="ft015">by&#160;default&#160;in&#160;most&#160;distributions,&#160;otherwise&#160;instead&#160;of&#160;the&#160;above&#160;trick&#160;you&#160;could<br/>take&#160;the&#160;route&#160;via&#160;</p>
+<p style="position:absolute;top:905px;left:185px;white-space:nowrap" class="ft04">localhost</p>
+<p style="position:absolute;top:904px;left:253px;white-space:nowrap" class="ft02">.&#160;Enter&#160;</p>
+<p style="position:absolute;top:905px;left:298px;white-space:nowrap" class="ft04">xhost&#160;+&#160;localhost</p>
+<p style="position:absolute;top:904px;left:427px;white-space:nowrap" class="ft02">&#160;outside,&#160;and&#160;</p>
+<p style="position:absolute;top:905px;left:513px;white-space:nowrap" class="ft04">export</p>
+<p style="position:absolute;top:925px;left:68px;white-space:nowrap" class="ft04">DISPLAY=localhost:0</p>
+<p style="position:absolute;top:924px;left:212px;white-space:nowrap" class="ft02">&#160;inside.</p>
+<p style="position:absolute;top:317px;left:701px;white-space:nowrap" class="ft08">Linux&#160;knowledge</p>
+<p style="position:absolute;top:340px;left:673px;white-space:nowrap" class="ft02">These&#160;articles&#160;were&#160;written</p>
+<p style="position:absolute;top:359px;left:704px;white-space:nowrap" class="ft02">by&#160;the&#160;founder&#160;of</p>
+<p style="position:absolute;top:378px;left:675px;white-space:nowrap" class="ft02">Checkmk&#160;many&#160;years&#160;ago.</p>
+<p style="position:absolute;top:397px;left:677px;white-space:nowrap" class="ft02">They&#160;are&#160;still&#160;valid&#160;though</p>
+<p style="position:absolute;top:416px;left:675px;white-space:nowrap" class="ft02">and&#160;thus&#160;we&#160;keep&#160;them&#160;on</p>
+<p style="position:absolute;top:435px;left:720px;white-space:nowrap" class="ft02">our&#160;website.</p>
+<p style="position:absolute;top:454px;left:687px;white-space:nowrap" class="ft02">Mathias&#160;has&#160;since&#160;then</p>
+<p style="position:absolute;top:472px;left:684px;white-space:nowrap" class="ft02">developed&#160;a&#160;monitoring</p>
+<p style="position:absolute;top:491px;left:680px;white-space:nowrap" class="ft02">software&#160;called&#160;Checkmk</p>
+<p style="position:absolute;top:526px;left:709px;white-space:nowrap" class="ft09"><b>Find&#160;out&#160;more</b></p>
+<p style="position:absolute;top:1041px;left:68px;white-space:nowrap" class="ft010"><b>SUBSCRIBE&#160;TO&#160;NEWSLETTER</b></p>
+<p style="position:absolute;top:1066px;left:68px;white-space:nowrap" class="ft016">Join&#160;thousands&#160;of&#160;sysadmins&#160;and&#160;receive&#160;free<br/>professional&#160;tips&#160;and&#160;tricks&#160;to&#160;help&#160;you&#160;monitor&#160;your&#160;IT-<br/>infrastructure.</p>
+<p style="position:absolute;top:1166px;left:75px;white-space:nowrap" class="ft012">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</p>
+<p style="position:absolute;top:1116px;left:89px;white-space:nowrap" class="ft016">I&#160;agree&#160;to&#160;receive&#160;email&#160;communications&#160;from<br/>tribe29&#160;GmbH.&#160;See&#160;our&#160;Privacy&#160;Policy&#160;for&#160;more<br/>details.</p>
+<p style="position:absolute;top:1041px;left:335px;white-space:nowrap" class="ft010"><b>PRODUCT</b></p>
+<p style="position:absolute;top:1066px;left:335px;white-space:nowrap" class="ft017">Features<br/>Pricing<br/>Editions<br/>Use&#160;Cases</p>
+<p style="position:absolute;top:1041px;left:468px;white-space:nowrap" class="ft010"><b>RESOURCES</b></p>
+<p style="position:absolute;top:1066px;left:468px;white-space:nowrap" class="ft017">Docs<br/>Forum<br/>Webinars<br/>Videos</p>
+<p style="position:absolute;top:1066px;left:602px;white-space:nowrap" class="ft017">Trainings<br/>Blog<br/>Integrations<br/>Monitoring&#160;Basics</p>
+<p style="position:absolute;top:1041px;left:735px;white-space:nowrap" class="ft010"><b>ABOUT</b></p>
+<p style="position:absolute;top:1066px;left:735px;white-space:nowrap" class="ft017">Company<br/>Career<br/>Brand&#160;Assets<br/>Contact&#160;Us</p>
+</div>
+</body>
+</html>

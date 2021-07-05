@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+<title>Page 159</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<style type="text/css">
+<!--
+	p {margin: 0; padding: 0;}	.ft00{font-size:10px;font-family:DejaVuSans;color:#000000;}
+	.ft01{font-size:10px;font-family:DejaVuSansMono;color:#000000;}
+	.ft02{font-size:10px;font-family:DejaVuSans;color:#a21313;}
+	.ft03{font-size:10px;font-family:DejaVuSansMono;color:#a21313;}
+	.ft04{font-size:10px;line-height:15px;font-family:DejaVuSans;color:#000000;}
+-->
+</style>
+</head>
+<body bgcolor="#A0A0A0" vlink="blue" link="blue">
+<div id="page159-div" style="position:relative;width:892px;height:1263px;">
+<img width="892" height="1263" src="ALL-07052021159.png" alt="background image"/>
+<p style="position:absolute;top:55px;left:272px;white-space:nowrap" class="ft00">The&#160;</p>
+<p style="position:absolute;top:55px;left:295px;white-space:nowrap" class="ft01">CodeMirror</p>
+<p style="position:absolute;top:55px;left:357px;white-space:nowrap" class="ft00">&#160;object&#160;itself&#160;provides&#160;several&#160;useful&#160;properties.</p>
+<p style="position:absolute;top:80px;left:273px;white-space:nowrap" class="ft01">CodeMirror.version:&#160;string</p>
+<p style="position:absolute;top:96px;left:287px;white-space:nowrap" class="ft04">It&#160;contains&#160;a&#160;string&#160;that&#160;indicates&#160;the&#160;version&#160;of&#160;the&#160;library.&#160;This&#160;is&#160;a<br/>triple&#160;of&#160;integers&#160;</p>
+<p style="position:absolute;top:111px;left:375px;white-space:nowrap" class="ft01">&#34;major.minor.patch&#34;</p>
+<p style="position:absolute;top:111px;left:491px;white-space:nowrap" class="ft00">,&#160;where&#160;</p>
+<p style="position:absolute;top:111px;left:533px;white-space:nowrap" class="ft01">patch</p>
+<p style="position:absolute;top:111px;left:564px;white-space:nowrap" class="ft00">&#160;is&#160;zero&#160;for</p>
+<p style="position:absolute;top:126px;left:287px;white-space:nowrap" class="ft00">releases,&#160;and&#160;something&#160;else&#160;(usually&#160;one)&#160;for&#160;dev&#160;snapshots.</p>
+<p style="position:absolute;top:151px;left:273px;white-space:nowrap" class="ft01">CodeMirror.fromTextArea(textArea:&#160;TextAreaElement,&#160;?config:</p>
+<p style="position:absolute;top:166px;left:292px;white-space:nowrap" class="ft01">object)</p>
+<p style="position:absolute;top:181px;left:287px;white-space:nowrap" class="ft04">This&#160;method&#160;provides&#160;another&#160;way&#160;to&#160;initialize&#160;an&#160;editor.&#160;It&#160;takes&#160;a<br/>textarea&#160;DOM&#160;node&#160;as&#160;first&#160;argument&#160;and&#160;an&#160;optional&#160;configuration<br/>object&#160;as&#160;second.&#160;It&#160;will&#160;replace&#160;the&#160;textarea&#160;with&#160;a&#160;CodeMirror<br/>instance,&#160;and&#160;wire&#160;up&#160;the&#160;form&#160;of&#160;that&#160;textarea&#160;(if&#160;any)&#160;to&#160;make&#160;sure<br/>the&#160;editor&#160;contents&#160;are&#160;put&#160;into&#160;the&#160;textarea&#160;when&#160;the&#160;form&#160;is<br/>submitted.&#160;The&#160;text&#160;in&#160;the&#160;textarea&#160;will&#160;provide&#160;the&#160;content&#160;for&#160;the<br/>editor.&#160;A&#160;CodeMirror&#160;instance&#160;created&#160;this&#160;way&#160;has&#160;three&#160;additional<br/>methods:</p>
+<p style="position:absolute;top:302px;left:288px;white-space:nowrap" class="ft01">cm.save()</p>
+<p style="position:absolute;top:317px;left:302px;white-space:nowrap" class="ft00">Copy&#160;the&#160;content&#160;of&#160;the&#160;editor&#160;into&#160;the&#160;textarea.</p>
+<p style="position:absolute;top:332px;left:288px;white-space:nowrap" class="ft01">cm.toTextArea()</p>
+<p style="position:absolute;top:347px;left:302px;white-space:nowrap" class="ft04">Remove&#160;the&#160;editor,&#160;and&#160;restore&#160;the&#160;original&#160;textarea&#160;(with&#160;the<br/>editor's&#160;current&#160;content).&#160;If&#160;you&#160;dynamically&#160;create&#160;and&#160;destroy<br/>editors&#160;made&#160;with&#160;`fromTextArea`,&#160;without&#160;destroying&#160;the&#160;form<br/>they&#160;are&#160;part&#160;of,&#160;you&#160;should&#160;make&#160;sure&#160;to&#160;call&#160;`toTextArea`&#160;to<br/>remove&#160;the&#160;editor,&#160;or&#160;its&#160;`&#34;submit&#34;`&#160;handler&#160;on&#160;the&#160;form&#160;will&#160;cause<br/>a&#160;memory&#160;leak.</p>
+<p style="position:absolute;top:438px;left:288px;white-space:nowrap" class="ft01">cm.getTextArea()&#160;→&#160;TextAreaElement</p>
+<p style="position:absolute;top:453px;left:302px;white-space:nowrap" class="ft00">Returns&#160;the&#160;textarea&#160;that&#160;the&#160;instance&#160;was&#160;based&#160;on.</p>
+<p style="position:absolute;top:478px;left:273px;white-space:nowrap" class="ft01">CodeMirror.defaults:&#160;object</p>
+<p style="position:absolute;top:493px;left:287px;white-space:nowrap" class="ft00">An&#160;object&#160;containing&#160;default&#160;values&#160;for&#160;all&#160;</p>
+<p style="position:absolute;top:493px;left:500px;white-space:nowrap" class="ft02">options</p>
+<p style="position:absolute;top:493px;left:537px;white-space:nowrap" class="ft00">.&#160;You&#160;can&#160;assign&#160;to&#160;its</p>
+<p style="position:absolute;top:508px;left:287px;white-space:nowrap" class="ft04">properties&#160;to&#160;modify&#160;defaults&#160;(though&#160;this&#160;won't&#160;affect&#160;editors&#160;that<br/>have&#160;already&#160;been&#160;created).</p>
+<p style="position:absolute;top:548px;left:273px;white-space:nowrap" class="ft01">CodeMirror.defineExtension(name:&#160;string,&#160;value:&#160;any)</p>
+<p style="position:absolute;top:563px;left:287px;white-space:nowrap" class="ft04">If&#160;you&#160;want&#160;to&#160;define&#160;extra&#160;methods&#160;in&#160;terms&#160;of&#160;the&#160;CodeMirror&#160;API,&#160;it<br/>is&#160;possible&#160;to&#160;use&#160;</p>
+<p style="position:absolute;top:579px;left:378px;white-space:nowrap" class="ft01">defineExtension</p>
+<p style="position:absolute;top:579px;left:470px;white-space:nowrap" class="ft00">.&#160;This&#160;will&#160;cause&#160;the&#160;given&#160;value</p>
+<p style="position:absolute;top:594px;left:287px;white-space:nowrap" class="ft04">(usually&#160;a&#160;method)&#160;to&#160;be&#160;added&#160;to&#160;all&#160;CodeMirror&#160;instances&#160;created<br/>from&#160;then&#160;on.</p>
+<p style="position:absolute;top:634px;left:273px;white-space:nowrap" class="ft01">CodeMirror.defineDocExtension(name:&#160;string,&#160;value:&#160;any)</p>
+<p style="position:absolute;top:649px;left:287px;white-space:nowrap" class="ft00">Like&#160;</p>
+<p style="position:absolute;top:649px;left:312px;white-space:nowrap" class="ft03">defineExtension</p>
+<p style="position:absolute;top:649px;left:404px;white-space:nowrap" class="ft00">,&#160;but&#160;the&#160;method&#160;will&#160;be&#160;added&#160;to&#160;the&#160;interface</p>
+<p style="position:absolute;top:664px;left:287px;white-space:nowrap" class="ft00">for&#160;</p>
+<p style="position:absolute;top:664px;left:305px;white-space:nowrap" class="ft03">Doc</p>
+<p style="position:absolute;top:664px;left:324px;white-space:nowrap" class="ft00">&#160;objects&#160;instead.</p>
+<p style="position:absolute;top:689px;left:273px;white-space:nowrap" class="ft01">CodeMirror.defineOption(name:&#160;string,&#160;default:&#160;any,</p>
+<p style="position:absolute;top:704px;left:292px;white-space:nowrap" class="ft01">updateFunc:&#160;function)</p>
+<p style="position:absolute;top:719px;left:287px;white-space:nowrap" class="ft00">Similarly,&#160;</p>
+<p style="position:absolute;top:719px;left:338px;white-space:nowrap" class="ft01">defineOption</p>
+<p style="position:absolute;top:719px;left:412px;white-space:nowrap" class="ft00">&#160;can&#160;be&#160;used&#160;to&#160;define&#160;new&#160;options&#160;for</p>
+<p style="position:absolute;top:735px;left:287px;white-space:nowrap" class="ft00">CodeMirror.&#160;The&#160;</p>
+<p style="position:absolute;top:735px;left:372px;white-space:nowrap" class="ft01">updateFunc</p>
+<p style="position:absolute;top:735px;left:434px;white-space:nowrap" class="ft00">&#160;will&#160;be&#160;called&#160;with&#160;the&#160;editor&#160;instance</p>
+<p style="position:absolute;top:750px;left:287px;white-space:nowrap" class="ft04">and&#160;the&#160;new&#160;value&#160;when&#160;an&#160;editor&#160;is&#160;initialized,&#160;and&#160;whenever&#160;the<br/>option&#160;is&#160;modified&#160;through&#160;</p>
+<p style="position:absolute;top:765px;left:424px;white-space:nowrap" class="ft03">setOption</p>
+<p style="position:absolute;top:765px;left:480px;white-space:nowrap" class="ft00">.</p>
+<p style="position:absolute;top:790px;left:273px;white-space:nowrap" class="ft01">CodeMirror.defineInitHook(func:&#160;function)</p>
+<p style="position:absolute;top:805px;left:287px;white-space:nowrap" class="ft04">If&#160;your&#160;extension&#160;just&#160;needs&#160;to&#160;run&#160;some&#160;code&#160;whenever&#160;a&#160;CodeMirror<br/>instance&#160;is&#160;initialized,&#160;use&#160;</p>
+<p style="position:absolute;top:820px;left:421px;white-space:nowrap" class="ft01">CodeMirror.defineInitHook</p>
+<p style="position:absolute;top:820px;left:573px;white-space:nowrap" class="ft00">.&#160;Give&#160;it&#160;a</p>
+<p style="position:absolute;top:835px;left:287px;white-space:nowrap" class="ft04">function&#160;as&#160;its&#160;only&#160;argument,&#160;and&#160;from&#160;then&#160;on,&#160;that&#160;function&#160;will&#160;be<br/>called&#160;(with&#160;the&#160;instance&#160;as&#160;argument)&#160;whenever&#160;a&#160;new&#160;CodeMirror<br/>instance&#160;is&#160;initialized.</p>
+<p style="position:absolute;top:890px;left:273px;white-space:nowrap" class="ft01">CodeMirror.registerHelper(type:&#160;string,&#160;name:&#160;string,</p>
+<p style="position:absolute;top:906px;left:292px;white-space:nowrap" class="ft01">value:&#160;helper)</p>
+<p style="position:absolute;top:921px;left:287px;white-space:nowrap" class="ft00">Registers&#160;a&#160;helper&#160;value&#160;with&#160;the&#160;given&#160;</p>
+<p style="position:absolute;top:921px;left:489px;white-space:nowrap" class="ft01">name</p>
+<p style="position:absolute;top:921px;left:514px;white-space:nowrap" class="ft00">&#160;in&#160;the&#160;given&#160;namespace</p>
+<p style="position:absolute;top:936px;left:287px;white-space:nowrap" class="ft00">(</p>
+<p style="position:absolute;top:936px;left:292px;white-space:nowrap" class="ft01">type</p>
+<p style="position:absolute;top:936px;left:317px;white-space:nowrap" class="ft00">).&#160;This&#160;is&#160;used&#160;to&#160;define&#160;functionality&#160;that&#160;may&#160;be&#160;looked&#160;up&#160;by</p>
+<p style="position:absolute;top:951px;left:287px;white-space:nowrap" class="ft00">mode.&#160;Will&#160;create&#160;(if&#160;it&#160;doesn't&#160;already&#160;exist)&#160;a&#160;property&#160;on&#160;the</p>
+<p style="position:absolute;top:966px;left:288px;white-space:nowrap" class="ft01">CodeMirror</p>
+<p style="position:absolute;top:966px;left:350px;white-space:nowrap" class="ft00">&#160;object&#160;for&#160;the&#160;given&#160;</p>
+<p style="position:absolute;top:966px;left:456px;white-space:nowrap" class="ft01">type</p>
+<p style="position:absolute;top:966px;left:481px;white-space:nowrap" class="ft00">,&#160;pointing&#160;to&#160;an&#160;object&#160;that&#160;maps</p>
+<p style="position:absolute;top:981px;left:287px;white-space:nowrap" class="ft00">names&#160;to&#160;values.&#160;I.e.&#160;after&#160;doing</p>
+<p style="position:absolute;top:996px;left:288px;white-space:nowrap" class="ft01">CodeMirror.registerHelper(&#34;hint&#34;,&#160;&#34;foo&#34;,&#160;myFoo)</p>
+<p style="position:absolute;top:996px;left:574px;white-space:nowrap" class="ft00">,&#160;the&#160;value</p>
+<p style="position:absolute;top:1011px;left:288px;white-space:nowrap" class="ft01">CodeMirror.hint.foo</p>
+<p style="position:absolute;top:1011px;left:404px;white-space:nowrap" class="ft00">&#160;will&#160;point&#160;to&#160;</p>
+<p style="position:absolute;top:1011px;left:471px;white-space:nowrap" class="ft01">myFoo</p>
+<p style="position:absolute;top:1011px;left:502px;white-space:nowrap" class="ft00">.</p>
+<p style="position:absolute;top:1036px;left:273px;white-space:nowrap" class="ft01">CodeMirror.registerGlobalHelper(type:&#160;string,&#160;name:&#160;string,</p>
+<p style="position:absolute;top:1051px;left:292px;white-space:nowrap" class="ft01">predicate:&#160;fn(mode,&#160;CodeMirror),&#160;value:&#160;helper)</p>
+<p style="position:absolute;top:1067px;left:287px;white-space:nowrap" class="ft00">Acts&#160;like&#160;</p>
+<p style="position:absolute;top:1067px;left:334px;white-space:nowrap" class="ft03">registerHelper</p>
+<p style="position:absolute;top:1067px;left:420px;white-space:nowrap" class="ft00">,&#160;but&#160;also&#160;registers&#160;this&#160;helper&#160;as&#160;'global',</p>
+<p style="position:absolute;top:1082px;left:287px;white-space:nowrap" class="ft00">meaning&#160;that&#160;it&#160;will&#160;be&#160;included&#160;by&#160;</p>
+<p style="position:absolute;top:1082px;left:466px;white-space:nowrap" class="ft03">getHelpers</p>
+<p style="position:absolute;top:1082px;left:528px;white-space:nowrap" class="ft00">&#160;whenever&#160;the&#160;given</p>
+<p style="position:absolute;top:1097px;left:288px;white-space:nowrap" class="ft01">predicate</p>
+<p style="position:absolute;top:1097px;left:344px;white-space:nowrap" class="ft00">&#160;returns&#160;true&#160;when&#160;called&#160;with&#160;the&#160;local&#160;mode&#160;and&#160;editor.</p>
+<p style="position:absolute;top:1122px;left:273px;white-space:nowrap" class="ft01">CodeMirror.Pos(line:&#160;integer,&#160;?ch:&#160;integer,&#160;?sticky:&#160;string)</p>
+<p style="position:absolute;top:1137px;left:287px;white-space:nowrap" class="ft04">A&#160;constructor&#160;for&#160;the&#160;objects&#160;that&#160;are&#160;used&#160;to&#160;represent&#160;positions&#160;in<br/>editor&#160;documents.&#160;</p>
+<p style="position:absolute;top:1152px;left:383px;white-space:nowrap" class="ft01">sticky</p>
+<p style="position:absolute;top:1152px;left:421px;white-space:nowrap" class="ft00">&#160;defaults&#160;to&#160;null,&#160;but&#160;can&#160;be&#160;set&#160;to&#160;</p>
+<p style="position:absolute;top:1152px;left:596px;white-space:nowrap" class="ft01">&#34;before&#34;</p>
+<p style="position:absolute;top:1167px;left:287px;white-space:nowrap" class="ft00">or&#160;</p>
+<p style="position:absolute;top:1167px;left:301px;white-space:nowrap" class="ft01">&#34;after&#34;</p>
+<p style="position:absolute;top:1167px;left:345px;white-space:nowrap" class="ft00">&#160;to&#160;make&#160;the&#160;position&#160;explicitly&#160;associate&#160;with&#160;the&#160;character</p>
+</div>
+</body>
+</html>

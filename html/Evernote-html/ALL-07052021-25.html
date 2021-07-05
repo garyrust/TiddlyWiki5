@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+<title>Page 25</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<style type="text/css">
+<!--
+	p {margin: 0; padding: 0;}	.ft00{font-size:20px;font-family:DejaVuSans;color:#283018;}
+	.ft01{font-size:13px;font-family:DejaVuSans;color:#283018;}
+	.ft02{font-size:13px;font-family:DejaVuSans;color:#283018;}
+	.ft03{font-size:13px;font-family:DejaVuSans;color:#385674;}
+	.ft04{font-size:8px;font-family:LiberationMono;color:#283018;}
+	.ft05{font-size:10px;font-family:DejaVuSans;color:#777777;}
+	.ft06{font-size:8px;font-family:DejaVuSerif;color:#000000;}
+	.ft07{font-size:13px;line-height:19px;font-family:DejaVuSans;color:#283018;}
+-->
+</style>
+</head>
+<body bgcolor="#A0A0A0" vlink="blue" link="blue">
+<div id="page25-div" style="position:relative;width:892px;height:1263px;">
+<img width="892" height="1263" src="ALL-07052021025.png" alt="background image"/>
+<p style="position:absolute;top:67px;left:185px;white-space:nowrap" class="ft00">Self-hosting&#160;component&#160;detail</p>
+<p style="position:absolute;top:101px;left:185px;white-space:nowrap" class="ft01">TiddlyWiki&#160;serving&#160;components:</p>
+<p style="position:absolute;top:132px;left:211px;white-space:nowrap" class="ft07"><b>nginx</b>:&#160;Provides&#160;TLS&#160;termination&#160;with&#160;Let’s&#160;Encrypt&#160;certiﬁcates&#160;and&#160;HTTP&#160;Basic<br/>Authorisation,&#160;then&#160;proxies&#160;to&#160;TiddlyWiki.&#160;</p>
+<p style="position:absolute;top:151px;left:486px;white-space:nowrap" class="ft03">See&#160;nginx&#160;conﬁg</p>
+<p style="position:absolute;top:151px;left:596px;white-space:nowrap" class="ft01">.</p>
+<p style="position:absolute;top:171px;left:211px;white-space:nowrap" class="ft07"><b>TiddlyWiki</b>:&#160;Node.js&#160;version&#160;of&#160;TiddlyWiki,&#160;listening&#160;on&#160;loopback&#160;only&#160;and<br/>conﬁgured&#160;with&#160;lazy&#160;image&#160;loading&#160;and&#160;gzip&#160;enabled.&#160;Running&#160;as&#160;a&#160;system<br/>service&#160;-&#160;</p>
+<p style="position:absolute;top:210px;left:271px;white-space:nowrap" class="ft03">see&#160;systemd&#160;unit&#160;ﬁle</p>
+<p style="position:absolute;top:210px;left:408px;white-space:nowrap" class="ft01">.</p>
+<p style="position:absolute;top:229px;left:211px;white-space:nowrap" class="ft07"><b>/var/tiddlywiki/</b>:&#160;Storage&#160;area&#160;for&#160;TiddlyWiki&#160;notes,&#160;initialised&#160;as&#160;a&#160;git&#160;repo.<br/><b>Versioning</b>:&#160;A&#160;cron&#160;job&#160;that&#160;runs&#160;</p>
+<p style="position:absolute;top:254px;left:433px;white-space:nowrap" class="ft04">git&#160;add&#160;--all</p>
+<p style="position:absolute;top:249px;left:497px;white-space:nowrap" class="ft01">&#160;every&#160;hour&#160;inside&#160;</p>
+<p style="position:absolute;top:254px;left:620px;white-space:nowrap" class="ft04">/var/tiddlywiki/</p>
+<p style="position:absolute;top:249px;left:699px;white-space:nowrap" class="ft01">.&#160;See</p>
+<p style="position:absolute;top:268px;left:211px;white-space:nowrap" class="ft03">the&#160;script</p>
+<p style="position:absolute;top:268px;left:273px;white-space:nowrap" class="ft01">.</p>
+<p style="position:absolute;top:288px;left:211px;white-space:nowrap" class="ft02"><b>Backups</b>:&#160;Daily&#160;cron&#160;job&#160;to&#160;backup&#160;</p>
+<p style="position:absolute;top:293px;left:446px;white-space:nowrap" class="ft04">/var/tiddlywiki/</p>
+<p style="position:absolute;top:288px;left:524px;white-space:nowrap" class="ft01">&#160;to&#160;S3&#160;using&#160;Duplicity&#160;with</p>
+<p style="position:absolute;top:307px;left:211px;white-space:nowrap" class="ft01">symmetric&#160;GPG&#160;encryption.&#160;See&#160;</p>
+<p style="position:absolute;top:307px;left:425px;white-space:nowrap" class="ft03">the&#160;backup&#160;script</p>
+<p style="position:absolute;top:307px;left:540px;white-space:nowrap" class="ft01">&#160;and&#160;</p>
+<p style="position:absolute;top:307px;left:573px;white-space:nowrap" class="ft03">the&#160;restore&#160;script</p>
+<p style="position:absolute;top:307px;left:686px;white-space:nowrap" class="ft01">.</p>
+<p style="position:absolute;top:338px;left:185px;white-space:nowrap" class="ft01">Raspberry&#160;Pi&#160;management:</p>
+<p style="position:absolute;top:369px;left:211px;white-space:nowrap" class="ft07"><b>DNS&#160;updater</b>:&#160;To&#160;work&#160;around&#160;ISPs&#160;that&#160;don’t&#160;provide&#160;static&#160;IPs.&#160;The&#160;script<br/>determines&#160;the&#160;currently&#160;assigned&#160;public&#160;IP,&#160;then&#160;updates&#160;a&#160;DNS&#160;A&#160;record&#160;in<br/>Route53&#160;to&#160;point&#160;to&#160;it.&#160;See&#160;</p>
+<p style="position:absolute;top:408px;left:389px;white-space:nowrap" class="ft03">the&#160;script</p>
+<p style="position:absolute;top:408px;left:451px;white-space:nowrap" class="ft01">.</p>
+<p style="position:absolute;top:427px;left:211px;white-space:nowrap" class="ft07"><b>Puppet</b>:&#160;Puppet&#160;is&#160;used&#160;for&#160;conﬁguration&#160;management.&#160;All&#160;of&#160;my&#160;manifest<br/>and&#160;modules&#160;are&#160;</p>
+<p style="position:absolute;top:447px;left:326px;white-space:nowrap" class="ft03">publically&#160;available&#160;here</p>
+<p style="position:absolute;top:447px;left:486px;white-space:nowrap" class="ft01">.</p>
+<p style="position:absolute;top:491px;left:185px;white-space:nowrap" class="ft00">Beneﬁts,&#160;downsides&#160;and&#160;improvements</p>
+<p style="position:absolute;top:523px;left:185px;white-space:nowrap" class="ft01">Beneﬁts&#160;of&#160;this&#160;arrangement:</p>
+<p style="position:absolute;top:554px;left:211px;white-space:nowrap" class="ft07">All&#160;notes&#160;are&#160;loaded&#160;in&#160;the&#160;browser.&#160;If&#160;the&#160;network&#160;decides&#160;to&#160;have&#160;a&#160;little<br/>wobbly,&#160;all&#160;notes&#160;are&#160;already&#160;present&#160;and&#160;searchable.<br/>You&#160;can&#160;</p>
+<p style="position:absolute;top:599px;left:265px;white-space:nowrap" class="ft04">grep</p>
+<p style="position:absolute;top:593px;left:285px;white-space:nowrap" class="ft01">,&#160;</p>
+<p style="position:absolute;top:599px;left:293px;white-space:nowrap" class="ft04">vim</p>
+<p style="position:absolute;top:593px;left:308px;white-space:nowrap" class="ft01">&#160;</p>
+<p style="position:absolute;top:599px;left:312px;white-space:nowrap" class="ft04">sed</p>
+<p style="position:absolute;top:593px;left:327px;white-space:nowrap" class="ft01">&#160;and&#160;</p>
+<p style="position:absolute;top:599px;left:360px;white-space:nowrap" class="ft04">awk</p>
+<p style="position:absolute;top:593px;left:375px;white-space:nowrap" class="ft01">&#160;notes&#160;on&#160;the&#160;server&#160;side.</p>
+<p style="position:absolute;top:613px;left:211px;white-space:nowrap" class="ft07">A&#160;read-only&#160;oﬄine&#160;copy&#160;is&#160;available.&#160;Just&#160;click&#160;the&#160;TiddlyWiki&#160;“Save&#160;Changes”<br/>button.</p>
+<p style="position:absolute;top:663px;left:185px;white-space:nowrap" class="ft01">Downsides&#160;of&#160;this&#160;arrangement:</p>
+<p style="position:absolute;top:694px;left:211px;white-space:nowrap" class="ft07">Self&#160;hosting&#160;means&#160;you’re&#160;the&#160;one&#160;who&#160;has&#160;to&#160;ﬁx&#160;things&#160;when&#160;they&#160;go&#160;wrong.<br/>TiddlyWiki&#160;doesn’t&#160;have&#160;the&#160;best&#160;UI&#160;support&#160;for&#160;when&#160;the&#160;network&#160;breaks<br/>down.&#160;Warning&#160;modals&#160;ﬂy&#160;all&#160;over&#160;the&#160;place.<br/>Although&#160;backups&#160;to&#160;S3&#160;are&#160;encrypted,&#160;the&#160;data&#160;is&#160;unencrypted&#160;on&#160;the<br/>Raspberry&#160;Pi.&#160;This&#160;could&#160;be&#160;improved&#160;by&#160;using&#160;an&#160;encrypted&#160;partition&#160;for&#160;the<br/>storage,&#160;but&#160;even&#160;then&#160;that&#160;only&#160;mitigates&#160;physical&#160;theft.</p>
+<p style="position:absolute;top:822px;left:185px;white-space:nowrap" class="ft01">Future&#160;enhancements:</p>
+<p style="position:absolute;top:853px;left:211px;white-space:nowrap" class="ft07">Patch&#160;TiddlyWiki&#160;to&#160;support&#160;listening&#160;on&#160;a&#160;Unix&#160;Domain&#160;Socket.&#160;There&#160;are<br/>minor&#160;performance&#160;and&#160;security&#160;reasons&#160;for&#160;this.</p>
+<p style="position:absolute;top:916px;left:185px;white-space:nowrap" class="ft05">Article&#160;published&#160;on:&#160;04&#160;March&#160;2020.&#160;Last&#160;updated:&#160;04&#160;March&#160;2020.</p>
+<p style="position:absolute;top:521px;left:59px;white-space:nowrap" class="ft06">Skip&#160;to&#160;content</p>
+</div>
+</body>
+</html>

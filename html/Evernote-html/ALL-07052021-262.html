@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+<title>Page 262</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<style type="text/css">
+<!--
+	p {margin: 0; padding: 0;}	.ft00{font-size:15px;font-family:DejaVuSerif;color:#000000;}
+	.ft01{font-size:10px;font-family:DejaVuSerif;color:#000000;}
+	.ft02{font-size:10px;font-family:DejaVuSerif;color:#0000ee;}
+	.ft03{font-size:20px;font-family:DejaVuSerif;color:#000000;}
+	.ft04{font-size:10px;font-family:DejaVuSerif;color:#000000;}
+	.ft05{font-size:11px;font-family:DejaVuSerif;color:#000000;}
+	.ft06{font-size:10px;line-height:11px;font-family:DejaVuSerif;color:#000000;}
+	.ft07{font-size:10px;line-height:12px;font-family:DejaVuSerif;color:#000000;}
+-->
+</style>
+</head>
+<body bgcolor="#A0A0A0" vlink="blue" link="blue">
+<div id="page262-div" style="position:relative;width:892px;height:1263px;">
+<img width="892" height="1263" src="ALL-07052021262.png" alt="background image"/>
+<p style="position:absolute;top:67px;left:59px;white-space:nowrap" class="ft00"><b>How&#160;to&#160;Clear&#160;Cache&#160;on&#160;Linux</b></p>
+<p style="position:absolute;top:110px;left:59px;white-space:nowrap" class="ft01"><b>Clip&#160;source:&#160;</b></p>
+<p style="position:absolute;top:110px;left:130px;white-space:nowrap" class="ft02">How&#160;to&#160;Clear&#160;Cache&#160;on&#160;Linux</p>
+<p style="position:absolute;top:136px;left:59px;white-space:nowrap" class="ft03"><b>How&#160;to&#160;Clear&#160;Cache&#160;on&#160;Linux</b></p>
+<p style="position:absolute;top:174px;left:59px;white-space:nowrap" class="ft06">•1&#160;year&#160;ago<br/>•by&#160;</p>
+<p style="position:absolute;top:186px;left:80px;white-space:nowrap" class="ft02">Linux&#160;Wolfman</p>
+<p style="position:absolute;top:197px;left:59px;white-space:nowrap" class="ft06">The&#160;linux&#160;file&#160;system&#160;cache&#160;(Page&#160;Cache)&#160;is&#160;used&#160;to&#160;make&#160;IO&#160;operations&#160;faster.&#160;&#160;Under&#160;certain&#160;circumstances&#160;an&#160;administrator&#160;or&#160;developer&#160;might&#160;want&#160;to<br/>manually&#160;clear&#160;the&#160;cache.&#160;&#160;In&#160;this&#160;article&#160;we&#160;will&#160;explain&#160;how&#160;the&#160;Linux&#160;File&#160;System&#160;cache&#160;works.&#160;&#160;Then&#160;we&#160;will&#160;demonstrate&#160;how&#160;to&#160;monitor&#160;the&#160;cache&#160;usage<br/>and&#160;how&#160;to&#160;clear&#160;the&#160;cache.&#160;&#160;We&#160;will&#160;do&#160;some&#160;simple&#160;performance&#160;experiments&#160;to&#160;verify&#160;the&#160;cache&#160;is&#160;working&#160;as&#160;expected&#160;and&#160;that&#160;the&#160;cache&#160;flush&#160;and&#160;clear<br/>procedure&#160;is&#160;also&#160;working&#160;as&#160;expected.</p>
+<p style="position:absolute;top:257px;left:59px;white-space:nowrap" class="ft05"><b>How&#160;Linux&#160;File&#160;System&#160;Cache&#160;Works</b></p>
+<p style="position:absolute;top:283px;left:59px;white-space:nowrap" class="ft06">The&#160;kernel&#160;reserves&#160;a&#160;certain&#160;amount&#160;of&#160;system&#160;memory&#160;for&#160;caching&#160;the&#160;file&#160;system&#160;disk&#160;accesses&#160;in&#160;order&#160;to&#160;make&#160;overall&#160;performance&#160;faster.&#160;&#160;The&#160;cache<br/>in&#160;linux&#160;is&#160;called&#160;the&#160;<b>Page&#160;Cache</b>.&#160;The&#160;size&#160;of&#160;the&#160;page&#160;cache&#160;is&#160;configurable&#160;with&#160;generous&#160;defaults&#160;enabled&#160;to&#160;cache&#160;large&#160;amounts&#160;of&#160;disk&#160;blocks.&#160;&#160;The<br/>max&#160;size&#160;of&#160;the&#160;cache&#160;and&#160;the&#160;policies&#160;of&#160;when&#160;to&#160;evict&#160;data&#160;from&#160;the&#160;cache&#160;are&#160;adjustable&#160;with&#160;kernel&#160;parameters.&#160;&#160;The&#160;linux&#160;cache&#160;approach&#160;is&#160;called&#160;a<br/>write-back&#160;cache.&#160;&#160;This&#160;means&#160;if&#160;data&#160;is&#160;written&#160;to&#160;disk&#160;it&#160;is&#160;written&#160;to&#160;memory&#160;into&#160;the&#160;cache&#160;and&#160;marked&#160;as&#160;dirty&#160;in&#160;the&#160;cache&#160;until&#160;it&#160;is&#160;synchronized&#160;to<br/>disk.&#160;&#160;The&#160;kernel&#160;maintains&#160;internal&#160;data&#160;structures&#160;to&#160;optimize&#160;which&#160;data&#160;to&#160;evict&#160;from&#160;cache&#160;when&#160;more&#160;space&#160;is&#160;needed&#160;in&#160;the&#160;cache.</p>
+<p style="position:absolute;top:355px;left:59px;white-space:nowrap" class="ft06">During&#160;Linux&#160;read&#160;system&#160;calls,&#160;the&#160;kernel&#160;will&#160;check&#160;if&#160;the&#160;data&#160;requested&#160;is&#160;stored&#160;in&#160;blocks&#160;of&#160;data&#160;in&#160;the&#160;cache,&#160;that&#160;would&#160;be&#160;a&#160;successful&#160;cache&#160;hit&#160;and<br/>the&#160;data&#160;will&#160;be&#160;returned&#160;from&#160;the&#160;cache&#160;without&#160;doing&#160;any&#160;IO&#160;to&#160;the&#160;disk&#160;system.&#160;&#160;For&#160;a&#160;cache&#160;miss&#160;the&#160;data&#160;will&#160;be&#160;fetched&#160;from&#160;IO&#160;system&#160;and&#160;the&#160;cache<br/>updated&#160;based&#160;on&#160;the&#160;caching&#160;policies&#160;as&#160;this&#160;same&#160;data&#160;is&#160;likely&#160;to&#160;be&#160;requested&#160;again.</p>
+<p style="position:absolute;top:403px;left:59px;white-space:nowrap" class="ft06">When&#160;certain&#160;thresholds&#160;of&#160;memory&#160;usage&#160;are&#160;reached&#160;background&#160;tasks&#160;will&#160;start&#160;writing&#160;dirty&#160;data&#160;to&#160;disk&#160;to&#160;ensure&#160;it&#160;is&#160;clearing&#160;the&#160;memory&#160;cache.&#160;<br/>These&#160;can&#160;have&#160;an&#160;impact&#160;on&#160;performance&#160;of&#160;memory&#160;and&#160;CPU&#160;intensive&#160;applications&#160;and&#160;require&#160;tuning&#160;by&#160;administrators&#160;and&#160;or&#160;developers.</p>
+<p style="position:absolute;top:451px;left:59px;white-space:nowrap" class="ft05"><b>Using&#160;Free&#160;command&#160;to&#160;view&#160;Cache&#160;Usage</b></p>
+<p style="position:absolute;top:477px;left:59px;white-space:nowrap" class="ft06">We&#160;can&#160;use&#160;the&#160;free&#160;command&#160;from&#160;the&#160;command&#160;line&#160;in&#160;order&#160;to&#160;analyze&#160;the&#160;system&#160;memory&#160;and&#160;the&#160;amount&#160;of&#160;memory&#160;allocated&#160;to&#160;caching.&#160;&#160;See<br/>command&#160;below:</p>
+<p style="position:absolute;top:513px;left:84px;white-space:nowrap" class="ft04">#&#160;free-m</p>
+<p style="position:absolute;top:626px;left:59px;white-space:nowrap" class="ft07">What&#160;we&#160;see&#160;from&#160;the&#160;<b>free</b>&#160;command&#160;above&#160;is&#160;that&#160;there&#160;is&#160;7.5&#160;GB&#160;of&#160;RAM&#160;on&#160;this&#160;system.&#160;&#160;Of&#160;this&#160;only&#160;209&#160;MB&#160;is&#160;used&#160;and&#160;6.5&#160;MB&#160;is&#160;free.&#160;&#160;667&#160;MB&#160;is&#160;used<br/>in&#160;the&#160;buffer&#160;cache.&#160;&#160;Now&#160;let’s&#160;try&#160;to&#160;increase&#160;that&#160;number&#160;by&#160;running&#160;a&#160;command&#160;to&#160;generate&#160;a&#160;file&#160;of&#160;1&#160;Gigabyte&#160;and&#160;reading&#160;the&#160;file.&#160;&#160;The&#160;command<br/>below&#160;will&#160;generate&#160;approximately&#160;100MB&#160;of&#160;random&#160;data&#160;and&#160;then&#160;append&#160;10&#160;copies&#160;of&#160;the&#160;file&#160;together&#160;into&#160;one&#160;<b>large_file</b>.</p>
+<p style="position:absolute;top:674px;left:59px;white-space:nowrap" class="ft04">#&#160;dd&#160;if=/dev/random&#160;of=/root/data_file&#160;count=1400000</p>
+<p style="position:absolute;top:686px;left:59px;white-space:nowrap" class="ft04">#&#160;for&#160;i&#160;in&#160;`seq&#160;1&#160;10`;&#160;do&#160;echo&#160;$i;&#160;cat&#160;data_file&#160;&gt;&gt;&#160;large_file;&#160;done</p>
+<p style="position:absolute;top:766px;left:59px;white-space:nowrap" class="ft04">Now&#160;we&#160;will&#160;make&#160;sure&#160;to&#160;read&#160;this&#160;1&#160;Gig&#160;file&#160;and&#160;then&#160;check&#160;the&#160;free&#160;command&#160;again:</p>
+<p style="position:absolute;top:789px;left:59px;white-space:nowrap" class="ft04">#&#160;cat&#160;large_file&#160;&gt;&#160;/dev/null</p>
+<p style="position:absolute;top:801px;left:59px;white-space:nowrap" class="ft04">#&#160;free&#160;-m</p>
+<p style="position:absolute;top:882px;left:59px;white-space:nowrap" class="ft04">We&#160;can&#160;see&#160;the&#160;buffer&#160;cache&#160;usage&#160;has&#160;gone&#160;up&#160;from&#160;667&#160;to&#160;1735&#160;Megabytes&#160;a&#160;roughly&#160;1&#160;Gigabyte&#160;increase&#160;in&#160;the&#160;usage&#160;of&#160;the&#160;buffer&#160;cache.</p>
+<p style="position:absolute;top:917px;left:59px;white-space:nowrap" class="ft05"><b>Proc&#160;Sys&#160;VM&#160;Drop&#160;Caches&#160;Command</b></p>
+<p style="position:absolute;top:943px;left:59px;white-space:nowrap" class="ft04">The&#160;linux&#160;kernel&#160;provides&#160;an&#160;interface&#160;to&#160;drop&#160;the&#160;cache&#160;let’s&#160;try&#160;out&#160;these&#160;commands&#160;and&#160;see&#160;the&#160;impact&#160;on&#160;the&#160;free&#160;setting.</p>
+<p style="position:absolute;top:967px;left:59px;white-space:nowrap" class="ft04">#&#160;echo&#160;1&#160;&gt;&#160;/proc/sys/vm/drop_caches</p>
+<p style="position:absolute;top:979px;left:59px;white-space:nowrap" class="ft04">#&#160;free&#160;-m</p>
+<p style="position:absolute;top:1079px;left:59px;white-space:nowrap" class="ft04">We&#160;can&#160;see&#160;above&#160;that&#160;the&#160;majority&#160;of&#160;the&#160;buffer&#160;cache&#160;allocation&#160;was&#160;freed&#160;with&#160;this&#160;command.</p>
+<p style="position:absolute;top:1114px;left:59px;white-space:nowrap" class="ft05"><b>Experimental&#160;Verification&#160;that&#160;Drop&#160;Caches&#160;Works</b></p>
+<p style="position:absolute;top:1140px;left:59px;white-space:nowrap" class="ft07">Can&#160;we&#160;do&#160;a&#160;performance&#160;validation&#160;of&#160;using&#160;the&#160;cache&#160;to&#160;read&#160;the&#160;file?&#160;Let’s&#160;read&#160;the&#160;file&#160;and&#160;write&#160;it&#160;back&#160;to&#160;/dev/null&#160;in&#160;order&#160;to&#160;test&#160;how&#160;long&#160;it&#160;takes&#160;to<br/>read&#160;the&#160;file&#160;from&#160;disk.&#160;&#160;We&#160;will&#160;time&#160;it&#160;with&#160;the&#160;<b>time</b>&#160;command.&#160;&#160;We&#160;do&#160;this&#160;command&#160;immediately&#160;after&#160;clearing&#160;the&#160;cache&#160;with&#160;the&#160;commands&#160;above.</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+<title>Page 119</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<style type="text/css">
+<!--
+	p {margin: 0; padding: 0;}	.ft00{font-size:11px;font-family:FiraSans;color:#424242;}
+	.ft01{font-size:10px;font-family:UbuntuMono;color:#f6f6f6;}
+	.ft02{font-size:11px;font-family:FiraSans;color:#424242;}
+	.ft03{font-size:15px;font-family:FiraSans-Light;color:#080808;}
+	.ft04{font-size:11px;font-family:FiraSans-Medium;color:#af5c02;}
+	.ft05{font-size:10px;font-family:FiraSans;color:#080808;}
+	.ft06{font-size:10px;font-family:FiraSans;color:#000000;}
+	.ft07{font-size:10px;font-family:UbuntuMono;color:#e2e2e2;}
+	.ft08{font-size:18px;font-family:FiraSans-Light;color:#080808;}
+	.ft09{font-size:11px;line-height:20px;font-family:FiraSans;color:#424242;}
+-->
+</style>
+</head>
+<body bgcolor="#A0A0A0" vlink="blue" link="blue">
+<div id="page119-div" style="position:relative;width:892px;height:1263px;">
+<img width="892" height="1263" src="ALL-07052021119.png" alt="background image"/>
+<p style="position:absolute;top:57px;left:177px;white-space:nowrap" class="ft09">If&#160;you&#160;need&#160;to&#160;configure&#160;grub-pc&#160;(for&#160;example,&#160;after&#160;an&#160;update),&#160;installing&#160;grub&#160;to&#160;all&#160;devices&#160;will&#160;break&#160;GRUB.<br/>You&#160;will&#160;need&#160;to&#160;install&#160;to&#160;</p>
+<p style="position:absolute;top:80px;left:317px;white-space:nowrap" class="ft01">/dev/sda</p>
+<p style="position:absolute;top:77px;left:362px;white-space:nowrap" class="ft00">&#160;<i>not</i>&#160;</p>
+<p style="position:absolute;top:80px;left:390px;white-space:nowrap" class="ft01">/dev/sda1</p>
+<p style="position:absolute;top:77px;left:440px;white-space:nowrap" class="ft00">.&#160;Installing&#160;everywhere&#160;will&#160;break&#160;the&#160;bootloader.</p>
+<p style="position:absolute;top:113px;left:177px;white-space:nowrap" class="ft09">On&#160;a&#160;fresh&#160;install&#160;of&#160;Pop!_OS&#160;18.04,&#160;systemd-boot&#160;is&#160;used&#160;rather&#160;than&#160;the&#160;GRUB&#160;bootloader,&#160;and&#160;the&#160;following<br/>instructions&#160;do&#160;not&#160;apply&#160;please&#160;refer&#160;to&#160;the&#160;systemd-boot&#160;section&#160;on&#160;this&#160;page.</p>
+<p style="position:absolute;top:177px;left:177px;white-space:nowrap" class="ft03">Create&#160;Live&#160;Disk</p>
+<p style="position:absolute;top:211px;left:177px;white-space:nowrap" class="ft00">Please&#160;see&#160;our&#160;instructions&#160;for&#160;making&#160;a&#160;live&#160;disk&#160;of&#160;Pop!_OS&#160;</p>
+<p style="position:absolute;top:211px;left:491px;white-space:nowrap" class="ft04">here</p>
+<p style="position:absolute;top:211px;left:514px;white-space:nowrap" class="ft00">.</p>
+<p style="position:absolute;top:255px;left:177px;white-space:nowrap" class="ft03">Reinstall&#160;GRUB&#160;Bootloader</p>
+<p style="position:absolute;top:289px;left:177px;white-space:nowrap" class="ft09">Once&#160;you&#160;have&#160;the&#160;disk&#160;made,&#160;reboot&#160;your&#160;system.&#160;You'll&#160;need&#160;to&#160;tell&#160;the&#160;computer&#160;to&#160;boot&#160;from&#160;the&#160;Live<br/>Disk.&#160;When&#160;you&#160;see&#160;the&#160;System76&#160;logo&#160;on&#160;the&#160;screen:</p>
+<p style="position:absolute;top:348px;left:177px;white-space:nowrap" class="ft05"><b>Laptops</b></p>
+<p style="position:absolute;top:348px;left:459px;white-space:nowrap" class="ft05"><b>Desktops</b></p>
+<p style="position:absolute;top:379px;left:177px;white-space:nowrap" class="ft06">Hold&#160;</p>
+<p style="position:absolute;top:383px;left:207px;white-space:nowrap" class="ft01">F7</p>
+<p style="position:absolute;top:379px;left:223px;white-space:nowrap" class="ft06">&#160;or&#160;</p>
+<p style="position:absolute;top:383px;left:244px;white-space:nowrap" class="ft01">F1</p>
+<p style="position:absolute;top:379px;left:459px;white-space:nowrap" class="ft06">Hold&#160;</p>
+<p style="position:absolute;top:383px;left:489px;white-space:nowrap" class="ft01">F8</p>
+<p style="position:absolute;top:379px;left:505px;white-space:nowrap" class="ft06">&#160;or&#160;</p>
+<p style="position:absolute;top:383px;left:525px;white-space:nowrap" class="ft01">F10</p>
+<p style="position:absolute;top:430px;left:177px;white-space:nowrap" class="ft09">Once&#160;the&#160;desktop&#160;is&#160;shown,&#160;connect&#160;the&#160;computer&#160;to&#160;the&#160;Internet.&#160;Next,&#160;open&#160;a&#160;terminal&#160;(search&#160;Terminal<br/>after&#160;pressing&#160;the&#160;Super&#160;Key)&#160;and&#160;run&#160;the&#160;following&#160;command:</p>
+<p style="position:absolute;top:500px;left:192px;white-space:nowrap" class="ft07">sudo&#160;parted&#160;-ls</p>
+<p style="position:absolute;top:548px;left:177px;white-space:nowrap" class="ft00">And&#160;then&#160;look&#160;for&#160;the&#160;name&#160;of&#160;your&#160;main&#160;hard&#160;drive.&#160;It&#160;could&#160;be&#160;</p>
+<p style="position:absolute;top:550px;left:511px;white-space:nowrap" class="ft01">/dev/sda</p>
+<p style="position:absolute;top:548px;left:556px;white-space:nowrap" class="ft00">&#160;or&#160;</p>
+<p style="position:absolute;top:550px;left:578px;white-space:nowrap" class="ft01">/dev/nvme0n1</p>
+<p style="position:absolute;top:548px;left:644px;white-space:nowrap" class="ft00">,&#160;depending&#160;on&#160;if</p>
+<p style="position:absolute;top:568px;left:177px;white-space:nowrap" class="ft09">you&#160;have&#160;a&#160;standard&#160;SATA&#160;drive,&#160;or&#160;an&#160;NVMe&#160;drive,&#160;respectively.&#160;If&#160;you&#160;have&#160;multiple&#160;drives,&#160;look&#160;at&#160;the&#160;sizes<br/>of&#160;the&#160;partitions&#160;and&#160;for&#160;the&#160;</p>
+<p style="position:absolute;top:590px;left:329px;white-space:nowrap" class="ft01">linux-swap</p>
+<p style="position:absolute;top:588px;left:384px;white-space:nowrap" class="ft00">&#160;partition&#160;to&#160;help&#160;identify&#160;the&#160;main&#160;OS&#160;drive.&#160;Here&#160;are&#160;some&#160;OS</p>
+<p style="position:absolute;top:608px;left:177px;white-space:nowrap" class="ft00">partition&#160;layout&#160;examples:</p>
+<p style="position:absolute;top:643px;left:177px;white-space:nowrap" class="ft00">Ubuntu&#160;20.04&#160;LTS</p>
+<p style="position:absolute;top:694px;left:192px;white-space:nowrap" class="ft07">&#160;&#160;&#160;&#160;&#160;&#160;Number&#160;&#160;Start&#160;&#160;&#160;End&#160;&#160;&#160;&#160;&#160;Size&#160;&#160;&#160;&#160;File&#160;system&#160;&#160;&#160;&#160;&#160;Name&#160;&#160;&#160;&#160;&#160;&#160;Flags</p>
+<p style="position:absolute;top:712px;left:192px;white-space:nowrap" class="ft07">&#160;&#160;&#160;&#160;&#160;&#160;&#160;1&#160;&#160;&#160;&#160;&#160;&#160;2097kB&#160;&#160;524MB&#160;&#160;&#160;522MB&#160;&#160;&#160;fat32&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;boot,&#160;esp</p>
+<p style="position:absolute;top:729px;left:192px;white-space:nowrap" class="ft07">root&#160;&#160;&#160;3&#160;&#160;&#160;&#160;&#160;&#160;524MB&#160;&#160;&#160;496GB&#160;&#160;&#160;491GB</p>
+<p style="position:absolute;top:747px;left:192px;white-space:nowrap" class="ft07">&#160;&#160;&#160;&#160;&#160;&#160;&#160;4&#160;&#160;&#160;&#160;&#160;&#160;496GB&#160;&#160;&#160;500GB&#160;&#160;&#160;4295MB&#160;&#160;linux-swap(v1)&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;swap</p>
+<p style="position:absolute;top:794px;left:177px;white-space:nowrap" class="ft00">Pop!_OS&#160;20.04&#160;LTS</p>
+<p style="position:absolute;top:845px;left:192px;white-space:nowrap" class="ft07">&#160;&#160;&#160;&#160;&#160;&#160;Number&#160;&#160;Start&#160;&#160;&#160;End&#160;&#160;&#160;&#160;&#160;Size&#160;&#160;&#160;&#160;File&#160;system&#160;&#160;&#160;&#160;&#160;Name&#160;&#160;&#160;&#160;&#160;&#160;Flags</p>
+<p style="position:absolute;top:863px;left:192px;white-space:nowrap" class="ft07">&#160;&#160;&#160;&#160;&#160;&#160;&#160;1&#160;&#160;&#160;&#160;&#160;&#160;2097kB&#160;&#160;524MB&#160;&#160;&#160;522MB&#160;&#160;&#160;fat32&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;boot,&#160;esp</p>
+<p style="position:absolute;top:880px;left:192px;white-space:nowrap" class="ft07">&#160;&#160;&#160;&#160;&#160;&#160;&#160;2&#160;&#160;&#160;&#160;&#160;&#160;524MB&#160;&#160;&#160;4819MB&#160;&#160;4295MB&#160;&#160;fat32&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;recovery&#160;&#160;msftdata</p>
+<p style="position:absolute;top:898px;left:192px;white-space:nowrap" class="ft07">root&#160;&#160;&#160;3&#160;&#160;&#160;&#160;&#160;&#160;4819MB&#160;&#160;496GB&#160;&#160;&#160;491GB</p>
+<p style="position:absolute;top:915px;left:192px;white-space:nowrap" class="ft07">&#160;&#160;&#160;&#160;&#160;&#160;&#160;4&#160;&#160;&#160;&#160;&#160;&#160;496GB&#160;&#160;&#160;500GB&#160;&#160;&#160;4295MB&#160;&#160;linux-swap(v1)&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;swap</p>
+<p style="position:absolute;top:976px;left:177px;white-space:nowrap" class="ft08">GRUB</p>
+<p style="position:absolute;top:1022px;left:177px;white-space:nowrap" class="ft03">EFI&#160;Boot</p>
+<p style="position:absolute;top:1055px;left:177px;white-space:nowrap" class="ft00">Most&#160;computers&#160;sold&#160;after&#160;2014&#160;use&#160;UEFI&#160;mode.&#160;If&#160;</p>
+<p style="position:absolute;top:1058px;left:438px;white-space:nowrap" class="ft01">boot,&#160;esp</p>
+<p style="position:absolute;top:1055px;left:488px;white-space:nowrap" class="ft00">&#160;is&#160;listed&#160;under&#160;</p>
+<p style="position:absolute;top:1058px;left:573px;white-space:nowrap" class="ft01">flags</p>
+<p style="position:absolute;top:1055px;left:603px;white-space:nowrap" class="ft00">,&#160;the&#160;system&#160;is&#160;installed&#160;in</p>
+<p style="position:absolute;top:1075px;left:177px;white-space:nowrap" class="ft00">UEFI&#160;mode.&#160;You&#160;can&#160;also&#160;use&#160;this&#160;command&#160;to&#160;see&#160;if&#160;the&#160;OS&#160;is&#160;installed&#160;in&#160;UEFI&#160;mode:</p>
+<p style="position:absolute;top:1126px;left:192px;white-space:nowrap" class="ft07">[&#160;-d&#160;/sys/firmware/efi&#160;]&#160;&amp;&amp;&#160;echo&#160;&#34;Installed&#160;in&#160;UEFI&#160;mode&#34;&#160;||&#160;echo&#160;&#34;Installed&#160;in&#160;Legacy&#160;mode&#34;</p>
+</div>
+</body>
+</html>

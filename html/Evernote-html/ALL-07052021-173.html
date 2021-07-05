@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+<title>Page 173</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<style type="text/css">
+<!--
+	p {margin: 0; padding: 0;}	.ft00{font-size:10px;font-family:DejaVuSans;color:#000000;}
+	.ft01{font-size:10px;font-family:DejaVuSansMono;color:#000000;}
+	.ft02{font-size:11px;font-family:DejaVuSans;color:#000000;}
+	.ft03{font-size:10px;font-family:DejaVuSans;color:#a21313;}
+	.ft04{font-size:10px;line-height:15px;font-family:DejaVuSans;color:#000000;}
+	.ft05{font-size:10px;line-height:15px;font-family:DejaVuSansMono;color:#000000;}
+-->
+</style>
+</head>
+<body bgcolor="#A0A0A0" vlink="blue" link="blue">
+<div id="page173-div" style="position:relative;width:892px;height:1263px;">
+<img width="892" height="1263" src="ALL-07052021173.png" alt="background image"/>
+<p style="position:absolute;top:55px;left:272px;white-space:nowrap" class="ft00">exposed&#160;on&#160;the&#160;</p>
+<p style="position:absolute;top:55px;left:354px;white-space:nowrap" class="ft01">CodeMirror.Vim</p>
+<p style="position:absolute;top:55px;left:440px;white-space:nowrap" class="ft00">&#160;object.</p>
+<p style="position:absolute;top:80px;left:273px;white-space:nowrap" class="ft01">setOption(name:&#160;string,&#160;value:&#160;any,&#160;?cm:&#160;CodeMirror,&#160;?cfg:</p>
+<p style="position:absolute;top:96px;left:292px;white-space:nowrap" class="ft01">object)</p>
+<p style="position:absolute;top:111px;left:287px;white-space:nowrap" class="ft00">Sets&#160;the&#160;value&#160;of&#160;a&#160;VIM&#160;option.&#160;</p>
+<p style="position:absolute;top:111px;left:445px;white-space:nowrap" class="ft01">name</p>
+<p style="position:absolute;top:111px;left:471px;white-space:nowrap" class="ft00">&#160;should&#160;be&#160;the&#160;name&#160;of&#160;an&#160;option.</p>
+<p style="position:absolute;top:126px;left:287px;white-space:nowrap" class="ft00">If&#160;</p>
+<p style="position:absolute;top:126px;left:298px;white-space:nowrap" class="ft01">cfg.scope</p>
+<p style="position:absolute;top:126px;left:353px;white-space:nowrap" class="ft00">&#160;is&#160;not&#160;set&#160;and&#160;</p>
+<p style="position:absolute;top:126px;left:429px;white-space:nowrap" class="ft01">cm</p>
+<p style="position:absolute;top:126px;left:443px;white-space:nowrap" class="ft00">&#160;is&#160;provided,&#160;then&#160;sets&#160;the&#160;global&#160;and</p>
+<p style="position:absolute;top:141px;left:287px;white-space:nowrap" class="ft04">instance&#160;values&#160;of&#160;the&#160;option.&#160;Otherwise,&#160;sets&#160;either&#160;the&#160;global&#160;or<br/>instance&#160;value&#160;of&#160;the&#160;option&#160;depending&#160;on&#160;whether&#160;</p>
+<p style="position:absolute;top:156px;left:549px;white-space:nowrap" class="ft01">cfg.scope</p>
+<p style="position:absolute;top:156px;left:605px;white-space:nowrap" class="ft00">&#160;is</p>
+<p style="position:absolute;top:171px;left:288px;white-space:nowrap" class="ft01">global</p>
+<p style="position:absolute;top:171px;left:326px;white-space:nowrap" class="ft00">&#160;or&#160;</p>
+<p style="position:absolute;top:171px;left:343px;white-space:nowrap" class="ft01">local</p>
+<p style="position:absolute;top:171px;left:375px;white-space:nowrap" class="ft00">.</p>
+<p style="position:absolute;top:196px;left:273px;white-space:nowrap" class="ft01">getOption(name:&#160;string,&#160;?cm:&#160;CodeMirror:&#160;?cfg:&#160;object)</p>
+<p style="position:absolute;top:211px;left:287px;white-space:nowrap" class="ft00">Gets&#160;the&#160;current&#160;value&#160;of&#160;a&#160;VIM&#160;option.&#160;If&#160;</p>
+<p style="position:absolute;top:211px;left:496px;white-space:nowrap" class="ft01">cfg.scope</p>
+<p style="position:absolute;top:211px;left:552px;white-space:nowrap" class="ft00">&#160;is&#160;not&#160;set&#160;and&#160;</p>
+<p style="position:absolute;top:211px;left:628px;white-space:nowrap" class="ft01">cm</p>
+<p style="position:absolute;top:226px;left:287px;white-space:nowrap" class="ft04">is&#160;provided,&#160;then&#160;gets&#160;the&#160;instance&#160;value&#160;of&#160;the&#160;option,&#160;falling&#160;back&#160;to<br/>the&#160;global&#160;value&#160;if&#160;not&#160;set.&#160;If&#160;</p>
+<p style="position:absolute;top:241px;left:433px;white-space:nowrap" class="ft01">cfg.scope</p>
+<p style="position:absolute;top:241px;left:489px;white-space:nowrap" class="ft00">&#160;is&#160;provided,&#160;then&#160;gets&#160;the</p>
+<p style="position:absolute;top:257px;left:288px;white-space:nowrap" class="ft01">global</p>
+<p style="position:absolute;top:257px;left:326px;white-space:nowrap" class="ft00">&#160;or&#160;</p>
+<p style="position:absolute;top:257px;left:343px;white-space:nowrap" class="ft01">local</p>
+<p style="position:absolute;top:257px;left:375px;white-space:nowrap" class="ft00">&#160;value&#160;without&#160;checking&#160;the&#160;other.</p>
+<p style="position:absolute;top:282px;left:273px;white-space:nowrap" class="ft01">map(lhs:&#160;string,&#160;rhs:&#160;string,&#160;?context:&#160;string)</p>
+<p style="position:absolute;top:297px;left:287px;white-space:nowrap" class="ft00">Maps&#160;a&#160;key&#160;sequence&#160;to&#160;another&#160;key&#160;sequence.&#160;Implements&#160;VIM's</p>
+<p style="position:absolute;top:312px;left:288px;white-space:nowrap" class="ft01">:map</p>
+<p style="position:absolute;top:312px;left:313px;white-space:nowrap" class="ft00">&#160;command.&#160;To&#160;map&#160;;&#160;to&#160;:&#160;in&#160;VIM&#160;would&#160;be&#160;</p>
+<p style="position:absolute;top:312px;left:525px;white-space:nowrap" class="ft01">:map&#160;;&#160;:</p>
+<p style="position:absolute;top:312px;left:575px;white-space:nowrap" class="ft00">.&#160;That&#160;would</p>
+<p style="position:absolute;top:327px;left:287px;white-space:nowrap" class="ft00">translate&#160;to&#160;</p>
+<p style="position:absolute;top:327px;left:349px;white-space:nowrap" class="ft01">CodeMirror.Vim.map(';',&#160;':');</p>
+<p style="position:absolute;top:327px;left:526px;white-space:nowrap" class="ft00">.&#160;The&#160;</p>
+<p style="position:absolute;top:327px;left:556px;white-space:nowrap" class="ft01">context</p>
+<p style="position:absolute;top:327px;left:599px;white-space:nowrap" class="ft00">&#160;can&#160;be</p>
+<p style="position:absolute;top:342px;left:288px;white-space:nowrap" class="ft01">normal</p>
+<p style="position:absolute;top:342px;left:326px;white-space:nowrap" class="ft00">,&#160;</p>
+<p style="position:absolute;top:342px;left:333px;white-space:nowrap" class="ft01">visual</p>
+<p style="position:absolute;top:342px;left:371px;white-space:nowrap" class="ft00">,&#160;or&#160;</p>
+<p style="position:absolute;top:342px;left:392px;white-space:nowrap" class="ft01">insert</p>
+<p style="position:absolute;top:342px;left:429px;white-space:nowrap" class="ft00">,&#160;which&#160;correspond&#160;to&#160;</p>
+<p style="position:absolute;top:342px;left:543px;white-space:nowrap" class="ft01">:nmap</p>
+<p style="position:absolute;top:342px;left:574px;white-space:nowrap" class="ft00">,&#160;</p>
+<p style="position:absolute;top:342px;left:582px;white-space:nowrap" class="ft01">:vmap</p>
+<p style="position:absolute;top:342px;left:613px;white-space:nowrap" class="ft00">,&#160;and</p>
+<p style="position:absolute;top:357px;left:288px;white-space:nowrap" class="ft01">:imap</p>
+<p style="position:absolute;top:357px;left:319px;white-space:nowrap" class="ft00">&#160;respectively.</p>
+<p style="position:absolute;top:382px;left:273px;white-space:nowrap" class="ft01">mapCommand(keys:&#160;string,&#160;type:&#160;string,&#160;name:&#160;string,&#160;?args:</p>
+<p style="position:absolute;top:397px;left:292px;white-space:nowrap" class="ft01">object,&#160;?extra:&#160;object)</p>
+<p style="position:absolute;top:413px;left:287px;white-space:nowrap" class="ft00">Maps&#160;a&#160;key&#160;sequence&#160;to&#160;a&#160;</p>
+<p style="position:absolute;top:413px;left:422px;white-space:nowrap" class="ft01">motion</p>
+<p style="position:absolute;top:413px;left:460px;white-space:nowrap" class="ft00">,&#160;</p>
+<p style="position:absolute;top:413px;left:468px;white-space:nowrap" class="ft01">operator</p>
+<p style="position:absolute;top:413px;left:517px;white-space:nowrap" class="ft00">,&#160;or&#160;</p>
+<p style="position:absolute;top:413px;left:538px;white-space:nowrap" class="ft01">action</p>
+<p style="position:absolute;top:413px;left:576px;white-space:nowrap" class="ft00">&#160;type</p>
+<p style="position:absolute;top:428px;left:287px;white-space:nowrap" class="ft04">command.&#160;The&#160;args&#160;object&#160;is&#160;passed&#160;through&#160;to&#160;the&#160;command&#160;when&#160;it<br/>is&#160;invoked&#160;by&#160;the&#160;provided&#160;key&#160;sequence.&#160;</p>
+<p style="position:absolute;top:443px;left:501px;white-space:nowrap" class="ft01">extras.context</p>
+<p style="position:absolute;top:443px;left:587px;white-space:nowrap" class="ft00">&#160;can&#160;be</p>
+<p style="position:absolute;top:458px;left:288px;white-space:nowrap" class="ft01">normal</p>
+<p style="position:absolute;top:458px;left:326px;white-space:nowrap" class="ft00">,&#160;</p>
+<p style="position:absolute;top:458px;left:333px;white-space:nowrap" class="ft01">visual</p>
+<p style="position:absolute;top:458px;left:371px;white-space:nowrap" class="ft00">,&#160;or&#160;</p>
+<p style="position:absolute;top:458px;left:392px;white-space:nowrap" class="ft01">insert</p>
+<p style="position:absolute;top:458px;left:429px;white-space:nowrap" class="ft00">,&#160;to&#160;map&#160;the&#160;key&#160;sequence&#160;only&#160;in&#160;the</p>
+<p style="position:absolute;top:473px;left:287px;white-space:nowrap" class="ft00">corresponding&#160;mode.&#160;</p>
+<p style="position:absolute;top:473px;left:398px;white-space:nowrap" class="ft01">extras.isEdit</p>
+<p style="position:absolute;top:473px;left:478px;white-space:nowrap" class="ft00">&#160;is&#160;applicable&#160;only&#160;to&#160;actions,</p>
+<p style="position:absolute;top:488px;left:287px;white-space:nowrap" class="ft00">determining&#160;whether&#160;it&#160;is&#160;recorded&#160;for&#160;replay&#160;for&#160;the&#160;</p>
+<p style="position:absolute;top:488px;left:555px;white-space:nowrap" class="ft01">.</p>
+<p style="position:absolute;top:488px;left:562px;white-space:nowrap" class="ft00">&#160;single-repeat</p>
+<p style="position:absolute;top:503px;left:287px;white-space:nowrap" class="ft00">command.</p>
+<p style="position:absolute;top:528px;left:273px;white-space:nowrap" class="ft01">unmap(lhs:&#160;string,&#160;ctx:&#160;string)</p>
+<p style="position:absolute;top:543px;left:287px;white-space:nowrap" class="ft00">Remove&#160;the&#160;command&#160;</p>
+<p style="position:absolute;top:543px;left:406px;white-space:nowrap" class="ft01">lhs</p>
+<p style="position:absolute;top:543px;left:425px;white-space:nowrap" class="ft00">&#160;if&#160;it&#160;is&#160;a&#160;user&#160;defined&#160;command.&#160;If&#160;the</p>
+<p style="position:absolute;top:558px;left:287px;white-space:nowrap" class="ft04">command&#160;is&#160;an&#160;Ex&#160;to&#160;Ex&#160;or&#160;Ex&#160;to&#160;key&#160;mapping&#160;then&#160;the&#160;context&#160;must<br/>be&#160;</p>
+<p style="position:absolute;top:574px;left:304px;white-space:nowrap" class="ft01">undefined</p>
+<p style="position:absolute;top:574px;left:359px;white-space:nowrap" class="ft00">&#160;or&#160;</p>
+<p style="position:absolute;top:574px;left:377px;white-space:nowrap" class="ft01">false</p>
+<p style="position:absolute;top:574px;left:409px;white-space:nowrap" class="ft00">.</p>
+<p style="position:absolute;top:599px;left:273px;white-space:nowrap" class="ft01">mapclear(ctx:&#160;string)</p>
+<p style="position:absolute;top:614px;left:287px;white-space:nowrap" class="ft00">Remove&#160;all&#160;user-defined&#160;mappings&#160;for&#160;the&#160;provided&#160;context.</p>
+<p style="position:absolute;top:639px;left:273px;white-space:nowrap" class="ft01">noremap(lhs:&#160;string,&#160;rhs:&#160;string,&#160;ctx:&#160;{string,</p>
+<p style="position:absolute;top:654px;left:292px;white-space:nowrap" class="ft01">array&lt;string&gt;})</p>
+<p style="position:absolute;top:669px;left:287px;white-space:nowrap" class="ft04">Non-recursive&#160;map&#160;function.&#160;This&#160;will&#160;not&#160;create&#160;mappings&#160;to&#160;key&#160;maps<br/>that&#160;aren't&#160;present&#160;in&#160;the&#160;default&#160;key&#160;map.&#160;If&#160;no&#160;context&#160;is&#160;provided<br/>then&#160;the&#160;mapping&#160;will&#160;be&#160;applied&#160;to&#160;each&#160;of&#160;normal,&#160;insert,&#160;and&#160;visual<br/>mode.</p>
+<p style="position:absolute;top:741px;left:272px;white-space:nowrap" class="ft02">Events</p>
+<p style="position:absolute;top:765px;left:272px;white-space:nowrap" class="ft04">VIM&#160;mode&#160;signals&#160;a&#160;few&#160;events&#160;on&#160;the&#160;editor&#160;instance.&#160;For&#160;an&#160;example<br/>usage,&#160;see&#160;</p>
+<p style="position:absolute;top:780px;left:329px;white-space:nowrap" class="ft03">demo/vim.html#L101</p>
+<p style="position:absolute;top:780px;left:439px;white-space:nowrap" class="ft00">.</p>
+<p style="position:absolute;top:806px;left:273px;white-space:nowrap" class="ft01">&#34;vim-command-done&#34;&#160;(reason:&#160;undefined)</p>
+<p style="position:absolute;top:821px;left:287px;white-space:nowrap" class="ft04">Fired&#160;on&#160;keypress&#160;and&#160;mousedown&#160;where&#160;command&#160;has&#160;completed&#160;or<br/>no&#160;command&#160;found.</p>
+<p style="position:absolute;top:861px;left:273px;white-space:nowrap" class="ft01">&#34;vim-keypress&#34;&#160;(vimKey:&#160;string)</p>
+<p style="position:absolute;top:876px;left:287px;white-space:nowrap" class="ft00">Fired&#160;on&#160;keypress,&#160;</p>
+<p style="position:absolute;top:876px;left:384px;white-space:nowrap" class="ft01">vimKey</p>
+<p style="position:absolute;top:876px;left:421px;white-space:nowrap" class="ft00">&#160;is&#160;in&#160;Vim's&#160;key&#160;notation.</p>
+<p style="position:absolute;top:901px;left:273px;white-space:nowrap" class="ft01">&#34;vim-mode-change&#34;&#160;(modeObj:&#160;object)</p>
+<p style="position:absolute;top:916px;left:287px;white-space:nowrap" class="ft00">Fired&#160;after&#160;mode&#160;change,&#160;</p>
+<p style="position:absolute;top:916px;left:419px;white-space:nowrap" class="ft01">modeObj</p>
+<p style="position:absolute;top:916px;left:462px;white-space:nowrap" class="ft00">&#160;parameter&#160;is&#160;a&#160;</p>
+<p style="position:absolute;top:916px;left:544px;white-space:nowrap" class="ft01">{mode:&#160;string,&#160;?</p>
+<p style="position:absolute;top:931px;left:287px;white-space:nowrap" class="ft01">subMode:&#160;string}</p>
+<p style="position:absolute;top:931px;left:385px;white-space:nowrap" class="ft00">&#160;object.&#160;Modes:&#160;</p>
+<p style="position:absolute;top:931px;left:466px;white-space:nowrap" class="ft01">&#34;insert&#34;,&#160;&#34;normal&#34;,</p>
+<p style="position:absolute;top:946px;left:287px;white-space:nowrap" class="ft01">&#34;replace&#34;,&#160;&#34;visual&#34;</p>
+<p style="position:absolute;top:946px;left:403px;white-space:nowrap" class="ft00">.&#160;Visual&#160;sub-modes:&#160;</p>
+<p style="position:absolute;top:946px;left:506px;white-space:nowrap" class="ft01">&#34;linewise&#34;,</p>
+<p style="position:absolute;top:962px;left:287px;white-space:nowrap" class="ft01">&#34;blockwise&#34;</p>
+<p style="position:absolute;top:962px;left:355px;white-space:nowrap" class="ft00">.</p>
+<p style="position:absolute;top:988px;left:272px;white-space:nowrap" class="ft02">Extending&#160;VIM</p>
+<p style="position:absolute;top:1012px;left:272px;white-space:nowrap" class="ft04">CodeMirror's&#160;VIM&#160;mode&#160;implements&#160;a&#160;large&#160;subset&#160;of&#160;VIM's&#160;core&#160;editing<br/>functionality.&#160;But&#160;since&#160;there's&#160;always&#160;more&#160;to&#160;be&#160;desired,&#160;there&#160;is&#160;a&#160;set<br/>of&#160;APIs&#160;for&#160;extending&#160;VIM's&#160;functionality.&#160;As&#160;with&#160;the&#160;configuration&#160;API,&#160;the<br/>methods&#160;are&#160;exposed&#160;on&#160;</p>
+<p style="position:absolute;top:1058px;left:401px;white-space:nowrap" class="ft01">CodeMirror.Vim</p>
+<p style="position:absolute;top:1058px;left:487px;white-space:nowrap" class="ft00">&#160;and&#160;may&#160;be&#160;called&#160;at&#160;any</p>
+<p style="position:absolute;top:1073px;left:272px;white-space:nowrap" class="ft00">time.</p>
+<p style="position:absolute;top:1098px;left:273px;white-space:nowrap" class="ft01">defineOption(name:&#160;string,&#160;default:&#160;any,&#160;type:&#160;string,&#160;?</p>
+<p style="position:absolute;top:1113px;left:292px;white-space:nowrap" class="ft05">aliases:&#160;array&lt;string&gt;,&#160;?callback:&#160;function&#160;(?value:&#160;any,<br/>?cm:&#160;CodeMirror)&#160;→&#160;?any)</p>
+<p style="position:absolute;top:1143px;left:287px;white-space:nowrap" class="ft00">Defines&#160;a&#160;VIM&#160;style&#160;option&#160;and&#160;makes&#160;it&#160;available&#160;to&#160;the&#160;</p>
+<p style="position:absolute;top:1143px;left:573px;white-space:nowrap" class="ft01">:set</p>
+<p style="position:absolute;top:1158px;left:287px;white-space:nowrap" class="ft00">command.&#160;Type&#160;can&#160;be&#160;</p>
+<p style="position:absolute;top:1158px;left:409px;white-space:nowrap" class="ft01">boolean</p>
+<p style="position:absolute;top:1158px;left:453px;white-space:nowrap" class="ft00">&#160;or&#160;</p>
+<p style="position:absolute;top:1158px;left:471px;white-space:nowrap" class="ft01">string</p>
+<p style="position:absolute;top:1158px;left:509px;white-space:nowrap" class="ft00">,&#160;used&#160;for&#160;validation&#160;and&#160;by</p>
+<p style="position:absolute;top:1173px;left:288px;white-space:nowrap" class="ft01">:set</p>
+<p style="position:absolute;top:1173px;left:313px;white-space:nowrap" class="ft00">&#160;to&#160;determine&#160;which&#160;syntax&#160;to&#160;accept.&#160;If&#160;a&#160;</p>
+<p style="position:absolute;top:1173px;left:528px;white-space:nowrap" class="ft01">callback</p>
+<p style="position:absolute;top:1173px;left:578px;white-space:nowrap" class="ft00">&#160;is&#160;passed&#160;in,</p>
+</div>
+</body>
+</html>

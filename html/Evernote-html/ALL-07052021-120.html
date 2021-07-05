@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+<title>Page 120</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<style type="text/css">
+<!--
+	p {margin: 0; padding: 0;}	.ft00{font-size:11px;font-family:FiraSans;color:#424242;}
+	.ft01{font-size:10px;font-family:UbuntuMono;color:#e2e2e2;}
+	.ft02{font-size:15px;font-family:FiraSans-Light;color:#080808;}
+	.ft03{font-size:10px;font-family:UbuntuMono;color:#f6f6f6;}
+-->
+</style>
+</head>
+<body bgcolor="#A0A0A0" vlink="blue" link="blue">
+<div id="page120-div" style="position:relative;width:892px;height:1263px;">
+<img width="892" height="1263" src="ALL-07052021120.png" alt="background image"/>
+<p style="position:absolute;top:57px;left:177px;white-space:nowrap" class="ft00">Run&#160;these&#160;commands&#160;based&#160;on&#160;what&#160;type&#160;of&#160;disk&#160;you&#160;have:</p>
+<p style="position:absolute;top:92px;left:177px;white-space:nowrap" class="ft00">For&#160;NVMe&#160;Drives:</p>
+<p style="position:absolute;top:143px;left:192px;white-space:nowrap" class="ft01">sudo&#160;mount&#160;/dev/nvme0n1p2&#160;/mnt</p>
+<p style="position:absolute;top:161px;left:192px;white-space:nowrap" class="ft01">sudo&#160;mount&#160;/dev/nvme0n1p1&#160;/mnt/boot/efi</p>
+<p style="position:absolute;top:178px;left:192px;white-space:nowrap" class="ft01">for&#160;i&#160;in&#160;/dev&#160;/dev/pts&#160;/proc&#160;/sys&#160;/run;&#160;do&#160;sudo&#160;mount&#160;-B&#160;$i&#160;/mnt$i;&#160;done</p>
+<p style="position:absolute;top:196px;left:192px;white-space:nowrap" class="ft01">sudo&#160;cp&#160;-n&#160;/etc/resolv.conf&#160;/mnt/etc/</p>
+<p style="position:absolute;top:231px;left:192px;white-space:nowrap" class="ft01">sudo&#160;chroot&#160;/mnt</p>
+<p style="position:absolute;top:249px;left:192px;white-space:nowrap" class="ft01">apt&#160;install&#160;--reinstall&#160;grub-efi-amd64&#160;linux-generic&#160;linux-headers-generic</p>
+<p style="position:absolute;top:266px;left:192px;white-space:nowrap" class="ft01">update-initramfs&#160;-c&#160;-k&#160;all</p>
+<p style="position:absolute;top:284px;left:192px;white-space:nowrap" class="ft01">sudo&#160;update-grub</p>
+<p style="position:absolute;top:331px;left:177px;white-space:nowrap" class="ft00">For&#160;SATA&#160;Drives:</p>
+<p style="position:absolute;top:382px;left:192px;white-space:nowrap" class="ft01">sudo&#160;mount&#160;/dev/sda2&#160;/mnt</p>
+<p style="position:absolute;top:400px;left:192px;white-space:nowrap" class="ft01">sudo&#160;mount&#160;/dev/sda1&#160;/mnt/boot/efi</p>
+<p style="position:absolute;top:417px;left:192px;white-space:nowrap" class="ft01">for&#160;i&#160;in&#160;/dev&#160;/dev/pts&#160;/proc&#160;/sys&#160;/run;&#160;do&#160;sudo&#160;mount&#160;-B&#160;$i&#160;/mnt$i;&#160;done</p>
+<p style="position:absolute;top:435px;left:192px;white-space:nowrap" class="ft01">sudo&#160;cp&#160;-n&#160;/etc/resolv.conf&#160;/mnt/etc/</p>
+<p style="position:absolute;top:470px;left:192px;white-space:nowrap" class="ft01">sudo&#160;chroot&#160;/mnt</p>
+<p style="position:absolute;top:488px;left:192px;white-space:nowrap" class="ft01">apt&#160;install&#160;--reinstall&#160;grub-efi-amd64&#160;linux-generic&#160;linux-headers-generic</p>
+<p style="position:absolute;top:505px;left:192px;white-space:nowrap" class="ft01">update-initramfs&#160;-c&#160;-k&#160;all</p>
+<p style="position:absolute;top:523px;left:192px;white-space:nowrap" class="ft01">sudo&#160;update-grub</p>
+<p style="position:absolute;top:574px;left:177px;white-space:nowrap" class="ft02">BIOS&#160;Boot</p>
+<p style="position:absolute;top:608px;left:177px;white-space:nowrap" class="ft00">If&#160;</p>
+<p style="position:absolute;top:610px;left:192px;white-space:nowrap" class="ft03">bios_grub</p>
+<p style="position:absolute;top:608px;left:243px;white-space:nowrap" class="ft00">&#160;is&#160;listed&#160;under&#160;</p>
+<p style="position:absolute;top:610px;left:327px;white-space:nowrap" class="ft03">flags</p>
+<p style="position:absolute;top:608px;left:358px;white-space:nowrap" class="ft00">,&#160;the&#160;system&#160;is&#160;installed&#160;in&#160;BIOS&#160;mode.&#160;You&#160;can&#160;also&#160;use&#160;this&#160;command&#160;to</p>
+<p style="position:absolute;top:628px;left:177px;white-space:nowrap" class="ft00">see&#160;if&#160;the&#160;OS&#160;is&#160;installed&#160;in&#160;BIOS&#160;mode:</p>
+<p style="position:absolute;top:679px;left:192px;white-space:nowrap" class="ft01">[&#160;-d&#160;/sys/firmware/efi&#160;]&#160;&amp;&amp;&#160;echo&#160;&#34;Installed&#160;in&#160;UEFI&#160;mode&#34;&#160;||&#160;echo&#160;&#34;Installed&#160;in&#160;Legacy&#160;mode&#34;</p>
+<p style="position:absolute;top:726px;left:177px;white-space:nowrap" class="ft00">Run&#160;these&#160;commands&#160;based&#160;on&#160;what&#160;type&#160;of&#160;disk&#160;you&#160;have:</p>
+<p style="position:absolute;top:762px;left:177px;white-space:nowrap" class="ft00">For&#160;NVMe&#160;Drives:</p>
+<p style="position:absolute;top:812px;left:192px;white-space:nowrap" class="ft01">sudo&#160;mount&#160;/dev/nvme0n1p2&#160;/mnt</p>
+<p style="position:absolute;top:830px;left:192px;white-space:nowrap" class="ft01">for&#160;i&#160;in&#160;/dev&#160;/dev/pts&#160;/proc&#160;/sys&#160;/run;&#160;do&#160;sudo&#160;mount&#160;-B&#160;$i&#160;/mnt$i;&#160;done</p>
+<p style="position:absolute;top:847px;left:192px;white-space:nowrap" class="ft01">sudo&#160;cp&#160;-n&#160;/etc/resolv.conf&#160;/mnt/etc/</p>
+<p style="position:absolute;top:883px;left:192px;white-space:nowrap" class="ft01">sudo&#160;chroot&#160;/mnt</p>
+<p style="position:absolute;top:900px;left:192px;white-space:nowrap" class="ft01">apt&#160;install&#160;--reinstall&#160;grub-efi-amd64&#160;linux-generic&#160;linux-headers-generic</p>
+<p style="position:absolute;top:918px;left:192px;white-space:nowrap" class="ft01">update-initramfs&#160;-c&#160;-k&#160;all</p>
+<p style="position:absolute;top:936px;left:192px;white-space:nowrap" class="ft01">sudo&#160;update-grub</p>
+<p style="position:absolute;top:983px;left:177px;white-space:nowrap" class="ft00">For&#160;SATA&#160;Drives:</p>
+<p style="position:absolute;top:1034px;left:192px;white-space:nowrap" class="ft01">sudo&#160;mount&#160;/dev/sda2&#160;/mnt</p>
+<p style="position:absolute;top:1051px;left:192px;white-space:nowrap" class="ft01">for&#160;i&#160;in&#160;/dev&#160;/dev/pts&#160;/proc&#160;/sys&#160;/run;&#160;do&#160;sudo&#160;mount&#160;-B&#160;$i&#160;/mnt$i;&#160;done</p>
+<p style="position:absolute;top:1069px;left:192px;white-space:nowrap" class="ft01">sudo&#160;cp&#160;-n&#160;/etc/resolv.conf&#160;/mnt/etc/</p>
+<p style="position:absolute;top:1104px;left:192px;white-space:nowrap" class="ft01">sudo&#160;chroot&#160;/mnt</p>
+<p style="position:absolute;top:1122px;left:192px;white-space:nowrap" class="ft01">apt&#160;install&#160;--reinstall&#160;grub-efi-amd64&#160;linux-generic&#160;linux-headers-generic</p>
+<p style="position:absolute;top:1139px;left:192px;white-space:nowrap" class="ft01">update-initramfs&#160;-c&#160;-k&#160;all</p>
+<p style="position:absolute;top:1157px;left:192px;white-space:nowrap" class="ft01">sudo&#160;update-grub</p>
+</div>
+</body>
+</html>

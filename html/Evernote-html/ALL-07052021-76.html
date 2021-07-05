@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+<title>Page 76</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<style type="text/css">
+<!--
+	p {margin: 0; padding: 0;}	.ft00{font-size:9px;font-family:DejaVuSansMono;color:#303030;}
+	.ft01{font-size:9px;font-family:DejaVuSansMono;color:#000000;}
+	.ft02{font-size:10px;font-family:DejaVuSerif;color:#000000;}
+	.ft03{font-size:10px;font-family:DejaVuSansMono;color:#000000;}
+	.ft04{font-size:10px;font-family:DejaVuSansMono;color:#000000;}
+	.ft05{font-size:10px;font-family:DejaVuSansMono;color:#00008b;}
+	.ft06{font-size:9px;font-family:DejaVuSansMono;color:#008000;}
+	.ft07{font-size:9px;font-family:DejaVuSansMono;color:#a52a2a;}
+	.ft08{font-size:9px;font-family:DejaVuSansMono;color:#ff0000;}
+	.ft09{font-size:10px;font-family:DejaVuSansMono;color:#0000ee;}
+	.ft010{font-size:9px;line-height:11px;font-family:DejaVuSansMono;color:#303030;}
+	.ft011{font-size:10px;line-height:11px;font-family:DejaVuSansMono;color:#000000;}
+-->
+</style>
+</head>
+<body bgcolor="#A0A0A0" vlink="blue" link="blue">
+<div id="page76-div" style="position:relative;width:892px;height:1263px;">
+<img width="892" height="1263" src="ALL-07052021076.png" alt="background image"/>
+<p style="position:absolute;top:54px;left:59px;white-space:nowrap" class="ft010">&#160;11:&#160;[&#160;2-&#160;0]:&#160;hardware&#160;dependent<br/>&#160;12:&#160;[&#160;2]&#160;&#160;&#160;:&#160;control<br/>&#160;33:&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;:&#160;timer</p>
+<p style="position:absolute;top:88px;left:59px;white-space:nowrap" class="ft01"><b>&gt;&#160;cat&#160;/proc/asound/card0/pcm2c/info</b></p>
+<p style="position:absolute;top:99px;left:59px;white-space:nowrap" class="ft010">card:&#160;0<br/>device:&#160;2<br/>subdevice:&#160;0<br/>stream:&#160;CAPTURE<br/>id:&#160;CMI8738-MC6<br/>name:&#160;C-Media&#160;PCI&#160;IEC958<br/>subname:&#160;subdevice&#160;#0<br/>class:&#160;0<br/>subclass:&#160;0<br/>subdevices_count:&#160;1<br/>subdevices_avail:&#160;1</p>
+<p style="position:absolute;top:234px;left:74px;white-space:nowrap" class="ft02">Now&#160;not&#160;all&#160;output&#160;devices&#160;support&#160;all&#160;sampling&#160;rates.&#160;My&#160;Bose&#160;sound&#160;bar&#160;does&#160;f.i.&#160;work&#160;well&#160;at&#160;48kHz&#160;or&#160;96kHz&#160;but&#160;not&#160;at&#160;192kHz.&#160;You&#160;may&#160;define&#160;rate</p>
+<p style="position:absolute;top:246px;left:59px;white-space:nowrap" class="ft02">settings&#160;in&#160;a&#160;file&#160;often&#160;called&#160;</p>
+<p style="position:absolute;top:246px;left:209px;white-space:nowrap" class="ft03"><b>/etc/asound.conf</b></p>
+<p style="position:absolute;top:246px;left:306px;white-space:nowrap" class="ft02">.&#160;However&#160;at&#160;me&#160;I&#160;had&#160;to&#160;create&#160;such&#160;a&#160;file&#160;</p>
+<p style="position:absolute;top:246px;left:531px;white-space:nowrap" class="ft04">/usr/share/alsa/alsa.conf.d</p>
+<p style="position:absolute;top:246px;left:694px;white-space:nowrap" class="ft02">.&#160;</p>
+<p style="position:absolute;top:246px;left:701px;white-space:nowrap" class="ft04">~/.asoundrc</p>
+<p style="position:absolute;top:246px;left:768px;white-space:nowrap" class="ft02">&#160;should&#160;also&#160;do&#160;it.</p>
+<p style="position:absolute;top:258px;left:59px;white-space:nowrap" class="ft02">There&#160;you&#160;can&#160;define&#160;aliases&#160;used&#160;with&#160;</p>
+<p style="position:absolute;top:258px;left:260px;white-space:nowrap" class="ft03"><b>aplay&#160;-D</b></p>
+<p style="position:absolute;top:258px;left:309px;white-space:nowrap" class="ft02">&#160;instead&#160;of&#160;</p>
+<p style="position:absolute;top:258px;left:365px;white-space:nowrap" class="ft03"><b>hw0,1</b></p>
+<p style="position:absolute;top:258px;left:396px;white-space:nowrap" class="ft02">.</p>
+<p style="position:absolute;top:280px;left:59px;white-space:nowrap" class="ft010">pcm.raw3&#160;{<br/>&#160;&#160;type&#160;hw<br/>&#160;&#160;card&#160;0<br/>&#160;&#160;device&#160;2<br/>}</p>
+<p style="position:absolute;top:347px;left:74px;white-space:nowrap" class="ft02">Test&#160;with&#160;</p>
+<p style="position:absolute;top:347px;left:126px;white-space:nowrap" class="ft04">aplay</p>
+<p style="position:absolute;top:347px;left:156px;white-space:nowrap" class="ft02">&#160;whether&#160;the&#160;target&#160;is&#160;avaiable&#160;and&#160;the&#160;config&#160;file&#160;has&#160;been&#160;parsed&#160;correctly.&#160;Here&#160;is&#160;a&#160;way&#160;to&#160;define&#160;a&#160;default&#160;sampling&#160;rate&#160;for&#160;such&#160;a</p>
+<p style="position:absolute;top:358px;left:59px;white-space:nowrap" class="ft02">device:</p>
+<p style="position:absolute;top:380px;left:59px;white-space:nowrap" class="ft010">pcm_slave.slout3&#160;{<br/>&#160;&#160;pcm&#160;&#34;hw:0,2&#34;<br/>&#160;&#160;rate&#160;96000<br/>}</p>
+<p style="position:absolute;top:437px;left:59px;white-space:nowrap" class="ft010">pcm.out3&#160;{<br/>&#160;&#160;type&#160;rate<br/>&#160;&#160;slave&#160;slout3<br/>}</p>
+<p style="position:absolute;top:492px;left:74px;white-space:nowrap" class="ft02">If&#160;you&#160;do&#160;not&#160;have&#160;a&#160;</p>
+<p style="position:absolute;top:492px;left:179px;white-space:nowrap" class="ft04">.wav</p>
+<p style="position:absolute;top:492px;left:203px;white-space:nowrap" class="ft02">&#160;file&#160;handy&#160;for&#160;testing,&#160;</p>
+<p style="position:absolute;top:492px;left:320px;white-space:nowrap" class="ft03"><b>speaker-test</b></p>
+<p style="position:absolute;top:492px;left:392px;white-space:nowrap" class="ft02">&#160;is&#160;what&#160;you&#160;want:&#160;</p>
+<p style="position:absolute;top:492px;left:489px;white-space:nowrap" class="ft03"><b>speaker-test&#160;-c2&#160;--device&#160;out3&#160;[--rate&#160;48000]</b></p>
+<p style="position:absolute;top:492px;left:762px;white-space:nowrap" class="ft02">.&#160;The&#160;tool&#160;is&#160;said&#160;to</p>
+<p style="position:absolute;top:504px;left:59px;white-space:nowrap" class="ft02">also&#160;initialize&#160;some&#160;parameters&#160;so&#160;playback&#160;may&#160;work&#160;better/&#160;start&#160;to&#160;work&#160;after&#160;an&#160;invocation.</p>
+<p style="position:absolute;top:526px;left:74px;white-space:nowrap" class="ft02">Finally&#160;&#160;make&#160;&#160;sure&#160;&#160;whether&#160;&#160;your&#160;&#160;sound&#160;&#160;card&#160;&#160;requires&#160;&#160;some&#160;&#160;additional&#160;&#160;firmware&#160;&#160;support.&#160;&#160;For&#160;&#160;Debian&#160;&#160;the&#160;&#160;usually&#160;&#160;proprietary&#160;&#160;firmware&#160;&#160;does&#160;&#160;not&#160;&#160;get</p>
+<p style="position:absolute;top:538px;left:59px;white-space:nowrap" class="ft02">installed&#160;</p>
+<p style="position:absolute;top:538px;left:134px;white-space:nowrap" class="ft02">automatically.&#160;</p>
+<p style="position:absolute;top:538px;left:238px;white-space:nowrap" class="ft02">However&#160;</p>
+<p style="position:absolute;top:538px;left:316px;white-space:nowrap" class="ft02">it&#160;</p>
+<p style="position:absolute;top:538px;left:355px;white-space:nowrap" class="ft02">can&#160;</p>
+<p style="position:absolute;top:538px;left:405px;white-space:nowrap" class="ft02">be&#160;</p>
+<p style="position:absolute;top:538px;left:449px;white-space:nowrap" class="ft02">downloaded&#160;</p>
+<p style="position:absolute;top:538px;left:542px;white-space:nowrap" class="ft02">from&#160;</p>
+<p style="position:absolute;top:538px;left:598px;white-space:nowrap" class="ft02">https://cdimage.debian.org/cdimage/unofficial/non-</p>
+<p style="position:absolute;top:550px;left:59px;white-space:nowrap" class="ft02">free/firmware/testing/current/firmware.tar.gz.&#160;Then&#160;you&#160;can&#160;query&#160;for&#160;sound&#160;support&#160;by&#160;the&#160;Linux&#160;kernel&#160;via&#160;</p>
+<p style="position:absolute;top:550px;left:626px;white-space:nowrap" class="ft03"><b>ls&#160;/sys/class/sound/</b></p>
+<p style="position:absolute;top:550px;left:748px;white-space:nowrap" class="ft02">.&#160;In&#160;our&#160;case&#160;we&#160;have</p>
+<p style="position:absolute;top:562px;left:59px;white-space:nowrap" class="ft02">two&#160;sound&#160;cards&#160;</p>
+<p style="position:absolute;top:562px;left:146px;white-space:nowrap" class="ft04">card0&#160;and&#160;card2.&#160;The&#160;kernel&#160;driver&#160;for&#160;a&#160;sound&#160;card&#160;can&#160;be&#160;obtained&#160;like&#160;this:</p>
+<p style="position:absolute;top:584px;left:59px;white-space:nowrap" class="ft01"><b>&gt;&#160;cat&#160;/sys/class/sound/card0/device/uevent</b></p>
+<p style="position:absolute;top:596px;left:59px;white-space:nowrap" class="ft010">DRIVER=snd_ens1371<br/>PCI_CLASS=40100<br/>PCI_ID=1274:1371<br/>PCI_SUBSYS_ID=1274:1371<br/>PCI_SLOT_NAME=0000:04:07.0<br/>MODALIAS=pci:v00001274d00001371sv00001274sd00001371bc04sc01i00</p>
+<p style="position:absolute;top:663px;left:59px;white-space:nowrap" class="ft01"><b>&gt;&#160;lspci&#160;|&#160;grep&#160;04:07.0</b></p>
+<p style="position:absolute;top:675px;left:59px;white-space:nowrap" class="ft00">04:07.0&#160;Multimedia&#160;audio&#160;controller:&#160;Ensoniq&#160;ES1371&#160;/&#160;Creative&#160;Labs&#160;CT2518&#160;[AudioPCI-97]&#160;(rev&#160;08)</p>
+<p style="position:absolute;top:686px;left:59px;white-space:nowrap" class="ft01"><b>&gt;&#160;modinfo&#160;snd_ens1371</b></p>
+<p style="position:absolute;top:697px;left:59px;white-space:nowrap" class="ft010">filename:&#160;&#160;&#160;&#160;&#160;&#160;&#160;/lib/modules/4.19.67-rt24/kernel/sound/pci/snd-ens1371.ko<br/>description:&#160;&#160;&#160;&#160;Ensoniq/Creative&#160;AudioPCI&#160;ES1371+<br/>license:&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;GPL<br/>author:&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Jaroslav&#160;Kysela&#160;,&#160;Thomas&#160;Sailer&#160;<br/>alias:&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;pci:v00001102d00008938sv*sd*bc*sc*i*<br/>alias:&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;pci:v00001274d00005880sv*sd*bc*sc*i*<br/>alias:&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;pci:v00001274d00001371sv*sd*bc*sc*i*<br/>depends:&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;snd-pcm,snd,snd-rawmidi,gameport,snd-ac97-codec<br/>retpoline:&#160;&#160;&#160;&#160;&#160;&#160;Y<br/>intree:&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Y<br/>name:&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;snd_ens1371<br/>vermagic:&#160;&#160;&#160;&#160;&#160;&#160;&#160;4.19.67-rt24&#160;SMP&#160;preempt&#160;mod_unload&#160;modversions&#160;<br/>parm:&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;index:Index&#160;value&#160;for&#160;Ensoniq&#160;AudioPCI&#160;soundcard.&#160;(array&#160;of&#160;int)<br/>parm:&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;id:ID&#160;string&#160;for&#160;Ensoniq&#160;AudioPCI&#160;soundcard.&#160;(array&#160;of&#160;charp)<br/>parm:&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;enable:Enable&#160;Ensoniq&#160;AudioPCI&#160;soundcard.&#160;(array&#160;of&#160;bool)<br/>parm:&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;joystick_port:Joystick&#160;port&#160;address.&#160;(array&#160;of&#160;int)<br/>parm:&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;spdif:S/PDIF&#160;output&#160;(-1&#160;=&#160;none,&#160;0&#160;=&#160;auto,&#160;1&#160;=&#160;force).&#160;(array&#160;of&#160;int)<br/>parm:&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;lineio:Line&#160;In&#160;to&#160;Rear&#160;Out&#160;(0&#160;=&#160;auto,&#160;1&#160;=&#160;force).&#160;(array&#160;of&#160;int)</p>
+<p style="position:absolute;top:911px;left:74px;white-space:nowrap" class="ft04">The&#160;&#160;actual&#160;&#160;model&#160;&#160;parameters&#160;&#160;can&#160;&#160;be&#160;&#160;queried&#160;&#160;via&#160;&#160;<b>/sys/class/sound/card2/device/driver/module/parameters/</b>&#160;&#160;and&#160;&#160;stated&#160;&#160;at&#160;&#160;<b>modprobe</b></p>
+<p style="position:absolute;top:923px;left:59px;white-space:nowrap" class="ft011">time.&#160;&#160;Before&#160;&#160;you&#160;&#160;can&#160;&#160;actually&#160;&#160;re-insert&#160;&#160;a&#160;&#160;kernel&#160;&#160;module&#160;&#160;you&#160;&#160;may&#160;&#160;need&#160;&#160;to&#160;&#160;remove&#160;&#160;it&#160;&#160;with&#160;&#160;<b>rmmod&#160;&#160;-f</b>.&#160;&#160;Query&#160;&#160;with&#160;&#160;<b>lsmod&#160;&#160;|&#160;&#160;grep&#160;&#160;name<br/></b>whether&#160;it&#160;is&#160;loaded.&#160;Set&#160;boot&#160;time&#160;module&#160;parameters&#160;in&#160;<b>/etc/modprobe.d/</b>:</p>
+<p style="position:absolute;top:957px;left:59px;white-space:nowrap" class="ft01"><b>&gt;&#160;cat&#160;/etc/modprobe.d/modesetting.conf&#160;</b></p>
+<p style="position:absolute;top:968px;left:59px;white-space:nowrap" class="ft010">options&#160;cirrus&#160;modeset=1<br/>options&#160;mgag200&#160;modeset=1</p>
+<p style="position:absolute;top:1001px;left:74px;white-space:nowrap" class="ft04">The&#160;&#160;lines&#160;&#160;from&#160;&#160;above&#160;&#160;show&#160;&#160;module&#160;&#160;parameters&#160;&#160;for&#160;&#160;some&#160;&#160;graphics&#160;&#160;cards.&#160;&#160;Similarely&#160;&#160;to&#160;&#160;audio&#160;&#160;graphics&#160;&#160;cards&#160;&#160;may&#160;&#160;require&#160;&#160;the&#160;&#160;right</p>
+<p style="position:absolute;top:1013px;left:59px;white-space:nowrap" class="ft04">firmware&#160;to&#160;be&#160;installed.</p>
+<p style="position:absolute;top:1042px;left:59px;white-space:nowrap" class="ft05"><b>Things&#160;that&#160;are&#160;new&#160;in&#160;version&#160;v2.4</b></p>
+<p style="position:absolute;top:1066px;left:84px;white-space:nowrap" class="ft04">pulseaudio&#160;support</p>
+<p style="position:absolute;top:1089px;left:84px;white-space:nowrap" class="ft04">running&#160;programs&#160;directly&#160;with&#160;xchroot&#160;without&#160;additionally&#160;specifying&#160;the&#160;chroot&#160;root&#160;directory&#160;(fetched&#160;from&#160;sudoers)&#160;</p>
+<p style="position:absolute;top:1090px;left:811px;white-space:nowrap" class="ft06"><b>elm:</b></p>
+<p style="position:absolute;top:1090px;left:833px;white-space:nowrap" class="ft07"><b>~&gt;</b></p>
+<p style="position:absolute;top:1090px;left:845px;white-space:nowrap" class="ft01"><b>&#160;openroot&#160;-t&#160;/dst/buster/usr/bin/xine&#160;Tahitian\&#160;Polynesian\&#160;Music-Q6klGrCbk2c.mkv&#160;--&#160;--noask</b></p>
+<p style="position:absolute;top:1102px;left:84px;white-space:nowrap" class="ft08"><b>root:</b></p>
+<p style="position:absolute;top:1102px;left:113px;white-space:nowrap" class="ft07"><b>~&gt;</b></p>
+<p style="position:absolute;top:1102px;left:124px;white-space:nowrap" class="ft01"><b>&#160;xchroot&#160;listsudoers</b></p>
+<p style="position:absolute;top:1114px;left:84px;white-space:nowrap" class="ft010">xchroot&#160;entries&#160;in&#160;/etc/sudoers:<br/>/home/shell/shutil/xchroot:&#160;elm-&gt;elm&#160;/dst/buster/*<br/>/home/shell/shutil/xchroot:&#160;elm-&gt;elm&#160;[-]t&#160;/dst/buster/*<br/>/home/shell/shutil/xchroot:&#160;elm-&gt;elm&#160;cleanup&#160;/dst/buster/*<br/>/home/shell/shutil/xchroot:&#160;elm-&gt;elm&#160;[-]t&#160;cleanup&#160;/dst/buster/*</p>
+<p style="position:absolute;top:1173px;left:84px;white-space:nowrap" class="ft04">It&#160;is&#160;important&#160;that&#160;the&#160;sudoers&#160;entry&#160;ends&#160;with&#160;“/*”&#160;and&#160;not&#160;with&#160;a&#160;slash&#160;and&#160;a&#160;space&#160;or&#160;a&#160;letter&#160;and&#160;a&#160;space&#160;as&#160;otherwise&#160;you</p>
+<p style="position:absolute;top:1031px;left:671px;white-space:nowrap" class="ft09">up</p>
+<p style="position:absolute;top:1031px;left:684px;white-space:nowrap" class="ft04">&#160;</p>
+<p style="position:absolute;top:1031px;left:690px;white-space:nowrap" class="ft09">down</p>
+<p style="position:absolute;top:1031px;left:714px;white-space:nowrap" class="ft04">&#160;</p>
+<p style="position:absolute;top:1031px;left:720px;white-space:nowrap" class="ft09">Directory</p>
+<p style="position:absolute;top:1031px;left:774px;white-space:nowrap" class="ft04">Menu</p>
+</div>
+</body>
+</html>

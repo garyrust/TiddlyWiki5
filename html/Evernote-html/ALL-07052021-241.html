@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+<title>Page 241</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<style type="text/css">
+<!--
+	p {margin: 0; padding: 0;}	.ft00{font-size:10px;font-family:DejaVuSerif;color:#1f0909;}
+	.ft01{font-size:10px;font-family:DejaVuSerif;color:#1f0909;}
+	.ft02{font-size:8px;font-family:DejaVuSerif;color:#1f0909;}
+	.ft03{font-size:8px;font-family:DejaVuSerif;color:#1f0909;}
+	.ft04{font-size:10px;font-family:DejaVuSerif;color:#065588;}
+	.ft05{font-size:18px;font-family:DejaVuSerif;color:#1f0909;}
+	.ft06{font-size:10px;line-height:15px;font-family:DejaVuSerif;color:#1f0909;}
+	.ft07{font-size:10px;line-height:15px;font-family:DejaVuSerif;color:#1f0909;}
+	.ft08{font-size:10px;line-height:14px;font-family:DejaVuSerif;color:#1f0909;}
+-->
+</style>
+</head>
+<body bgcolor="#A0A0A0" vlink="blue" link="blue">
+<div id="page241-div" style="position:relative;width:892px;height:1263px;">
+<img width="892" height="1263" src="ALL-07052021241.png" alt="background image"/>
+<p style="position:absolute;top:56px;left:262px;white-space:nowrap" class="ft07"><b>How&#160;can&#160;I&#160;reset&#160;the&#160;virtual&#160;machine(s)&#160;my&#160;code&#160;runs&#160;on,&#160;and<br/>why&#160;is&#160;this&#160;sometimes&#160;unavailable?<br/></b>Selecting&#160;<b>Runtime&#160;&gt;&#160;Factory&#160;reset&#160;runtime</b>&#160;to&#160;return&#160;all&#160;managed<br/>virtual&#160;machines&#160;assigned&#160;to&#160;you&#160;to&#160;their&#160;original&#160;state.&#160;This&#160;can&#160;be<br/>helpful&#160;in&#160;cases&#160;where&#160;a&#160;virtual&#160;machine&#160;has&#160;become&#160;unhealthy&#160;e.g.<br/>due&#160;to&#160;accidental&#160;overwrite&#160;of&#160;system&#160;files,&#160;or&#160;installation&#160;of<br/>incompatible&#160;software.&#160;Colab&#160;limits&#160;how&#160;often&#160;this&#160;can&#160;be&#160;done&#160;to<br/>prevent&#160;undue&#160;resource&#160;consumption.&#160;If&#160;an&#160;attempt&#160;fails,&#160;please&#160;try<br/>again&#160;later.</p>
+<p style="position:absolute;top:207px;left:262px;white-space:nowrap" class="ft00"><b>Why&#160;does&#160;</b></p>
+<p style="position:absolute;top:209px;left:319px;white-space:nowrap" class="ft02"><b>drive.mount()</b></p>
+<p style="position:absolute;top:207px;left:388px;white-space:nowrap" class="ft00"><b>&#160;sometimes&#160;fail&#160;saying&#160;&#34;timed&#160;out&#34;,&#160;and</b></p>
+<p style="position:absolute;top:223px;left:262px;white-space:nowrap" class="ft00"><b>why&#160;do&#160;I/O&#160;operations&#160;in&#160;</b></p>
+<p style="position:absolute;top:224px;left:404px;white-space:nowrap" class="ft02"><b>drive.mount()</b></p>
+<p style="position:absolute;top:223px;left:472px;white-space:nowrap" class="ft00"><b>-mounted&#160;folders</b></p>
+<p style="position:absolute;top:239px;left:262px;white-space:nowrap" class="ft07"><b>sometimes&#160;fail?<br/></b>Google&#160;Drive&#160;operations&#160;can&#160;time&#160;out&#160;when&#160;the&#160;number&#160;of&#160;files&#160;or<br/>subfolders&#160;in&#160;a&#160;folder&#160;grows&#160;too&#160;large.&#160;If&#160;thousands&#160;of&#160;items&#160;are<br/>directly&#160;contained&#160;in&#160;the&#160;top-level&#160;&#34;My&#160;Drive&#34;&#160;folder&#160;then&#160;mounting<br/>the&#160;drive&#160;will&#160;likely&#160;time&#160;out.&#160;Repeated&#160;attempts&#160;may&#160;eventually<br/>succeed&#160;as&#160;failed&#160;attempts&#160;cache&#160;partial&#160;state&#160;locally&#160;before&#160;timing<br/>out.&#160;If&#160;you&#160;encounter&#160;this&#160;problem,&#160;try&#160;moving&#160;files&#160;and&#160;folders<br/>directly&#160;contained&#160;in&#160;&#34;My&#160;Drive&#34;&#160;into&#160;sub-folders.&#160;A&#160;similar&#160;problem<br/>can&#160;occur&#160;when&#160;reading&#160;from&#160;other&#160;folders&#160;after&#160;a&#160;successful</p>
+<p style="position:absolute;top:375px;left:262px;white-space:nowrap" class="ft03">drive.mount()</p>
+<p style="position:absolute;top:374px;left:323px;white-space:nowrap" class="ft01">.&#160;Accessing&#160;items&#160;in&#160;any&#160;folder&#160;containing&#160;many&#160;items&#160;can</p>
+<p style="position:absolute;top:390px;left:262px;white-space:nowrap" class="ft01">cause&#160;errors&#160;like&#160;</p>
+<p style="position:absolute;top:391px;left:351px;white-space:nowrap" class="ft03">OSError:&#160;[Errno&#160;5]&#160;Input/output&#160;error</p>
+<p style="position:absolute;top:390px;left:520px;white-space:nowrap" class="ft01">.&#160;Again,&#160;you&#160;can&#160;fix</p>
+<p style="position:absolute;top:406px;left:262px;white-space:nowrap" class="ft07">this&#160;problem&#160;by&#160;moving&#160;directly&#160;contained&#160;items&#160;into&#160;sub-folders.<br/>Note&#160;that&#160;&#34;deleting&#34;&#160;files&#160;or&#160;subfolders&#160;by&#160;moving&#160;them&#160;to&#160;the&#160;Trash<br/>may&#160;not&#160;be&#160;enough;&#160;if&#160;that&#160;doesn't&#160;seem&#160;to&#160;help,&#160;make&#160;sure&#160;to&#160;also</p>
+<p style="position:absolute;top:451px;left:262px;white-space:nowrap" class="ft04">Empty&#160;your&#160;Trash</p>
+<p style="position:absolute;top:451px;left:354px;white-space:nowrap" class="ft01">.</p>
+<p style="position:absolute;top:482px;left:262px;white-space:nowrap" class="ft07"><b>Why&#160;do&#160;Drive&#160;operations&#160;sometimes&#160;fail&#160;due&#160;to&#160;quota?<br/></b>Google&#160;Drive&#160;enforces&#160;various&#160;limits,&#160;including&#160;per-user&#160;and&#160;per-file<br/>operation&#160;count&#160;and&#160;bandwidth&#160;quotas.&#160;Exceeding&#160;these&#160;limits&#160;will<br/>trigger&#160;</p>
+<p style="position:absolute;top:528px;left:301px;white-space:nowrap" class="ft03">Input/output&#160;error</p>
+<p style="position:absolute;top:526px;left:383px;white-space:nowrap" class="ft01">&#160;as&#160;above,&#160;and&#160;show&#160;a&#160;notification&#160;in&#160;the&#160;Colab</p>
+<p style="position:absolute;top:542px;left:262px;white-space:nowrap" class="ft07">UI.&#160;A&#160;typical&#160;cause&#160;is&#160;accessing&#160;a&#160;popular&#160;shared&#160;file,&#160;or&#160;accessing&#160;too<br/>many&#160;distinct&#160;files&#160;too&#160;quickly.&#160;Workarounds&#160;include:</p>
+<p style="position:absolute;top:577px;left:277px;white-space:nowrap" class="ft01">Copy&#160;the&#160;file&#160;using&#160;</p>
+<p style="position:absolute;top:577px;left:376px;white-space:nowrap" class="ft04">drive.google.com</p>
+<p style="position:absolute;top:577px;left:464px;white-space:nowrap" class="ft01">&#160;and&#160;don't&#160;share&#160;it&#160;widely&#160;so</p>
+<p style="position:absolute;top:592px;left:277px;white-space:nowrap" class="ft07">that&#160;other&#160;users&#160;don't&#160;use&#160;up&#160;its&#160;limits.<br/>Avoid&#160;making&#160;many&#160;small&#160;I/O&#160;reads,&#160;instead&#160;opting&#160;to&#160;copy&#160;data<br/>from&#160;Drive&#160;to&#160;the&#160;Colab&#160;VM&#160;in&#160;an&#160;archive&#160;format&#160;(e.g.&#160;</p>
+<p style="position:absolute;top:624px;left:555px;white-space:nowrap" class="ft03">.zip</p>
+<p style="position:absolute;top:623px;left:570px;white-space:nowrap" class="ft01">&#160;or</p>
+<p style="position:absolute;top:624px;left:584px;white-space:nowrap" class="ft03">.tar.gz</p>
+<p style="position:absolute;top:638px;left:277px;white-space:nowrap" class="ft07">files)&#160;and&#160;unarchive&#160;the&#160;data&#160;locally&#160;on&#160;the&#160;VM&#160;instead&#160;of&#160;in&#160;the<br/>mounted&#160;Drive&#160;directory.<br/>Wait&#160;a&#160;day&#160;for&#160;quota&#160;limits&#160;to&#160;reset.</p>
+<p style="position:absolute;top:699px;left:262px;white-space:nowrap" class="ft07"><b>Why&#160;do&#160;Drive&#160;operations&#160;sometimes&#160;fail&#160;due&#160;to&#160;storage&#160;quota?<br/></b>Google&#160;Drive&#160;imposes&#160;a&#160;limit&#160;on&#160;how&#160;much&#160;data&#160;can&#160;be&#160;stored&#160;in&#160;it&#160;by<br/>each&#160;user.&#160;If&#160;Drive&#160;operations&#160;are&#160;failing&#160;with</p>
+<p style="position:absolute;top:730px;left:495px;white-space:nowrap" class="ft03">Input/output&#160;error</p>
+<p style="position:absolute;top:729px;left:577px;white-space:nowrap" class="ft01">&#160;and&#160;a</p>
+<p style="position:absolute;top:745px;left:262px;white-space:nowrap" class="ft07">notification&#160;says&#160;storage&#160;quota&#160;has&#160;been&#160;exceeded,&#160;delete&#160;some&#160;files<br/>using&#160;</p>
+<p style="position:absolute;top:760px;left:293px;white-space:nowrap" class="ft04">drive.google.com</p>
+<p style="position:absolute;top:760px;left:381px;white-space:nowrap" class="ft01">&#160;and&#160;</p>
+<p style="position:absolute;top:760px;left:406px;white-space:nowrap" class="ft04">Empty&#160;your&#160;Trash</p>
+<p style="position:absolute;top:760px;left:498px;white-space:nowrap" class="ft01">&#160;to&#160;reclaim&#160;the&#160;space.&#160;It</p>
+<p style="position:absolute;top:775px;left:262px;white-space:nowrap" class="ft07">might&#160;take&#160;a&#160;little&#160;while&#160;for&#160;the&#160;reclaimed&#160;space&#160;to&#160;be&#160;available&#160;in<br/>Colab.</p>
+<p style="position:absolute;top:820px;left:262px;white-space:nowrap" class="ft01">If&#160;you'd&#160;like&#160;to&#160;purchase&#160;more&#160;Drive&#160;space,&#160;visit&#160;</p>
+<p style="position:absolute;top:820px;left:509px;white-space:nowrap" class="ft04">Google&#160;Drive</p>
+<p style="position:absolute;top:820px;left:576px;white-space:nowrap" class="ft01">.&#160;Note</p>
+<p style="position:absolute;top:835px;left:262px;white-space:nowrap" class="ft07">that&#160;purchasing&#160;more&#160;space&#160;on&#160;Drive&#160;will&#160;not&#160;increase&#160;the&#160;amount&#160;of<br/>disk&#160;available&#160;on&#160;Colab&#160;VMs.&#160;Subscribing&#160;to&#160;</p>
+<p style="position:absolute;top:850px;left:490px;white-space:nowrap" class="ft04">Colab&#160;Pro</p>
+<p style="position:absolute;top:850px;left:540px;white-space:nowrap" class="ft01">&#160;will.</p>
+<p style="position:absolute;top:886px;left:262px;white-space:nowrap" class="ft05"><b>Resource&#160;Limits</b></p>
+<p style="position:absolute;top:919px;left:262px;white-space:nowrap" class="ft07"><b>Why&#160;aren’t&#160;resources&#160;guaranteed&#160;in&#160;Colab?<br/></b>In&#160;order&#160;to&#160;be&#160;able&#160;to&#160;offer&#160;computational&#160;resources&#160;for&#160;free,&#160;Colab<br/>needs&#160;to&#160;maintain&#160;the&#160;flexibility&#160;to&#160;adjust&#160;usage&#160;limits&#160;and&#160;hardware<br/>availability&#160;on&#160;the&#160;fly.&#160;Resources&#160;available&#160;in&#160;Colab&#160;vary&#160;over&#160;time&#160;to<br/>accommodate&#160;fluctuations&#160;in&#160;demand,&#160;as&#160;well&#160;as&#160;to&#160;accommodate<br/>overall&#160;growth&#160;and&#160;other&#160;factors.</p>
+<p style="position:absolute;top:1024px;left:262px;white-space:nowrap" class="ft07">Some&#160;users&#160;want&#160;to&#160;be&#160;able&#160;to&#160;do&#160;more&#160;in&#160;Colab&#160;than&#160;the&#160;resource<br/>limits&#160;allow.&#160;We&#160;have&#160;heard&#160;from&#160;many&#160;users&#160;who&#160;want&#160;faster&#160;GPUs,<br/>longer&#160;running&#160;notebooks&#160;and&#160;more&#160;memory,&#160;as&#160;well&#160;as&#160;usage&#160;limits<br/>that&#160;are&#160;higher&#160;and&#160;don’t&#160;fluctuate&#160;as&#160;much.&#160;Introducing&#160;</p>
+<p style="position:absolute;top:1070px;left:555px;white-space:nowrap" class="ft04">Colab&#160;Pro</p>
+<p style="position:absolute;top:1070px;left:605px;white-space:nowrap" class="ft01">&#160;is</p>
+<p style="position:absolute;top:1085px;left:262px;white-space:nowrap" class="ft07">the&#160;first&#160;step&#160;we&#160;are&#160;taking&#160;towards&#160;serving&#160;users&#160;who&#160;want&#160;to&#160;do<br/>more&#160;in&#160;Colab.&#160;Our&#160;long&#160;term&#160;goal&#160;is&#160;to&#160;continue&#160;providing&#160;a&#160;free<br/>version&#160;of&#160;Colab,&#160;while&#160;also&#160;growing&#160;in&#160;a&#160;sustainable&#160;fashion&#160;to&#160;meet<br/>the&#160;needs&#160;of&#160;our&#160;users.&#160;If&#160;you&#160;are&#160;interested&#160;in&#160;doing&#160;more&#160;in&#160;Colab<br/>than&#160;the&#160;resource&#160;limits&#160;of&#160;the&#160;free&#160;version&#160;of&#160;Colab&#160;allow,&#160;please&#160;try<br/>out&#160;Colab&#160;Pro&#160;and&#160;let&#160;us&#160;know&#160;what&#160;you&#160;think.</p>
+</div>
+</body>
+</html>

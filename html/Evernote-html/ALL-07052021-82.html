@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+<title>Page 82</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<style type="text/css">
+<!--
+	p {margin: 0; padding: 0;}	.ft00{font-size:9px;font-family:DejaVuSans;color:#222222;}
+	.ft01{font-size:13px;font-family:DejaVuSans;color:#111111;}
+	.ft02{font-size:9px;font-family:DejaVuSans;color:#222222;}
+	.ft03{font-size:7px;font-family:BitstreamVeraSansMono;color:#008200;}
+	.ft04{font-size:7px;font-family:BitstreamVeraSansMono;color:#000000;}
+	.ft05{font-size:7px;font-family:BitstreamVeraSansMono;color:#ff1493;}
+	.ft06{font-size:9px;line-height:16px;font-family:DejaVuSans;color:#222222;}
+	.ft07{font-size:9px;line-height:15px;font-family:DejaVuSans;color:#222222;}
+-->
+</style>
+</head>
+<body bgcolor="#A0A0A0" vlink="blue" link="blue">
+<div id="page82-div" style="position:relative;width:892px;height:1263px;">
+<img width="892" height="1263" src="ALL-07052021082.png" alt="background image"/>
+<p style="position:absolute;top:57px;left:123px;white-space:nowrap" class="ft06">The&#160;Ip-netns&#160;utility&#160;is&#160;one&#160;of&#160;the&#160;few&#160;that&#160;directly&#160;use&#160;network&#160;namespaces&#160;to&#160;create&#160;virtual<br/>interfaces.&#160;To&#160;create&#160;a&#160;new&#160;network&#160;namespace,&#160;use&#160;the&#160;following&#160;command:</p>
+<p style="position:absolute;top:123px;left:123px;white-space:nowrap" class="ft00">To&#160;check&#160;the&#160;interfaces&#160;inside,&#160;use&#160;the&#160;command&#160;shown&#160;below:</p>
+<p style="position:absolute;top:172px;left:123px;white-space:nowrap" class="ft00">You&#160;can&#160;even&#160;get&#160;the&#160;shell&#160;inside&#160;it,&#160;as&#160;follows:</p>
+<p style="position:absolute;top:222px;left:123px;white-space:nowrap" class="ft06">This&#160;will&#160;take&#160;you&#160;inside&#160;the&#160;network&#160;namespace,&#160;which&#160;has&#160;only&#160;a&#160;single&#160;network&#160;interface<br/>with&#160;no&#160;IP.&#160;So,&#160;you&#160;are&#160;not&#160;connected&#160;with&#160;the&#160;external&#160;network&#160;and&#160;also&#160;can​t&#160;ping.</p>
+<p style="position:absolute;top:288px;left:123px;white-space:nowrap" class="ft06">This&#160;will&#160;bring&#160;the&#160;loop&#160;interface&#160;up.&#160;But&#160;to&#160;connect&#160;to&#160;the&#160;external&#160;network&#160;you&#160;need&#160;to<br/>create&#160;a&#160;virtual&#160;Ethernet&#160;and&#160;add&#160;it&#160;to&#160;</p>
+<p style="position:absolute;top:304px;left:305px;white-space:nowrap" class="ft00">netns&#160;as&#160;follows:</p>
+<p style="position:absolute;top:362px;left:123px;white-space:nowrap" class="ft00">Now,&#160;it​s&#160;time&#160;to&#160;set&#160;the&#160;IP&#160;to&#160;these&#160;devices,&#160;as&#160;follows:</p>
+<p style="position:absolute;top:428px;left:123px;white-space:nowrap" class="ft01">Unshare</p>
+<p style="position:absolute;top:459px;left:123px;white-space:nowrap" class="ft06">The&#160;unshare&#160;utility&#160;is&#160;used&#160;to&#160;create&#160;any&#160;namespace&#160;isolated&#160;environment&#160;and&#160;run&#160;a<br/>program&#160;or&#160;shell&#160;inside&#160;it.</p>
+<p style="position:absolute;top:508px;left:123px;white-space:nowrap" class="ft00">To&#160;get&#160;a&#160;network&#160;namespace&#160;and&#160;run&#160;the&#160;shell&#160;inside&#160;it,&#160;use&#160;the&#160;command&#160;shown&#160;below:</p>
+<p style="position:absolute;top:558px;left:123px;white-space:nowrap" class="ft07">The&#160;shell&#160;you&#160;get&#160;back&#160;will&#160;come&#160;with&#160;a&#160;different&#160;network&#160;stack.&#160;You&#160;can&#160;check&#160;this&#160;by&#160;using<br/>#ip&#160;addr,&#160;as&#160;follows:</p>
+<p style="position:absolute;top:632px;left:123px;white-space:nowrap" class="ft00">To&#160;create&#160;a&#160;user&#160;namespace&#160;environment,&#160;use&#160;the&#160;following&#160;command:</p>
+<p style="position:absolute;top:682px;left:123px;white-space:nowrap" class="ft00">You&#160;can&#160;check&#160;your&#160;user&#160;inside&#160;the&#160;shell&#160;by&#160;using&#160;the&#160;command&#160;below:</p>
+<p style="position:absolute;top:740px;left:123px;white-space:nowrap" class="ft00">To&#160;get&#160;the&#160;PID&#160;namespace,&#160;use&#160;the&#160;following&#160;command:</p>
+<p style="position:absolute;top:789px;left:123px;white-space:nowrap" class="ft00">Inside&#160;this&#160;namespace,&#160;you&#160;can&#160;see&#160;all&#160;the&#160;processes&#160;but&#160;cannot&#160;kill&#160;any.</p>
+<p style="position:absolute;top:872px;left:123px;white-space:nowrap" class="ft06">To&#160;get&#160;a&#160;whole&#160;different&#160;degree&#160;of&#160;process&#160;tree&#160;isolation&#160;you&#160;need&#160;to&#160;mount&#160;another&#160;proc<br/>for&#160;the&#160;namespace,&#160;as&#160;follows:</p>
+<p style="position:absolute;top:938px;left:123px;white-space:nowrap" class="ft06">In&#160;this&#160;way,&#160;you&#160;can&#160;use&#160;unshare&#160;to&#160;create&#160;a&#160;single&#160;namespace.&#160;More&#160;about&#160;it&#160;can&#160;be&#160;found<br/>out&#160;on&#160;the&#160;man&#160;page&#160;of&#160;unshare.</p>
+<p style="position:absolute;top:987px;left:123px;white-space:nowrap" class="ft02"><b>Note:</b>&#160;</p>
+<p style="position:absolute;top:986px;left:155px;white-space:nowrap" class="ft00">A&#160;namespace&#160;created&#160;by&#160;using&#160;unshare&#160;can&#160;also&#160;be&#160;combined&#160;to&#160;create&#160;a&#160;single&#160;shell</p>
+<p style="position:absolute;top:1003px;left:123px;white-space:nowrap" class="ft00">which&#160;uses&#160;different&#160;namespaces.&#160;For&#160;example:</p>
+<p style="position:absolute;top:1053px;left:123px;white-space:nowrap" class="ft00">This&#160;will&#160;create&#160;an&#160;isolated&#160;environment&#160;using&#160;the&#160;PID&#160;and&#160;user&#160;namespaces.</p>
+<p style="position:absolute;top:1084px;left:123px;white-space:nowrap" class="ft01">Firejail</p>
+<p style="position:absolute;top:1116px;left:123px;white-space:nowrap" class="ft06">Firejail&#160;is&#160;an&#160;SUID&#160;sandbox&#160;program&#160;that&#160;is&#160;used&#160;to&#160;isolate&#160;programs&#160;for&#160;testing&#160;or&#160;security<br/>purposes.&#160;It&#160;is&#160;written&#160;in&#160;C&#160;and&#160;can&#160;be&#160;configured&#160;to&#160;use&#160;most&#160;of&#160;the&#160;namespaces.&#160;To&#160;start&#160;a<br/>service&#160;in&#160;firejail,&#160;use&#160;the&#160;following&#160;command:</p>
+<p style="position:absolute;top:104px;left:126px;white-space:nowrap" class="ft03">#ip&#160;netns&#160;add&#160;netns1</p>
+<p style="position:absolute;top:153px;left:126px;white-space:nowrap" class="ft03">#ip&#160;netns&#160;exec&#160;netns&#160;ip&#160;addr</p>
+<p style="position:absolute;top:203px;left:126px;white-space:nowrap" class="ft03">#ip&#160;netns&#160;exec&#160;netns&#160;/bin/bash</p>
+<p style="position:absolute;top:269px;left:126px;white-space:nowrap" class="ft03">#ip&#160;netns&#160;exec&#160;netns&#160;ip&#160;link&#160;set&#160;dev&#160;lo&#160;up</p>
+<p style="position:absolute;top:335px;left:126px;white-space:nowrap" class="ft03">#&#160;ip&#160;link&#160;add&#160;veth0&#160;type&#160;veth&#160;peer&#160;name&#160;veth1</p>
+<p style="position:absolute;top:343px;left:126px;white-space:nowrap" class="ft03">#&#160;ip&#160;link&#160;set&#160;veth1&#160;netns&#160;netns1</p>
+<p style="position:absolute;top:393px;left:126px;white-space:nowrap" class="ft03">#&#160;ip&#160;netns&#160;exec&#160;netns1&#160;ifconfig&#160;veth1&#160;10.1.1.1/24&#160;up</p>
+<p style="position:absolute;top:401px;left:126px;white-space:nowrap" class="ft03">#&#160;ifconfig&#160;veth0&#160;10.1.1.2/24&#160;up</p>
+<p style="position:absolute;top:539px;left:126px;white-space:nowrap" class="ft03">#unshare&#160;--net&#160;/bin/bash</p>
+<p style="position:absolute;top:605px;left:126px;white-space:nowrap" class="ft04">1:&#160;lo:&#160;&lt;LOOPBACK&gt;&#160;mtu&#160;65536&#160;qdisc&#160;noop&#160;state&#160;DOWN&#160;mode&#160;DEFAULT&#160;group&#160;default</p>
+<p style="position:absolute;top:613px;left:126px;white-space:nowrap" class="ft04">link/loopback&#160;00:00:00:00:00:00&#160;brd&#160;00:00:00:00:00:00</p>
+<p style="position:absolute;top:663px;left:126px;white-space:nowrap" class="ft03">#unshare&#160;--user&#160;/bin/bash</p>
+<p style="position:absolute;top:712px;left:126px;white-space:nowrap" class="ft03">#whoami</p>
+<p style="position:absolute;top:721px;left:126px;white-space:nowrap" class="ft04">nobody</p>
+<p style="position:absolute;top:770px;left:126px;white-space:nowrap" class="ft03">#unshare&#160;--pid&#160;--fork&#160;/bin/bash</p>
+<p style="position:absolute;top:820px;left:126px;white-space:nowrap" class="ft03">#ps&#160;-aux&#160;|grep&#160;firefox</p>
+<p style="position:absolute;top:828px;left:126px;white-space:nowrap" class="ft04">root&#160;1110&#160;42.6&#160;11.0&#160;1209424&#160;436756&#160;tty1&#160;Sl&#160;23:36&#160;0:15&#160;.firefox1/./firefox</p>
+<p style="position:absolute;top:836px;left:126px;white-space:nowrap" class="ft04">root&#160;1208&#160;0.0&#160;0.0&#160;12660&#160;1648&#160;pts/2&#160;S+&#160;23:37&#160;0:00&#160;</p>
+<p style="position:absolute;top:836px;left:348px;white-space:nowrap" class="ft05">grep</p>
+<p style="position:absolute;top:836px;left:366px;white-space:nowrap" class="ft04">&#160;firefox</p>
+<p style="position:absolute;top:844px;left:126px;white-space:nowrap" class="ft03">#kill&#160;1110</p>
+<p style="position:absolute;top:853px;left:126px;white-space:nowrap" class="ft05">bash</p>
+<p style="position:absolute;top:853px;left:144px;white-space:nowrap" class="ft04">:&#160;</p>
+<p style="position:absolute;top:853px;left:153px;white-space:nowrap" class="ft05">kill</p>
+<p style="position:absolute;top:853px;left:171px;white-space:nowrap" class="ft04">:&#160;(1110)&#160;-&#160;No&#160;such&#160;process</p>
+<p style="position:absolute;top:919px;left:126px;white-space:nowrap" class="ft04">unshare&#160;--pid&#160;--fork&#160;--</p>
+<p style="position:absolute;top:919px;left:230px;white-space:nowrap" class="ft05">mount</p>
+<p style="position:absolute;top:919px;left:253px;white-space:nowrap" class="ft04">-proc&#160;/bin/bash</p>
+<p style="position:absolute;top:1034px;left:126px;white-space:nowrap" class="ft03">#unshare&#160;--pid&#160;--fork&#160;--user&#160;/bin/bash</p>
+<p style="position:absolute;top:1179px;left:126px;white-space:nowrap" class="ft03">#firejail&#160;firefox</p>
+</div>
+</body>
+</html>

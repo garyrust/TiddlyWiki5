@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+<title>Page 155</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<style type="text/css">
+<!--
+	p {margin: 0; padding: 0;}	.ft00{font-size:10px;font-family:DejaVuSansMono;color:#a21313;}
+	.ft01{font-size:10px;font-family:DejaVuSans;color:#000000;}
+	.ft02{font-size:10px;font-family:DejaVuSansMono;color:#000000;}
+	.ft03{font-size:10px;font-family:DejaVuSans;color:#a21313;}
+	.ft04{font-size:11px;font-family:DejaVuSans;color:#000000;}
+	.ft05{font-size:10px;line-height:15px;font-family:DejaVuSans;color:#000000;}
+-->
+</style>
+</head>
+<body bgcolor="#A0A0A0" vlink="blue" link="blue">
+<div id="page155-div" style="position:relative;width:892px;height:1263px;">
+<img width="892" height="1263" src="ALL-07052021155.png" alt="background image"/>
+<p style="position:absolute;top:55px;left:288px;white-space:nowrap" class="ft00">addLineClass</p>
+<p style="position:absolute;top:55px;left:362px;white-space:nowrap" class="ft01">).&#160;</p>
+<p style="position:absolute;top:55px;left:373px;white-space:nowrap" class="ft02">class</p>
+<p style="position:absolute;top:55px;left:405px;white-space:nowrap" class="ft01">&#160;can&#160;be&#160;left&#160;off&#160;to&#160;remove&#160;all&#160;classes&#160;for&#160;the</p>
+<p style="position:absolute;top:70px;left:287px;white-space:nowrap" class="ft01">specified&#160;node,&#160;or&#160;be&#160;a&#160;string&#160;to&#160;remove&#160;only&#160;a&#160;specific&#160;class.</p>
+<p style="position:absolute;top:96px;left:273px;white-space:nowrap" class="ft02">doc.lineInfo(line:&#160;integer|LineHandle)&#160;→&#160;object</p>
+<p style="position:absolute;top:111px;left:287px;white-space:nowrap" class="ft05">Returns&#160;the&#160;line&#160;number,&#160;text&#160;content,&#160;and&#160;marker&#160;status&#160;of&#160;the&#160;given<br/>line,&#160;which&#160;can&#160;be&#160;either&#160;a&#160;number&#160;or&#160;a&#160;line&#160;handle.&#160;The&#160;returned<br/>object&#160;has&#160;the&#160;structure&#160;</p>
+<p style="position:absolute;top:141px;left:412px;white-space:nowrap" class="ft02">{line,&#160;handle,&#160;text,&#160;gutterMarkers,</p>
+<p style="position:absolute;top:156px;left:287px;white-space:nowrap" class="ft02">textClass,&#160;bgClass,&#160;wrapClass,&#160;widgets}</p>
+<p style="position:absolute;top:156px;left:524px;white-space:nowrap" class="ft01">,&#160;where&#160;</p>
+<p style="position:absolute;top:156px;left:566px;white-space:nowrap" class="ft02">gutterMarkers</p>
+<p style="position:absolute;top:171px;left:287px;white-space:nowrap" class="ft01">is&#160;an&#160;object&#160;mapping&#160;gutter&#160;IDs&#160;to&#160;marker&#160;elements,&#160;and&#160;</p>
+<p style="position:absolute;top:171px;left:578px;white-space:nowrap" class="ft02">widgets</p>
+<p style="position:absolute;top:171px;left:621px;white-space:nowrap" class="ft01">&#160;is</p>
+<p style="position:absolute;top:186px;left:287px;white-space:nowrap" class="ft01">an&#160;array&#160;of&#160;</p>
+<p style="position:absolute;top:186px;left:345px;white-space:nowrap" class="ft03">line&#160;widgets</p>
+<p style="position:absolute;top:186px;left:406px;white-space:nowrap" class="ft01">&#160;attached&#160;to&#160;this&#160;line,&#160;and&#160;the&#160;various&#160;class</p>
+<p style="position:absolute;top:201px;left:287px;white-space:nowrap" class="ft01">properties&#160;refer&#160;to&#160;classes&#160;added&#160;with&#160;</p>
+<p style="position:absolute;top:201px;left:482px;white-space:nowrap" class="ft00">addLineClass</p>
+<p style="position:absolute;top:201px;left:556px;white-space:nowrap" class="ft01">.</p>
+<p style="position:absolute;top:226px;left:273px;white-space:nowrap" class="ft02">cm.addWidget(pos:&#160;{line,&#160;ch},&#160;node:&#160;Element,&#160;scrollIntoView:</p>
+<p style="position:absolute;top:241px;left:292px;white-space:nowrap" class="ft02">boolean)</p>
+<p style="position:absolute;top:257px;left:287px;white-space:nowrap" class="ft01">Puts&#160;</p>
+<p style="position:absolute;top:257px;left:313px;white-space:nowrap" class="ft02">node</p>
+<p style="position:absolute;top:257px;left:338px;white-space:nowrap" class="ft01">,&#160;which&#160;should&#160;be&#160;an&#160;absolutely&#160;positioned&#160;DOM&#160;node,&#160;into</p>
+<p style="position:absolute;top:272px;left:287px;white-space:nowrap" class="ft01">the&#160;editor,&#160;positioned&#160;right&#160;below&#160;the&#160;given&#160;</p>
+<p style="position:absolute;top:272px;left:510px;white-space:nowrap" class="ft02">{line,&#160;ch}</p>
+<p style="position:absolute;top:272px;left:571px;white-space:nowrap" class="ft01">&#160;position.</p>
+<p style="position:absolute;top:287px;left:287px;white-space:nowrap" class="ft01">When&#160;</p>
+<p style="position:absolute;top:287px;left:320px;white-space:nowrap" class="ft02">scrollIntoView</p>
+<p style="position:absolute;top:287px;left:406px;white-space:nowrap" class="ft01">&#160;is&#160;true,&#160;the&#160;editor&#160;will&#160;ensure&#160;that&#160;the&#160;entire</p>
+<p style="position:absolute;top:302px;left:287px;white-space:nowrap" class="ft05">node&#160;is&#160;visible&#160;(if&#160;possible).&#160;To&#160;remove&#160;the&#160;widget&#160;again,&#160;simply&#160;use<br/>DOM&#160;methods&#160;(move&#160;it&#160;somewhere&#160;else,&#160;or&#160;call&#160;</p>
+<p style="position:absolute;top:317px;left:530px;white-space:nowrap" class="ft02">removeChild</p>
+<p style="position:absolute;top:317px;left:598px;white-space:nowrap" class="ft01">&#160;on&#160;its</p>
+<p style="position:absolute;top:332px;left:287px;white-space:nowrap" class="ft01">parent).</p>
+<p style="position:absolute;top:357px;left:273px;white-space:nowrap" class="ft02">doc.addLineWidget(line:&#160;integer|LineHandle,&#160;node:&#160;Element,&#160;?</p>
+<p style="position:absolute;top:372px;left:292px;white-space:nowrap" class="ft02">options:&#160;object)&#160;→&#160;LineWidget</p>
+<p style="position:absolute;top:387px;left:287px;white-space:nowrap" class="ft05">Adds&#160;a&#160;line&#160;widget,&#160;an&#160;element&#160;shown&#160;below&#160;a&#160;line,&#160;spanning&#160;the<br/>whole&#160;of&#160;the&#160;editor's&#160;width,&#160;and&#160;moving&#160;the&#160;lines&#160;below&#160;it&#160;downwards.</p>
+<p style="position:absolute;top:418px;left:288px;white-space:nowrap" class="ft02">line</p>
+<p style="position:absolute;top:418px;left:313px;white-space:nowrap" class="ft01">&#160;should&#160;be&#160;either&#160;an&#160;integer&#160;or&#160;a&#160;line&#160;handle,&#160;and&#160;</p>
+<p style="position:absolute;top:418px;left:565px;white-space:nowrap" class="ft02">node</p>
+<p style="position:absolute;top:418px;left:590px;white-space:nowrap" class="ft01">&#160;should&#160;be</p>
+<p style="position:absolute;top:433px;left:287px;white-space:nowrap" class="ft01">a&#160;DOM&#160;node,&#160;which&#160;will&#160;be&#160;displayed&#160;below&#160;the&#160;given&#160;line.&#160;</p>
+<p style="position:absolute;top:433px;left:584px;white-space:nowrap" class="ft02">options</p>
+<p style="position:absolute;top:433px;left:628px;white-space:nowrap" class="ft01">,</p>
+<p style="position:absolute;top:448px;left:287px;white-space:nowrap" class="ft05">when&#160;given,&#160;should&#160;be&#160;an&#160;object&#160;that&#160;configures&#160;the&#160;behavior&#160;of&#160;the<br/>widget.&#160;The&#160;following&#160;options&#160;are&#160;supported&#160;(all&#160;default&#160;to&#160;false):</p>
+<p style="position:absolute;top:478px;left:288px;white-space:nowrap" class="ft02">coverGutter:&#160;boolean</p>
+<p style="position:absolute;top:493px;left:302px;white-space:nowrap" class="ft01">Whether&#160;the&#160;widget&#160;should&#160;cover&#160;the&#160;gutter.</p>
+<p style="position:absolute;top:508px;left:288px;white-space:nowrap" class="ft02">noHScroll:&#160;boolean</p>
+<p style="position:absolute;top:523px;left:302px;white-space:nowrap" class="ft05">Whether&#160;the&#160;widget&#160;should&#160;stay&#160;fixed&#160;in&#160;the&#160;face&#160;of&#160;horizontal<br/>scrolling.</p>
+<p style="position:absolute;top:553px;left:288px;white-space:nowrap" class="ft02">above:&#160;boolean</p>
+<p style="position:absolute;top:569px;left:302px;white-space:nowrap" class="ft05">Causes&#160;the&#160;widget&#160;to&#160;be&#160;placed&#160;above&#160;instead&#160;of&#160;below&#160;the&#160;text&#160;of<br/>the&#160;line.</p>
+<p style="position:absolute;top:599px;left:288px;white-space:nowrap" class="ft02">handleMouseEvents:&#160;boolean</p>
+<p style="position:absolute;top:614px;left:302px;white-space:nowrap" class="ft05">Determines&#160;whether&#160;the&#160;editor&#160;will&#160;capture&#160;mouse&#160;and&#160;drag&#160;events<br/>occurring&#160;in&#160;this&#160;widget.&#160;Default&#160;is&#160;false—the&#160;events&#160;will&#160;be&#160;left<br/>alone&#160;for&#160;the&#160;default&#160;browser&#160;handler,&#160;or&#160;specific&#160;handlers&#160;on&#160;the<br/>widget,&#160;to&#160;capture.</p>
+<p style="position:absolute;top:674px;left:288px;white-space:nowrap" class="ft02">insertAt:&#160;integer</p>
+<p style="position:absolute;top:689px;left:302px;white-space:nowrap" class="ft05">By&#160;default,&#160;the&#160;widget&#160;is&#160;added&#160;below&#160;other&#160;widgets&#160;for&#160;the&#160;line.<br/>This&#160;option&#160;can&#160;be&#160;used&#160;to&#160;place&#160;it&#160;at&#160;a&#160;different&#160;position&#160;(zero&#160;for<br/>the&#160;top,&#160;N&#160;to&#160;put&#160;it&#160;after&#160;the&#160;Nth&#160;other&#160;widget).&#160;Note&#160;that&#160;this&#160;only<br/>has&#160;effect&#160;once,&#160;when&#160;the&#160;widget&#160;is&#160;created.</p>
+<p style="position:absolute;top:750px;left:288px;white-space:nowrap" class="ft02">className:&#160;string</p>
+<p style="position:absolute;top:765px;left:302px;white-space:nowrap" class="ft05">Add&#160;an&#160;extra&#160;CSS&#160;class&#160;name&#160;to&#160;the&#160;wrapper&#160;element&#160;created&#160;for<br/>the&#160;widget.</p>
+<p style="position:absolute;top:795px;left:287px;white-space:nowrap" class="ft05">Note&#160;that&#160;the&#160;widget&#160;node&#160;will&#160;become&#160;a&#160;descendant&#160;of&#160;nodes&#160;with<br/>CodeMirror-specific&#160;CSS&#160;classes,&#160;and&#160;those&#160;classes&#160;might&#160;in&#160;some<br/>cases&#160;affect&#160;it.&#160;This&#160;method&#160;returns&#160;an&#160;object&#160;that&#160;represents&#160;the<br/>widget&#160;placement.&#160;It'll&#160;have&#160;a&#160;</p>
+<p style="position:absolute;top:840px;left:440px;white-space:nowrap" class="ft02">line</p>
+<p style="position:absolute;top:840px;left:466px;white-space:nowrap" class="ft01">&#160;property&#160;pointing&#160;at&#160;the&#160;line</p>
+<p style="position:absolute;top:855px;left:287px;white-space:nowrap" class="ft01">handle&#160;that&#160;it&#160;is&#160;associated&#160;with,&#160;and&#160;the&#160;following&#160;methods:</p>
+<p style="position:absolute;top:870px;left:288px;white-space:nowrap" class="ft02">clear()</p>
+<p style="position:absolute;top:885px;left:302px;white-space:nowrap" class="ft01">Removes&#160;the&#160;widget.</p>
+<p style="position:absolute;top:901px;left:288px;white-space:nowrap" class="ft02">changed()</p>
+<p style="position:absolute;top:916px;left:302px;white-space:nowrap" class="ft05">Call&#160;this&#160;if&#160;you&#160;made&#160;some&#160;change&#160;to&#160;the&#160;widget's&#160;DOM&#160;node&#160;that<br/>might&#160;affect&#160;its&#160;height.&#160;It'll&#160;force&#160;CodeMirror&#160;to&#160;update&#160;the&#160;height&#160;of<br/>the&#160;line&#160;that&#160;contains&#160;the&#160;widget.</p>
+<p style="position:absolute;top:972px;left:272px;white-space:nowrap" class="ft04">Sizing,&#160;scrolling&#160;and&#160;positioning&#160;methods</p>
+<p style="position:absolute;top:999px;left:273px;white-space:nowrap" class="ft02">cm.setSize(width:&#160;number|string,&#160;height:&#160;number|string)</p>
+<p style="position:absolute;top:1014px;left:287px;white-space:nowrap" class="ft01">Programmatically&#160;set&#160;the&#160;size&#160;of&#160;the&#160;editor&#160;(overriding&#160;the&#160;applicable</p>
+<p style="position:absolute;top:1029px;left:287px;white-space:nowrap" class="ft03">CSS&#160;rules</p>
+<p style="position:absolute;top:1029px;left:334px;white-space:nowrap" class="ft01">).&#160;</p>
+<p style="position:absolute;top:1029px;left:346px;white-space:nowrap" class="ft02">width</p>
+<p style="position:absolute;top:1029px;left:378px;white-space:nowrap" class="ft01">&#160;and&#160;</p>
+<p style="position:absolute;top:1029px;left:404px;white-space:nowrap" class="ft02">height</p>
+<p style="position:absolute;top:1029px;left:442px;white-space:nowrap" class="ft01">&#160;can&#160;be&#160;either&#160;numbers&#160;(interpreted&#160;as</p>
+<p style="position:absolute;top:1045px;left:287px;white-space:nowrap" class="ft01">pixels)&#160;or&#160;CSS&#160;units&#160;(</p>
+<p style="position:absolute;top:1045px;left:393px;white-space:nowrap" class="ft02">&#34;100%&#34;</p>
+<p style="position:absolute;top:1045px;left:430px;white-space:nowrap" class="ft01">,&#160;for&#160;example).&#160;You&#160;can&#160;pass&#160;</p>
+<p style="position:absolute;top:1045px;left:578px;white-space:nowrap" class="ft02">null</p>
+<p style="position:absolute;top:1045px;left:604px;white-space:nowrap" class="ft01">&#160;for</p>
+<p style="position:absolute;top:1060px;left:287px;white-space:nowrap" class="ft01">either&#160;of&#160;them&#160;to&#160;indicate&#160;that&#160;that&#160;dimension&#160;should&#160;not&#160;be&#160;changed.</p>
+<p style="position:absolute;top:1085px;left:273px;white-space:nowrap" class="ft02">cm.scrollTo(x:&#160;number,&#160;y:&#160;number)</p>
+<p style="position:absolute;top:1100px;left:287px;white-space:nowrap" class="ft05">Scroll&#160;the&#160;editor&#160;to&#160;a&#160;given&#160;(pixel)&#160;position.&#160;Both&#160;arguments&#160;may&#160;be&#160;left<br/>as&#160;</p>
+<p style="position:absolute;top:1115px;left:303px;white-space:nowrap" class="ft02">null</p>
+<p style="position:absolute;top:1115px;left:328px;white-space:nowrap" class="ft01">&#160;or&#160;</p>
+<p style="position:absolute;top:1115px;left:346px;white-space:nowrap" class="ft02">undefined</p>
+<p style="position:absolute;top:1115px;left:402px;white-space:nowrap" class="ft01">&#160;to&#160;have&#160;no&#160;effect.</p>
+<p style="position:absolute;top:1140px;left:273px;white-space:nowrap" class="ft02">cm.getScrollInfo()&#160;→&#160;{left,&#160;top,&#160;width,&#160;height,&#160;clientWidth,</p>
+<p style="position:absolute;top:1155px;left:292px;white-space:nowrap" class="ft02">clientHeight}</p>
+<p style="position:absolute;top:1170px;left:287px;white-space:nowrap" class="ft01">Get&#160;an&#160;</p>
+<p style="position:absolute;top:1170px;left:325px;white-space:nowrap" class="ft02">{left,&#160;top,&#160;width,&#160;height,&#160;clientWidth,&#160;clientHeight}</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+<title>Page 189</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<style type="text/css">
+<!--
+	p {margin: 0; padding: 0;}	.ft00{font-size:11px;font-family:DejaVuSans;color:#242729;}
+	.ft01{font-size:11px;font-family:DejaVuSansMono;color:#ffffff;}
+	.ft02{font-size:17px;font-family:DejaVuSans;color:#34444c;}
+	.ft03{font-size:11px;font-family:DejaVuSans;color:#242729;}
+	.ft04{font-size:11px;font-family:DejaVuSans;color:#501445;}
+	.ft05{font-size:11px;line-height:16px;font-family:DejaVuSans;color:#242729;}
+	.ft06{font-size:11px;line-height:16px;font-family:DejaVuSansMono;color:#ffffff;}
+-->
+</style>
+</head>
+<body bgcolor="#A0A0A0" vlink="blue" link="blue">
+<div id="page189-div" style="position:relative;width:892px;height:1263px;">
+<img width="892" height="1263" src="ALL-07052021189.png" alt="background image"/>
+<p style="position:absolute;top:55px;left:246px;white-space:nowrap" class="ft00">http://www.myfileserver.com/file2.zip</p>
+<p style="position:absolute;top:78px;left:246px;white-space:nowrap" class="ft00">http://www.myfileserver.com/file3.zip</p>
+<p style="position:absolute;top:103px;left:233px;white-space:nowrap" class="ft05">If&#160;you&#160;know&#160;the&#160;base&#160;URL&#160;is&#160;the&#160;same,&#160;specify&#160;the&#160;following&#160;in&#160;the<br/>input&#160;file:</p>
+<p style="position:absolute;top:143px;left:246px;white-space:nowrap" class="ft00">file1.zip</p>
+<p style="position:absolute;top:166px;left:246px;white-space:nowrap" class="ft00">file2.zip</p>
+<p style="position:absolute;top:189px;left:246px;white-space:nowrap" class="ft00">file3.zip</p>
+<p style="position:absolute;top:213px;left:233px;white-space:nowrap" class="ft05">You&#160;can&#160;then&#160;provide&#160;the&#160;base&#160;URL&#160;as&#160;part&#160;of&#160;the&#160;wget&#160;command,&#160;as<br/>follows:</p>
+<p style="position:absolute;top:265px;left:245px;white-space:nowrap" class="ft06">wget&#160;-B&#160;http://www.myfileserver.com&#160;-i&#160;<br/>/path/to/inputfile</p>
+<p style="position:absolute;top:324px;left:233px;white-space:nowrap" class="ft02"><b>Retry&#160;Options</b></p>
+<p style="position:absolute;top:354px;left:233px;white-space:nowrap" class="ft05">If&#160;you&#160;set&#160;up&#160;a&#160;queue&#160;of&#160;files&#160;to&#160;download&#160;in&#160;an&#160;input&#160;file&#160;and&#160;you<br/>leave&#160;your&#160;computer&#160;running&#160;to&#160;download&#160;the&#160;files,&#160;the&#160;input&#160;file&#160;may<br/>become&#160;stuck&#160;while&#160;you're&#160;away&#160;and&#160;retry&#160;to&#160;download&#160;the&#160;content.<br/>You&#160;can&#160;specify&#160;the&#160;number&#160;of&#160;retries&#160;using&#160;the&#160;following&#160;switch:</p>
+<p style="position:absolute;top:439px;left:245px;white-space:nowrap" class="ft01">wget&#160;-t&#160;10&#160;-i&#160;/path/to/inputfile</p>
+<p style="position:absolute;top:475px;left:233px;white-space:nowrap" class="ft05">Use&#160;the&#160;above&#160;command&#160;in&#160;conjunction&#160;with&#160;the&#160;<b>-T</b>&#160;switch&#160;to&#160;specify<br/>a&#160;timeout&#160;in&#160;seconds,&#160;as&#160;follows:</p>
+<p style="position:absolute;top:527px;left:245px;white-space:nowrap" class="ft01">wget&#160;-t&#160;10&#160;-T&#160;10&#160;-i&#160;/path/to/inputfile</p>
+<p style="position:absolute;top:563px;left:233px;white-space:nowrap" class="ft05">The&#160;above&#160;command&#160;will&#160;retry&#160;10&#160;times&#160;and&#160;connect&#160;for&#160;10&#160;seconds<br/>for&#160;each&#160;file&#160;link.</p>
+<p style="position:absolute;top:603px;left:233px;white-space:nowrap" class="ft05">It&#160;is&#160;also&#160;inconvenient&#160;when&#160;you&#160;download&#160;75%&#160;of&#160;a&#160;4-gigabyte&#160;file&#160;on<br/>a&#160;slow&#160;</p>
+<p style="position:absolute;top:620px;left:273px;white-space:nowrap" class="ft04">broadband&#160;connection</p>
+<p style="position:absolute;top:620px;left:403px;white-space:nowrap" class="ft00">,&#160;only&#160;for&#160;the&#160;connection&#160;to&#160;drop.&#160;To&#160;use</p>
+<p style="position:absolute;top:636px;left:233px;white-space:nowrap" class="ft05">wget&#160;to&#160;retry&#160;from&#160;where&#160;it&#160;stopped&#160;downloading,&#160;use&#160;the&#160;following<br/>command:</p>
+<p style="position:absolute;top:688px;left:245px;white-space:nowrap" class="ft01">wget&#160;-c&#160;www.myfileserver.com/file1.zip</p>
+<p style="position:absolute;top:724px;left:233px;white-space:nowrap" class="ft05">If&#160;you&#160;hammer&#160;a&#160;server,&#160;the&#160;host&#160;might&#160;not&#160;like&#160;it&#160;and&#160;might&#160;block&#160;or<br/>kill&#160;your&#160;requests.&#160;You&#160;can&#160;specify&#160;a&#160;waiting&#160;period&#160;to&#160;specify&#160;how<br/>long&#160;to&#160;wait&#160;between&#160;each&#160;retrieval,&#160;as&#160;follows:</p>
+<p style="position:absolute;top:792px;left:245px;white-space:nowrap" class="ft01">wget&#160;-w&#160;60&#160;-i&#160;/path/to/inputfile</p>
+<p style="position:absolute;top:828px;left:233px;white-space:nowrap" class="ft05">The&#160;above&#160;command&#160;waits&#160;60&#160;seconds&#160;between&#160;each&#160;download.&#160;This<br/>is&#160;useful&#160;if&#160;you&#160;download&#160;many&#160;files&#160;from&#160;a&#160;single&#160;source.</p>
+<p style="position:absolute;top:869px;left:233px;white-space:nowrap" class="ft05">Some&#160;web&#160;hosts&#160;might&#160;spot&#160;the&#160;frequency&#160;and&#160;block&#160;you.&#160;You&#160;can<br/>make&#160;the&#160;waiting&#160;period&#160;random&#160;to&#160;make&#160;it&#160;look&#160;like&#160;you&#160;aren't&#160;using<br/>a&#160;program,&#160;as&#160;follows:</p>
+<p style="position:absolute;top:937px;left:245px;white-space:nowrap" class="ft01">wget&#160;--random-wait&#160;-i&#160;/path/to/inputfile</p>
+<p style="position:absolute;top:980px;left:233px;white-space:nowrap" class="ft02"><b>Protect&#160;Download&#160;Limits</b></p>
+<p style="position:absolute;top:1010px;left:233px;white-space:nowrap" class="ft05">Many&#160;internet&#160;service&#160;providers&#160;apply&#160;download&#160;limits&#160;for&#160;broadband<br/>usage,&#160;especially&#160;for&#160;those&#160;who&#160;live&#160;outside&#160;of&#160;a&#160;city.&#160;You&#160;may&#160;want<br/>to&#160;add&#160;a&#160;quota&#160;so&#160;that&#160;you&#160;don't&#160;go&#160;over&#160;your&#160;download&#160;limit.&#160;You&#160;can<br/>do&#160;that&#160;in&#160;the&#160;following&#160;way:</p>
+<p style="position:absolute;top:1095px;left:245px;white-space:nowrap" class="ft01">wget&#160;-q&#160;100m&#160;-i&#160;/path/to/inputfile</p>
+<p style="position:absolute;top:1131px;left:233px;white-space:nowrap" class="ft05">The&#160;<b>-q</b>&#160;command&#160;won't&#160;work&#160;with&#160;a&#160;single&#160;file.&#160;If&#160;you&#160;download&#160;a&#160;file<br/>that&#160;is&#160;2&#160;gigabytes&#160;in&#160;size,&#160;using&#160;<b>-q</b>&#160;<b>1000m</b>&#160;doesn't&#160;stop&#160;the&#160;file&#160;from<br/>downloading.</p>
+</div>
+</body>
+</html>

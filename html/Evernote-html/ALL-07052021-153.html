@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+<title>Page 153</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<style type="text/css">
+<!--
+	p {margin: 0; padding: 0;}	.ft00{font-size:10px;font-family:DejaVuSans;color:#000000;}
+	.ft01{font-size:10px;font-family:DejaVuSansMono;color:#a21313;}
+	.ft02{font-size:10px;font-family:DejaVuSansMono;color:#000000;}
+	.ft03{font-size:11px;font-family:DejaVuSans;color:#000000;}
+	.ft04{font-size:10px;line-height:15px;font-family:DejaVuSans;color:#000000;}
+-->
+</style>
+</head>
+<body bgcolor="#A0A0A0" vlink="blue" link="blue">
+<div id="page153-div" style="position:relative;width:892px;height:1263px;">
+<img width="892" height="1263" src="ALL-07052021153.png" alt="background image"/>
+<p style="position:absolute;top:55px;left:287px;white-space:nowrap" class="ft04">Replace&#160;the&#160;editor's&#160;undo&#160;history&#160;with&#160;the&#160;one&#160;provided,&#160;which&#160;must<br/>be&#160;a&#160;value&#160;as&#160;returned&#160;by&#160;</p>
+<p style="position:absolute;top:70px;left:421px;white-space:nowrap" class="ft01">getHistory</p>
+<p style="position:absolute;top:70px;left:483px;white-space:nowrap" class="ft00">.&#160;Note&#160;that&#160;this&#160;will&#160;have</p>
+<p style="position:absolute;top:86px;left:287px;white-space:nowrap" class="ft04">entirely&#160;undefined&#160;results&#160;if&#160;the&#160;editor&#160;content&#160;isn't&#160;also&#160;the&#160;same&#160;as&#160;it<br/>was&#160;when&#160;</p>
+<p style="position:absolute;top:101px;left:341px;white-space:nowrap" class="ft02">getHistory</p>
+<p style="position:absolute;top:101px;left:403px;white-space:nowrap" class="ft00">&#160;was&#160;called.</p>
+<p style="position:absolute;top:127px;left:272px;white-space:nowrap" class="ft03">Text-marking&#160;methods</p>
+<p style="position:absolute;top:154px;left:273px;white-space:nowrap" class="ft02">doc.markText(from:&#160;{line,&#160;ch},&#160;to:&#160;{line,&#160;ch},&#160;?options:</p>
+<p style="position:absolute;top:169px;left:292px;white-space:nowrap" class="ft02">object)&#160;→&#160;TextMarker</p>
+<p style="position:absolute;top:184px;left:287px;white-space:nowrap" class="ft00">Can&#160;be&#160;used&#160;to&#160;mark&#160;a&#160;range&#160;of&#160;text&#160;with&#160;a&#160;specific&#160;CSS&#160;class&#160;name.</p>
+<p style="position:absolute;top:199px;left:288px;white-space:nowrap" class="ft02">from</p>
+<p style="position:absolute;top:199px;left:313px;white-space:nowrap" class="ft00">&#160;and&#160;</p>
+<p style="position:absolute;top:199px;left:340px;white-space:nowrap" class="ft02">to</p>
+<p style="position:absolute;top:199px;left:353px;white-space:nowrap" class="ft00">&#160;should&#160;be&#160;</p>
+<p style="position:absolute;top:199px;left:410px;white-space:nowrap" class="ft02">{line,&#160;ch}</p>
+<p style="position:absolute;top:199px;left:472px;white-space:nowrap" class="ft00">&#160;objects.&#160;The&#160;</p>
+<p style="position:absolute;top:199px;left:541px;white-space:nowrap" class="ft02">options</p>
+<p style="position:absolute;top:199px;left:584px;white-space:nowrap" class="ft00">&#160;parameter</p>
+<p style="position:absolute;top:214px;left:287px;white-space:nowrap" class="ft04">is&#160;optional.&#160;When&#160;given,&#160;it&#160;should&#160;be&#160;an&#160;object&#160;that&#160;may&#160;contain&#160;the<br/>following&#160;configuration&#160;options:</p>
+<p style="position:absolute;top:245px;left:288px;white-space:nowrap" class="ft02">className:&#160;string</p>
+<p style="position:absolute;top:260px;left:302px;white-space:nowrap" class="ft00">Assigns&#160;a&#160;CSS&#160;class&#160;to&#160;the&#160;marked&#160;stretch&#160;of&#160;text.</p>
+<p style="position:absolute;top:275px;left:288px;white-space:nowrap" class="ft02">inclusiveLeft:&#160;boolean</p>
+<p style="position:absolute;top:290px;left:302px;white-space:nowrap" class="ft04">Determines&#160;whether&#160;text&#160;inserted&#160;on&#160;the&#160;left&#160;of&#160;the&#160;marker&#160;will&#160;end<br/>up&#160;inside&#160;or&#160;outside&#160;of&#160;it.</p>
+<p style="position:absolute;top:320px;left:288px;white-space:nowrap" class="ft02">inclusiveRight:&#160;boolean</p>
+<p style="position:absolute;top:335px;left:302px;white-space:nowrap" class="ft00">Like&#160;</p>
+<p style="position:absolute;top:335px;left:327px;white-space:nowrap" class="ft02">inclusiveLeft</p>
+<p style="position:absolute;top:335px;left:407px;white-space:nowrap" class="ft00">,&#160;but&#160;for&#160;the&#160;right&#160;side.</p>
+<p style="position:absolute;top:350px;left:288px;white-space:nowrap" class="ft02">selectLeft:&#160;boolean</p>
+<p style="position:absolute;top:365px;left:302px;white-space:nowrap" class="ft04">For&#160;atomic&#160;ranges,&#160;determines&#160;whether&#160;the&#160;cursor&#160;is&#160;allowed&#160;to&#160;be<br/>placed&#160;directly&#160;to&#160;the&#160;left&#160;of&#160;the&#160;range.&#160;Has&#160;no&#160;effect&#160;on&#160;non-atomic<br/>ranges.</p>
+<p style="position:absolute;top:411px;left:288px;white-space:nowrap" class="ft02">selectRight:&#160;boolean</p>
+<p style="position:absolute;top:426px;left:302px;white-space:nowrap" class="ft00">Like&#160;</p>
+<p style="position:absolute;top:426px;left:327px;white-space:nowrap" class="ft02">selectLeft</p>
+<p style="position:absolute;top:426px;left:388px;white-space:nowrap" class="ft00">,&#160;but&#160;for&#160;the&#160;right&#160;side.</p>
+<p style="position:absolute;top:441px;left:288px;white-space:nowrap" class="ft02">atomic:&#160;boolean</p>
+<p style="position:absolute;top:456px;left:302px;white-space:nowrap" class="ft04">Atomic&#160;ranges&#160;act&#160;as&#160;a&#160;single&#160;unit&#160;when&#160;cursor&#160;movement&#160;is<br/>concerned—i.e.&#160;it&#160;is&#160;impossible&#160;to&#160;place&#160;the&#160;cursor&#160;inside&#160;of&#160;them.<br/>You&#160;can&#160;control&#160;whether&#160;the&#160;cursor&#160;is&#160;allowed&#160;to&#160;be&#160;placed&#160;directly<br/>before&#160;or&#160;after&#160;them&#160;using&#160;</p>
+<p style="position:absolute;top:501px;left:439px;white-space:nowrap" class="ft02">selectLeft</p>
+<p style="position:absolute;top:501px;left:501px;white-space:nowrap" class="ft00">&#160;or&#160;</p>
+<p style="position:absolute;top:501px;left:519px;white-space:nowrap" class="ft02">selectRight</p>
+<p style="position:absolute;top:501px;left:587px;white-space:nowrap" class="ft00">.&#160;If</p>
+<p style="position:absolute;top:516px;left:303px;white-space:nowrap" class="ft02">selectLeft</p>
+<p style="position:absolute;top:516px;left:365px;white-space:nowrap" class="ft00">&#160;(or&#160;right)&#160;is&#160;not&#160;provided,&#160;then&#160;</p>
+<p style="position:absolute;top:516px;left:525px;white-space:nowrap" class="ft02">inclusiveLeft</p>
+<p style="position:absolute;top:516px;left:605px;white-space:nowrap" class="ft00">&#160;(or</p>
+<p style="position:absolute;top:531px;left:302px;white-space:nowrap" class="ft00">right)&#160;will&#160;control&#160;this&#160;behavior.</p>
+<p style="position:absolute;top:546px;left:288px;white-space:nowrap" class="ft02">collapsed:&#160;boolean</p>
+<p style="position:absolute;top:562px;left:302px;white-space:nowrap" class="ft04">Collapsed&#160;ranges&#160;do&#160;not&#160;show&#160;up&#160;in&#160;the&#160;display.&#160;Setting&#160;a&#160;range&#160;to<br/>be&#160;collapsed&#160;will&#160;automatically&#160;make&#160;it&#160;atomic.</p>
+<p style="position:absolute;top:592px;left:288px;white-space:nowrap" class="ft02">clearOnEnter:&#160;boolean</p>
+<p style="position:absolute;top:607px;left:302px;white-space:nowrap" class="ft04">When&#160;enabled,&#160;will&#160;cause&#160;the&#160;mark&#160;to&#160;clear&#160;itself&#160;whenever&#160;the<br/>cursor&#160;enters&#160;its&#160;range.&#160;This&#160;is&#160;mostly&#160;useful&#160;for&#160;text-replacement<br/>widgets&#160;that&#160;need&#160;to&#160;'snap&#160;open'&#160;when&#160;the&#160;user&#160;tries&#160;to&#160;edit&#160;them.<br/>The&#160;</p>
+<p style="position:absolute;top:652px;left:325px;white-space:nowrap" class="ft01">&#34;clear&#34;</p>
+<p style="position:absolute;top:652px;left:369px;white-space:nowrap" class="ft00">&#160;event&#160;fired&#160;on&#160;the&#160;range&#160;handle&#160;can&#160;be&#160;used&#160;to&#160;be</p>
+<p style="position:absolute;top:667px;left:302px;white-space:nowrap" class="ft00">notified&#160;when&#160;this&#160;happens.</p>
+<p style="position:absolute;top:682px;left:288px;white-space:nowrap" class="ft02">clearWhenEmpty:&#160;boolean</p>
+<p style="position:absolute;top:697px;left:302px;white-space:nowrap" class="ft04">Determines&#160;whether&#160;the&#160;mark&#160;is&#160;automatically&#160;cleared&#160;when&#160;it<br/>becomes&#160;empty.&#160;Default&#160;is&#160;true.</p>
+<p style="position:absolute;top:728px;left:288px;white-space:nowrap" class="ft02">replacedWith:&#160;Element</p>
+<p style="position:absolute;top:743px;left:302px;white-space:nowrap" class="ft04">Use&#160;a&#160;given&#160;node&#160;to&#160;display&#160;this&#160;range.&#160;Implies&#160;both&#160;collapsed&#160;and<br/>atomic.&#160;The&#160;given&#160;DOM&#160;node&#160;</p>
+<p style="position:absolute;top:757px;left:451px;white-space:nowrap" class="ft00">must&#160;&#160;be&#160;an&#160;inline&#160;element&#160;(as</p>
+<p style="position:absolute;top:773px;left:302px;white-space:nowrap" class="ft00">opposed&#160;to&#160;a&#160;block&#160;element).</p>
+<p style="position:absolute;top:788px;left:288px;white-space:nowrap" class="ft02">handleMouseEvents:&#160;boolean</p>
+<p style="position:absolute;top:803px;left:302px;white-space:nowrap" class="ft00">When&#160;</p>
+<p style="position:absolute;top:803px;left:335px;white-space:nowrap" class="ft02">replacedWith</p>
+<p style="position:absolute;top:803px;left:409px;white-space:nowrap" class="ft00">&#160;is&#160;given,&#160;this&#160;determines&#160;whether&#160;the&#160;editor</p>
+<p style="position:absolute;top:818px;left:302px;white-space:nowrap" class="ft04">will&#160;capture&#160;mouse&#160;and&#160;drag&#160;events&#160;occurring&#160;in&#160;this&#160;widget.<br/>Default&#160;is&#160;false—the&#160;events&#160;will&#160;be&#160;left&#160;alone&#160;for&#160;the&#160;default&#160;browser<br/>handler,&#160;or&#160;specific&#160;handlers&#160;on&#160;the&#160;widget,&#160;to&#160;capture.</p>
+<p style="position:absolute;top:863px;left:288px;white-space:nowrap" class="ft02">readOnly:&#160;boolean</p>
+<p style="position:absolute;top:879px;left:302px;white-space:nowrap" class="ft04">A&#160;read-only&#160;span&#160;can,&#160;as&#160;long&#160;as&#160;it&#160;is&#160;not&#160;cleared,&#160;not&#160;be&#160;modified<br/>except&#160;by&#160;calling&#160;</p>
+<p style="position:absolute;top:894px;left:392px;white-space:nowrap" class="ft01">setValue</p>
+<p style="position:absolute;top:894px;left:442px;white-space:nowrap" class="ft00">&#160;to&#160;reset&#160;the&#160;whole&#160;document.&#160;</p>
+<p style="position:absolute;top:893px;left:597px;white-space:nowrap" class="ft00">Note:</p>
+<p style="position:absolute;top:909px;left:302px;white-space:nowrap" class="ft04">adding&#160;a&#160;read-only&#160;span&#160;currently&#160;clears&#160;the&#160;undo&#160;history&#160;of&#160;the<br/>editor,&#160;because&#160;existing&#160;undo&#160;events&#160;being&#160;partially&#160;nullified&#160;by<br/>read-only&#160;spans&#160;would&#160;corrupt&#160;the&#160;history&#160;(in&#160;the&#160;current<br/>implementation).</p>
+<p style="position:absolute;top:969px;left:288px;white-space:nowrap" class="ft02">addToHistory:&#160;boolean</p>
+<p style="position:absolute;top:984px;left:302px;white-space:nowrap" class="ft04">When&#160;set&#160;to&#160;true&#160;(default&#160;is&#160;false),&#160;adding&#160;this&#160;marker&#160;will&#160;create&#160;an<br/>event&#160;in&#160;the&#160;undo&#160;history&#160;that&#160;can&#160;be&#160;individually&#160;undone&#160;(clearing<br/>the&#160;marker).</p>
+<p style="position:absolute;top:1029px;left:288px;white-space:nowrap" class="ft02">startStyle:&#160;string</p>
+<p style="position:absolute;top:1045px;left:302px;white-space:nowrap" class="ft04">Can&#160;be&#160;used&#160;to&#160;specify&#160;an&#160;extra&#160;CSS&#160;class&#160;to&#160;be&#160;applied&#160;to&#160;the<br/>leftmost&#160;span&#160;that&#160;is&#160;part&#160;of&#160;the&#160;marker.</p>
+<p style="position:absolute;top:1075px;left:288px;white-space:nowrap" class="ft02">endStyle:&#160;string</p>
+<p style="position:absolute;top:1090px;left:302px;white-space:nowrap" class="ft00">Equivalent&#160;to&#160;</p>
+<p style="position:absolute;top:1090px;left:373px;white-space:nowrap" class="ft02">startStyle</p>
+<p style="position:absolute;top:1090px;left:435px;white-space:nowrap" class="ft00">,&#160;but&#160;for&#160;the&#160;rightmost&#160;span.</p>
+<p style="position:absolute;top:1105px;left:288px;white-space:nowrap" class="ft02">css:&#160;string</p>
+<p style="position:absolute;top:1120px;left:302px;white-space:nowrap" class="ft00">A&#160;string&#160;of&#160;CSS&#160;to&#160;be&#160;applied&#160;to&#160;the&#160;covered&#160;text.&#160;For&#160;example</p>
+<p style="position:absolute;top:1135px;left:303px;white-space:nowrap" class="ft02">&#34;color:&#160;#fe3&#34;</p>
+<p style="position:absolute;top:1135px;left:383px;white-space:nowrap" class="ft00">.</p>
+<p style="position:absolute;top:1150px;left:288px;white-space:nowrap" class="ft02">attributes:&#160;object</p>
+<p style="position:absolute;top:1165px;left:302px;white-space:nowrap" class="ft00">When&#160;given,&#160;add&#160;the&#160;attributes&#160;in&#160;the&#160;given&#160;object&#160;to&#160;the&#160;elements</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+<title>Page 87</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<style type="text/css">
+<!--
+	p {margin: 0; padding: 0;}	.ft00{font-size:15px;font-family:DejaVuSerif;color:#000000;}
+	.ft01{font-size:16px;font-family:DejaVuSans;color:#000000;}
+	.ft02{font-size:11px;font-family:DejaVuSerif;color:#000000;}
+	.ft03{font-size:11px;font-family:DejaVuSerif;color:#0b61a4;}
+	.ft04{font-size:9px;font-family:DejaVuSerif;color:#0b61a4;}
+	.ft05{font-size:13px;font-family:DejaVuSerif;color:#000000;}
+	.ft06{font-size:11px;font-family:DejaVuSansMono;color:#000000;}
+	.ft07{font-size:22px;font-family:DejaVuSans;color:#000000;}
+	.ft08{font-size:11px;line-height:13px;font-family:DejaVuSerif;color:#000000;}
+-->
+</style>
+</head>
+<body bgcolor="#A0A0A0" vlink="blue" link="blue">
+<div id="page87-div" style="position:relative;width:892px;height:1263px;">
+<img width="892" height="1263" src="ALL-07052021087.png" alt="background image"/>
+<p style="position:absolute;top:67px;left:59px;white-space:nowrap" class="ft00"><b>Creating&#160;a&#160;chroot&#160;jail&#160;with&#160;sound&#160;and&#160;X11&#160;|&#160;Musings&#160;from&#160;kb8ojh.net</b></p>
+<p style="position:absolute;top:181px;left:59px;white-space:nowrap" class="ft01"><b>Wed,&#160;05&#160;Feb&#160;2014</b></p>
+<p style="position:absolute;top:216px;left:91px;white-space:nowrap" class="ft01"><b>Creating&#160;a&#160;chroot&#160;jail&#160;with&#160;sound&#160;and&#160;X11</b></p>
+<p style="position:absolute;top:250px;left:82px;white-space:nowrap" class="ft02">posted&#160;2014-02-05&#160;at&#160;03:04&#160;z&#160;by&#160;</p>
+<p style="position:absolute;top:250px;left:270px;white-space:nowrap" class="ft03">Ethan&#160;Blanton</p>
+<p style="position:absolute;top:250px;left:352px;white-space:nowrap" class="ft02">&#160;on&#160;</p>
+<p style="position:absolute;top:250px;left:374px;white-space:nowrap" class="ft03">kb8ojh.net</p>
+<p style="position:absolute;top:250px;left:435px;white-space:nowrap" class="ft02">:</p>
+<p style="position:absolute;top:276px;left:82px;white-space:nowrap" class="ft08">As&#160;&#160;time&#160;&#160;goes&#160;&#160;on,&#160;&#160;I&#160;&#160;have&#160;&#160;become&#160;&#160;increasingly&#160;&#160;mistrustful&#160;&#160;of&#160;&#160;closed-source&#160;&#160;software.&#160;&#160;I<br/>have&#160;</p>
+<p style="position:absolute;top:289px;left:114px;white-space:nowrap" class="ft02">always&#160;been&#160;mistrustful&#160;of&#160;crypto&#160;that&#160;the&#160;authors&#160;won't&#160;talk&#160;about.&#160;Therefore&#160;I</p>
+<p style="position:absolute;top:306px;left:82px;white-space:nowrap" class="ft02">decided&#160;that,&#160;while&#160;I&#160;do&#160;require</p>
+<p style="position:absolute;top:303px;left:269px;white-space:nowrap" class="ft04">[1]</p>
+<p style="position:absolute;top:306px;left:282px;white-space:nowrap" class="ft02">&#160;it&#160;for&#160;employment&#160;reasons&#160;from&#160;time&#160;to&#160;time,&#160;I&#160;am</p>
+<p style="position:absolute;top:320px;left:82px;white-space:nowrap" class="ft02">not&#160;interested&#160;in&#160;installing&#160;Microsoft's&#160;</p>
+<p style="position:absolute;top:320px;left:310px;white-space:nowrap" class="ft03">Skype</p>
+<p style="position:absolute;top:320px;left:345px;white-space:nowrap" class="ft02">&#160;client&#160;on&#160;</p>
+<p style="position:absolute;top:320px;left:405px;white-space:nowrap" class="ft03">my&#160;new&#160;Sputnik&#160;3&#160;laptop</p>
+<p style="position:absolute;top:320px;left:553px;white-space:nowrap" class="ft02">&#160;—&#160;at</p>
+<p style="position:absolute;top:333px;left:82px;white-space:nowrap" class="ft02">least,&#160;not&#160;directly.</p>
+<p style="position:absolute;top:359px;left:82px;white-space:nowrap" class="ft08">My&#160;&#160;first&#160;&#160;inclination&#160;&#160;was&#160;&#160;to&#160;&#160;put&#160;&#160;the&#160;&#160;whole&#160;&#160;ball&#160;&#160;of&#160;&#160;wax&#160;&#160;in&#160;&#160;a&#160;&#160;virtual&#160;&#160;machine;&#160;&#160;after&#160;&#160;all,<br/>when&#160;&#160;I&#160;&#160;provisioned&#160;&#160;the&#160;&#160;disk&#160;&#160;I&#160;&#160;left&#160;&#160;a&#160;&#160;substantial&#160;&#160;amount&#160;&#160;of&#160;&#160;room&#160;&#160;just&#160;&#160;for&#160;&#160;development<br/>VMs&#160;&#160;—&#160;&#160;why&#160;&#160;not&#160;&#160;one&#160;&#160;for&#160;&#160;untrusted&#160;&#160;software,&#160;&#160;too?&#160;&#160;Unfortunately,&#160;&#160;some&#160;&#160;digging&#160;&#160;for<br/>information&#160;and&#160;hacking&#160;at&#160;the&#160;issue&#160;indicated&#160;that&#160;it&#160;wasn't&#160;going&#160;to&#160;be&#160;that&#160;easy,&#160;at<br/>least&#160;not&#160;with&#160;a&#160;</p>
+<p style="position:absolute;top:414px;left:177px;white-space:nowrap" class="ft03">KVM&#160;partition</p>
+<p style="position:absolute;top:414px;left:259px;white-space:nowrap" class="ft02">.&#160;To&#160;make&#160;a&#160;long&#160;story&#160;short,&#160;emulated&#160;sound&#160;hardware</p>
+<p style="position:absolute;top:428px;left:82px;white-space:nowrap" class="ft02">isn't&#160;&#160;really&#160;&#160;a&#160;&#160;working&#160;&#160;thing&#160;&#160;in&#160;</p>
+<p style="position:absolute;top:428px;left:263px;white-space:nowrap" class="ft03">Ubuntu</p>
+<p style="position:absolute;top:428px;left:306px;white-space:nowrap" class="ft02">&#160;&#160;12.04&#160;&#160;(the&#160;&#160;distribution&#160;&#160;presently&#160;&#160;on&#160;&#160;my&#160;&#160;laptop</p>
+<p style="position:absolute;top:442px;left:82px;white-space:nowrap" class="ft02">for&#160;&#160;various&#160;&#160;reasons,&#160;&#160;some&#160;&#160;of&#160;&#160;which&#160;&#160;are&#160;</p>
+<p style="position:absolute;top:442px;left:343px;white-space:nowrap" class="ft03">detailed&#160;&#160;here</p>
+<p style="position:absolute;top:442px;left:424px;white-space:nowrap" class="ft02">).&#160;&#160;That&#160;&#160;left&#160;&#160;me&#160;&#160;with&#160;&#160;two</p>
+<p style="position:absolute;top:455px;left:82px;white-space:nowrap" class="ft02">possibilities:&#160;</p>
+<p style="position:absolute;top:455px;left:158px;white-space:nowrap" class="ft02">1)&#160;chase&#160;a&#160;network&#160;audio&#160;solution,&#160;or&#160;2)&#160;find&#160;a&#160;different&#160;way&#160;to&#160;sandbox</p>
+<p style="position:absolute;top:469px;left:82px;white-space:nowrap" class="ft08">Skype.&#160;I've&#160;done&#160;my&#160;share&#160;of&#160;playing&#160;with&#160;network&#160;audio&#160;solutions&#160;over&#160;the&#160;years,&#160;and<br/>let's&#160;just&#160;say&#160;that&#160;I&#160;wasn't&#160;looking&#160;forward&#160;to&#160;doing&#160;it&#160;again;&#160;therefore,&#160;new&#160;sandbox&#160;it<br/>was.</p>
+<p style="position:absolute;top:522px;left:82px;white-space:nowrap" class="ft08">A&#160;&#160;chroot&#160;&#160;jail&#160;&#160;seemed&#160;&#160;like&#160;&#160;the&#160;&#160;next&#160;&#160;best&#160;&#160;choice,&#160;&#160;after&#160;&#160;a&#160;&#160;dedicated&#160;&#160;VM&#160;&#160;fell&#160;&#160;down.&#160;&#160;The<br/>isolation&#160;between&#160;a&#160;chrooted&#160;application&#160;and&#160;the&#160;host&#160;operating&#160;system&#160;is&#160;not&#160;nearly&#160;as<br/>good,&#160;particularly&#160;after&#160;riddling&#160;the&#160;chroot&#160;with&#160;holes&#160;for&#160;sound&#160;and&#160;graphics,&#160;but&#160;I&#160;felt<br/>like&#160;I&#160;could&#160;mitigate&#160;the&#160;worst&#160;of&#160;the&#160;exposed&#160;surface&#160;area.&#160;So&#160;I&#160;set&#160;about&#160;doing&#160;so,&#160;and<br/>in&#160;the&#160;process&#160;built&#160;a&#160;set&#160;of&#160;scripts&#160;and&#160;a&#160;chroot&#160;configuration&#160;for&#160;a&#160;(relatively)&#160;efficient<br/>audio-enabled&#160;&#160;sandbox&#160;&#160;for&#160;&#160;untrusted&#160;&#160;or&#160;&#160;semi-trusted&#160;&#160;applications.&#160;&#160;At&#160;&#160;the&#160;&#160;moment,<br/>mine&#160;runs&#160;Skype.&#160;This&#160;document&#160;describes&#160;how&#160;I&#160;set&#160;it&#160;up.&#160;There&#160;is&#160;nothing&#160;here&#160;that<br/>isn't&#160;documented&#160;somewhere&#160;else,&#160;but&#160;I&#160;couldn't&#160;find&#160;it&#160;all&#160;scraped&#160;up&#160;in&#160;a&#160;pile,&#160;so&#160;here<br/>it&#160;is.</p>
+<p style="position:absolute;top:660px;left:82px;white-space:nowrap" class="ft05"><b>Setting&#160;up&#160;a&#160;minimal&#160;chroot</b></p>
+<p style="position:absolute;top:689px;left:82px;white-space:nowrap" class="ft02">Building&#160;&#160;chroots&#160;&#160;in&#160;</p>
+<p style="position:absolute;top:689px;left:199px;white-space:nowrap" class="ft03">Debian</p>
+<p style="position:absolute;top:689px;left:240px;white-space:nowrap" class="ft02">-based&#160;&#160;distributions&#160;&#160;is&#160;&#160;refreshingly&#160;&#160;easy.&#160;&#160;Several&#160;&#160;tools&#160;&#160;are</p>
+<p style="position:absolute;top:703px;left:82px;white-space:nowrap" class="ft08">provided&#160;for&#160;both&#160;managing&#160;a&#160;chroot&#160;environment&#160;and&#160;creating&#160;an&#160;installation&#160;with&#160;the<br/>required&#160;dependencies&#160;for&#160;a&#160;particular&#160;package&#160;set.&#160;For&#160;this&#160;task,&#160;I&#160;used&#160;</p>
+<p style="position:absolute;top:716px;left:511px;white-space:nowrap" class="ft06">schroot</p>
+<p style="position:absolute;top:716px;left:559px;white-space:nowrap" class="ft02">&#160;and</p>
+<p style="position:absolute;top:730px;left:82px;white-space:nowrap" class="ft06">debootstrap</p>
+<p style="position:absolute;top:730px;left:157px;white-space:nowrap" class="ft02">.&#160;&#160;The&#160;&#160;former&#160;&#160;manages&#160;&#160;the&#160;&#160;chroot&#160;&#160;environment&#160;&#160;itself,&#160;&#160;while&#160;&#160;the&#160;&#160;latter</p>
+<p style="position:absolute;top:744px;left:82px;white-space:nowrap" class="ft08">handles&#160;packaging&#160;for&#160;a&#160;minimal&#160;(or&#160;not&#160;so&#160;minimal,&#160;in&#160;this&#160;case!)&#160;internally-consistent<br/>environment.</p>
+<p style="position:absolute;top:783px;left:82px;white-space:nowrap" class="ft08">The&#160;first&#160;thing&#160;to&#160;take&#160;care&#160;of&#160;is&#160;installing&#160;a&#160;complete&#160;enough&#160;set&#160;of&#160;packages&#160;that&#160;the<br/>chroot&#160;jail&#160;can&#160;manage&#160;itself&#160;from&#160;there&#160;on&#160;out.&#160;To&#160;do&#160;this,&#160;pick&#160;where&#160;you&#160;want&#160;to&#160;put<br/>your&#160;chroot&#160;(I&#160;used&#160;</p>
+<p style="position:absolute;top:811px;left:197px;white-space:nowrap" class="ft06">/mnt/unsafe/</p>
+<p style="position:absolute;top:811px;left:278px;white-space:nowrap" class="ft02">,&#160;and&#160;that's&#160;the&#160;path&#160;I'll&#160;be&#160;using&#160;throughout&#160;the&#160;rest</p>
+<p style="position:absolute;top:825px;left:82px;white-space:nowrap" class="ft02">of&#160;&#160;this&#160;&#160;document;&#160;&#160;adjust&#160;&#160;accordingly&#160;&#160;for&#160;&#160;your&#160;&#160;own&#160;&#160;purposes)&#160;&#160;and&#160;&#160;initialize&#160;&#160;it&#160;&#160;with</p>
+<p style="position:absolute;top:838px;left:82px;white-space:nowrap" class="ft06">debootstrap</p>
+<p style="position:absolute;top:838px;left:157px;white-space:nowrap" class="ft02">.&#160;In&#160;this&#160;case,&#160;I&#160;chose&#160;an&#160;i386&#160;Ubuntu&#160;12.04&#160;(“precise”)&#160;jail,&#160;and&#160;initialized</p>
+<p style="position:absolute;top:852px;left:82px;white-space:nowrap" class="ft02">it&#160;as&#160;follows:</p>
+<p style="position:absolute;top:884px;left:100px;white-space:nowrap" class="ft06">sudo&#160;debootstrap&#160;--arch=i386&#160;precise&#160;/mnt/unsafe/&#160;http://archive.ubuntu.com/ubuntu</p>
+<p style="position:absolute;top:916px;left:82px;white-space:nowrap" class="ft02">Documentation&#160;for&#160;how&#160;to&#160;use&#160;</p>
+<p style="position:absolute;top:916px;left:265px;white-space:nowrap" class="ft06">debootstrap</p>
+<p style="position:absolute;top:916px;left:339px;white-space:nowrap" class="ft02">&#160;effectively&#160;is&#160;readily&#160;available,&#160;so&#160;I&#160;won't</p>
+<p style="position:absolute;top:930px;left:82px;white-space:nowrap" class="ft02">cover&#160;it&#160;further&#160;in&#160;this&#160;document.</p>
+<p style="position:absolute;top:955px;left:82px;white-space:nowrap" class="ft08">The&#160;&#160;next&#160;&#160;step&#160;&#160;is&#160;&#160;to&#160;&#160;turn&#160;&#160;this&#160;&#160;set&#160;&#160;of&#160;&#160;extracted&#160;&#160;packages&#160;&#160;into&#160;&#160;an&#160;&#160;actual&#160;&#160;chroot&#160;&#160;jail;&#160;&#160;as<br/>previously&#160;&#160;mentioned,&#160;&#160;I&#160;&#160;used&#160;</p>
+<p style="position:absolute;top:969px;left:269px;white-space:nowrap" class="ft06">schroot</p>
+<p style="position:absolute;top:969px;left:317px;white-space:nowrap" class="ft02">&#160;&#160;to&#160;&#160;accomplish&#160;&#160;that.&#160;&#160;It&#160;&#160;handles&#160;&#160;setup&#160;&#160;that</p>
+<p style="position:absolute;top:983px;left:82px;white-space:nowrap" class="ft02">requires&#160;&#160;superuser&#160;&#160;privileges,&#160;&#160;including&#160;&#160;mounting&#160;&#160;special&#160;&#160;filesystems&#160;&#160;such&#160;&#160;as&#160;</p>
+<p style="position:absolute;top:983px;left:547px;white-space:nowrap" class="ft06">/proc</p>
+<p style="position:absolute;top:983px;left:581px;white-space:nowrap" class="ft02">,</p>
+<p style="position:absolute;top:997px;left:82px;white-space:nowrap" class="ft08">and&#160;&#160;jail&#160;&#160;lifetimes.&#160;&#160;In&#160;&#160;order&#160;&#160;to&#160;&#160;jail&#160;&#160;Skype&#160;&#160;as&#160;&#160;tightly&#160;&#160;as&#160;&#160;possible&#160;&#160;while&#160;&#160;still&#160;&#160;allowing&#160;&#160;it<br/>access&#160;&#160;to&#160;&#160;my&#160;&#160;session&#160;&#160;PulseAudio&#160;&#160;server&#160;&#160;for&#160;&#160;sound,&#160;&#160;I&#160;&#160;needed&#160;&#160;a&#160;&#160;jail&#160;&#160;that&#160;&#160;was&#160;&#160;slightly<br/>more&#160;permissive&#160;than&#160;its&#160;minimal&#160;configuration,&#160;but&#160;far&#160;less&#160;permissive&#160;than&#160;its&#160;default<br/>configuration&#160;&#160;—&#160;&#160;which&#160;&#160;mounts&#160;&#160;user&#160;&#160;home&#160;&#160;directories&#160;&#160;inside&#160;&#160;the&#160;&#160;jail,&#160;&#160;even!&#160;&#160;I&#160;&#160;chose&#160;&#160;to<br/>create&#160;&#160;a&#160;&#160;configuration&#160;&#160;called&#160;</p>
+<p style="position:absolute;top:1052px;left:269px;white-space:nowrap" class="ft02">unsafe&#160;&#160;that&#160;&#160;mounts&#160;&#160;the&#160;&#160;necessary&#160;&#160;files,&#160;&#160;but&#160;&#160;not&#160;&#160;a</p>
+<p style="position:absolute;top:1066px;left:82px;white-space:nowrap" class="ft02">complete&#160;</p>
+<p style="position:absolute;top:1066px;left:141px;white-space:nowrap" class="ft06">/home</p>
+<p style="position:absolute;top:1066px;left:176px;white-space:nowrap" class="ft02">,&#160;&#160;and&#160;&#160;does&#160;&#160;not&#160;&#160;copy&#160;&#160;over&#160;&#160;unnecessary&#160;&#160;user&#160;&#160;or&#160;&#160;password&#160;&#160;database</p>
+<p style="position:absolute;top:1080px;left:82px;white-space:nowrap" class="ft02">information.</p>
+<p style="position:absolute;top:1105px;left:82px;white-space:nowrap" class="ft02">The&#160;&#160;configuration&#160;&#160;for&#160;&#160;such&#160;&#160;a&#160;&#160;jail&#160;&#160;consists&#160;&#160;of&#160;&#160;four&#160;&#160;files&#160;&#160;in&#160;&#160;a&#160;&#160;directory&#160;&#160;under</p>
+<p style="position:absolute;top:1119px;left:82px;white-space:nowrap" class="ft06">/etc/schroot</p>
+<p style="position:absolute;top:1119px;left:163px;white-space:nowrap" class="ft02">&#160;&#160;(in&#160;&#160;this&#160;&#160;case,&#160;</p>
+<p style="position:absolute;top:1119px;left:258px;white-space:nowrap" class="ft06">/etc/schroot/unsafe</p>
+<p style="position:absolute;top:1119px;left:387px;white-space:nowrap" class="ft02">),&#160;&#160;two&#160;&#160;of&#160;&#160;which&#160;&#160;(</p>
+<p style="position:absolute;top:1119px;left:495px;white-space:nowrap" class="ft06">copyfiles</p>
+<p style="position:absolute;top:1119px;left:556px;white-space:nowrap" class="ft02">&#160;&#160;and</p>
+<p style="position:absolute;top:1133px;left:82px;white-space:nowrap" class="ft06">nssdatabases</p>
+<p style="position:absolute;top:1133px;left:163px;white-space:nowrap" class="ft02">&#160;&#160;are&#160;&#160;empty.&#160;&#160;You&#160;&#160;can&#160;&#160;download&#160;</p>
+<p style="position:absolute;top:1133px;left:356px;white-space:nowrap" class="ft03">a&#160;&#160;tarball&#160;&#160;containing&#160;&#160;the&#160;&#160;setup&#160;&#160;I&#160;&#160;used</p>
+<p style="position:absolute;top:1133px;left:581px;white-space:nowrap" class="ft02">,</p>
+<p style="position:absolute;top:1147px;left:82px;white-space:nowrap" class="ft08">though&#160;it&#160;will&#160;require&#160;some&#160;editing,&#160;but&#160;I&#160;will&#160;include&#160;descriptions&#160;of&#160;the&#160;other&#160;two&#160;files<br/>here.</p>
+<p style="position:absolute;top:167px;left:710px;white-space:nowrap" class="ft02">[&#160;</p>
+<p style="position:absolute;top:167px;left:718px;white-space:nowrap" class="ft03">Home</p>
+<p style="position:absolute;top:167px;left:752px;white-space:nowrap" class="ft02">&#160;|&#160;</p>
+<p style="position:absolute;top:167px;left:763px;white-space:nowrap" class="ft03">RSS</p>
+<p style="position:absolute;top:167px;left:787px;white-space:nowrap" class="ft02">&#160;|&#160;</p>
+<p style="position:absolute;top:167px;left:798px;white-space:nowrap" class="ft03">ATOM</p>
+<p style="position:absolute;top:167px;left:835px;white-space:nowrap" class="ft02">&#160;]</p>
+<p style="position:absolute;top:195px;left:710px;white-space:nowrap" class="ft01"><b>Tags</b></p>
+<p style="position:absolute;top:230px;left:710px;white-space:nowrap" class="ft03">advertising</p>
+<p style="position:absolute;top:230px;left:775px;white-space:nowrap" class="ft02">&#160;</p>
+<p style="position:absolute;top:230px;left:778px;white-space:nowrap" class="ft03">android</p>
+<p style="position:absolute;top:243px;left:710px;white-space:nowrap" class="ft03">books</p>
+<p style="position:absolute;top:243px;left:744px;white-space:nowrap" class="ft02">&#160;</p>
+<p style="position:absolute;top:243px;left:747px;white-space:nowrap" class="ft03">bugs</p>
+<p style="position:absolute;top:243px;left:775px;white-space:nowrap" class="ft02">&#160;</p>
+<p style="position:absolute;top:243px;left:779px;white-space:nowrap" class="ft03">chroot</p>
+<p style="position:absolute;top:243px;left:816px;white-space:nowrap" class="ft02">&#160;</p>
+<p style="position:absolute;top:243px;left:819px;white-space:nowrap" class="ft03">coffee</p>
+<p style="position:absolute;top:257px;left:710px;white-space:nowrap" class="ft03">consumerism</p>
+<p style="position:absolute;top:257px;left:787px;white-space:nowrap" class="ft02">&#160;</p>
+<p style="position:absolute;top:257px;left:790px;white-space:nowrap" class="ft03">debian</p>
+<p style="position:absolute;top:257px;left:829px;white-space:nowrap" class="ft02">&#160;</p>
+<p style="position:absolute;top:257px;left:833px;white-space:nowrap" class="ft03">drm</p>
+<p style="position:absolute;top:271px;left:710px;white-space:nowrap" class="ft03">embedded</p>
+<p style="position:absolute;top:271px;left:770px;white-space:nowrap" class="ft02">&#160;</p>
+<p style="position:absolute;top:271px;left:774px;white-space:nowrap" class="ft03">encryption</p>
+<p style="position:absolute;top:285px;left:710px;white-space:nowrap" class="ft03">ergonomics</p>
+<p style="position:absolute;top:285px;left:777px;white-space:nowrap" class="ft02">&#160;</p>
+<p style="position:absolute;top:285px;left:781px;white-space:nowrap" class="ft03">et</p>
+<p style="position:absolute;top:285px;left:792px;white-space:nowrap" class="ft02">&#160;</p>
+<p style="position:absolute;top:285px;left:795px;white-space:nowrap" class="ft03">fatigue</p>
+<p style="position:absolute;top:299px;left:710px;white-space:nowrap" class="ft03">finance</p>
+<p style="position:absolute;top:299px;left:752px;white-space:nowrap" class="ft02">&#160;</p>
+<p style="position:absolute;top:299px;left:756px;white-space:nowrap" class="ft03">floss</p>
+<p style="position:absolute;top:299px;left:782px;white-space:nowrap" class="ft02">&#160;</p>
+<p style="position:absolute;top:299px;left:786px;white-space:nowrap" class="ft03">freedom</p>
+<p style="position:absolute;top:313px;left:710px;white-space:nowrap" class="ft03">hamradio</p>
+<p style="position:absolute;top:313px;left:765px;white-space:nowrap" class="ft02">&#160;</p>
+<p style="position:absolute;top:313px;left:768px;white-space:nowrap" class="ft03">hibernate</p>
+<p style="position:absolute;top:313px;left:824px;white-space:nowrap" class="ft02">&#160;</p>
+<p style="position:absolute;top:313px;left:828px;white-space:nowrap" class="ft03">iced</p>
+<p style="position:absolute;top:326px;left:710px;white-space:nowrap" class="ft03">im</p>
+<p style="position:absolute;top:326px;left:725px;white-space:nowrap" class="ft02">&#160;</p>
+<p style="position:absolute;top:326px;left:728px;white-space:nowrap" class="ft03">jeep</p>
+<p style="position:absolute;top:326px;left:752px;white-space:nowrap" class="ft02">&#160;</p>
+<p style="position:absolute;top:326px;left:756px;white-space:nowrap" class="ft03">keybase</p>
+<p style="position:absolute;top:326px;left:802px;white-space:nowrap" class="ft02">&#160;</p>
+<p style="position:absolute;top:326px;left:806px;white-space:nowrap" class="ft03">luks</p>
+<p style="position:absolute;top:326px;left:830px;white-space:nowrap" class="ft02">&#160;</p>
+<p style="position:absolute;top:326px;left:833px;white-space:nowrap" class="ft03">lvm</p>
+<p style="position:absolute;top:340px;left:710px;white-space:nowrap" class="ft03">madeinusa</p>
+<p style="position:absolute;top:340px;left:772px;white-space:nowrap" class="ft02">&#160;</p>
+<p style="position:absolute;top:340px;left:776px;white-space:nowrap" class="ft03">monitoring</p>
+<p style="position:absolute;top:354px;left:710px;white-space:nowrap" class="ft03">parallella</p>
+<p style="position:absolute;top:354px;left:764px;white-space:nowrap" class="ft02">&#160;</p>
+<p style="position:absolute;top:354px;left:768px;white-space:nowrap" class="ft03">pi</p>
+<p style="position:absolute;top:354px;left:779px;white-space:nowrap" class="ft02">&#160;</p>
+<p style="position:absolute;top:354px;left:782px;white-space:nowrap" class="ft03">pidgin</p>
+<p style="position:absolute;top:368px;left:710px;white-space:nowrap" class="ft03">publishing</p>
+<p style="position:absolute;top:368px;left:771px;white-space:nowrap" class="ft02">&#160;</p>
+<p style="position:absolute;top:368px;left:774px;white-space:nowrap" class="ft03">pulseaudio</p>
+<p style="position:absolute;top:382px;left:710px;white-space:nowrap" class="ft03">recovery</p>
+<p style="position:absolute;top:382px;left:760px;white-space:nowrap" class="ft02">&#160;</p>
+<p style="position:absolute;top:382px;left:764px;white-space:nowrap" class="ft03">review</p>
+<p style="position:absolute;top:382px;left:802px;white-space:nowrap" class="ft02">&#160;</p>
+<p style="position:absolute;top:382px;left:806px;white-space:nowrap" class="ft03">security</p>
+<p style="position:absolute;top:396px;left:710px;white-space:nowrap" class="ft03">skype</p>
+<p style="position:absolute;top:396px;left:743px;white-space:nowrap" class="ft02">&#160;</p>
+<p style="position:absolute;top:396px;left:747px;white-space:nowrap" class="ft03">software</p>
+<p style="position:absolute;top:396px;left:797px;white-space:nowrap" class="ft02">&#160;</p>
+<p style="position:absolute;top:396px;left:800px;white-space:nowrap" class="ft03">sputnik</p>
+<p style="position:absolute;top:409px;left:710px;white-space:nowrap" class="ft03">swap</p>
+<p style="position:absolute;top:409px;left:740px;white-space:nowrap" class="ft02">&#160;</p>
+<p style="position:absolute;top:409px;left:743px;white-space:nowrap" class="ft03">travel</p>
+<p style="position:absolute;top:409px;left:777px;white-space:nowrap" class="ft02">&#160;</p>
+<p style="position:absolute;top:409px;left:780px;white-space:nowrap" class="ft03">trust</p>
+<p style="position:absolute;top:409px;left:808px;white-space:nowrap" class="ft02">&#160;</p>
+<p style="position:absolute;top:409px;left:812px;white-space:nowrap" class="ft03">ubuntu</p>
+<p style="position:absolute;top:423px;left:710px;white-space:nowrap" class="ft03">x11</p>
+<p style="position:absolute;top:423px;left:731px;white-space:nowrap" class="ft02">&#160;</p>
+<p style="position:absolute;top:423px;left:735px;white-space:nowrap" class="ft03">xmpp</p>
+<p style="position:absolute;top:423px;left:766px;white-space:nowrap" class="ft02">&#160;</p>
+<p style="position:absolute;top:423px;left:770px;white-space:nowrap" class="ft03">xpra</p>
+<p style="position:absolute;top:423px;left:796px;white-space:nowrap" class="ft02">&#160;</p>
+<p style="position:absolute;top:423px;left:799px;white-space:nowrap" class="ft03">youtube</p>
+<p style="position:absolute;top:125px;left:59px;white-space:nowrap" class="ft07"><b>Musings&#160;from&#160;kb8ojh.net</b></p>
+</div>
+</body>
+</html>

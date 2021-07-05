@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+<title>Page 80</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<style type="text/css">
+<!--
+	p {margin: 0; padding: 0;}	.ft00{font-size:9px;font-family:DejaVuSans;color:#222222;}
+	.ft01{font-size:13px;font-family:DejaVuSans;color:#111111;}
+	.ft02{font-size:7px;font-family:BitstreamVeraSansMono;color:#008200;}
+	.ft03{font-size:7px;font-family:BitstreamVeraSansMono;color:#000000;}
+	.ft04{font-size:9px;line-height:16px;font-family:DejaVuSans;color:#222222;}
+-->
+</style>
+</head>
+<body bgcolor="#A0A0A0" vlink="blue" link="blue">
+<div id="page80-div" style="position:relative;width:892px;height:1263px;">
+<img width="892" height="1263" src="ALL-07052021080.png" alt="background image"/>
+<p style="position:absolute;top:57px;left:123px;white-space:nowrap" class="ft04">features&#160;of&#160;these&#160;namespaces.&#160;CLONE_NEW*&#160;identifiers&#160;are&#160;used&#160;with&#160;these&#160;system&#160;calls&#160;to<br/>identify&#160;the&#160;type&#160;of&#160;namespace.&#160;These&#160;three&#160;system&#160;calls&#160;make&#160;use&#160;of&#160;the&#160;CLONE_NEW*&#160;as<br/>CLONE_NEWIPC,&#160;CLONE_NEWNS,&#160;CLONE_NEWNET,&#160;CLONE_NEWPID,&#160;CLONE_NEWUSER,&#160;and<br/>CLONE_NEWUTS.&#160;A&#160;process&#160;in&#160;a&#160;namespace&#160;can&#160;be&#160;different&#160;because&#160;of&#160;its&#160;unique&#160;inode<br/>number&#160;when&#160;it&#160;is&#160;created.</p>
+<p style="position:absolute;top:229px;left:123px;white-space:nowrap" class="ft01">Mount&#160;namespace</p>
+<p style="position:absolute;top:260px;left:123px;white-space:nowrap" class="ft04">A&#160;process&#160;views&#160;different&#160;mount&#160;points&#160;other&#160;than&#160;the&#160;original&#160;system&#160;mount&#160;point.&#160;It<br/>creates&#160;a&#160;separate&#160;file&#160;system&#160;tree&#160;associated&#160;with&#160;different&#160;processes,&#160;which&#160;restricts&#160;them<br/>from&#160;making&#160;changes&#160;to&#160;the&#160;root&#160;file&#160;system.</p>
+<p style="position:absolute;top:324px;left:123px;white-space:nowrap" class="ft01">PID&#160;namespace</p>
+<p style="position:absolute;top:355px;left:123px;white-space:nowrap" class="ft04">PID&#160;namespace&#160;isolates&#160;a&#160;process&#160;ID&#160;from&#160;the&#160;main&#160;PID&#160;hierarchy.&#160;A&#160;process&#160;inside&#160;a&#160;PID<br/>namespace&#160;can&#160;have&#160;the&#160;same&#160;PID&#160;as&#160;a&#160;process&#160;outside&#160;it,&#160;and&#160;even&#160;inside&#160;the&#160;namespace,<br/>you&#160;can&#160;have&#160;different&#160;init&#160;with&#160;PID&#160;1.</p>
+<p style="position:absolute;top:420px;left:123px;white-space:nowrap" class="ft01">UTS&#160;namespace</p>
+<p style="position:absolute;top:451px;left:123px;white-space:nowrap" class="ft04">In&#160;the&#160;UTS&#160;(UNIX&#160;Timesharing&#160;System)&#160;namespace,&#160;a&#160;process&#160;can&#160;have&#160;a&#160;different&#160;set&#160;of<br/>domain&#160;names&#160;and&#160;host&#160;names&#160;than&#160;the&#160;main&#160;system.&#160;It&#160;uses&#160;sethostname()&#160;and<br/>setdomainname()&#160;to&#160;do&#160;that.</p>
+<p style="position:absolute;top:515px;left:123px;white-space:nowrap" class="ft01">IPC&#160;namespace</p>
+<p style="position:absolute;top:546px;left:123px;white-space:nowrap" class="ft04">This&#160;is&#160;used&#160;for&#160;inter-process&#160;communication&#160;resources&#160;isolation&#160;and&#160;POSIX&#160;message<br/>queues.</p>
+<p style="position:absolute;top:595px;left:123px;white-space:nowrap" class="ft01">User&#160;namespace</p>
+<p style="position:absolute;top:626px;left:123px;white-space:nowrap" class="ft04">This&#160;isolates&#160;user&#160;and&#160;group&#160;IDs&#160;inside&#160;a&#160;namespace,&#160;which&#160;is&#160;allowed&#160;to&#160;have&#160;the&#160;same&#160;UID<br/>or&#160;GID&#160;in&#160;the&#160;namespace&#160;as&#160;in&#160;the&#160;host&#160;machine.&#160;In&#160;your&#160;system,&#160;unprivileged&#160;processes<br/>can&#160;create&#160;user&#160;namespaces&#160;in&#160;which&#160;they&#160;have&#160;full&#160;privileges.</p>
+<p style="position:absolute;top:690px;left:123px;white-space:nowrap" class="ft01">Network&#160;namespace</p>
+<p style="position:absolute;top:721px;left:123px;white-space:nowrap" class="ft04">Inside&#160;this&#160;namespace,&#160;processes&#160;can&#160;have&#160;different&#160;network&#160;stacks,&#160;i.e.,&#160;different&#160;network<br/>devices,&#160;IP&#160;addresses,&#160;routing&#160;tables,&#160;etc.</p>
+<p style="position:absolute;top:770px;left:123px;white-space:nowrap" class="ft04">Sandboxing&#160;tools&#160;available&#160;in&#160;Linux&#160;use&#160;this&#160;namespaces&#160;feature&#160;to&#160;isolate&#160;a&#160;process&#160;or<br/>create&#160;a&#160;new&#160;virtual&#160;environment.&#160;A&#160;much&#160;more&#160;secure&#160;tool&#160;will&#160;be&#160;that&#160;which&#160;uses<br/>maximum&#160;namespaces&#160;for&#160;isolation.&#160;Now,&#160;let​s&#160;talk&#160;about&#160;different&#160;methods&#160;of&#160;sandboxing,<br/>from&#160;soft&#160;to&#160;hard&#160;isolation.</p>
+<p style="position:absolute;top:851px;left:123px;white-space:nowrap" class="ft01">chroot</p>
+<p style="position:absolute;top:882px;left:123px;white-space:nowrap" class="ft04">chroot&#160;is&#160;the&#160;oldest&#160;sandboxing&#160;tool&#160;available&#160;in&#160;Linux.&#160;Its&#160;work&#160;is&#160;the&#160;same&#160;as&#160;mount<br/>namespace,&#160;but&#160;it&#160;is&#160;implemented&#160;much&#160;earlier.&#160;</p>
+<p style="position:absolute;top:898px;left:353px;white-space:nowrap" class="ft00">chroot&#160;changes&#160;the&#160;root&#160;directory&#160;for&#160;a</p>
+<p style="position:absolute;top:915px;left:123px;white-space:nowrap" class="ft00">process&#160;to&#160;any&#160;</p>
+<p style="position:absolute;top:915px;left:195px;white-space:nowrap" class="ft00">chroot&#160;directory&#160;(like&#160;/chroot).&#160;As&#160;the&#160;root&#160;directory&#160;is&#160;the&#160;top&#160;of&#160;the&#160;file</p>
+<p style="position:absolute;top:931px;left:123px;white-space:nowrap" class="ft04">system&#160;hierarchy,&#160;applications&#160;are&#160;unable&#160;to&#160;access&#160;directories&#160;higher&#160;up&#160;than&#160;the&#160;root<br/>directory,&#160;and&#160;so&#160;are&#160;isolated&#160;from&#160;the&#160;rest&#160;of&#160;the&#160;system.&#160;This&#160;prevents&#160;applications&#160;inside<br/>the&#160;</p>
+<p style="position:absolute;top:964px;left:142px;white-space:nowrap" class="ft00">chroot&#160;from&#160;interfering&#160;with&#160;files&#160;elsewhere&#160;on&#160;your&#160;computer.&#160;To&#160;create&#160;an&#160;isolated</p>
+<p style="position:absolute;top:980px;left:123px;white-space:nowrap" class="ft04">environment&#160;in&#160;old&#160;SystemV&#160;based&#160;operating&#160;systems,&#160;you&#160;first&#160;need&#160;to&#160;copy&#160;all&#160;required<br/>packages&#160;and&#160;libraries&#160;to&#160;that&#160;directory.&#160;For&#160;demonstration&#160;purposes,&#160;I&#160;am&#160;running&#160;​ls​&#160;on&#160;the<br/>chroot&#160;directory.</p>
+<p style="position:absolute;top:1046px;left:123px;white-space:nowrap" class="ft00">First,&#160;create&#160;a&#160;directory&#160;to&#160;set&#160;as&#160;root&#160;a&#160;file&#160;system&#160;for&#160;a&#160;process:</p>
+<p style="position:absolute;top:1095px;left:123px;white-space:nowrap" class="ft00">Next,&#160;make&#160;the&#160;required&#160;directory&#160;inside&#160;it.</p>
+<p style="position:absolute;top:1145px;left:123px;white-space:nowrap" class="ft04">Now,&#160;the&#160;most&#160;important&#160;step&#160;is&#160;to&#160;copy&#160;the&#160;executable&#160;and&#160;libraries.&#160;To&#160;get&#160;the&#160;shell&#160;inside<br/>the&#160;</p>
+<p style="position:absolute;top:1161px;left:142px;white-space:nowrap" class="ft00">chroot,&#160;you&#160;also&#160;need&#160;/bin/bash.</p>
+<p style="position:absolute;top:153px;left:126px;white-space:nowrap" class="ft02">#ls&#160;-al&#160;/proc/&lt;pid&gt;/ns</p>
+<p style="position:absolute;top:161px;left:126px;white-space:nowrap" class="ft03">lrwxrwxrwx&#160;1&#160;root&#160;root&#160;0&#160;Feb&#160;7&#160;13:52&#160;ipc&#160;-&gt;&#160;ipc:[4026532253]</p>
+<p style="position:absolute;top:169px;left:126px;white-space:nowrap" class="ft03">lrwxrwxrwx&#160;1&#160;root&#160;root&#160;0&#160;Feb&#160;7&#160;15:39&#160;mnt&#160;-&gt;&#160;mnt:[4026532251]</p>
+<p style="position:absolute;top:177px;left:126px;white-space:nowrap" class="ft03">lrwxrwxrwx&#160;1&#160;root&#160;root&#160;0&#160;Feb&#160;7&#160;13:52&#160;net&#160;-&gt;&#160;net:[4026531957]</p>
+<p style="position:absolute;top:185px;left:126px;white-space:nowrap" class="ft03">lrwxrwxrwx&#160;1&#160;root&#160;root&#160;0&#160;Feb&#160;7&#160;13:52&#160;pid&#160;-&gt;&#160;pid:[4026532254]</p>
+<p style="position:absolute;top:194px;left:126px;white-space:nowrap" class="ft03">lrwxrwxrwx&#160;1&#160;root&#160;root&#160;0&#160;Feb&#160;7&#160;13:52&#160;user&#160;-&gt;&#160;user:[4026531837]</p>
+<p style="position:absolute;top:202px;left:126px;white-space:nowrap" class="ft03">lrwxrwxrwx&#160;1&#160;root&#160;root&#160;0&#160;Feb&#160;7&#160;15:39&#160;uts&#160;-&gt;&#160;uts:[4026532252]</p>
+<p style="position:absolute;top:1076px;left:126px;white-space:nowrap" class="ft03">&lt;em&gt;</p>
+<p style="position:absolute;top:1076px;left:144px;white-space:nowrap" class="ft02">#mkdir&#160;/chroot&lt;/em&gt;</p>
+<p style="position:absolute;top:1126px;left:126px;white-space:nowrap" class="ft03">&lt;em&gt;</p>
+<p style="position:absolute;top:1126px;left:144px;white-space:nowrap" class="ft02">#mkdir&#160;/chroot/{lib,lib64,bin,etc}&lt;/em&gt;</p>
+</div>
+</body>
+</html>

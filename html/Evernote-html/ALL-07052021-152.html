@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+<title>Page 152</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<style type="text/css">
+<!--
+	p {margin: 0; padding: 0;}	.ft00{font-size:10px;font-family:DejaVuSans;color:#000000;}
+	.ft01{font-size:10px;font-family:DejaVuSansMono;color:#000000;}
+	.ft02{font-size:10px;font-family:DejaVuSans;color:#a21313;}
+	.ft03{font-size:11px;font-family:DejaVuSans;color:#000000;}
+	.ft04{font-size:10px;line-height:15px;font-family:DejaVuSans;color:#000000;}
+	.ft05{font-size:10px;line-height:15px;font-family:DejaVuSansMono;color:#000000;}
+-->
+</style>
+</head>
+<body bgcolor="#A0A0A0" vlink="blue" link="blue">
+<div id="page152-div" style="position:relative;width:892px;height:1263px;">
+<img width="892" height="1263" src="ALL-07052021152.png" alt="background image"/>
+<p style="position:absolute;top:55px;left:272px;white-space:nowrap" class="ft00">Each&#160;editor&#160;is&#160;associated&#160;with&#160;an&#160;instance&#160;of&#160;</p>
+<p style="position:absolute;top:55px;left:500px;white-space:nowrap" class="ft01">CodeMirror.Doc</p>
+<p style="position:absolute;top:55px;left:586px;white-space:nowrap" class="ft00">,&#160;its</p>
+<p style="position:absolute;top:70px;left:272px;white-space:nowrap" class="ft04">document.&#160;A&#160;document&#160;represents&#160;the&#160;editor&#160;content,&#160;plus&#160;a&#160;selection,&#160;an<br/>undo&#160;history,&#160;and&#160;a&#160;</p>
+<p style="position:absolute;top:86px;left:373px;white-space:nowrap" class="ft02">mode</p>
+<p style="position:absolute;top:86px;left:401px;white-space:nowrap" class="ft00">.&#160;A&#160;document&#160;can&#160;only&#160;be&#160;associated&#160;with&#160;a</p>
+<p style="position:absolute;top:101px;left:272px;white-space:nowrap" class="ft00">single&#160;editor&#160;at&#160;a&#160;time.&#160;You&#160;can&#160;create&#160;new&#160;documents&#160;by&#160;calling&#160;the</p>
+<p style="position:absolute;top:116px;left:273px;white-space:nowrap" class="ft01">CodeMirror.Doc(text:&#160;string,&#160;mode:&#160;Object,&#160;firstLineNumber:&#160;?</p>
+<p style="position:absolute;top:131px;left:272px;white-space:nowrap" class="ft01">number,&#160;lineSeparator:&#160;?string)</p>
+<p style="position:absolute;top:131px;left:460px;white-space:nowrap" class="ft00">&#160;constructor.&#160;The&#160;last&#160;three</p>
+<p style="position:absolute;top:146px;left:272px;white-space:nowrap" class="ft04">arguments&#160;are&#160;optional&#160;and&#160;can&#160;be&#160;used&#160;to&#160;set&#160;a&#160;mode&#160;for&#160;the&#160;document,<br/>make&#160;it&#160;start&#160;at&#160;a&#160;line&#160;number&#160;other&#160;than&#160;0,&#160;and&#160;set&#160;a&#160;specific&#160;line<br/>separator&#160;respectively.</p>
+<p style="position:absolute;top:201px;left:273px;white-space:nowrap" class="ft01">cm.getDoc()&#160;→&#160;Doc</p>
+<p style="position:absolute;top:216px;left:287px;white-space:nowrap" class="ft00">Retrieve&#160;the&#160;currently&#160;active&#160;document&#160;from&#160;an&#160;editor.</p>
+<p style="position:absolute;top:241px;left:273px;white-space:nowrap" class="ft01">doc.getEditor()&#160;→&#160;CodeMirror</p>
+<p style="position:absolute;top:257px;left:287px;white-space:nowrap" class="ft00">Retrieve&#160;the&#160;editor&#160;associated&#160;with&#160;a&#160;document.&#160;May&#160;return&#160;</p>
+<p style="position:absolute;top:257px;left:592px;white-space:nowrap" class="ft01">null</p>
+<p style="position:absolute;top:257px;left:618px;white-space:nowrap" class="ft00">.</p>
+<p style="position:absolute;top:282px;left:273px;white-space:nowrap" class="ft01">cm.swapDoc(doc:&#160;CodeMirror.Doc)&#160;→&#160;Doc</p>
+<p style="position:absolute;top:297px;left:287px;white-space:nowrap" class="ft04">Attach&#160;a&#160;new&#160;document&#160;to&#160;the&#160;editor.&#160;Returns&#160;the&#160;old&#160;document,&#160;which<br/>is&#160;now&#160;no&#160;longer&#160;associated&#160;with&#160;an&#160;editor.</p>
+<p style="position:absolute;top:337px;left:273px;white-space:nowrap" class="ft01">doc.copy(copyHistory:&#160;boolean)&#160;→&#160;Doc</p>
+<p style="position:absolute;top:352px;left:287px;white-space:nowrap" class="ft00">Create&#160;an&#160;identical&#160;copy&#160;of&#160;the&#160;given&#160;doc.&#160;When&#160;</p>
+<p style="position:absolute;top:352px;left:534px;white-space:nowrap" class="ft01">copyHistory</p>
+<p style="position:absolute;top:352px;left:602px;white-space:nowrap" class="ft00">&#160;is&#160;true,</p>
+<p style="position:absolute;top:367px;left:287px;white-space:nowrap" class="ft00">the&#160;history&#160;will&#160;also&#160;be&#160;copied.&#160;Can&#160;not&#160;be&#160;called&#160;directly&#160;on&#160;an&#160;editor.</p>
+<p style="position:absolute;top:392px;left:273px;white-space:nowrap" class="ft01">doc.linkedDoc(options:&#160;object)&#160;→&#160;Doc</p>
+<p style="position:absolute;top:408px;left:287px;white-space:nowrap" class="ft04">Create&#160;a&#160;new&#160;document&#160;that's&#160;linked&#160;to&#160;the&#160;target&#160;document.&#160;Linked<br/>documents&#160;will&#160;stay&#160;in&#160;sync&#160;(changes&#160;to&#160;one&#160;are&#160;also&#160;applied&#160;to&#160;the<br/>other)&#160;until&#160;</p>
+<p style="position:absolute;top:438px;left:346px;white-space:nowrap" class="ft02">unlinked</p>
+<p style="position:absolute;top:438px;left:389px;white-space:nowrap" class="ft00">.&#160;These&#160;are&#160;the&#160;options&#160;that&#160;are&#160;supported:</p>
+<p style="position:absolute;top:453px;left:288px;white-space:nowrap" class="ft01">sharedHist:&#160;boolean</p>
+<p style="position:absolute;top:468px;left:302px;white-space:nowrap" class="ft04">When&#160;turned&#160;on,&#160;the&#160;linked&#160;copy&#160;will&#160;share&#160;an&#160;undo&#160;history&#160;with&#160;the<br/>original.&#160;Thus,&#160;something&#160;done&#160;in&#160;one&#160;of&#160;the&#160;two&#160;can&#160;be&#160;undone&#160;in<br/>the&#160;other,&#160;and&#160;vice&#160;versa.</p>
+<p style="position:absolute;top:513px;left:288px;white-space:nowrap" class="ft05">from:&#160;integer<br/>to:&#160;integer</p>
+<p style="position:absolute;top:543px;left:302px;white-space:nowrap" class="ft04">Can&#160;be&#160;given&#160;to&#160;make&#160;the&#160;new&#160;document&#160;a&#160;subview&#160;of&#160;the&#160;original.<br/>Subviews&#160;only&#160;show&#160;a&#160;given&#160;range&#160;of&#160;lines.&#160;Note&#160;that&#160;line<br/>coordinates&#160;inside&#160;the&#160;subview&#160;will&#160;be&#160;consistent&#160;with&#160;those&#160;of&#160;the<br/>parent,&#160;so&#160;that&#160;for&#160;example&#160;a&#160;subview&#160;starting&#160;at&#160;line&#160;10&#160;will&#160;refer&#160;to<br/>its&#160;first&#160;line&#160;as&#160;line&#160;10,&#160;not&#160;0.</p>
+<p style="position:absolute;top:619px;left:288px;white-space:nowrap" class="ft01">mode:&#160;string|object</p>
+<p style="position:absolute;top:634px;left:302px;white-space:nowrap" class="ft04">By&#160;default,&#160;the&#160;new&#160;document&#160;inherits&#160;the&#160;mode&#160;of&#160;the&#160;parent.&#160;This<br/>option&#160;can&#160;be&#160;set&#160;to&#160;a&#160;</p>
+<p style="position:absolute;top:649px;left:415px;white-space:nowrap" class="ft02">mode&#160;spec</p>
+<p style="position:absolute;top:649px;left:470px;white-space:nowrap" class="ft00">&#160;to&#160;give&#160;it&#160;a&#160;different&#160;mode.</p>
+<p style="position:absolute;top:674px;left:273px;white-space:nowrap" class="ft01">doc.unlinkDoc(doc:&#160;CodeMirror.Doc)</p>
+<p style="position:absolute;top:689px;left:287px;white-space:nowrap" class="ft04">Break&#160;the&#160;link&#160;between&#160;two&#160;documents.&#160;After&#160;calling&#160;this,&#160;changes&#160;will<br/>no&#160;longer&#160;propagate&#160;between&#160;the&#160;documents,&#160;and,&#160;if&#160;they&#160;had&#160;a<br/>shared&#160;history,&#160;the&#160;history&#160;will&#160;become&#160;separate.</p>
+<p style="position:absolute;top:745px;left:273px;white-space:nowrap" class="ft01">doc.iterLinkedDocs(function:&#160;(doc:&#160;CodeMirror.Doc,</p>
+<p style="position:absolute;top:760px;left:292px;white-space:nowrap" class="ft01">sharedHist:&#160;boolean))</p>
+<p style="position:absolute;top:775px;left:287px;white-space:nowrap" class="ft04">Will&#160;call&#160;the&#160;given&#160;function&#160;for&#160;all&#160;documents&#160;linked&#160;to&#160;the&#160;target<br/>document.&#160;It&#160;will&#160;be&#160;passed&#160;two&#160;arguments,&#160;the&#160;linked&#160;document&#160;and&#160;a<br/>boolean&#160;indicating&#160;whether&#160;that&#160;document&#160;shares&#160;history&#160;with&#160;the<br/>target.</p>
+<p style="position:absolute;top:847px;left:272px;white-space:nowrap" class="ft03">History-related&#160;methods</p>
+<p style="position:absolute;top:874px;left:273px;white-space:nowrap" class="ft01">doc.undo()</p>
+<p style="position:absolute;top:889px;left:287px;white-space:nowrap" class="ft00">Undo&#160;one&#160;edit&#160;(if&#160;any&#160;undo&#160;events&#160;are&#160;stored).</p>
+<p style="position:absolute;top:914px;left:273px;white-space:nowrap" class="ft01">doc.redo()</p>
+<p style="position:absolute;top:929px;left:287px;white-space:nowrap" class="ft00">Redo&#160;one&#160;undone&#160;edit.</p>
+<p style="position:absolute;top:954px;left:273px;white-space:nowrap" class="ft01">doc.undoSelection()</p>
+<p style="position:absolute;top:969px;left:287px;white-space:nowrap" class="ft00">Undo&#160;one&#160;edit&#160;or&#160;selection&#160;change.</p>
+<p style="position:absolute;top:994px;left:273px;white-space:nowrap" class="ft01">doc.redoSelection()</p>
+<p style="position:absolute;top:1009px;left:287px;white-space:nowrap" class="ft00">Redo&#160;one&#160;undone&#160;edit&#160;or&#160;selection&#160;change.</p>
+<p style="position:absolute;top:1035px;left:273px;white-space:nowrap" class="ft01">doc.historySize()&#160;→&#160;{undo:&#160;integer,&#160;redo:&#160;integer}</p>
+<p style="position:absolute;top:1050px;left:287px;white-space:nowrap" class="ft00">Returns&#160;an&#160;object&#160;with&#160;</p>
+<p style="position:absolute;top:1050px;left:405px;white-space:nowrap" class="ft01">{undo,&#160;redo}</p>
+<p style="position:absolute;top:1050px;left:479px;white-space:nowrap" class="ft00">&#160;properties,&#160;both&#160;of&#160;which&#160;hold</p>
+<p style="position:absolute;top:1065px;left:287px;white-space:nowrap" class="ft00">integers,&#160;indicating&#160;the&#160;amount&#160;of&#160;stored&#160;undo&#160;and&#160;redo&#160;operations.</p>
+<p style="position:absolute;top:1090px;left:273px;white-space:nowrap" class="ft01">doc.clearHistory()</p>
+<p style="position:absolute;top:1105px;left:287px;white-space:nowrap" class="ft00">Clears&#160;the&#160;editor's&#160;undo&#160;history.</p>
+<p style="position:absolute;top:1130px;left:273px;white-space:nowrap" class="ft01">doc.getHistory()&#160;→&#160;object</p>
+<p style="position:absolute;top:1145px;left:287px;white-space:nowrap" class="ft00">Get&#160;a&#160;(JSON-serializable)&#160;representation&#160;of&#160;the&#160;undo&#160;history.</p>
+<p style="position:absolute;top:1170px;left:273px;white-space:nowrap" class="ft01">doc.setHistory(history:&#160;object)</p>
+</div>
+</body>
+</html>

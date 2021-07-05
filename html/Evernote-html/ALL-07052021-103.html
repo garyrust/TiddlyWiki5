@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+<title>Page 103</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<style type="text/css">
+<!--
+	p {margin: 0; padding: 0;}	.ft00{font-size:10px;font-family:DejaVuSans;color:#273239;}
+	.ft01{font-size:10px;font-family:DejaVuSans;color:#273239;}
+	.ft02{font-size:10px;font-family:DejaVuSansMono;color:#273239;}
+	.ft03{font-size:10px;font-family:DejaVuSans;color:#308d46;}
+	.ft04{font-size:10px;line-height:17px;font-family:DejaVuSans;color:#273239;}
+	.ft05{font-size:10px;line-height:16px;font-family:DejaVuSansMono;color:#273239;}
+-->
+</style>
+</head>
+<body bgcolor="#A0A0A0" vlink="blue" link="blue">
+<div id="page103-div" style="position:relative;width:892px;height:1263px;">
+<img width="892" height="1263" src="ALL-07052021103.png" alt="background image"/>
+<p style="position:absolute;top:251px;left:128px;white-space:nowrap" class="ft04"><b>5.&#160;&#160;Sudo&#160;&#160;chroot:&#160;</b>Run&#160;this&#160;command&#160;&#160;to&#160;change&#160;the&#160;root&#160;to&#160;the&#160;JAILED<br/>directory,&#160;along&#160;with&#160;the&#160;path&#160;to&#160;the&#160;shell.&#160;By&#160;default&#160;it&#160;will&#160;try&#160;to&#160;load<br/>‘/bin/sh’&#160;shell.</p>
+<p style="position:absolute;top:323px;left:141px;white-space:nowrap" class="ft05">&#160;&#160;$&#160;&#160;cd&#160;..<br/>&#160;&#160;$&#160;&#160;sudo&#160;chroot&#160;jailed&#160;/bin/bash</p>
+<p style="position:absolute;top:374px;left:128px;white-space:nowrap" class="ft01">You&#160;might&#160;face&#160;this&#160;error&#160;while&#160;running&#160;the&#160;chroot&#160;command,</p>
+<p style="position:absolute;top:411px;left:141px;white-space:nowrap" class="ft02">chroot:&#160;failed&#160;to&#160;run&#160;command&#160;`/bin/bash':&#160;No&#160;such&#160;file&#160;or&#160;directory</p>
+<p style="position:absolute;top:455px;left:128px;white-space:nowrap" class="ft04">This&#160;&#160;may&#160;&#160;be&#160;&#160;due&#160;&#160;to&#160;&#160;2&#160;&#160;reasons,&#160;&#160;either&#160;&#160;the&#160;&#160;file&#160;&#160;does&#160;&#160;not&#160;&#160;exist(which&#160;&#160;is<br/>obvious),&#160;&#160;or&#160;&#160;when&#160;&#160;the&#160;&#160;loading&#160;&#160;library&#160;&#160;fails&#160;&#160;or&#160;&#160;is&#160;&#160;not&#160;&#160;available.&#160;&#160;Double-<br/>Check&#160;if&#160;the&#160;libaries&#160;are&#160;in&#160;correct&#160;location.</p>
+<p style="position:absolute;top:514px;left:128px;white-space:nowrap" class="ft04"><b>6.&#160;&#160;A&#160;&#160;new&#160;&#160;shell&#160;&#160;must&#160;&#160;pop&#160;&#160;up:</b>&#160;Its&#160;&#160;our&#160;&#160;jailed&#160;&#160;bash.&#160;&#160;We&#160;&#160;currently&#160;&#160;have<br/>only&#160;&#160;2&#160;&#160;commands&#160;&#160;installed,&#160;&#160;bash&#160;&#160;and&#160;&#160;ls.&#160;&#160;Fortunately&#160;&#160;cd&#160;&#160;and&#160;&#160;pwd&#160;&#160;are<br/>builtin&#160;commands&#160;in&#160;bash&#160;shell,&#160;and&#160;so&#160;you&#160;can&#160;use&#160;them&#160;as&#160;well.</p>
+<p style="position:absolute;top:573px;left:128px;white-space:nowrap" class="ft04">Roam&#160;around&#160;the&#160;directory,&#160;try&#160;accessing&#160;‘cd&#160;/../’&#160;or&#160;something&#160;similar.<br/>Try&#160;to&#160;break&#160;the&#160;jail,&#160;probably&#160;you&#160;won’t&#160;be&#160;able&#160;to.&#160;</p>
+<p style="position:absolute;top:614px;left:128px;white-space:nowrap" class="ft01">To&#160;exit&#160;from&#160;the&#160;jail,</p>
+<p style="position:absolute;top:651px;left:141px;white-space:nowrap" class="ft02">&#160;&#160;&#160;&#160;&#160;&#160;$&#160;exit</p>
+<p style="position:absolute;top:686px;left:128px;white-space:nowrap" class="ft01">The&#160;most&#160;important&#160;and&#160;interesting&#160;part&#160;is&#160;that,&#160;when&#160;you&#160;run,</p>
+<p style="position:absolute;top:723px;left:141px;white-space:nowrap" class="ft02">&#160;&#160;&#160;&#160;$&#160;ps&#160;aux</p>
+<p style="position:absolute;top:758px;left:128px;white-space:nowrap" class="ft01">and&#160;find&#160;the&#160;process,&#160;you’ll&#160;find&#160;that&#160;there&#160;is&#160;only&#160;one&#160;process,</p>
+<p style="position:absolute;top:794px;left:141px;white-space:nowrap" class="ft02">root&#160;&#160;&#160;&#160;&#160;24958&#160;&#160;…&#160;&#160;03:21&#160;&#160;&#160;0:00&#160;/usr/bin/sudo&#160;-E&#160;chroot&#160;jailed/&#160;/bin/bash</p>
+<p style="position:absolute;top:838px;left:128px;white-space:nowrap" class="ft04">Interestingly,&#160;processes&#160;in&#160;the&#160;jailed&#160;shell&#160;run&#160;as&#160;a&#160;simple&#160;child&#160;process<br/>of&#160;&#160;this&#160;&#160;shell.&#160;&#160;All&#160;&#160;the&#160;&#160;processes&#160;&#160;inside&#160;&#160;the&#160;&#160;JAILED&#160;&#160;environment,&#160;&#160;are&#160;&#160;just<br/>simple&#160;&#160;user&#160;&#160;level&#160;&#160;process&#160;&#160;in&#160;&#160;the&#160;&#160;host&#160;&#160;OS&#160;&#160;and&#160;&#160;are&#160;&#160;isolated&#160;&#160;by&#160;&#160;the<br/>namespaces&#160;&#160;provided&#160;&#160;by&#160;&#160;the&#160;&#160;kernel,&#160;&#160;thus&#160;&#160;there&#160;&#160;is&#160;&#160;minimal&#160;&#160;overhead<br/>and&#160;as&#160;an&#160;added&#160;benefit&#160;we&#160;get&#160;isolation.</p>
+<p style="position:absolute;top:968px;left:128px;white-space:nowrap" class="ft01">A&#160;copy&#160;of&#160;jailed-bash-directory&#160;explained&#160;here&#160;can&#160;be&#160;downloaded&#160;from</p>
+<p style="position:absolute;top:986px;left:128px;white-space:nowrap" class="ft03">here</p>
+<p style="position:absolute;top:986px;left:153px;white-space:nowrap" class="ft01">.</p>
+<p style="position:absolute;top:1009px;left:128px;white-space:nowrap" class="ft04">Similarly,&#160;&#160;you&#160;&#160;can&#160;&#160;add&#160;&#160;more&#160;&#160;commands&#160;&#160;to&#160;&#160;you&#160;&#160;virtual&#160;&#160;jailed<br/>environment.&#160;&#160;To&#160;&#160;add&#160;&#160;more&#160;&#160;complex&#160;&#160;programs,&#160;&#160;you&#160;&#160;might&#160;&#160;need&#160;&#160;to<br/>create&#160;&#160;more&#160;&#160;directories,&#160;&#160;like,&#160;&#160;‘/proc’&#160;&#160;and&#160;&#160;‘/dev’.&#160;&#160;These&#160;&#160;increase&#160;&#160;the<br/>complexity&#160;&#160;of&#160;&#160;the&#160;&#160;process.&#160;&#160;Hopefully&#160;&#160;we&#160;&#160;do&#160;&#160;not&#160;&#160;require&#160;&#160;it&#160;&#160;for&#160;&#160;our<br/>purpose.</p>
+<p style="position:absolute;top:1104px;left:128px;white-space:nowrap" class="ft04">This&#160;is&#160;all&#160;you&#160;need&#160;to&#160;know&#160;about&#160;chroot&#160;and&#160;the&#160;jailing&#160;of&#160;directories.<br/>Our&#160;&#160;ultimate&#160;&#160;aim&#160;&#160;is&#160;&#160;to&#160;&#160;understand&#160;&#160;what&#160;&#160;are&#160;&#160;containers&#160;&#160;and&#160;&#160;how&#160;&#160;are<br/>services&#160;&#160;like&#160;&#160;AWS&#160;&#160;(Amazon&#160;&#160;Web&#160;&#160;Services),&#160;&#160;Google&#160;&#160;Cloud&#160;&#160;and&#160;&#160;Docker<br/>able&#160;&#160;to&#160;&#160;provide&#160;&#160;so&#160;&#160;many&#160;&#160;virtual&#160;&#160;instances&#160;&#160;of&#160;&#160;operating&#160;&#160;systems&#160;&#160;on</p>
+</div>
+</body>
+</html>

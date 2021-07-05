@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+<title>Page 121</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<style type="text/css">
+<!--
+	p {margin: 0; padding: 0;}	.ft00{font-size:18px;font-family:FiraSans-Light;color:#080808;}
+	.ft01{font-size:11px;font-family:FiraSans;color:#424242;}
+	.ft02{font-size:10px;font-family:UbuntuMono;color:#f6f6f6;}
+	.ft03{font-size:10px;font-family:UbuntuMono;color:#e2e2e2;}
+	.ft04{font-size:11px;line-height:20px;font-family:FiraSans;color:#424242;}
+-->
+</style>
+</head>
+<body bgcolor="#A0A0A0" vlink="blue" link="blue">
+<div id="page121-div" style="position:relative;width:892px;height:1263px;">
+<img width="892" height="1263" src="ALL-07052021121.png" alt="background image"/>
+<p style="position:absolute;top:55px;left:177px;white-space:nowrap" class="ft00">systemd-boot&#160;EFI&#160;Boot</p>
+<p style="position:absolute;top:102px;left:177px;white-space:nowrap" class="ft01">Most&#160;computers&#160;sold&#160;after&#160;2014&#160;use&#160;UEFI&#160;mode.&#160;If&#160;</p>
+<p style="position:absolute;top:104px;left:438px;white-space:nowrap" class="ft02">boot,&#160;esp</p>
+<p style="position:absolute;top:102px;left:488px;white-space:nowrap" class="ft01">&#160;is&#160;listed&#160;under&#160;</p>
+<p style="position:absolute;top:104px;left:573px;white-space:nowrap" class="ft02">flags</p>
+<p style="position:absolute;top:102px;left:603px;white-space:nowrap" class="ft01">,&#160;the&#160;system&#160;is&#160;installed&#160;in</p>
+<p style="position:absolute;top:122px;left:177px;white-space:nowrap" class="ft01">UEFI&#160;mode.&#160;You&#160;can&#160;also&#160;use&#160;this&#160;command&#160;to&#160;see&#160;if&#160;the&#160;OS&#160;is&#160;installed&#160;in&#160;UEFI&#160;mode:</p>
+<p style="position:absolute;top:173px;left:192px;white-space:nowrap" class="ft03">[&#160;-d&#160;/sys/firmware/efi&#160;]&#160;&amp;&amp;&#160;echo&#160;&#34;Installed&#160;in&#160;UEFI&#160;mode&#34;&#160;||&#160;echo&#160;&#34;Installed&#160;in&#160;Legacy&#160;mode&#34;</p>
+<p style="position:absolute;top:220px;left:177px;white-space:nowrap" class="ft01">Run&#160;these&#160;commands&#160;based&#160;on&#160;what&#160;type&#160;of&#160;disk&#160;you&#160;have:</p>
+<p style="position:absolute;top:255px;left:177px;white-space:nowrap" class="ft01">For&#160;NVMe&#160;Drives:</p>
+<p style="position:absolute;top:306px;left:192px;white-space:nowrap" class="ft03">sudo&#160;mount&#160;/dev/nvme0n1p3&#160;/mnt</p>
+<p style="position:absolute;top:324px;left:192px;white-space:nowrap" class="ft03">sudo&#160;mount&#160;/dev/nvme0n1p1&#160;/mnt/boot/efi</p>
+<p style="position:absolute;top:341px;left:192px;white-space:nowrap" class="ft03">for&#160;i&#160;in&#160;/dev&#160;/dev/pts&#160;/proc&#160;/sys&#160;/run;&#160;do&#160;sudo&#160;mount&#160;-B&#160;$i&#160;/mnt$i;&#160;done</p>
+<p style="position:absolute;top:359px;left:192px;white-space:nowrap" class="ft03">sudo&#160;cp&#160;-n&#160;/etc/resolv.conf&#160;/mnt/etc/</p>
+<p style="position:absolute;top:394px;left:192px;white-space:nowrap" class="ft03">sudo&#160;chroot&#160;/mnt</p>
+<p style="position:absolute;top:412px;left:192px;white-space:nowrap" class="ft03">apt&#160;install&#160;--reinstall&#160;linux-generic&#160;linux-headers-generic</p>
+<p style="position:absolute;top:429px;left:192px;white-space:nowrap" class="ft03">update-initramfs&#160;-c&#160;-k&#160;all</p>
+<p style="position:absolute;top:447px;left:192px;white-space:nowrap" class="ft03">exit</p>
+<p style="position:absolute;top:464px;left:192px;white-space:nowrap" class="ft03">sudo&#160;bootctl&#160;--path=/mnt/boot/efi&#160;install</p>
+<p style="position:absolute;top:512px;left:177px;white-space:nowrap" class="ft01">For&#160;SATA&#160;Drives:</p>
+<p style="position:absolute;top:563px;left:192px;white-space:nowrap" class="ft03">sudo&#160;mount&#160;/dev/sda3&#160;/mnt</p>
+<p style="position:absolute;top:580px;left:192px;white-space:nowrap" class="ft03">sudo&#160;mount&#160;/dev/sda1&#160;/mnt/boot/efi</p>
+<p style="position:absolute;top:598px;left:192px;white-space:nowrap" class="ft03">for&#160;i&#160;in&#160;/dev&#160;/dev/pts&#160;/proc&#160;/sys&#160;/run;&#160;do&#160;sudo&#160;mount&#160;-B&#160;$i&#160;/mnt$i;&#160;done</p>
+<p style="position:absolute;top:615px;left:192px;white-space:nowrap" class="ft03">sudo&#160;cp&#160;-n&#160;/etc/resolv.conf&#160;/mnt/etc/</p>
+<p style="position:absolute;top:651px;left:192px;white-space:nowrap" class="ft03">sudo&#160;chroot&#160;/mnt</p>
+<p style="position:absolute;top:668px;left:192px;white-space:nowrap" class="ft03">apt&#160;install&#160;--reinstall&#160;linux-generic&#160;linux-headers-generic</p>
+<p style="position:absolute;top:686px;left:192px;white-space:nowrap" class="ft03">update-initramfs&#160;-c&#160;-k&#160;all</p>
+<p style="position:absolute;top:703px;left:192px;white-space:nowrap" class="ft03">exit</p>
+<p style="position:absolute;top:721px;left:192px;white-space:nowrap" class="ft03">sudo&#160;bootctl&#160;--path=/mnt/boot/efi&#160;install</p>
+<p style="position:absolute;top:782px;left:177px;white-space:nowrap" class="ft00">Encrypted&#160;Disk</p>
+<p style="position:absolute;top:828px;left:177px;white-space:nowrap" class="ft01">To&#160;get&#160;access&#160;to&#160;an&#160;encrypted&#160;disk,&#160;these&#160;additional&#160;commands&#160;need&#160;run&#160;to&#160;unlock&#160;the&#160;disk.&#160;Please&#160;use&#160;the</p>
+<p style="position:absolute;top:851px;left:182px;white-space:nowrap" class="ft02">lsblk</p>
+<p style="position:absolute;top:848px;left:212px;white-space:nowrap" class="ft01">&#160;command&#160;described&#160;above&#160;to&#160;determine&#160;the&#160;correct&#160;drive&#160;and&#160;partition.</p>
+<p style="position:absolute;top:884px;left:177px;white-space:nowrap" class="ft01">For&#160;NVMe&#160;Drives:</p>
+<p style="position:absolute;top:934px;left:192px;white-space:nowrap" class="ft03">sudo&#160;cryptsetup&#160;luksOpen&#160;/dev/nvme0n1p3&#160;cryptdata</p>
+<p style="position:absolute;top:952px;left:192px;white-space:nowrap" class="ft03">sudo&#160;lvscan</p>
+<p style="position:absolute;top:969px;left:192px;white-space:nowrap" class="ft03">sudo&#160;vgchange&#160;-ay</p>
+<p style="position:absolute;top:1017px;left:177px;white-space:nowrap" class="ft01">For&#160;SATA&#160;Drives:</p>
+<p style="position:absolute;top:1068px;left:192px;white-space:nowrap" class="ft03">sudo&#160;cryptsetup&#160;luksOpen&#160;/dev/sda3&#160;cryptdata</p>
+<p style="position:absolute;top:1085px;left:192px;white-space:nowrap" class="ft03">sudo&#160;lvscan</p>
+<p style="position:absolute;top:1103px;left:192px;white-space:nowrap" class="ft03">sudo&#160;vgchange&#160;-ay</p>
+<p style="position:absolute;top:1150px;left:177px;white-space:nowrap" class="ft04">And&#160;take&#160;note&#160;as&#160;to&#160;what&#160;the&#160;volume&#160;group&#160;is&#160;called.&#160;Substitute&#160;the&#160;correct&#160;info&#160;into&#160;this&#160;next&#160;command.<br/>Make&#160;sure&#160;that&#160;</p>
+<p style="position:absolute;top:1173px;left:262px;white-space:nowrap" class="ft02">-root</p>
+<p style="position:absolute;top:1170px;left:292px;white-space:nowrap" class="ft01">&#160;is&#160;on&#160;the&#160;end:</p>
+</div>
+</body>
+</html>

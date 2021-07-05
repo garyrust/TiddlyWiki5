@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+<title>Page 157</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<style type="text/css">
+<!--
+	p {margin: 0; padding: 0;}	.ft00{font-size:10px;font-family:DejaVuSansMono;color:#000000;}
+	.ft01{font-size:10px;font-family:DejaVuSans;color:#000000;}
+	.ft02{font-size:10px;font-family:DejaVuSans;color:#a21313;}
+	.ft03{font-size:10px;font-family:DejaVuSansMono;color:#a21313;}
+	.ft04{font-size:11px;font-family:DejaVuSans;color:#000000;}
+	.ft05{font-size:10px;line-height:15px;font-family:DejaVuSans;color:#000000;}
+-->
+</style>
+</head>
+<body bgcolor="#A0A0A0" vlink="blue" link="blue">
+<div id="page157-div" style="position:relative;width:892px;height:1263px;">
+<img width="892" height="1263" src="ALL-07052021157.png" alt="background image"/>
+<p style="position:absolute;top:55px;left:273px;white-space:nowrap" class="ft00">doc.getMode()&#160;→&#160;object</p>
+<p style="position:absolute;top:70px;left:287px;white-space:nowrap" class="ft05">Gets&#160;the&#160;(outer)&#160;mode&#160;object&#160;for&#160;the&#160;editor.&#160;Note&#160;that&#160;this&#160;is&#160;distinct<br/>from&#160;</p>
+<p style="position:absolute;top:86px;left:315px;white-space:nowrap" class="ft00">getOption(&#34;mode&#34;)</p>
+<p style="position:absolute;top:86px;left:419px;white-space:nowrap" class="ft01">,&#160;which&#160;gives&#160;you&#160;the&#160;mode&#160;specification,</p>
+<p style="position:absolute;top:101px;left:287px;white-space:nowrap" class="ft01">rather&#160;than&#160;the&#160;resolved,&#160;instantiated&#160;</p>
+<p style="position:absolute;top:101px;left:479px;white-space:nowrap" class="ft02">mode&#160;object</p>
+<p style="position:absolute;top:101px;left:542px;white-space:nowrap" class="ft01">.</p>
+<p style="position:absolute;top:126px;left:273px;white-space:nowrap" class="ft00">cm.getModeAt(pos:&#160;{line,&#160;ch})&#160;→&#160;object</p>
+<p style="position:absolute;top:141px;left:287px;white-space:nowrap" class="ft01">Gets&#160;the&#160;inner&#160;mode&#160;at&#160;a&#160;given&#160;position.&#160;This&#160;will&#160;return&#160;the&#160;same&#160;as</p>
+<p style="position:absolute;top:156px;left:288px;white-space:nowrap" class="ft03">getMode</p>
+<p style="position:absolute;top:156px;left:332px;white-space:nowrap" class="ft01">&#160;for&#160;simple&#160;modes,&#160;but&#160;will&#160;return&#160;an&#160;inner&#160;mode&#160;for&#160;nesting</p>
+<p style="position:absolute;top:171px;left:287px;white-space:nowrap" class="ft01">modes&#160;(such&#160;as&#160;</p>
+<p style="position:absolute;top:171px;left:370px;white-space:nowrap" class="ft00">htmlmixed</p>
+<p style="position:absolute;top:171px;left:426px;white-space:nowrap" class="ft01">).</p>
+<p style="position:absolute;top:196px;left:273px;white-space:nowrap" class="ft00">cm.getTokenAt(pos:&#160;{line,&#160;ch},&#160;?precise:&#160;boolean)&#160;→&#160;object</p>
+<p style="position:absolute;top:211px;left:287px;white-space:nowrap" class="ft05">Retrieves&#160;information&#160;about&#160;the&#160;token&#160;the&#160;current&#160;mode&#160;found&#160;before<br/>the&#160;given&#160;position&#160;(a&#160;</p>
+<p style="position:absolute;top:226px;left:395px;white-space:nowrap" class="ft00">{line,&#160;ch}</p>
+<p style="position:absolute;top:226px;left:457px;white-space:nowrap" class="ft01">&#160;object).&#160;The&#160;returned&#160;object&#160;has&#160;the</p>
+<p style="position:absolute;top:241px;left:287px;white-space:nowrap" class="ft01">following&#160;properties:</p>
+<p style="position:absolute;top:257px;left:288px;white-space:nowrap" class="ft00">start</p>
+<p style="position:absolute;top:272px;left:302px;white-space:nowrap" class="ft01">The&#160;character&#160;(on&#160;the&#160;given&#160;line)&#160;at&#160;which&#160;the&#160;token&#160;starts.</p>
+<p style="position:absolute;top:287px;left:288px;white-space:nowrap" class="ft00">end</p>
+<p style="position:absolute;top:302px;left:302px;white-space:nowrap" class="ft01">The&#160;character&#160;at&#160;which&#160;the&#160;token&#160;ends.</p>
+<p style="position:absolute;top:317px;left:288px;white-space:nowrap" class="ft00">string</p>
+<p style="position:absolute;top:332px;left:302px;white-space:nowrap" class="ft01">The&#160;token's&#160;string.</p>
+<p style="position:absolute;top:347px;left:288px;white-space:nowrap" class="ft00">type</p>
+<p style="position:absolute;top:362px;left:302px;white-space:nowrap" class="ft01">The&#160;token&#160;type&#160;the&#160;mode&#160;assigned&#160;to&#160;the&#160;token,&#160;such&#160;as&#160;</p>
+<p style="position:absolute;top:362px;left:591px;white-space:nowrap" class="ft00">&#34;keyword&#34;</p>
+<p style="position:absolute;top:377px;left:302px;white-space:nowrap" class="ft01">or&#160;</p>
+<p style="position:absolute;top:377px;left:317px;white-space:nowrap" class="ft00">&#34;comment&#34;</p>
+<p style="position:absolute;top:377px;left:372px;white-space:nowrap" class="ft01">&#160;(may&#160;also&#160;be&#160;null).</p>
+<p style="position:absolute;top:392px;left:288px;white-space:nowrap" class="ft00">state</p>
+<p style="position:absolute;top:408px;left:302px;white-space:nowrap" class="ft01">The&#160;mode's&#160;state&#160;at&#160;the&#160;end&#160;of&#160;this&#160;token.</p>
+<p style="position:absolute;top:423px;left:287px;white-space:nowrap" class="ft01">If&#160;</p>
+<p style="position:absolute;top:423px;left:298px;white-space:nowrap" class="ft00">precise</p>
+<p style="position:absolute;top:423px;left:341px;white-space:nowrap" class="ft01">&#160;is&#160;true,&#160;the&#160;token&#160;will&#160;be&#160;guaranteed&#160;to&#160;be&#160;accurate&#160;based</p>
+<p style="position:absolute;top:438px;left:287px;white-space:nowrap" class="ft05">on&#160;recent&#160;edits.&#160;If&#160;false&#160;or&#160;not&#160;specified,&#160;the&#160;token&#160;will&#160;use&#160;cached<br/>state&#160;information,&#160;which&#160;will&#160;be&#160;faster&#160;but&#160;might&#160;not&#160;be&#160;accurate&#160;if<br/>edits&#160;were&#160;recently&#160;made&#160;and&#160;highlighting&#160;has&#160;not&#160;yet&#160;completed.</p>
+<p style="position:absolute;top:493px;left:273px;white-space:nowrap" class="ft00">cm.getLineTokens(line:&#160;integer,&#160;?precise:&#160;boolean)&#160;→</p>
+<p style="position:absolute;top:508px;left:292px;white-space:nowrap" class="ft00">array&lt;{start,&#160;end,&#160;string,&#160;type,&#160;state}&gt;</p>
+<p style="position:absolute;top:523px;left:287px;white-space:nowrap" class="ft01">This&#160;is&#160;similar&#160;to&#160;</p>
+<p style="position:absolute;top:523px;left:373px;white-space:nowrap" class="ft03">getTokenAt</p>
+<p style="position:absolute;top:523px;left:435px;white-space:nowrap" class="ft01">,&#160;but&#160;collects&#160;all&#160;tokens&#160;for&#160;a&#160;given&#160;line</p>
+<p style="position:absolute;top:538px;left:287px;white-space:nowrap" class="ft01">into&#160;an&#160;array.&#160;It&#160;is&#160;much&#160;cheaper&#160;than&#160;repeatedly&#160;calling&#160;</p>
+<p style="position:absolute;top:538px;left:575px;white-space:nowrap" class="ft00">getTokenAt</p>
+<p style="position:absolute;top:538px;left:637px;white-space:nowrap" class="ft01">,</p>
+<p style="position:absolute;top:553px;left:287px;white-space:nowrap" class="ft01">which&#160;re-parses&#160;the&#160;part&#160;of&#160;the&#160;line&#160;before&#160;the&#160;token&#160;for&#160;every&#160;call.</p>
+<p style="position:absolute;top:579px;left:273px;white-space:nowrap" class="ft00">cm.getTokenTypeAt(pos:&#160;{line,&#160;ch})&#160;→&#160;string</p>
+<p style="position:absolute;top:594px;left:287px;white-space:nowrap" class="ft01">This&#160;is&#160;a&#160;(much)&#160;cheaper&#160;version&#160;of&#160;</p>
+<p style="position:absolute;top:594px;left:468px;white-space:nowrap" class="ft03">getTokenAt</p>
+<p style="position:absolute;top:594px;left:530px;white-space:nowrap" class="ft01">&#160;useful&#160;for&#160;when&#160;you</p>
+<p style="position:absolute;top:609px;left:287px;white-space:nowrap" class="ft05">just&#160;need&#160;the&#160;type&#160;of&#160;the&#160;token&#160;at&#160;a&#160;given&#160;position,&#160;and&#160;no&#160;other<br/>information.&#160;Will&#160;return&#160;</p>
+<p style="position:absolute;top:624px;left:408px;white-space:nowrap" class="ft00">null</p>
+<p style="position:absolute;top:624px;left:434px;white-space:nowrap" class="ft01">&#160;for&#160;unstyled&#160;tokens,&#160;and&#160;a&#160;string,</p>
+<p style="position:absolute;top:639px;left:287px;white-space:nowrap" class="ft05">potentially&#160;containing&#160;multiple&#160;space-separated&#160;style&#160;names,<br/>otherwise.</p>
+<p style="position:absolute;top:679px;left:273px;white-space:nowrap" class="ft00">cm.getHelpers(pos:&#160;{line,&#160;ch},&#160;type:&#160;string)&#160;→&#160;array&lt;helper&gt;</p>
+<p style="position:absolute;top:694px;left:287px;white-space:nowrap" class="ft05">Fetch&#160;the&#160;set&#160;of&#160;applicable&#160;helper&#160;values&#160;for&#160;the&#160;given&#160;position.<br/>Helpers&#160;provide&#160;a&#160;way&#160;to&#160;look&#160;up&#160;functionality&#160;appropriate&#160;for&#160;a&#160;mode.<br/>The&#160;</p>
+<p style="position:absolute;top:724px;left:310px;white-space:nowrap" class="ft00">type</p>
+<p style="position:absolute;top:724px;left:335px;white-space:nowrap" class="ft01">&#160;argument&#160;provides&#160;the&#160;helper&#160;namespace&#160;(see</p>
+<p style="position:absolute;top:740px;left:288px;white-space:nowrap" class="ft03">registerHelper</p>
+<p style="position:absolute;top:740px;left:374px;white-space:nowrap" class="ft01">),&#160;in&#160;which&#160;the&#160;values&#160;will&#160;be&#160;looked&#160;up.&#160;When&#160;the</p>
+<p style="position:absolute;top:755px;left:287px;white-space:nowrap" class="ft01">mode&#160;itself&#160;has&#160;a&#160;property&#160;that&#160;corresponds&#160;to&#160;the&#160;</p>
+<p style="position:absolute;top:755px;left:546px;white-space:nowrap" class="ft00">type</p>
+<p style="position:absolute;top:755px;left:571px;white-space:nowrap" class="ft01">,&#160;that&#160;directly</p>
+<p style="position:absolute;top:770px;left:287px;white-space:nowrap" class="ft05">determines&#160;the&#160;keys&#160;that&#160;are&#160;used&#160;to&#160;look&#160;up&#160;the&#160;helper&#160;values&#160;(it&#160;may<br/>be&#160;either&#160;a&#160;single&#160;string,&#160;or&#160;an&#160;array&#160;of&#160;strings).&#160;Failing&#160;that,&#160;the<br/>mode's&#160;</p>
+<p style="position:absolute;top:800px;left:328px;white-space:nowrap" class="ft00">helperType</p>
+<p style="position:absolute;top:800px;left:389px;white-space:nowrap" class="ft01">&#160;property&#160;and&#160;finally&#160;the&#160;mode's&#160;name&#160;are&#160;used.</p>
+<p style="position:absolute;top:825px;left:287px;white-space:nowrap" class="ft01">For&#160;example,&#160;the&#160;JavaScript&#160;mode&#160;has&#160;a&#160;property&#160;</p>
+<p style="position:absolute;top:825px;left:539px;white-space:nowrap" class="ft00">fold</p>
+<p style="position:absolute;top:825px;left:564px;white-space:nowrap" class="ft01">&#160;containing</p>
+<p style="position:absolute;top:840px;left:288px;white-space:nowrap" class="ft00">&#34;brace&#34;</p>
+<p style="position:absolute;top:840px;left:332px;white-space:nowrap" class="ft01">.&#160;When&#160;the&#160;</p>
+<p style="position:absolute;top:840px;left:391px;white-space:nowrap" class="ft00">brace-fold</p>
+<p style="position:absolute;top:840px;left:453px;white-space:nowrap" class="ft01">&#160;addon&#160;is&#160;loaded,&#160;that&#160;defines&#160;a</p>
+<p style="position:absolute;top:855px;left:287px;white-space:nowrap" class="ft01">helper&#160;named&#160;</p>
+<p style="position:absolute;top:855px;left:361px;white-space:nowrap" class="ft00">brace</p>
+<p style="position:absolute;top:855px;left:393px;white-space:nowrap" class="ft01">&#160;in&#160;the&#160;</p>
+<p style="position:absolute;top:855px;left:429px;white-space:nowrap" class="ft00">fold</p>
+<p style="position:absolute;top:855px;left:455px;white-space:nowrap" class="ft01">&#160;namespace.&#160;This&#160;is&#160;then&#160;used&#160;by&#160;the</p>
+<p style="position:absolute;top:870px;left:288px;white-space:nowrap" class="ft03">foldcode</p>
+<p style="position:absolute;top:870px;left:338px;white-space:nowrap" class="ft01">&#160;addon&#160;to&#160;figure&#160;out&#160;that&#160;it&#160;can&#160;use&#160;that&#160;folding&#160;function&#160;to</p>
+<p style="position:absolute;top:885px;left:287px;white-space:nowrap" class="ft01">fold&#160;JavaScript&#160;code.</p>
+<p style="position:absolute;top:911px;left:287px;white-space:nowrap" class="ft01">When&#160;any&#160;</p>
+<p style="position:absolute;top:911px;left:340px;white-space:nowrap" class="ft02">'global'</p>
+<p style="position:absolute;top:911px;left:377px;white-space:nowrap" class="ft01">&#160;helpers&#160;are&#160;defined&#160;for&#160;the&#160;given&#160;namespace,&#160;their</p>
+<p style="position:absolute;top:926px;left:287px;white-space:nowrap" class="ft05">predicates&#160;are&#160;called&#160;on&#160;the&#160;current&#160;mode&#160;and&#160;editor,&#160;and&#160;all&#160;those<br/>that&#160;declare&#160;they&#160;are&#160;applicable&#160;will&#160;also&#160;be&#160;added&#160;to&#160;the&#160;array&#160;that&#160;is<br/>returned.</p>
+<p style="position:absolute;top:981px;left:273px;white-space:nowrap" class="ft00">cm.getHelper(pos:&#160;{line,&#160;ch},&#160;type:&#160;string)&#160;→&#160;helper</p>
+<p style="position:absolute;top:996px;left:287px;white-space:nowrap" class="ft01">Returns&#160;the&#160;first&#160;applicable&#160;helper&#160;value.&#160;See&#160;</p>
+<p style="position:absolute;top:996px;left:519px;white-space:nowrap" class="ft03">getHelpers</p>
+<p style="position:absolute;top:996px;left:581px;white-space:nowrap" class="ft01">.</p>
+<p style="position:absolute;top:1021px;left:273px;white-space:nowrap" class="ft00">cm.getStateAfter(?line:&#160;integer,&#160;?precise:&#160;boolean)&#160;→&#160;object</p>
+<p style="position:absolute;top:1036px;left:287px;white-space:nowrap" class="ft05">Returns&#160;the&#160;mode's&#160;parser&#160;state,&#160;if&#160;any,&#160;at&#160;the&#160;end&#160;of&#160;the&#160;given&#160;line<br/>number.&#160;If&#160;no&#160;line&#160;number&#160;is&#160;given,&#160;the&#160;state&#160;at&#160;the&#160;end&#160;of&#160;the<br/>document&#160;is&#160;returned.&#160;This&#160;can&#160;be&#160;useful&#160;for&#160;storing&#160;parsing&#160;errors&#160;in<br/>the&#160;state,&#160;or&#160;getting&#160;other&#160;kinds&#160;of&#160;contextual&#160;information&#160;for&#160;a&#160;line.</p>
+<p style="position:absolute;top:1097px;left:288px;white-space:nowrap" class="ft00">precise</p>
+<p style="position:absolute;top:1097px;left:332px;white-space:nowrap" class="ft01">&#160;is&#160;defined&#160;as&#160;in&#160;</p>
+<p style="position:absolute;top:1097px;left:415px;white-space:nowrap" class="ft00">getTokenAt()</p>
+<p style="position:absolute;top:1097px;left:489px;white-space:nowrap" class="ft01">.</p>
+<p style="position:absolute;top:1123px;left:272px;white-space:nowrap" class="ft04">Miscellaneous&#160;methods</p>
+<p style="position:absolute;top:1150px;left:273px;white-space:nowrap" class="ft00">cm.operation(func:&#160;()&#160;→&#160;any)&#160;→&#160;any</p>
+<p style="position:absolute;top:1165px;left:287px;white-space:nowrap" class="ft01">CodeMirror&#160;internally&#160;buffers&#160;changes&#160;and&#160;only&#160;updates&#160;its&#160;DOM</p>
+</div>
+</body>
+</html>

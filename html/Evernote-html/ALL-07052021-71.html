@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+<title>Page 71</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<style type="text/css">
+<!--
+	p {margin: 0; padding: 0;}	.ft00{font-size:15px;font-family:DejaVuSerif;color:#000000;}
+	.ft01{font-size:13px;font-family:DejaVuSerif;color:#224439;}
+	.ft02{font-size:33px;font-family:DejaVuSerif;color:#aa4400;}
+	.ft03{font-size:11px;font-family:DejaVuSerif;color:#008b8b;}
+	.ft04{font-size:10px;font-family:DejaVuSerif;color:#0000ee;}
+	.ft05{font-size:10px;font-family:DejaVuSerif;color:#00008b;}
+	.ft06{font-size:10px;font-family:DejaVuSerif;color:#000000;}
+	.ft07{font-size:9px;font-family:DejaVuSansMono;color:#000000;}
+	.ft08{font-size:10px;font-family:DejaVuSansMono;color:#000000;}
+	.ft09{font-size:13px;font-family:DejaVuSerif;color:#0000ee;}
+	.ft010{font-size:10px;line-height:11px;font-family:DejaVuSerif;color:#0000ee;}
+	.ft011{font-size:10px;line-height:11px;font-family:DejaVuSerif;color:#000000;}
+	.ft012{font-size:9px;line-height:11px;font-family:DejaVuSansMono;color:#000000;}
+	.ft013{font-size:13px;line-height:16px;font-family:DejaVuSerif;color:#0000ee;}
+-->
+</style>
+</head>
+<body bgcolor="#A0A0A0" vlink="blue" link="blue">
+<div id="page71-div" style="position:relative;width:892px;height:1263px;">
+<img width="892" height="1263" src="ALL-07052021071.png" alt="background image"/>
+<p style="position:absolute;top:67px;left:59px;white-space:nowrap" class="ft00"><b>xchroot</b></p>
+<p style="position:absolute;top:109px;left:59px;white-space:nowrap" class="ft01"><b>openroot&#160;is&#160;now&#160;called&#160;xchroot:</b></p>
+<p style="position:absolute;top:148px;left:388px;white-space:nowrap" class="ft02"><b>xchroot</b></p>
+<p style="position:absolute;top:190px;left:152px;white-space:nowrap" class="ft01"><b>chroot&#160;for&#160;users&#160;with&#160;Xorg/X11&#160;forwarding&#160;and&#160;automatic&#160;mounting&#160;+&#160;aufs/unionfs</b></p>
+<p style="position:absolute;top:206px;left:374px;white-space:nowrap" class="ft01"><b>read&#160;only&#160;root&#160;support.</b></p>
+<p style="position:absolute;top:245px;left:59px;white-space:nowrap" class="ft03"><b>Table&#160;of&#160;Contents</b></p>
+<p style="position:absolute;top:272px;left:84px;white-space:nowrap" class="ft010">Introduction<br/>problems&#160;with&#160;a&#160;pure&#160;chroot<br/>trying&#160;to&#160;resolve&#160;these&#160;problems&#160;by&#160;hand<br/>xchroot&#160;-&#160;an&#160;extended&#160;version&#160;of&#160;chroot<br/>xchroot&#160;and&#160;users:&#160;the&#160;background<br/>xchroot&#160;and&#160;users:&#160;the&#160;easy&#160;way<br/>establishing&#160;users&#160;for&#160;a&#160;chroot&#160;environment<br/>Xorg/X11&#160;access&#160;as&#160;root<br/>xchroot&#160;and&#160;read&#160;only&#160;roots&#160;(aufs,unionfs)<br/>xchroot&#160;and&#160;changeable&#160;media<br/>How&#160;to&#160;create&#160;a&#160;chroot&#160;environment<br/>Making&#160;audio&#160;support&#160;work<br/>general&#160;issues&#160;with&#160;audio&#160;support&#160;under&#160;Linux<br/>Things&#160;that&#160;are&#160;new&#160;in&#160;version&#160;v2.4<br/>get&#160;it!<br/>licensing</p>
+<p style="position:absolute;top:480px;left:59px;white-space:nowrap" class="ft05"><b>Introduction</b></p>
+<p style="position:absolute;top:504px;left:74px;white-space:nowrap" class="ft06">Chroot&#160;&#160;allows&#160;&#160;you&#160;&#160;to&#160;&#160;run&#160;&#160;commands&#160;&#160;from&#160;&#160;a&#160;&#160;different&#160;&#160;system&#160;&#160;installation&#160;&#160;without&#160;&#160;having&#160;&#160;to&#160;&#160;boot&#160;&#160;into&#160;&#160;that&#160;&#160;system.&#160;&#160;You&#160;&#160;do&#160;&#160;not&#160;&#160;even&#160;&#160;need&#160;&#160;a&#160;&#160;separate</p>
+<p style="position:absolute;top:516px;left:59px;white-space:nowrap" class="ft011">partition&#160;for&#160;the&#160;alternate&#160;system&#160;installation&#160;or&#160;root&#160;file&#160;system.&#160;This&#160;does&#160;of&#160;course&#160;only&#160;work&#160;if&#160;both&#160;systems&#160;are&#160;Linux&#160;installations&#160;or&#160;both&#160;systems&#160;are<br/>BSD&#160;derivates&#160;since&#160;they&#160;will&#160;always&#160;need&#160;a&#160;compatible&#160;kernel&#160;to&#160;be&#160;in&#160;operation.&#160;Just&#160;shared&#160;libraries&#160;(*.so,&#160;Windows:&#160;dll)&#160;are&#160;loaded&#160;from&#160;the&#160;new&#160;root&#160;on<br/>program&#160;invocation&#160;out&#160;of&#160;the&#160;chroot&#160;environment.&#160;Newer&#160;kernels&#160;use&#160;to&#160;be&#160;backward&#160;compatible.&#160;Thus&#160;chrooting&#160;into&#160;an&#160;elder&#160;system&#160;installation&#160;would<br/>always&#160;&#160;be&#160;&#160;possible.&#160;&#160;There&#160;&#160;are&#160;&#160;a&#160;&#160;few&#160;&#160;exceptions&#160;&#160;like&#160;&#160;the&#160;&#160;old&#160;&#160;ddrescue&#160;&#160;program&#160;&#160;using&#160;&#160;a&#160;&#160;deprecated&#160;&#160;kernel&#160;&#160;api&#160;&#160;which&#160;&#160;is&#160;&#160;no&#160;&#160;more&#160;&#160;supported.&#160;&#160;Backward<br/>compatibility&#160;of&#160;kernels&#160;is&#160;also&#160;the&#160;reason&#160;why&#160;statically&#160;linked&#160;programs&#160;use&#160;to&#160;continue&#160;to&#160;run&#160;even&#160;without&#160;preserving&#160;a&#160;full&#160;chroot&#160;environment&#160;for&#160;them.</p>
+<p style="position:absolute;top:586px;left:74px;white-space:nowrap" class="ft06">Chroot&#160;&#160;is&#160;&#160;particularely&#160;&#160;useful&#160;&#160;if&#160;&#160;you&#160;&#160;have&#160;&#160;installed&#160;&#160;more&#160;&#160;than&#160;&#160;one&#160;&#160;Linux&#160;&#160;distro&#160;&#160;and&#160;&#160;want&#160;&#160;to&#160;&#160;run&#160;&#160;programs&#160;&#160;from&#160;&#160;another&#160;&#160;distro&#160;&#160;than&#160;&#160;you&#160;&#160;have&#160;&#160;actually</p>
+<p style="position:absolute;top:598px;left:59px;white-space:nowrap" class="ft011">booted&#160;&#160;to.&#160;&#160;Chroot&#160;&#160;is&#160;&#160;also&#160;&#160;widely&#160;&#160;in&#160;&#160;use&#160;&#160;for&#160;&#160;program&#160;&#160;development&#160;&#160;and&#160;&#160;packaging&#160;&#160;as&#160;&#160;it&#160;&#160;can&#160;&#160;simulate&#160;&#160;another&#160;&#160;environment&#160;&#160;very&#160;&#160;well&#160;&#160;allowing&#160;&#160;to&#160;&#160;test&#160;&#160;on<br/>multiple&#160;systems&#160;at&#160;the&#160;same&#160;time.&#160;It&#160;can&#160;also&#160;be&#160;used&#160;to&#160;run&#160;programs&#160;that&#160;are&#160;no&#160;more&#160;available&#160;for&#160;recent&#160;Linux&#160;distros.</p>
+<p style="position:absolute;top:632px;left:74px;white-space:nowrap" class="ft06">Chroot&#160;works&#160;immediately&#160;and&#160;guarantees&#160;minimal&#160;effort.&#160;You&#160;do&#160;not&#160;have&#160;to&#160;wait&#160;until&#160;another&#160;system&#160;is&#160;booted.&#160;Memory&#160;usage&#160;is&#160;as&#160;little&#160;as&#160;possible.</p>
+<p style="position:absolute;top:644px;left:59px;white-space:nowrap" class="ft06">Under&#160;Linux&#160;it&#160;is&#160;possible&#160;for&#160;a&#160;cracker&#160;to&#160;escape&#160;from&#160;a&#160;chroot&#160;environment&#160;while&#160;chroot-jails&#160;are&#160;also&#160;considered&#160;a&#160;security&#160;feature&#160;in&#160;FreeBSD.</p>
+<p style="position:absolute;top:666px;left:74px;white-space:nowrap" class="ft06">The&#160;only&#160;thing&#160;you&#160;basically&#160;have&#160;to&#160;do&#160;in&#160;order&#160;to&#160;change&#160;to&#160;another&#160;chroot&#160;environment&#160;(i.e.&#160;another&#160;installed&#160;system)&#160;is&#160;to&#160;issue&#160;a&#160;chroot&#160;command&#160;as</p>
+<p style="position:absolute;top:678px;left:59px;white-space:nowrap" class="ft06">root&#160;on&#160;the&#160;directory&#160;that&#160;should&#160;become&#160;the&#160;new&#160;root&#160;of&#160;the&#160;file&#160;system.&#160;Use&#160;exit&#160;to&#160;get&#160;back&#160;to&#160;your&#160;boot-root.</p>
+<p style="position:absolute;top:701px;left:59px;white-space:nowrap" class="ft07"><b>&gt;&#160;chroot&#160;/dst/other-linux-system&#160;</b></p>
+<p style="position:absolute;top:700px;left:246px;white-space:nowrap" class="ft06">&#160;</p>
+<p style="position:absolute;top:816px;left:59px;white-space:nowrap" class="ft04">***&#160;other&#160;interesting&#160;content&#160;from&#160;elstel&#160;***</p>
+<p style="position:absolute;top:846px;left:59px;white-space:nowrap" class="ft05"><b>problems&#160;with&#160;a&#160;pure&#160;chroot</b></p>
+<p style="position:absolute;top:870px;left:74px;white-space:nowrap" class="ft06">Nonetheless&#160;you&#160;may&#160;find&#160;out&#160;soon&#160;that&#160;this&#160;does&#160;not&#160;work&#160;for&#160;many&#160;many&#160;programs;&#160;f.i.&#160;you&#160;are&#160;not&#160;able&#160;to&#160;run&#160;any&#160;GUI&#160;applications&#160;as&#160;you&#160;can&#160;not</p>
+<p style="position:absolute;top:882px;left:59px;white-space:nowrap" class="ft011">connect&#160;&#160;to&#160;&#160;a&#160;&#160;running&#160;&#160;X&#160;&#160;server&#160;&#160;inside&#160;&#160;a&#160;&#160;chroot&#160;&#160;environment&#160;&#160;without&#160;&#160;special&#160;&#160;provisions&#160;&#160;even&#160;&#160;under&#160;&#160;Linux&#160;&#160;which&#160;&#160;allows&#160;&#160;programs&#160;&#160;to&#160;&#160;'escape'&#160;&#160;from&#160;&#160;chroot<br/>environments.</p>
+<p style="position:absolute;top:916px;left:74px;white-space:nowrap" class="ft06">For&#160;further&#160;&#160;instructions&#160;&#160;on&#160;&#160;how&#160;&#160;to&#160;&#160;secure&#160;&#160;a&#160;&#160;chroot&#160;&#160;environment&#160;&#160;under&#160;&#160;Linux&#160;&#160;that&#160;&#160;does&#160;&#160;not&#160;&#160;need&#160;&#160;X&#160;&#160;access&#160;&#160;you&#160;&#160;may&#160;&#160;want&#160;&#160;to&#160;&#160;have&#160;&#160;a&#160;&#160;look&#160;&#160;at&#160;Grsecurity</p>
+<p style="position:absolute;top:928px;left:59px;white-space:nowrap" class="ft06">(though&#160;</p>
+<p style="position:absolute;top:928px;left:102px;white-space:nowrap" class="ft04">booting&#160;the&#160;system&#160;in&#160;a&#160;virtual&#160;machine</p>
+<p style="position:absolute;top:928px;left:306px;white-space:nowrap" class="ft06">&#160;is&#160;the&#160;best&#160;option&#160;for&#160;means&#160;of&#160;security.).&#160;Be&#160;aware&#160;that&#160;allowing&#160;compromized&#160;programs&#160;to&#160;connect&#160;to&#160;the</p>
+<p style="position:absolute;top:940px;left:59px;white-space:nowrap" class="ft011">same&#160;X&#160;server&#160;(the&#160;program&#160;that&#160;is&#160;responsible&#160;for&#160;graphics&#160;output&#160;under&#160;unixoid&#160;systems)&#160;together&#160;with&#160;uncompromized&#160;programs&#160;will&#160;compromize&#160;the<br/>rest&#160;of&#160;your&#160;system&#160;at&#160;least&#160;as&#160;long&#160;as&#160;no&#160;MAC&#160;(Mandatory&#160;Access&#160;System)&#160;is&#160;in&#160;place&#160;that&#160;is&#160;able&#160;to&#160;controlle&#160;your&#160;X&#160;server&#160;and&#160;adherent&#160;programs&#160;like<br/>DBUS;&#160;be&#160;it&#160;a&#160;'secured'&#160;chroot&#160;environment&#160;or&#160;not.&#160;That&#160;can&#160;be&#160;as&#160;simple&#160;as&#160;pasting&#160;text&#160;into&#160;a&#160;root&#160;console&#160;and&#160;letting&#160;it&#160;disappear&#160;by&#160;appropriate&#160;escape<br/>sequences&#160;fractions&#160;of&#160;milliseconds&#160;thereafter!</p>
+<p style="position:absolute;top:997px;left:74px;white-space:nowrap" class="ft06">There&#160;are&#160;even&#160;more&#160;restrictions:&#160;you&#160;can&#160;not&#160;run&#160;programs&#160;such&#160;as&#160;grub&#160;that&#160;need&#160;access&#160;to&#160;either&#160;/dev,&#160;/sys&#160;or&#160;your&#160;/proc&#160;filesystem&#160;as&#160;long&#160;as&#160;these</p>
+<p style="position:absolute;top:1009px;left:59px;white-space:nowrap" class="ft011">systems&#160;&#160;are&#160;&#160;not&#160;&#160;mounted&#160;&#160;properly&#160;&#160;(i.e.&#160;&#160;recursively)&#160;&#160;into&#160;&#160;the&#160;&#160;new&#160;&#160;chroot&#160;&#160;environment.&#160;&#160;If&#160;&#160;you&#160;&#160;have&#160;&#160;installed&#160;&#160;a&#160;&#160;fresh&#160;&#160;system&#160;&#160;and&#160;&#160;want&#160;&#160;to&#160;&#160;access&#160;&#160;your&#160;&#160;old<br/>installation&#160;via&#160;xchroot&#160;you&#160;may&#160;want&#160;to&#160;verify&#160;your&#160;old&#160;installation&#160;with&#160;a&#160;tool&#160;like&#160;</p>
+<p style="position:absolute;top:1021px;left:483px;white-space:nowrap" class="ft04">debcheckroot</p>
+<p style="position:absolute;top:1021px;left:553px;white-space:nowrap" class="ft06">&#160;first&#160;in&#160;order&#160;not&#160;to&#160;infect&#160;your&#160;new&#160;system.</p>
+<p style="position:absolute;top:1051px;left:59px;white-space:nowrap" class="ft05"><b>trying&#160;to&#160;resolve&#160;these&#160;problems&#160;by&#160;hand</b></p>
+<p style="position:absolute;top:1075px;left:74px;white-space:nowrap" class="ft06">As&#160;far&#160;as&#160;now&#160;you&#160;may&#160;already&#160;know&#160;that&#160;a&#160;pure&#160;chroot&#160;is&#160;very&#160;restricted.&#160;f.i.&#160;You&#160;can&#160;not&#160;run&#160;any&#160;GUI-applications.&#160;A&#160;workaround&#160;for&#160;this&#160;is&#160;to&#160;redirect</p>
+<p style="position:absolute;top:1087px;left:59px;white-space:nowrap" class="ft06">all&#160;Xorg&#160;drawing&#160;operations&#160;through&#160;localhost:&#160;</p>
+<p style="position:absolute;top:1099px;left:59px;white-space:nowrap" class="ft012"><b>&gt;&#160;xhost&#160;+localhost<br/>&gt;&#160;DISPLAY=localhost:0&#160;chroot&#160;/dst/debian;&#160;</b></p>
+<p style="position:absolute;top:1131px;left:74px;white-space:nowrap" class="ft06">However&#160;this&#160;does&#160;not&#160;work&#160;if&#160;your&#160;X&#160;server&#160;(being&#160;responsible&#160;for&#160;all&#160;graphical&#160;output)&#160;has&#160;been&#160;startet&#160;with&#160;the&#160;</p>
+<p style="position:absolute;top:1131px;left:664px;white-space:nowrap" class="ft08"><b>-nolisten&#160;tcp&#160;</b></p>
+<p style="position:absolute;top:1131px;left:749px;white-space:nowrap" class="ft06">option&#160;which&#160;is&#160;on&#160;by</p>
+<p style="position:absolute;top:1143px;left:59px;white-space:nowrap" class="ft011">default&#160;&#160;now&#160;&#160;for&#160;&#160;reasons&#160;&#160;of&#160;&#160;security&#160;&#160;in&#160;&#160;most&#160;&#160;modern&#160;&#160;distributions.&#160;&#160;In&#160;&#160;this&#160;&#160;case&#160;&#160;you&#160;&#160;would&#160;&#160;have&#160;&#160;to&#160;&#160;replicate&#160;&#160;the&#160;&#160;socket&#160;&#160;file&#160;&#160;/tmp/.X11-unix/X0&#160;&#160;to<br/>/dst/debian/tmp/.X11-unix/X0&#160;which&#160;can&#160;be&#160;done&#160;by&#160;a&#160;proper&#160;socat&#160;rather&#160;than&#160;a&#160;pure&#160;symbolic&#160;link.&#160;Pure&#160;symbolic&#160;links&#160;do&#160;not&#160;work&#160;since&#160;a&#160;link&#160;equals&#160;to<br/>the&#160;character&#160;string&#160;of&#160;the&#160;referenced&#160;file&#160;which&#160;points&#160;to&#160;something&#160;different&#160;after&#160;the&#160;chroot.&#160;Find&#160;out&#160;about&#160;the&#160;command&#160;line&#160;X&#160;has&#160;been&#160;started&#160;with&#160;by</p>
+<p style="position:absolute;top:469px;left:677px;white-space:nowrap" class="ft06">up</p>
+<p style="position:absolute;top:469px;left:690px;white-space:nowrap" class="ft04">down</p>
+<p style="position:absolute;top:469px;left:718px;white-space:nowrap" class="ft06">&#160;</p>
+<p style="position:absolute;top:469px;left:721px;white-space:nowrap" class="ft04">Directory</p>
+<p style="position:absolute;top:469px;left:769px;white-space:nowrap" class="ft06">Menu</p>
+<p style="position:absolute;top:736px;left:83px;white-space:nowrap" class="ft013">Europe<br/><a href="https://www.elstel.org/GreeceAndTheEuro.html.en">and&#160;&#160;</a>the<br/><a href="https://www.elstel.org/GreeceAndTheEuro.html.en">Deb</a>t<br/><a href="https://www.elstel.org/GreeceAndTheEuro.html.en">Disa</a>ster</p>
+<p style="position:absolute;top:744px;left:165px;white-space:nowrap" class="ft013">Faults&#160;&#160;in<br/><a href="https://www.elstel.org/AgroFuel.html">Climate<br/>Protecti</a>on</p>
+<p style="position:absolute;top:736px;left:262px;white-space:nowrap" class="ft013">Sea<br/><a href="https://www.elstel.org/SeaLevelRise.html">Level<br/>Rise<br/>Maps</a></p>
+<p style="position:absolute;top:728px;left:325px;white-space:nowrap" class="ft013"><a href="https://www.elstel.org/ISDS.html.en">how<br/>compani</a>es<br/><a href="https://www.elstel.org/ISDS.html.en">sue<br/>states:<br/>ISDS</a></p>
+<p style="position:absolute;top:736px;left:424px;white-space:nowrap" class="ft013">Plastic<br/><a href="https://www.elstel.org/PoisonousPlastic.html">Synthetics,<br/>Environment<br/>&amp;&#160;Health</a></p>
+<p style="position:absolute;top:753px;left:537px;white-space:nowrap" class="ft013"><a href="https://www.elstel.org/PoisonousPlastic.html">F</a><a href="https://www.elstel.org/MH370.html.en">light<br/></a><a href="https://www.elstel.org/PoisonousPlastic.html">M</a><a href="https://www.elstel.org/MH370.html.en">H370</a></p>
+<p style="position:absolute;top:753px;left:614px;white-space:nowrap" class="ft013"><a href="https://www.elstel.org/FilmReviewSamsara.html.en">Film&#160;Review<br/>-&#160;Samsara</a></p>
+<p style="position:absolute;top:834px;left:674px;white-space:nowrap" class="ft04">up</p>
+<p style="position:absolute;top:834px;left:687px;white-space:nowrap" class="ft06">&#160;</p>
+<p style="position:absolute;top:834px;left:690px;white-space:nowrap" class="ft04">down</p>
+<p style="position:absolute;top:834px;left:718px;white-space:nowrap" class="ft06">&#160;</p>
+<p style="position:absolute;top:834px;left:721px;white-space:nowrap" class="ft04">Directory</p>
+<p style="position:absolute;top:834px;left:769px;white-space:nowrap" class="ft06">Menu</p>
+<p style="position:absolute;top:1040px;left:674px;white-space:nowrap" class="ft04">up</p>
+<p style="position:absolute;top:1040px;left:687px;white-space:nowrap" class="ft06">&#160;</p>
+<p style="position:absolute;top:1040px;left:690px;white-space:nowrap" class="ft04">down</p>
+<p style="position:absolute;top:1040px;left:718px;white-space:nowrap" class="ft06">&#160;</p>
+<p style="position:absolute;top:1040px;left:721px;white-space:nowrap" class="ft04">Directory</p>
+<p style="position:absolute;top:1040px;left:769px;white-space:nowrap" class="ft06">Menu</p>
+</div>
+</body>
+</html>

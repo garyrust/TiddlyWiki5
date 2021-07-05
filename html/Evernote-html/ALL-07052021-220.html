@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+<title>Page 220</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<style type="text/css">
+<!--
+	p {margin: 0; padding: 0;}	.ft00{font-size:30px;font-family:FiraSans;color:#080808;}
+	.ft01{font-size:11px;font-family:FiraSans;color:#424242;}
+	.ft02{font-size:15px;font-family:FiraSans-Light;color:#080808;}
+	.ft03{font-size:10px;font-family:UbuntuMono;color:#e2e2e2;}
+	.ft04{font-size:11px;font-family:FiraSans;color:#424242;}
+	.ft05{font-size:15px;font-family:FiraSans-SemiBold;color:#080808;}
+	.ft06{font-size:11px;line-height:20px;font-family:FiraSans;color:#424242;}
+	.ft07{font-size:15px;line-height:22px;font-family:FiraSans-Light;color:#080808;}
+-->
+</style>
+</head>
+<body bgcolor="#A0A0A0" vlink="blue" link="blue">
+<div id="page220-div" style="position:relative;width:892px;height:1263px;">
+<img width="892" height="1263" src="ALL-07052021220.png" alt="background image"/>
+<p style="position:absolute;top:54px;left:177px;white-space:nowrap" class="ft00">Upgrading&#160;older&#160;releases</p>
+<p style="position:absolute;top:116px;left:177px;white-space:nowrap" class="ft06">Upgrading&#160;Pop!_OS&#160;17.10&#160;(artful)&#160;18.10&#160;(cosmic),&#160;19.04&#160;(disco)&#160;or&#160;19.10&#160;(eoan)&#160;will&#160;require&#160;upgrading&#160;to&#160;Pop!_OS<br/>20.04&#160;(focal)&#160;LTS&#160;before&#160;upgrading&#160;to&#160;the&#160;current&#160;Pop!_OS&#160;21.04&#160;(hirsute).</p>
+<p style="position:absolute;top:171px;left:177px;white-space:nowrap" class="ft06">These&#160;older&#160;Pop!_OS&#160;releases&#160;are&#160;now&#160;unsupported&#160;and&#160;no&#160;new&#160;updates&#160;are&#160;available.&#160;After&#160;unsupported<br/>versions&#160;have&#160;been&#160;removed&#160;from&#160;the&#160;archive&#160;and&#160;mirror&#160;network,&#160;you&#160;will&#160;need&#160;to&#160;change&#160;where&#160;your<br/>system&#160;checks&#160;for&#160;un-applied&#160;updates&#160;to&#160;be&#160;able&#160;to&#160;upgrade.&#160;Open&#160;a&#160;terminal&#160;and&#160;follow&#160;the&#160;next&#160;set&#160;of<br/>instructions&#160;to&#160;upgrade&#160;from&#160;Pop!_OS&#160;18.10,&#160;19.04,&#160;or&#160;19.10.</p>
+<p style="position:absolute;top:276px;left:177px;white-space:nowrap" class="ft02">1.&#160;Get&#160;your&#160;current&#160;system&#160;fully&#160;updated:</p>
+<p style="position:absolute;top:330px;left:192px;white-space:nowrap" class="ft03">sudo&#160;sed&#160;-i&#160;'s/us.archive/old-releases/g'&#160;/etc/apt/sources.list</p>
+<p style="position:absolute;top:347px;left:192px;white-space:nowrap" class="ft03">sudo&#160;apt&#160;update&#160;-m</p>
+<p style="position:absolute;top:365px;left:192px;white-space:nowrap" class="ft03">sudo&#160;dpkg&#160;--configure&#160;-a</p>
+<p style="position:absolute;top:383px;left:192px;white-space:nowrap" class="ft03">sudo&#160;apt&#160;install&#160;-f</p>
+<p style="position:absolute;top:400px;left:192px;white-space:nowrap" class="ft03">sudo&#160;apt&#160;full-upgrade</p>
+<p style="position:absolute;top:418px;left:192px;white-space:nowrap" class="ft03">sudo&#160;apt&#160;install&#160;pop-desktop</p>
+<p style="position:absolute;top:469px;left:177px;white-space:nowrap" class="ft07">2.&#160;Move&#160;any&#160;PPA&#160;additions&#160;out&#160;of&#160;the&#160;way,&#160;and&#160;get&#160;all&#160;of&#160;the&#160;sources&#160;pointed&#160;at&#160;the<br/>20.04&#160;versions:</p>
+<p style="position:absolute;top:546px;left:192px;white-space:nowrap" class="ft03">sudo&#160;mkdir&#160;-p&#160;/etc/apt/backup</p>
+<p style="position:absolute;top:564px;left:192px;white-space:nowrap" class="ft03">sudo&#160;mv&#160;/etc/apt/sources.list.d/*&#160;/etc/apt/backup</p>
+<p style="position:absolute;top:581px;left:192px;white-space:nowrap" class="ft03">sudo&#160;apt-add-repository&#160;-yn&#160;ppa:system76-dev/stable</p>
+<p style="position:absolute;top:599px;left:192px;white-space:nowrap" class="ft03">sudo&#160;apt-add-repository&#160;-yn&#160;ppa:system76/pop</p>
+<p style="position:absolute;top:617px;left:192px;white-space:nowrap" class="ft03">sudo&#160;sed&#160;-i&#160;'s/old-releases/us.archive/g'&#160;/etc/apt/sources.list</p>
+<p style="position:absolute;top:634px;left:192px;white-space:nowrap" class="ft03">sudo&#160;sed&#160;-Ei&#160;'s/cosmic|eoan|disco/focal/g'&#160;/etc/apt/sources.list&#160;/etc/apt/sources.list.d/*.list</p>
+<p style="position:absolute;top:682px;left:177px;white-space:nowrap" class="ft04"><i>Note&#160;to&#160;change&#160;'disco'&#160;to&#160;your&#160;release&#160;that&#160;you&#160;are&#160;trying&#160;to&#160;update&#160;from</i></p>
+<p style="position:absolute;top:726px;left:177px;white-space:nowrap" class="ft02">3.&#160;Now,&#160;do&#160;the&#160;upgrade!</p>
+<p style="position:absolute;top:760px;left:177px;white-space:nowrap" class="ft06">This&#160;will&#160;have&#160;a&#160;three&#160;phases&#160;and&#160;once&#160;the&#160;download&#160;is&#160;complete,&#160;you&#160;can't&#160;change&#160;your&#160;mind.&#160;This&#160;works<br/>from&#160;a&#160;new&#160;install&#160;of&#160;19.04,&#160;but&#160;some&#160;packages&#160;may&#160;add&#160;complications,&#160;so&#160;make&#160;sure&#160;you&#160;have&#160;a&#160;backup&#160;of<br/>important&#160;data&#160;before&#160;moving&#160;forward.&#160;There&#160;may&#160;be&#160;a&#160;question&#160;about&#160;restarting&#160;services,&#160;and&#160;it&#160;is&#160;safe&#160;to<br/>answer&#160;&#34;Yes&#34;.&#160;There&#160;may&#160;be&#160;some&#160;questions&#160;about&#160;using&#160;&#34;maintainer&#34;&#160;version&#160;of&#160;configuration&#160;files&#160;and&#160;using<br/>the&#160;that&#160;new&#160;version&#160;is&#160;also&#160;very&#160;likely&#160;what&#160;you&#160;want&#160;to&#160;do&#160;(and&#160;the&#160;default&#160;answer&#160;will&#160;work):</p>
+<p style="position:absolute;top:891px;left:192px;white-space:nowrap" class="ft03">sudo&#160;apt&#160;update</p>
+<p style="position:absolute;top:908px;left:192px;white-space:nowrap" class="ft03">sudo&#160;apt&#160;install&#160;dpkg&#160;apt</p>
+<p style="position:absolute;top:926px;left:192px;white-space:nowrap" class="ft03">sudo&#160;apt&#160;full-upgrade&#160;|&#160;tee&#160;~/upgrade.log</p>
+<p style="position:absolute;top:978px;left:177px;white-space:nowrap" class="ft02">4.&#160;Now&#160;put&#160;the&#160;PPAs&#160;back</p>
+<p style="position:absolute;top:1011px;left:177px;white-space:nowrap" class="ft06">You&#160;will&#160;want&#160;to&#160;take&#160;a&#160;look&#160;at&#160;the&#160;files&#160;that&#160;end&#160;in&#160;&#34;list&#34;&#160;in&#160;&#34;/etc/apt/backup&#34;&#160;to&#160;see&#160;if&#160;you&#160;want&#160;to&#160;enable<br/>that&#160;again&#160;by&#160;moving&#160;them&#160;back&#160;to&#160;the&#160;/etc/apt/sources.list.d/&#160;directory.</p>
+<p style="position:absolute;top:1076px;left:177px;white-space:nowrap" class="ft02">5.&#160;After&#160;the&#160;20.04&#160;Pop&#160;upgrade&#160;is&#160;complete,&#160;</p>
+<p style="position:absolute;top:1076px;left:469px;white-space:nowrap" class="ft05"><b>reboot</b></p>
+<p style="position:absolute;top:1076px;left:516px;white-space:nowrap" class="ft02">.</p>
+<p style="position:absolute;top:1108px;left:177px;white-space:nowrap" class="ft02">6.&#160;Run&#160;the&#160;command&#160;to&#160;upgrade&#160;to&#160;Pop&#160;21.04</p>
+<p style="position:absolute;top:1163px;left:192px;white-space:nowrap" class="ft03">pop-upgrade&#160;release&#160;upgrade</p>
+</div>
+</body>
+</html>

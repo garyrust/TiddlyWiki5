@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+<title>Page 158</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<style type="text/css">
+<!--
+	p {margin: 0; padding: 0;}	.ft00{font-size:10px;font-family:DejaVuSans;color:#000000;}
+	.ft01{font-size:10px;font-family:DejaVuSansMono;color:#000000;}
+	.ft02{font-size:10px;font-family:DejaVuSans;color:#a21313;}
+	.ft03{font-size:10px;font-family:DejaVuSansMono;color:#a21313;}
+	.ft04{font-size:11px;font-family:DejaVuSans;color:#000000;}
+	.ft05{font-size:10px;line-height:15px;font-family:DejaVuSans;color:#000000;}
+	.ft06{font-size:10px;line-height:15px;font-family:DejaVuSansMono;color:#000000;}
+-->
+</style>
+</head>
+<body bgcolor="#A0A0A0" vlink="blue" link="blue">
+<div id="page158-div" style="position:relative;width:892px;height:1263px;">
+<img width="892" height="1263" src="ALL-07052021158.png" alt="background image"/>
+<p style="position:absolute;top:55px;left:287px;white-space:nowrap" class="ft05">structure&#160;after&#160;it&#160;has&#160;finished&#160;performing&#160;some&#160;operation.&#160;If&#160;you&#160;need<br/>to&#160;perform&#160;a&#160;lot&#160;of&#160;operations&#160;on&#160;a&#160;CodeMirror&#160;instance,&#160;you&#160;can&#160;call<br/>this&#160;method&#160;with&#160;a&#160;function&#160;argument.&#160;It&#160;will&#160;call&#160;the&#160;function,<br/>buffering&#160;up&#160;all&#160;changes,&#160;and&#160;only&#160;doing&#160;the&#160;expensive&#160;update&#160;after<br/>the&#160;function&#160;returns.&#160;This&#160;can&#160;be&#160;a&#160;lot&#160;faster.&#160;The&#160;return&#160;value&#160;from<br/>this&#160;method&#160;will&#160;be&#160;the&#160;return&#160;value&#160;of&#160;your&#160;function.</p>
+<p style="position:absolute;top:156px;left:273px;white-space:nowrap" class="ft06">cm.startOperation()<br/>cm.endOperation()</p>
+<p style="position:absolute;top:186px;left:287px;white-space:nowrap" class="ft00">In&#160;normal&#160;circumstances,&#160;use&#160;the&#160;above&#160;</p>
+<p style="position:absolute;top:186px;left:493px;white-space:nowrap" class="ft01">operation</p>
+<p style="position:absolute;top:186px;left:549px;white-space:nowrap" class="ft00">&#160;method.&#160;But&#160;if&#160;you</p>
+<p style="position:absolute;top:201px;left:287px;white-space:nowrap" class="ft05">want&#160;to&#160;buffer&#160;operations&#160;happening&#160;asynchronously,&#160;or&#160;that&#160;can't&#160;all<br/>be&#160;wrapped&#160;in&#160;a&#160;callback&#160;function,&#160;you&#160;can&#160;call&#160;</p>
+<p style="position:absolute;top:216px;left:528px;white-space:nowrap" class="ft01">startOperation</p>
+<p style="position:absolute;top:216px;left:614px;white-space:nowrap" class="ft00">&#160;to&#160;tell</p>
+<p style="position:absolute;top:231px;left:287px;white-space:nowrap" class="ft00">CodeMirror&#160;to&#160;start&#160;buffering&#160;changes,&#160;and&#160;</p>
+<p style="position:absolute;top:231px;left:507px;white-space:nowrap" class="ft01">endOperation</p>
+<p style="position:absolute;top:231px;left:580px;white-space:nowrap" class="ft00">&#160;to&#160;actually</p>
+<p style="position:absolute;top:247px;left:287px;white-space:nowrap" class="ft00">render&#160;all&#160;the&#160;updates.&#160;</p>
+<p style="position:absolute;top:246px;left:405px;white-space:nowrap" class="ft00">Be&#160;careful:&#160;&#160;if&#160;you&#160;use&#160;this&#160;API&#160;and&#160;forget&#160;to&#160;call</p>
+<p style="position:absolute;top:262px;left:288px;white-space:nowrap" class="ft01">endOperation</p>
+<p style="position:absolute;top:262px;left:362px;white-space:nowrap" class="ft00">,&#160;the&#160;editor&#160;will&#160;just&#160;never&#160;update.</p>
+<p style="position:absolute;top:287px;left:273px;white-space:nowrap" class="ft01">cm.indentLine(line:&#160;integer,&#160;?dir:&#160;string|integer)</p>
+<p style="position:absolute;top:302px;left:287px;white-space:nowrap" class="ft05">Adjust&#160;the&#160;indentation&#160;of&#160;the&#160;given&#160;line.&#160;The&#160;second&#160;argument&#160;(which<br/>defaults&#160;to&#160;</p>
+<p style="position:absolute;top:317px;left:345px;white-space:nowrap" class="ft01">&#34;smart&#34;</p>
+<p style="position:absolute;top:317px;left:389px;white-space:nowrap" class="ft00">)&#160;may&#160;be&#160;one&#160;of:</p>
+<p style="position:absolute;top:332px;left:288px;white-space:nowrap" class="ft01">&#34;prev&#34;</p>
+<p style="position:absolute;top:347px;left:302px;white-space:nowrap" class="ft00">Base&#160;indentation&#160;on&#160;the&#160;indentation&#160;of&#160;the&#160;previous&#160;line.</p>
+<p style="position:absolute;top:362px;left:288px;white-space:nowrap" class="ft01">&#34;smart&#34;</p>
+<p style="position:absolute;top:377px;left:302px;white-space:nowrap" class="ft00">Use&#160;the&#160;mode's&#160;smart&#160;indentation&#160;if&#160;available,&#160;behave&#160;like&#160;</p>
+<p style="position:absolute;top:377px;left:600px;white-space:nowrap" class="ft01">&#34;prev&#34;</p>
+<p style="position:absolute;top:392px;left:302px;white-space:nowrap" class="ft00">otherwise.</p>
+<p style="position:absolute;top:408px;left:288px;white-space:nowrap" class="ft01">&#34;add&#34;</p>
+<p style="position:absolute;top:423px;left:302px;white-space:nowrap" class="ft00">Increase&#160;the&#160;indentation&#160;of&#160;the&#160;line&#160;by&#160;one&#160;</p>
+<p style="position:absolute;top:423px;left:520px;white-space:nowrap" class="ft02">indent&#160;unit</p>
+<p style="position:absolute;top:423px;left:574px;white-space:nowrap" class="ft00">.</p>
+<p style="position:absolute;top:438px;left:288px;white-space:nowrap" class="ft01">&#34;subtract&#34;</p>
+<p style="position:absolute;top:453px;left:302px;white-space:nowrap" class="ft00">Reduce&#160;the&#160;indentation&#160;of&#160;the&#160;line.</p>
+<p style="position:absolute;top:468px;left:288px;white-space:nowrap" class="ft01">&lt;integer&gt;</p>
+<p style="position:absolute;top:483px;left:302px;white-space:nowrap" class="ft05">Add&#160;(positive&#160;number)&#160;or&#160;reduce&#160;(negative&#160;number)&#160;the&#160;indentation<br/>by&#160;the&#160;given&#160;amount&#160;of&#160;spaces.</p>
+<p style="position:absolute;top:523px;left:273px;white-space:nowrap" class="ft01">cm.toggleOverwrite(?value:&#160;boolean)</p>
+<p style="position:absolute;top:538px;left:287px;white-space:nowrap" class="ft05">Switches&#160;between&#160;overwrite&#160;and&#160;normal&#160;insert&#160;mode&#160;(when&#160;not&#160;given<br/>an&#160;argument),&#160;or&#160;sets&#160;the&#160;overwrite&#160;mode&#160;to&#160;a&#160;specific&#160;state&#160;(when<br/>given&#160;an&#160;argument).</p>
+<p style="position:absolute;top:594px;left:273px;white-space:nowrap" class="ft01">cm.isReadOnly()&#160;→&#160;boolean</p>
+<p style="position:absolute;top:609px;left:287px;white-space:nowrap" class="ft00">Tells&#160;you&#160;whether&#160;the&#160;editor's&#160;content&#160;can&#160;be&#160;edited&#160;by&#160;the&#160;user.</p>
+<p style="position:absolute;top:634px;left:273px;white-space:nowrap" class="ft01">doc.lineSeparator()</p>
+<p style="position:absolute;top:649px;left:287px;white-space:nowrap" class="ft05">Returns&#160;the&#160;preferred&#160;line&#160;separator&#160;string&#160;for&#160;this&#160;document,&#160;as&#160;per<br/>the&#160;</p>
+<p style="position:absolute;top:664px;left:306px;white-space:nowrap" class="ft02">option</p>
+<p style="position:absolute;top:664px;left:338px;white-space:nowrap" class="ft00">&#160;by&#160;the&#160;same&#160;name.&#160;When&#160;that&#160;option&#160;is&#160;</p>
+<p style="position:absolute;top:664px;left:545px;white-space:nowrap" class="ft01">null</p>
+<p style="position:absolute;top:664px;left:571px;white-space:nowrap" class="ft00">,&#160;the&#160;string</p>
+<p style="position:absolute;top:679px;left:288px;white-space:nowrap" class="ft01">&#34;\n&#34;</p>
+<p style="position:absolute;top:679px;left:313px;white-space:nowrap" class="ft00">&#160;is&#160;returned.</p>
+<p style="position:absolute;top:704px;left:273px;white-space:nowrap" class="ft01">cm.execCommand(name:&#160;string)</p>
+<p style="position:absolute;top:719px;left:287px;white-space:nowrap" class="ft00">Runs&#160;the&#160;</p>
+<p style="position:absolute;top:719px;left:335px;white-space:nowrap" class="ft02">command</p>
+<p style="position:absolute;top:719px;left:385px;white-space:nowrap" class="ft00">&#160;with&#160;the&#160;given&#160;name&#160;on&#160;the&#160;editor.</p>
+<p style="position:absolute;top:745px;left:273px;white-space:nowrap" class="ft01">doc.posFromIndex(index:&#160;integer)&#160;→&#160;{line,&#160;ch}</p>
+<p style="position:absolute;top:760px;left:287px;white-space:nowrap" class="ft00">Calculates&#160;and&#160;returns&#160;a&#160;</p>
+<p style="position:absolute;top:760px;left:414px;white-space:nowrap" class="ft01">{line,&#160;ch}</p>
+<p style="position:absolute;top:760px;left:476px;white-space:nowrap" class="ft00">&#160;object&#160;for&#160;a&#160;zero-based&#160;</p>
+<p style="position:absolute;top:760px;left:600px;white-space:nowrap" class="ft01">index</p>
+<p style="position:absolute;top:775px;left:287px;white-space:nowrap" class="ft00">who's&#160;value&#160;is&#160;relative&#160;to&#160;the&#160;start&#160;of&#160;the&#160;editor's&#160;text.&#160;If&#160;the&#160;</p>
+<p style="position:absolute;top:775px;left:592px;white-space:nowrap" class="ft01">index</p>
+<p style="position:absolute;top:775px;left:623px;white-space:nowrap" class="ft00">&#160;is</p>
+<p style="position:absolute;top:790px;left:287px;white-space:nowrap" class="ft05">out&#160;of&#160;range&#160;of&#160;the&#160;text&#160;then&#160;the&#160;returned&#160;object&#160;is&#160;clipped&#160;to&#160;start&#160;or<br/>end&#160;of&#160;the&#160;text&#160;respectively.</p>
+<p style="position:absolute;top:830px;left:273px;white-space:nowrap" class="ft01">doc.indexFromPos(object:&#160;{line,&#160;ch})&#160;→&#160;integer</p>
+<p style="position:absolute;top:845px;left:287px;white-space:nowrap" class="ft00">The&#160;reverse&#160;of&#160;</p>
+<p style="position:absolute;top:845px;left:364px;white-space:nowrap" class="ft03">posFromIndex</p>
+<p style="position:absolute;top:845px;left:438px;white-space:nowrap" class="ft00">.</p>
+<p style="position:absolute;top:870px;left:273px;white-space:nowrap" class="ft01">cm.focus()</p>
+<p style="position:absolute;top:885px;left:287px;white-space:nowrap" class="ft00">Give&#160;the&#160;editor&#160;focus.</p>
+<p style="position:absolute;top:911px;left:273px;white-space:nowrap" class="ft01">cm.phrase(text:&#160;string)&#160;→&#160;string</p>
+<p style="position:absolute;top:926px;left:287px;white-space:nowrap" class="ft00">Allow&#160;the&#160;given&#160;string&#160;to&#160;be&#160;translated&#160;with&#160;the&#160;</p>
+<p style="position:absolute;top:926px;left:528px;white-space:nowrap" class="ft03">phrases</p>
+<p style="position:absolute;top:926px;left:572px;white-space:nowrap" class="ft02">&#160;option</p>
+<p style="position:absolute;top:926px;left:607px;white-space:nowrap" class="ft00">.</p>
+<p style="position:absolute;top:951px;left:273px;white-space:nowrap" class="ft01">cm.getInputField()&#160;→&#160;Element</p>
+<p style="position:absolute;top:966px;left:287px;white-space:nowrap" class="ft05">Returns&#160;the&#160;input&#160;field&#160;for&#160;the&#160;editor.&#160;Will&#160;be&#160;a&#160;textarea&#160;or&#160;an&#160;editable<br/>div,&#160;depending&#160;on&#160;the&#160;value&#160;of&#160;the&#160;</p>
+<p style="position:absolute;top:981px;left:465px;white-space:nowrap" class="ft03">inputStyle</p>
+<p style="position:absolute;top:981px;left:527px;white-space:nowrap" class="ft00">&#160;option.</p>
+<p style="position:absolute;top:1006px;left:273px;white-space:nowrap" class="ft01">cm.getWrapperElement()&#160;→&#160;Element</p>
+<p style="position:absolute;top:1021px;left:287px;white-space:nowrap" class="ft05">Returns&#160;the&#160;DOM&#160;node&#160;that&#160;represents&#160;the&#160;editor,&#160;and&#160;controls&#160;its&#160;size.<br/>Remove&#160;this&#160;from&#160;your&#160;tree&#160;to&#160;delete&#160;an&#160;editor&#160;instance.</p>
+<p style="position:absolute;top:1062px;left:273px;white-space:nowrap" class="ft01">cm.getScrollerElement()&#160;→&#160;Element</p>
+<p style="position:absolute;top:1077px;left:287px;white-space:nowrap" class="ft05">Returns&#160;the&#160;DOM&#160;node&#160;that&#160;is&#160;responsible&#160;for&#160;the&#160;scrolling&#160;of&#160;the<br/>editor.</p>
+<p style="position:absolute;top:1117px;left:273px;white-space:nowrap" class="ft01">cm.getGutterElement()&#160;→&#160;Element</p>
+<p style="position:absolute;top:1132px;left:287px;white-space:nowrap" class="ft00">Fetches&#160;the&#160;DOM&#160;node&#160;that&#160;contains&#160;the&#160;editor&#160;gutters.</p>
+<p style="position:absolute;top:1158px;left:272px;white-space:nowrap" class="ft04">Static&#160;properties</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+<title>Page 13</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<style type="text/css">
+<!--
+	p {margin: 0; padding: 0;}	.ft00{font-size:15px;font-family:DejaVuSerif;color:#000000;}
+	.ft01{font-size:10px;font-family:DejaVuSerif;color:#000000;}
+	.ft02{font-size:13px;font-family:DejaVuSerif;color:#ffffff;}
+	.ft03{font-size:11px;font-family:DejaVuSerif;color:#444444;}
+	.ft04{font-size:15px;font-family:DejaVuSerif;color:#000000;}
+	.ft05{font-size:11px;font-family:DejaVuSerif;color:#000000;}
+	.ft06{font-size:7px;font-family:Ubuntu;color:#ffa500;}
+	.ft07{font-size:8px;font-family:DejaVuSansMono;color:#ffd700;}
+	.ft08{font-size:8px;font-family:DejaVuSansMono;color:#f8f8f2;}
+	.ft09{font-size:8px;font-family:DejaVuSansMono;color:#00e0e0;}
+	.ft010{font-size:8px;font-family:DejaVuSansMono;color:#fefefe;}
+	.ft011{font-size:8px;font-family:DejaVuSansMono;color:#abe338;}
+	.ft012{font-size:10px;font-family:DejaVuSans;color:#333332;}
+	.ft013{font-size:8px;font-family:DejaVuSans;color:#333332;}
+	.ft014{font-size:7px;font-family:DejaVuSerif;color:#929292;}
+	.ft015{font-size:9px;font-family:DejaVuSans;color:#57ad68;}
+	.ft016{font-size:11px;line-height:17px;font-family:DejaVuSerif;color:#444444;}
+	.ft017{font-size:11px;line-height:17px;font-family:DejaVuSerif;color:#000000;}
+	.ft018{font-size:8px;line-height:13px;font-family:DejaVuSansMono;color:#f8f8f2;}
+-->
+</style>
+</head>
+<body bgcolor="#A0A0A0" vlink="blue" link="blue">
+<div id="page13-div" style="position:relative;width:892px;height:1263px;">
+<img width="892" height="1263" src="ALL-07052021013.png" alt="background image"/>
+<p style="position:absolute;top:67px;left:59px;white-space:nowrap" class="ft00"><b>How&#160;to&#160;Install&#160;grub&#160;on&#160;POP&#160;OS&#160;20.04&#160;–&#160;Jacci.Net</b></p>
+<p style="position:absolute;top:97px;left:430px;white-space:nowrap" class="ft01">06/30/2021</p>
+<p style="position:absolute;top:382px;left:253px;white-space:nowrap" class="ft02"><b>Objective</b></p>
+<p style="position:absolute;top:420px;left:252px;white-space:nowrap" class="ft03">To&#160;install&#160;and&#160;configure&#160;grub&#160;boot&#160;loader&#160;for&#160;POP&#160;OS.</p>
+<p style="position:absolute;top:477px;left:253px;white-space:nowrap" class="ft02"><b>Prerequisite/Requirements</b></p>
+<p style="position:absolute;top:515px;left:288px;white-space:nowrap" class="ft016">POP&#160;OS&#160;20.04&#160;Installed<br/>User&#160;account&#160;with&#160;sudo&#160;access</p>
+<p style="position:absolute;top:589px;left:253px;white-space:nowrap" class="ft02"><b>Warning</b></p>
+<p style="position:absolute;top:627px;left:252px;white-space:nowrap" class="ft016">After&#160;installing&#160;and&#160;initializing&#160;grub&#160;do&#160;not&#160;reboot&#160;your&#160;system&#160;until<br/>the&#160;end</p>
+<p style="position:absolute;top:714px;left:321px;white-space:nowrap" class="ft04">Step&#160;1:&#160;Install&#160;necessary&#160;packages</p>
+<p style="position:absolute;top:769px;left:239px;white-space:nowrap" class="ft017">First&#160;and&#160;foremost&#160;update&#160;and&#160;upgrade&#160;your&#160;POP&#160;OS&#160;if&#160;it&#160;is&#160;newly<br/>installed.</p>
+<p style="position:absolute;top:816px;left:239px;white-space:nowrap" class="ft05">Open&#160;up&#160;terminal&#160;and&#160;enter:</p>
+<p style="position:absolute;top:847px;left:249px;white-space:nowrap" class="ft06"><b>Command</b></p>
+<p style="position:absolute;top:877px;left:246px;white-space:nowrap" class="ft07">sudo</p>
+<p style="position:absolute;top:877px;left:268px;white-space:nowrap" class="ft08">&#160;</p>
+<p style="position:absolute;top:877px;left:273px;white-space:nowrap" class="ft07">apt</p>
+<p style="position:absolute;top:877px;left:289px;white-space:nowrap" class="ft08">&#160;update&#160;-y&#160;</p>
+<p style="position:absolute;top:877px;left:347px;white-space:nowrap" class="ft09">&amp;&amp;</p>
+<p style="position:absolute;top:877px;left:358px;white-space:nowrap" class="ft08">&#160;</p>
+<p style="position:absolute;top:877px;left:363px;white-space:nowrap" class="ft07">sudo</p>
+<p style="position:absolute;top:877px;left:384px;white-space:nowrap" class="ft08">&#160;</p>
+<p style="position:absolute;top:877px;left:389px;white-space:nowrap" class="ft07">apt</p>
+<p style="position:absolute;top:877px;left:405px;white-space:nowrap" class="ft08">&#160;upgrade&#160;-y</p>
+<p style="position:absolute;top:904px;left:249px;white-space:nowrap" class="ft06"><b>Example&#160;Output</b></p>
+<p style="position:absolute;top:934px;left:246px;white-space:nowrap" class="ft010">[</p>
+<p style="position:absolute;top:934px;left:252px;white-space:nowrap" class="ft08">jacci@Jacci&#160;~</p>
+<p style="position:absolute;top:934px;left:321px;white-space:nowrap" class="ft010">]</p>
+<p style="position:absolute;top:934px;left:326px;white-space:nowrap" class="ft08">$&#160;</p>
+<p style="position:absolute;top:934px;left:336px;white-space:nowrap" class="ft07">sudo</p>
+<p style="position:absolute;top:934px;left:358px;white-space:nowrap" class="ft08">&#160;</p>
+<p style="position:absolute;top:934px;left:363px;white-space:nowrap" class="ft07">apt</p>
+<p style="position:absolute;top:934px;left:379px;white-space:nowrap" class="ft08">&#160;update&#160;-y&#160;</p>
+<p style="position:absolute;top:934px;left:437px;white-space:nowrap" class="ft09">&amp;&amp;</p>
+<p style="position:absolute;top:934px;left:448px;white-space:nowrap" class="ft08">&#160;</p>
+<p style="position:absolute;top:934px;left:453px;white-space:nowrap" class="ft07">sudo</p>
+<p style="position:absolute;top:934px;left:474px;white-space:nowrap" class="ft08">&#160;</p>
+<p style="position:absolute;top:934px;left:479px;white-space:nowrap" class="ft07">apt</p>
+<p style="position:absolute;top:934px;left:495px;white-space:nowrap" class="ft08">&#160;upgrade&#160;-y</p>
+<p style="position:absolute;top:948px;left:246px;white-space:nowrap" class="ft018">Hit:1&#160;http://us.archive.ubuntu.com/ubuntu&#160;focal&#160;InRelease<br/>Hit:2&#160;http://us.archive.ubuntu.com/ubuntu&#160;focal-security&#160;InRelease<br/>Hit:3&#160;http://us.archive.ubuntu.com/ubuntu&#160;focal-updates&#160;InRelease&#160;&#160;&#160;<br/>Hit:4&#160;http://us.archive.ubuntu.com/ubuntu&#160;focal-backports&#160;InRelease&#160;<br/>Hit:5&#160;http://apt.pop-os.org/proprietary&#160;focal&#160;InRelease<br/>Hit:6&#160;http://ppa.launchpad.net/system76/pop/ubuntu&#160;focal&#160;InRelease<br/>Reading&#160;package&#160;lists</p>
+<p style="position:absolute;top:1027px;left:358px;white-space:nowrap" class="ft010">..</p>
+<p style="position:absolute;top:1027px;left:368px;white-space:nowrap" class="ft08">.&#160;Done</p>
+<p style="position:absolute;top:1040px;left:246px;white-space:nowrap" class="ft018">Building&#160;dependency&#160;tree&#160;&#160;&#160;&#160;&#160;&#160;&#160;<br/>Reading&#160;state&#160;information</p>
+<p style="position:absolute;top:1053px;left:379px;white-space:nowrap" class="ft010">..</p>
+<p style="position:absolute;top:1053px;left:389px;white-space:nowrap" class="ft08">.&#160;Done</p>
+<p style="position:absolute;top:1067px;left:246px;white-space:nowrap" class="ft09">64</p>
+<p style="position:absolute;top:1067px;left:257px;white-space:nowrap" class="ft08">&#160;packages&#160;can&#160;be&#160;upgraded.&#160;Run&#160;</p>
+<p style="position:absolute;top:1067px;left:421px;white-space:nowrap" class="ft011">'apt&#160;list&#160;--upgradable'</p>
+<p style="position:absolute;top:1067px;left:543px;white-space:nowrap" class="ft08">&#160;to&#160;see&#160;them.</p>
+<p style="position:absolute;top:1080px;left:246px;white-space:nowrap" class="ft08">Reading&#160;package&#160;lists</p>
+<p style="position:absolute;top:1080px;left:358px;white-space:nowrap" class="ft010">..</p>
+<p style="position:absolute;top:1080px;left:368px;white-space:nowrap" class="ft08">.&#160;Done</p>
+<p style="position:absolute;top:1093px;left:246px;white-space:nowrap" class="ft018">Building&#160;dependency&#160;tree&#160;&#160;&#160;&#160;&#160;&#160;&#160;<br/>Reading&#160;state&#160;information</p>
+<p style="position:absolute;top:1106px;left:379px;white-space:nowrap" class="ft010">..</p>
+<p style="position:absolute;top:1106px;left:389px;white-space:nowrap" class="ft08">.&#160;Done</p>
+<p style="position:absolute;top:1119px;left:246px;white-space:nowrap" class="ft08">Calculating&#160;upgrade</p>
+<p style="position:absolute;top:1119px;left:347px;white-space:nowrap" class="ft010">..</p>
+<p style="position:absolute;top:1119px;left:358px;white-space:nowrap" class="ft08">.&#160;Done</p>
+<p style="position:absolute;top:1133px;left:246px;white-space:nowrap" class="ft08">The&#160;following&#160;package&#160;was&#160;automatically&#160;installed&#160;</p>
+<p style="position:absolute;top:1159px;left:246px;white-space:nowrap" class="ft010">..</p>
+<p style="position:absolute;top:1159px;left:257px;white-space:nowrap" class="ft08">.</p>
+<p style="position:absolute;top:442px;left:132px;white-space:nowrap" class="ft012"><b>MasroorATB</b></p>
+<p style="position:absolute;top:480px;left:152px;white-space:nowrap" class="ft013"><b>Published</b></p>
+<p style="position:absolute;top:498px;left:153px;white-space:nowrap" class="ft014">June&#160;3,&#160;2020</p>
+<p style="position:absolute;top:538px;left:173px;white-space:nowrap" class="ft015">Home</p>
+<p style="position:absolute;top:554px;left:162px;white-space:nowrap" class="ft015">NDD430</p>
+</div>
+</body>
+</html>

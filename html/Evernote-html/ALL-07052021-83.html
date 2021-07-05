@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+<title>Page 83</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<style type="text/css">
+<!--
+	p {margin: 0; padding: 0;}	.ft00{font-size:9px;font-family:DejaVuSans;color:#222222;}
+	.ft01{font-size:9px;font-family:DejaVuSans;color:#222222;}
+	.ft02{font-size:13px;font-family:DejaVuSans;color:#111111;}
+	.ft03{font-size:7px;font-family:BitstreamVeraSansMono;color:#008200;}
+	.ft04{font-size:7px;font-family:FreeMono;color:#008200;}
+	.ft05{font-size:9px;line-height:16px;font-family:DejaVuSans;color:#222222;}
+-->
+</style>
+</head>
+<body bgcolor="#A0A0A0" vlink="blue" link="blue">
+<div id="page83-div" style="position:relative;width:892px;height:1263px;">
+<img width="892" height="1263" src="ALL-07052021083.png" alt="background image"/>
+<p style="position:absolute;top:64px;left:123px;white-space:nowrap" class="ft05">It&#160;will&#160;start&#160;Firefox&#160;in&#160;a&#160;sandbox&#160;with&#160;the&#160;root&#160;file&#160;system&#160;mounted&#160;as&#160;read&#160;only.&#160;To&#160;start<br/>Firefox&#160;with&#160;only</p>
+<p style="position:absolute;top:80px;left:201px;white-space:nowrap" class="ft00">&#160;~/Downloads&#160;and&#160;~/.mozilla&#160;mounted&#160;to&#160;write,&#160;use&#160;the&#160;following</p>
+<p style="position:absolute;top:97px;left:123px;white-space:nowrap" class="ft00">command:</p>
+<p style="position:absolute;top:146px;left:123px;white-space:nowrap" class="ft05">Firejail,&#160;by&#160;default,&#160;uses&#160;the&#160;user&#160;namespace&#160;and&#160;mounts&#160;empty&#160;temporary&#160;file&#160;systems<br/>(</p>
+<p style="position:absolute;top:162px;left:127px;white-space:nowrap" class="ft00">tmpfs)&#160;on&#160;top&#160;of&#160;the&#160;user&#160;home&#160;directory&#160;in&#160;private&#160;mode.&#160;To&#160;start&#160;a&#160;program&#160;in&#160;private</p>
+<p style="position:absolute;top:179px;left:123px;white-space:nowrap" class="ft00">mode,&#160;use&#160;the&#160;command&#160;given&#160;below:</p>
+<p style="position:absolute;top:229px;left:123px;white-space:nowrap" class="ft00">To&#160;start&#160;firejail&#160;in&#160;a&#160;new&#160;network&#160;stack,&#160;use&#160;the&#160;following&#160;command:</p>
+<p style="position:absolute;top:279px;left:123px;white-space:nowrap" class="ft00">To&#160;assign&#160;an&#160;IP&#160;address&#160;to&#160;the&#160;sandbox,&#160;use&#160;the&#160;following&#160;command:</p>
+<p style="position:absolute;top:328px;left:123px;white-space:nowrap" class="ft01"><b>Note:</b></p>
+<p style="position:absolute;top:328px;left:152px;white-space:nowrap" class="ft00">&#160;To&#160;sandbox&#160;all&#160;programs&#160;running&#160;by&#160;a&#160;user,&#160;you&#160;can&#160;change&#160;the&#160;default&#160;shell&#160;of&#160;that</p>
+<p style="position:absolute;top:344px;left:123px;white-space:nowrap" class="ft00">user&#160;to&#160;/usr/bin/firejail.</p>
+<p style="position:absolute;top:402px;left:123px;white-space:nowrap" class="ft02">Containers</p>
+<p style="position:absolute;top:433px;left:123px;white-space:nowrap" class="ft05">When&#160;learning&#160;about&#160;virtualisation&#160;technologies,&#160;what&#160;attracted&#160;me&#160;most&#160;were&#160;containers<br/>because&#160;of&#160;their&#160;easy&#160;deployment.&#160;Containers&#160;(also&#160;known&#160;as&#160;lightweight&#160;virtualisation)&#160;are<br/>tools&#160;for&#160;isolation,&#160;which&#160;use&#160;namespaces&#160;for&#160;the&#160;purpose.&#160;They&#160;are&#160;a&#160;better&#160;sandboxing<br/>utility,&#160;because&#160;they&#160;generally&#160;use&#160;more&#160;then&#160;one&#160;namespace&#160;and&#160;are&#160;more&#160;focused&#160;on<br/>creating&#160;a&#160;whole&#160;virtual&#160;system&#160;instance&#160;rather&#160;than&#160;isolating&#160;a&#160;single&#160;process.</p>
+<p style="position:absolute;top:531px;left:123px;white-space:nowrap" class="ft05">Containers&#160;are&#160;not&#160;a&#160;new&#160;technology.&#160;They&#160;have&#160;been&#160;in&#160;UNIX&#160;and&#160;Linux&#160;for&#160;decades&#160;but<br/>due&#160;to&#160;their&#160;increasing&#160;use&#160;in&#160;SaaS&#160;and&#160;PaaS,&#160;they&#160;have&#160;become&#160;a&#160;hot&#160;topic&#160;since&#160;they<br/>provide&#160;the&#160;most&#160;secure&#160;environment&#160;to&#160;deliver&#160;and&#160;use&#160;these&#160;services.&#160;They&#160;are&#160;called<br/>lightweight&#160;virtualisation&#160;because&#160;they&#160;provide&#160;process&#160;level&#160;isolation,&#160;which&#160;means&#160;they<br/>depend&#160;on&#160;the&#160;Linux&#160;kernel.&#160;Hence,&#160;only&#160;those&#160;instances&#160;can&#160;be&#160;created&#160;which&#160;use&#160;the<br/>same&#160;base&#160;kernel.&#160;There&#160;are&#160;lots&#160;of&#160;containers&#160;available&#160;for&#160;Linux&#160;that&#160;have&#160;gained<br/>popularity&#160;over&#160;the&#160;past&#160;few&#160;years.</p>
+<p style="position:absolute;top:661px;left:123px;white-space:nowrap" class="ft02">Systemd-nspawn</p>
+<p style="position:absolute;top:692px;left:123px;white-space:nowrap" class="ft05">This&#160;is&#160;a&#160;utility&#160;available&#160;by&#160;default&#160;with&#160;systemd,&#160;which&#160;creates&#160;separate&#160;containers&#160;for<br/>isolation.&#160;It&#160;uses&#160;mount&#160;and&#160;PID&#160;namespaces&#160;by&#160;default&#160;but&#160;another&#160;namespace&#160;can&#160;also&#160;be<br/>configured.&#160;To&#160;create&#160;a&#160;container&#160;or&#160;isolated&#160;shell,&#160;you&#160;need&#160;to&#160;download&#160;a&#160;basic<br/>distribution&#160;which&#160;we&#160;have&#160;done&#160;already,&#160;using&#160;debootstrap.&#160;To&#160;get&#160;inside&#160;this&#160;container,<br/>use&#160;the&#160;code&#160;below:</p>
+<p style="position:absolute;top:807px;left:123px;white-space:nowrap" class="ft00">This&#160;container&#160;is&#160;stronger&#160;then&#160;</p>
+<p style="position:absolute;top:807px;left:271px;white-space:nowrap" class="ft00">chroot&#160;because&#160;it&#160;not&#160;only&#160;has&#160;a&#160;different&#160;mount&#160;point&#160;but</p>
+<p style="position:absolute;top:824px;left:123px;white-space:nowrap" class="ft00">also&#160;a&#160;separate&#160;process&#160;tree&#160;(check&#160;it&#160;by</p>
+<p style="position:absolute;top:823px;left:315px;white-space:nowrap" class="ft00">&#160;ps&#160;-aux).&#160;But&#160;still,&#160;the&#160;hostname&#160;and&#160;IP&#160;interfaces</p>
+<p style="position:absolute;top:840px;left:123px;white-space:nowrap" class="ft05">are&#160;the&#160;same&#160;as&#160;the&#160;host&#160;system.&#160;To&#160;add&#160;your&#160;own&#160;network&#160;stack,&#160;you&#160;need&#160;to&#160;connect&#160;to<br/>the&#160;existing&#160;network&#160;bridge.</p>
+<p style="position:absolute;top:906px;left:123px;white-space:nowrap" class="ft00">This&#160;will&#160;start&#160;the&#160;container&#160;with&#160;the&#160;network&#160;namespace&#160;with&#160;a&#160;pair&#160;of&#160;</p>
+<p style="position:absolute;top:906px;left:460px;white-space:nowrap" class="ft00">veth&#160;devices.&#160;You</p>
+<p style="position:absolute;top:923px;left:123px;white-space:nowrap" class="ft00">can&#160;even&#160;boot&#160;the&#160;instance&#160;by&#160;the</p>
+<p style="position:absolute;top:922px;left:285px;white-space:nowrap" class="ft00">&#160;-b&#160;option,&#160;as&#160;follows:</p>
+<p style="position:absolute;top:972px;left:123px;white-space:nowrap" class="ft01"><b>Note:</b>&#160;</p>
+<p style="position:absolute;top:972px;left:155px;white-space:nowrap" class="ft00">While&#160;booting&#160;the&#160;container,&#160;you&#160;will&#160;be&#160;required&#160;to&#160;enter&#160;the&#160;password&#160;of&#160;the&#160;root</p>
+<p style="position:absolute;top:988px;left:123px;white-space:nowrap" class="ft00">user;&#160;so&#160;first&#160;run&#160;#passwd&#160;inside&#160;to&#160;set&#160;the&#160;root&#160;password.</p>
+<p style="position:absolute;top:1021px;left:123px;white-space:nowrap" class="ft00">The&#160;whole&#160;</p>
+<p style="position:absolute;top:1021px;left:175px;white-space:nowrap" class="ft00">nspawn&#160;project&#160;is&#160;relatively&#160;young;&#160;hence&#160;there&#160;is&#160;still&#160;a&#160;lot&#160;that&#160;needs&#160;to&#160;be</p>
+<p style="position:absolute;top:1038px;left:123px;white-space:nowrap" class="ft00">developed.</p>
+<p style="position:absolute;top:1069px;left:123px;white-space:nowrap" class="ft02">Docker</p>
+<p style="position:absolute;top:1101px;left:123px;white-space:nowrap" class="ft05">Docker&#160;is&#160;the&#160;smartest&#160;and&#160;most&#160;prominent&#160;container&#160;in&#160;Linux&#160;to&#160;run&#160;an&#160;applications<br/>environment.&#160;Over&#160;the&#160;past&#160;few&#160;years,&#160;it&#160;has&#160;grabbed&#160;the&#160;most&#160;attention.&#160;Docker&#160;containers<br/>use&#160;most&#160;of&#160;the&#160;namespaces&#160;and&#160;cgroups&#160;present&#160;in&#160;systemd&#160;for&#160;providing&#160;a&#160;strong&#160;isolated<br/>environment.&#160;Docker&#160;runs&#160;on&#160;the&#160;Docker&#160;daemon,&#160;which&#160;starts&#160;an&#160;isolated&#160;instance&#160;like<br/>systemd-nspawn,&#160;in&#160;which&#160;any&#160;service&#160;can&#160;be&#160;deployed&#160;with&#160;just&#160;a&#160;few&#160;tweaks.&#160;It&#160;can&#160;be</p>
+<p style="position:absolute;top:127px;left:126px;white-space:nowrap" class="ft03">#firejail&#160;--whitelist=~/.mozilla&#160;--whitelist=~/Download&#160;firefox</p>
+<p style="position:absolute;top:210px;left:126px;white-space:nowrap" class="ft03">#firejail&#160;--private&#160;firefox</p>
+<p style="position:absolute;top:260px;left:126px;white-space:nowrap" class="ft03">#firejail&#160;--net=eth0&#160;--whitelist=~/.mozilla&#160;--whitelist=~/Download&#160;firefox</p>
+<p style="position:absolute;top:309px;left:126px;white-space:nowrap" class="ft03">#firejail&#160;--net=eth0&#160;--ip=192.168.1.155&#160;firefox</p>
+<p style="position:absolute;top:375px;left:126px;white-space:nowrap" class="ft03">#chsh&#160;</p>
+<p style="position:absolute;top:376px;left:153px;white-space:nowrap" class="ft04">​</p>
+<p style="position:absolute;top:375px;left:153px;white-space:nowrap" class="ft03">shell&#160;/usr/bin/firejail</p>
+<p style="position:absolute;top:788px;left:126px;white-space:nowrap" class="ft03">#systemd-nspawn&#160;-D&#160;my_deb</p>
+<p style="position:absolute;top:887px;left:126px;white-space:nowrap" class="ft03">#systemd-nspawn&#160;-D&#160;my_deb&#160;--network-bridge=br0</p>
+<p style="position:absolute;top:953px;left:126px;white-space:nowrap" class="ft03">#systemd-nspawn&#160;-bD&#160;my_deb</p>
+</div>
+</body>
+</html>

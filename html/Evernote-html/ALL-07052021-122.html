@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+<title>Page 122</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<style type="text/css">
+<!--
+	p {margin: 0; padding: 0;}	.ft00{font-size:10px;font-family:UbuntuMono;color:#e2e2e2;}
+	.ft01{font-size:11px;font-family:FiraSans;color:#424242;}
+	.ft02{font-size:10px;font-family:UbuntuMono;color:#f6f6f6;}
+	.ft03{font-size:15px;font-family:FiraSans-Light;color:#080808;}
+	.ft04{font-size:18px;font-family:FiraSans-Light;color:#080808;}
+	.ft05{font-size:10px;font-family:FiraSans;color:#080808;}
+	.ft06{font-size:11px;font-family:FiraSans;color:#000000;}
+	.ft07{font-size:11px;line-height:20px;font-family:FiraSans;color:#424242;}
+-->
+</style>
+</head>
+<body bgcolor="#A0A0A0" vlink="blue" link="blue">
+<div id="page122-div" style="position:relative;width:892px;height:1263px;">
+<img width="892" height="1263" src="ALL-07052021122.png" alt="background image"/>
+<p style="position:absolute;top:68px;left:192px;white-space:nowrap" class="ft00">sudo&#160;mount&#160;/dev/mapper/data-root&#160;/mnt</p>
+<p style="position:absolute;top:115px;left:177px;white-space:nowrap" class="ft01">And&#160;now&#160;the&#160;existing&#160;hard&#160;drive&#160;can&#160;be&#160;accessed&#160;by&#160;going&#160;to&#160;the&#160;</p>
+<p style="position:absolute;top:117px;left:515px;white-space:nowrap" class="ft02">/mnt</p>
+<p style="position:absolute;top:115px;left:540px;white-space:nowrap" class="ft01">&#160;folder.&#160;To&#160;use&#160;the&#160;Files&#160;program,&#160;go&#160;to</p>
+<p style="position:absolute;top:135px;left:177px;white-space:nowrap" class="ft01">'+&#160;Other&#160;Locations'&#160;-&gt;&#160;'Computer'&#160;and&#160;then&#160;click&#160;on&#160;the&#160;</p>
+<p style="position:absolute;top:137px;left:463px;white-space:nowrap" class="ft02">/mnt</p>
+<p style="position:absolute;top:135px;left:489px;white-space:nowrap" class="ft01">&#160;folder.</p>
+<p style="position:absolute;top:179px;left:177px;white-space:nowrap" class="ft03">Chroot</p>
+<p style="position:absolute;top:213px;left:177px;white-space:nowrap" class="ft07">chroot&#160;is&#160;the&#160;way&#160;to&#160;run&#160;commands&#160;as&#160;if&#160;the&#160;existing&#160;operating&#160;system&#160;had&#160;been&#160;booted.&#160;Once&#160;these<br/>commands&#160;are&#160;run,&#160;then&#160;package&#160;manager&#160;(apt)&#160;and&#160;other&#160;system&#160;level&#160;commands&#160;can&#160;be&#160;run.</p>
+<p style="position:absolute;top:269px;left:177px;white-space:nowrap" class="ft07">The&#160;EFI&#160;partition&#160;is&#160;usually&#160;around&#160;512MB&#160;so&#160;that&#160;would&#160;be&#160;the&#160;partition&#160;that&#160;we&#160;replace&#160;in&#160;the&#160;next<br/>command.&#160;The&#160;Recovery&#160;Partition&#160;is&#160;around&#160;4GB&#160;as&#160;well.</p>
+<p style="position:absolute;top:339px;left:192px;white-space:nowrap" class="ft00">sudo&#160;mount&#160;/dev/sda1&#160;/mnt/boot/efi</p>
+<p style="position:absolute;top:357px;left:192px;white-space:nowrap" class="ft00">for&#160;i&#160;in&#160;/dev&#160;/dev/pts&#160;/proc&#160;/sys&#160;/run;&#160;do&#160;sudo&#160;mount&#160;-B&#160;$i&#160;/mnt$i;&#160;done</p>
+<p style="position:absolute;top:375px;left:192px;white-space:nowrap" class="ft00">sudo&#160;chroot&#160;/mnt</p>
+<p style="position:absolute;top:422px;left:177px;white-space:nowrap" class="ft01">To&#160;exit&#160;from&#160;the&#160;chroot&#160;and&#160;reboot&#160;the&#160;computer,&#160;run&#160;these&#160;commands:</p>
+<p style="position:absolute;top:473px;left:192px;white-space:nowrap" class="ft00">exit</p>
+<p style="position:absolute;top:490px;left:192px;white-space:nowrap" class="ft00">reboot</p>
+<p style="position:absolute;top:538px;left:177px;white-space:nowrap" class="ft01">After&#160;this,&#160;reboot&#160;your&#160;computer,&#160;removing&#160;the&#160;disk&#160;when&#160;prompted,&#160;and&#160;the&#160;computer&#160;should&#160;boot.</p>
+<p style="position:absolute;top:591px;left:177px;white-space:nowrap" class="ft04">Troubleshooting</p>
+<p style="position:absolute;top:637px;left:177px;white-space:nowrap" class="ft03">chroot</p>
+<p style="position:absolute;top:670px;left:177px;white-space:nowrap" class="ft01">If&#160;the&#160;</p>
+<p style="position:absolute;top:673px;left:212px;white-space:nowrap" class="ft02">chroot</p>
+<p style="position:absolute;top:670px;left:247px;white-space:nowrap" class="ft01">&#160;command&#160;returns&#160;with&#160;the&#160;error:&#160;</p>
+<p style="position:absolute;top:673px;left:426px;white-space:nowrap" class="ft02">chroot:&#160;cannot&#160;run&#160;command&#160;'/bin/bash':&#160;Exec&#160;format&#160;error</p>
+<p style="position:absolute;top:670px;left:718px;white-space:nowrap" class="ft01">,</p>
+<p style="position:absolute;top:691px;left:177px;white-space:nowrap" class="ft01">this&#160;probably&#160;indicates&#160;that&#160;the&#160;Install&#160;DVD/CD&#160;or&#160;USB&#160;is&#160;not&#160;compatible&#160;with&#160;that&#160;of&#160;the&#160;installed&#160;system.</p>
+<p style="position:absolute;top:726px;left:177px;white-space:nowrap" class="ft01">For&#160;example,&#160;the&#160;error&#160;is&#160;most&#160;frequently&#160;seen&#160;when&#160;trying&#160;to&#160;</p>
+<p style="position:absolute;top:728px;left:501px;white-space:nowrap" class="ft02">chroot</p>
+<p style="position:absolute;top:726px;left:536px;white-space:nowrap" class="ft01">&#160;to&#160;a&#160;64-bit&#160;system&#160;(amd64)&#160;from&#160;a&#160;32-</p>
+<p style="position:absolute;top:746px;left:177px;white-space:nowrap" class="ft01">bit&#160;Install&#160;CD&#160;(x86).</p>
+<p style="position:absolute;top:781px;left:177px;white-space:nowrap" class="ft07">The&#160;solution&#160;is&#160;to&#160;use&#160;an&#160;Install&#160;CD&#160;which&#160;is&#160;using&#160;the&#160;same&#160;architecture&#160;as&#160;the&#160;installed&#160;system&#160;(32-bit&#160;Install<br/>CD&#160;for&#160;32-bit&#160;targets&#160;/&#160;64-bit&#160;Install&#160;CD&#160;for&#160;64-bit&#160;targets).</p>
+<p style="position:absolute;top:836px;left:177px;white-space:nowrap" class="ft01">Make&#160;sure&#160;to&#160;use&#160;</p>
+<p style="position:absolute;top:839px;left:272px;white-space:nowrap" class="ft02">/dev/sda1</p>
+<p style="position:absolute;top:836px;left:323px;white-space:nowrap" class="ft01">&#160;(the&#160;partition)&#160;and&#160;</p>
+<p style="position:absolute;top:839px;left:428px;white-space:nowrap" class="ft02">/dev/sda</p>
+<p style="position:absolute;top:836px;left:474px;white-space:nowrap" class="ft01">&#160;(the&#160;disk)&#160;or&#160;</p>
+<p style="position:absolute;top:839px;left:547px;white-space:nowrap" class="ft02">/dev/nvme0n1p1</p>
+<p style="position:absolute;top:836px;left:622px;white-space:nowrap" class="ft01">&#160;(the&#160;partition)&#160;and</p>
+<p style="position:absolute;top:859px;left:182px;white-space:nowrap" class="ft02">/dev/nvme0n1</p>
+<p style="position:absolute;top:857px;left:248px;white-space:nowrap" class="ft01">&#160;(the&#160;disk)&#160;correctly&#160;in&#160;the&#160;commands&#160;above.</p>
+<p style="position:absolute;top:901px;left:177px;white-space:nowrap" class="ft03">systemd-boot&#160;fails&#160;to&#160;start&#160;the&#160;OS</p>
+<p style="position:absolute;top:935px;left:177px;white-space:nowrap" class="ft01">If&#160;the&#160;system&#160;boots&#160;into&#160;a&#160;</p>
+<p style="position:absolute;top:937px;left:316px;white-space:nowrap" class="ft02">BusyBox</p>
+<p style="position:absolute;top:935px;left:356px;white-space:nowrap" class="ft01">&#160;environment,&#160;try&#160;</p>
+<p style="position:absolute;top:937px;left:453px;white-space:nowrap" class="ft02">exit</p>
+<p style="position:absolute;top:935px;left:478px;white-space:nowrap" class="ft01">&#160;to&#160;show&#160;potential&#160;failure&#160;causes.</p>
+<p style="position:absolute;top:970px;left:177px;white-space:nowrap" class="ft01">A&#160;message&#160;like&#160;</p>
+<p style="position:absolute;top:972px;left:261px;white-space:nowrap" class="ft02">ALERT!&#160;UUID:xxx&#160;does&#160;not&#160;exist.&#160;Dropping&#160;to&#160;a&#160;shell!</p>
+<p style="position:absolute;top:970px;left:527px;white-space:nowrap" class="ft01">&#160;indicates&#160;an&#160;issue&#160;with&#160;the&#160;loader&#160;entry</p>
+<p style="position:absolute;top:990px;left:177px;white-space:nowrap" class="ft01">in&#160;</p>
+<p style="position:absolute;top:992px;left:195px;white-space:nowrap" class="ft02">systemd-boot</p>
+<p style="position:absolute;top:990px;left:261px;white-space:nowrap" class="ft01">.</p>
+<p style="position:absolute;top:1025px;left:177px;white-space:nowrap" class="ft01">Ensure&#160;that&#160;</p>
+<p style="position:absolute;top:1027px;left:244px;white-space:nowrap" class="ft02">/boot/efi/loader/entries/Pop_OS-current.conf</p>
+<p style="position:absolute;top:1025px;left:471px;white-space:nowrap" class="ft01">&#160;contains&#160;the&#160;correct&#160;UUID&#160;for&#160;the&#160;disk.&#160;For&#160;an</p>
+<p style="position:absolute;top:1045px;left:177px;white-space:nowrap" class="ft01">encrypted&#160;setup,&#160;the&#160;line&#160;</p>
+<p style="position:absolute;top:1047px;left:314px;white-space:nowrap" class="ft02">options&#160;root=UUID=xxx&#160;ro&#160;quiet&#160;loglevel=0&#160;systemd.show_status=false&#160;splash</p>
+<p style="position:absolute;top:1045px;left:691px;white-space:nowrap" class="ft01">&#160;should</p>
+<p style="position:absolute;top:1065px;left:177px;white-space:nowrap" class="ft01">match&#160;the&#160;UUID&#160;reported&#160;by&#160;</p>
+<p style="position:absolute;top:1068px;left:329px;white-space:nowrap" class="ft02">lsblk&#160;-f</p>
+<p style="position:absolute;top:1065px;left:374px;white-space:nowrap" class="ft01">&#160;for&#160;the&#160;</p>
+<p style="position:absolute;top:1068px;left:420px;white-space:nowrap" class="ft02">data-root</p>
+<p style="position:absolute;top:1065px;left:470px;white-space:nowrap" class="ft01">&#160;partition&#160;on&#160;a&#160;standard&#160;installation&#160;with&#160;LUKS.</p>
+<p style="position:absolute;top:1156px;left:99px;white-space:nowrap" class="ft05">Article&#160;was&#160;last&#160;edited&#160;at&#160;6/29/2021&#160;by&#160;@btkostner</p>
+<p style="position:absolute;top:1155px;left:767px;white-space:nowrap" class="ft06"><a href="https://github.com/system76/docs/edit/master/content/bootloader.md">Edit&#160;on&#160;GitHub</a></p>
+</div>
+</body>
+</html>

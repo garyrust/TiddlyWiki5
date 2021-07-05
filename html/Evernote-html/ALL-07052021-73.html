@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+<title>Page 73</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<style type="text/css">
+<!--
+	p {margin: 0; padding: 0;}	.ft00{font-size:10px;font-family:DejaVuSerif;color:#000000;}
+	.ft01{font-size:8px;font-family:DejaVuSansMono;color:#ff0000;}
+	.ft02{font-size:8px;font-family:DejaVuSansMono;color:#a52a2a;}
+	.ft03{font-size:8px;font-family:DejaVuSansMono;color:#000000;}
+	.ft04{font-size:10px;font-family:DejaVuSerif;color:#00008b;}
+	.ft05{font-size:8px;font-family:DejaVuSansMono;color:#0000ff;}
+	.ft06{font-size:10px;font-family:DejaVuSansMono;color:#000000;}
+	.ft07{font-size:10px;font-family:DejaVuSerif;color:#000000;}
+	.ft08{font-size:8px;font-family:DejaVuSansMono;color:#000000;}
+	.ft09{font-size:8px;font-family:DejaVuSansMono;color:#008000;}
+	.ft010{font-size:10px;font-family:DejaVuSerif;color:#0000ee;}
+	.ft011{font-size:8px;line-height:10px;font-family:DejaVuSansMono;color:#000000;}
+	.ft012{font-size:10px;line-height:12px;font-family:DejaVuSerif;color:#000000;}
+	.ft013{font-size:10px;line-height:11px;font-family:DejaVuSerif;color:#000000;}
+	.ft014{font-size:8px;line-height:10px;font-family:DejaVuSansMono;color:#000000;}
+-->
+</style>
+</head>
+<body bgcolor="#A0A0A0" vlink="blue" link="blue">
+<div id="page73-div" style="position:relative;width:892px;height:1263px;">
+<img width="892" height="1263" src="ALL-07052021073.png" alt="background image"/>
+<p style="position:absolute;top:54px;left:74px;white-space:nowrap" class="ft00">Now&#160;just&#160;have&#160;a&#160;little&#160;time&#160;to&#160;disfruit&#160;our&#160;new&#160;macro:</p>
+<p style="position:absolute;top:76px;left:59px;white-space:nowrap" class="ft01">elm:</p>
+<p style="position:absolute;top:76px;left:80px;white-space:nowrap" class="ft02">~&gt;</p>
+<p style="position:absolute;top:76px;left:91px;white-space:nowrap" class="ft03">&#160;openroot&#160;/dst/debchroot</p>
+<p style="position:absolute;top:87px;left:59px;white-space:nowrap" class="ft01">elm:</p>
+<p style="position:absolute;top:87px;left:80px;white-space:nowrap" class="ft02">~&gt;</p>
+<p style="position:absolute;top:87px;left:91px;white-space:nowrap" class="ft03">&#160;openroot&#160;-t&#160;/dst/debchroot&#160;--&#160;--aufs</p>
+<p style="position:absolute;top:126px;left:59px;white-space:nowrap" class="ft04"><b>xchroot&#160;and&#160;users:&#160;the&#160;easy&#160;way</b></p>
+<p style="position:absolute;top:150px;left:74px;white-space:nowrap" class="ft00">xchroot&#160;has&#160;a&#160;user&#160;wrapper&#160;called&#160;openroot:&#160;It&#160;can&#160;invoke&#160;xchroot&#160;via&#160;sudo&#160;as&#160;user.</p>
+<p style="position:absolute;top:172px;left:74px;white-space:nowrap" class="ft00">Now&#160;before&#160;we&#160;can&#160;use&#160;openroot&#160;we&#160;need&#160;to&#160;execute&#160;some&#160;administration&#160;commands&#160;as&#160;root&#160;to&#160;set&#160;up&#160;proper&#160;access&#160;rights&#160;for&#160;users.</p>
+<p style="position:absolute;top:198px;left:64px;white-space:nowrap" class="ft01">root:</p>
+<p style="position:absolute;top:198px;left:90px;white-space:nowrap" class="ft02">~&gt;</p>
+<p style="position:absolute;top:198px;left:101px;white-space:nowrap" class="ft03">&#160;xchroot&#160;--dirpfx&#160;/dst/&#160;addsudoers&#160;elm</p>
+<p style="position:absolute;top:209px;left:64px;white-space:nowrap" class="ft05">adding&#160;elm&#160;with&#160;directory&#160;praefix&#160;/dst/&#160;to&#160;/etc/sudoers&#160;...&#160;</p>
+<p style="position:absolute;top:230px;left:64px;white-space:nowrap" class="ft01">root:</p>
+<p style="position:absolute;top:230px;left:90px;white-space:nowrap" class="ft02">~&gt;</p>
+<p style="position:absolute;top:230px;left:101px;white-space:nowrap" class="ft03">&#160;xchroot&#160;--dir&#160;/dst/debchroot/&#160;addsudoers&#160;shell</p>
+<p style="position:absolute;top:241px;left:64px;white-space:nowrap" class="ft05">adding&#160;shell&#160;with&#160;directory&#160;/dst/debchroot/&#160;to&#160;/etc/sudoers&#160;...</p>
+<p style="position:absolute;top:262px;left:64px;white-space:nowrap" class="ft01">root:</p>
+<p style="position:absolute;top:262px;left:90px;white-space:nowrap" class="ft02">~&gt;</p>
+<p style="position:absolute;top:262px;left:101px;white-space:nowrap" class="ft03">&#160;xchroot&#160;listsudoers</p>
+<p style="position:absolute;top:273px;left:64px;white-space:nowrap" class="ft05">xchroot&#160;entries&#160;in&#160;/etc/sudoers:</p>
+<p style="position:absolute;top:284px;left:64px;white-space:nowrap" class="ft011">/usr/sbin/xchroot:&#160;elm&#160;/dst/*<br/>/usr/sbin/xchroot:&#160;elm&#160;[-]t&#160;/dst/*<br/>/usr/sbin/xchroot:&#160;elm&#160;cleanup&#160;/dst/*<br/>/usr/sbin/xchroot:&#160;elm&#160;[-]t&#160;cleanup&#160;/dst/*<br/>/usr/sbin/xchroot:&#160;shell&#160;/dst/debchroot/&#160;*<br/>/usr/sbin/xchroot:&#160;shell&#160;[-]t&#160;/dst/debchroot/&#160;*<br/>/usr/sbin/xchroot:&#160;shell&#160;cleanup&#160;/dst/debchroot/&#160;*<br/>/usr/sbin/xchroot:&#160;shell&#160;[-]t&#160;cleanup&#160;/dst/debchroot/&#160;*</p>
+<p style="position:absolute;top:384px;left:74px;white-space:nowrap" class="ft00">Now&#160;let&#160;us&#160;have&#160;a&#160;look&#160;at&#160;the&#160;preceding&#160;commands.&#160;The&#160;first&#160;</p>
+<p style="position:absolute;top:384px;left:396px;white-space:nowrap" class="ft06"><b>addsudoers</b></p>
+<p style="position:absolute;top:384px;left:457px;white-space:nowrap" class="ft00">&#160;allows&#160;the&#160;user&#160;</p>
+<p style="position:absolute;top:384px;left:543px;white-space:nowrap" class="ft00">elm&#160;to&#160;xchroot&#160;to&#160;any&#160;directory&#160;below&#160;/dst/.&#160;Note&#160;the&#160;trailing</p>
+<p style="position:absolute;top:396px;left:59px;white-space:nowrap" class="ft012">slash:&#160;It&#160;is&#160;necessary&#160;in&#160;order&#160;not&#160;to&#160;allow&#160;xchrooting&#160;to&#160;any&#160;directory&#160;name&#160;that&#160;starts&#160;with&#160;/dst.&#160;Then&#160;we&#160;allow&#160;the&#160;user&#160;shell&#160;to&#160;issue&#160;an&#160;openroot&#160;upon<br/>/dst/debchroot&#160;and&#160;only&#160;upon&#160;this&#160;directory.&#160;Finally&#160;we&#160;<b>list</b>&#160;all&#160;sudoer&#160;entries:&#160;addsudoers&#160;adds&#160;four&#160;sudoer&#160;entries&#160;for&#160;every&#160;access&#160;record:&#160;Allowing&#160;to<br/>invoke&#160;openroot&#160;with&#160;and&#160;without&#160;tail&#160;opts&#160;([-]t)&#160;and&#160;finally&#160;allowing&#160;to&#160;issue&#160;<b>cleanups</b>&#160;for&#160;whenever&#160;you&#160;have&#160;invoked&#160;openroot&#160;with&#160;</p>
+<p style="position:absolute;top:421px;left:756px;white-space:nowrap" class="ft06"><b>--noask</b></p>
+<p style="position:absolute;top:421px;left:798px;white-space:nowrap" class="ft00">,&#160;killed&#160;it&#160;or</p>
+<p style="position:absolute;top:433px;left:59px;white-space:nowrap" class="ft00">chosen&#160;&#160;to&#160;&#160;leave&#160;&#160;some&#160;&#160;programs&#160;&#160;running.&#160;&#160;Use&#160;</p>
+<p style="position:absolute;top:433px;left:307px;white-space:nowrap" class="ft06"><b>delsudoers</b></p>
+<p style="position:absolute;top:433px;left:368px;white-space:nowrap" class="ft00">&#160;&#160;to&#160;&#160;delete&#160;&#160;a&#160;&#160;given&#160;&#160;group&#160;&#160;of&#160;&#160;sudoer&#160;&#160;entries.&#160;&#160;You&#160;&#160;may&#160;&#160;furthermore&#160;&#160;remove&#160;&#160;the&#160;&#160;lines&#160;&#160;with&#160;&#160;[-]t</p>
+<p style="position:absolute;top:445px;left:59px;white-space:nowrap" class="ft00">manually&#160;to&#160;disable&#160;tail&#160;option&#160;parsing&#160;for&#160;the&#160;given&#160;user.</p>
+<p style="position:absolute;top:467px;left:74px;white-space:nowrap" class="ft00">Now&#160;what&#160;is&#160;tail&#160;option&#160;parsing?&#160;Tail&#160;option&#160;parsing&#160;allows&#160;you&#160;to&#160;put&#160;options&#160;at&#160;the&#160;end&#160;rather&#160;than&#160;letting&#160;the&#160;options&#160;precede&#160;your&#160;chroot&#160;directory</p>
+<p style="position:absolute;top:479px;left:59px;white-space:nowrap" class="ft013">and&#160;the&#160;command&#160;to&#160;execute&#160;in&#160;the&#160;new&#160;chroot.&#160;Tail&#160;options&#160;work&#160;like&#160;the&#160;following:&#160;Put&#160;the&#160;[-]t&#160;option&#160;in&#160;front&#160;and&#160;all&#160;other&#160;options&#160;at&#160;the&#160;end&#160;after&#160;an&#160;&#34;--&#34;.<br/>This&#160;has&#160;become&#160;necessary&#160;because&#160;of&#160;the&#160;wildcarding&#160;feature&#160;of&#160;sudoers:&#160;A&#160;wildcard&#160;can&#160;stand&#160;for&#160;any&#160;combination&#160;of&#160;letters.&#160;That&#160;is&#160;why&#160;we&#160;may&#160;only<br/>wildcard&#160;after&#160;specifying&#160;user&#160;and&#160;root&#160;filesystem.&#160;Have&#160;a&#160;look&#160;at&#160;the&#160;following&#160;examples:</p>
+<p style="position:absolute;top:525px;left:59px;white-space:nowrap" class="ft01">elm:</p>
+<p style="position:absolute;top:525px;left:80px;white-space:nowrap" class="ft02">~&gt;</p>
+<p style="position:absolute;top:525px;left:91px;white-space:nowrap" class="ft03">&#160;openroot&#160;/dst/debchroot/</p>
+<p style="position:absolute;top:536px;left:59px;white-space:nowrap" class="ft01">elm:</p>
+<p style="position:absolute;top:536px;left:80px;white-space:nowrap" class="ft02">~&gt;</p>
+<p style="position:absolute;top:536px;left:91px;white-space:nowrap" class="ft03">&#160;openroot&#160;-t&#160;/dst/debchroot/&#160;--&#160;--aufs</p>
+<p style="position:absolute;top:557px;left:74px;white-space:nowrap" class="ft00">The&#160;first&#160;one&#160;does&#160;not&#160;need&#160;any&#160;option,&#160;the&#160;second&#160;one&#160;needs&#160;-t&#160;in&#160;front&#160;because&#160;we&#160;have&#160;--&#160;--aufs&#160;at&#160;the&#160;back.&#160;Note&#160;that&#160;you&#160;may&#160;add&#160;any&#160;number&#160;of</p>
+<p style="position:absolute;top:569px;left:59px;white-space:nowrap" class="ft00">options&#160;after&#160;the&#160;--.&#160;Now&#160;to&#160;make&#160;this&#160;work&#160;you&#160;need&#160;to&#160;add&#160;the&#160;openroot&#160;macro&#160;to&#160;your&#160;~/.bashrc&#160;first:</p>
+<p style="position:absolute;top:590px;left:59px;white-space:nowrap" class="ft01">elm:</p>
+<p style="position:absolute;top:590px;left:80px;white-space:nowrap" class="ft02">~&gt;</p>
+<p style="position:absolute;top:590px;left:91px;white-space:nowrap" class="ft03">&#160;xchroot&#160;bashrclines&#160;&gt;&gt;~/.bashrc</p>
+<p style="position:absolute;top:601px;left:59px;white-space:nowrap" class="ft01">elm:</p>
+<p style="position:absolute;top:601px;left:80px;white-space:nowrap" class="ft02">~&gt;</p>
+<p style="position:absolute;top:601px;left:91px;white-space:nowrap" class="ft03">&#160;source&#160;~/.bashrc</p>
+<p style="position:absolute;top:622px;left:74px;white-space:nowrap" class="ft00">The&#160;first&#160;line&#160;installs&#160;the&#160;openroot&#160;macro&#160;in&#160;your&#160;basrc&#160;(do&#160;a&#160;</p>
+<p style="position:absolute;top:622px;left:394px;white-space:nowrap" class="ft06"><b>grep&#160;openroot&#160;~/.bashrc</b></p>
+<p style="position:absolute;top:622px;left:534px;white-space:nowrap" class="ft00">&#160;to&#160;see&#160;whether&#160;it&#160;is&#160;already&#160;installed),&#160;the&#160;second&#160;line&#160;fetches</p>
+<p style="position:absolute;top:634px;left:59px;white-space:nowrap" class="ft00">the&#160;changes&#160;of&#160;your&#160;bashrc&#160;for&#160;the&#160;current&#160;session.</p>
+<p style="position:absolute;top:656px;left:74px;white-space:nowrap" class="ft00">Now&#160;to&#160;keep&#160;things&#160;clear&#160;and&#160;to&#160;see&#160;which&#160;chroot&#160;environment&#160;you&#160;are&#160;currently&#160;working&#160;in&#160;a&#160;goodie&#160;for&#160;colorful&#160;user&#160;prompts&#160;designed&#160;especially&#160;for</p>
+<p style="position:absolute;top:668px;left:59px;white-space:nowrap" class="ft00">use&#160;with&#160;xchroot&#160;(put&#160;it&#160;in&#160;your&#160;.bashrc);</p>
+<p style="position:absolute;top:684px;left:59px;white-space:nowrap" class="ft014"><b>export&#160;PS1=&#34;\[\e[0;32m\]$XCHROOT_NAME${XCHROOT_NAME:+_}\[\e[0;31m\]\u:\[\e[0;33m\]\w&gt;&#160;\[\e[0m\]&#34;<br/></b>&#160;&#160;</p>
+<p style="position:absolute;top:710px;left:64px;white-space:nowrap" class="ft01">elm:</p>
+<p style="position:absolute;top:710px;left:85px;white-space:nowrap" class="ft02">~&gt;</p>
+<p style="position:absolute;top:710px;left:95px;white-space:nowrap" class="ft03">&#160;openroot&#160;/dst/debchroot/</p>
+<p style="position:absolute;top:724px;left:64px;white-space:nowrap" class="ft02">xchroot&#160;-&#160;visit&#160;us&#160;on&#160;www.elstel.org/xchroot</p>
+<p style="position:absolute;top:736px;left:64px;white-space:nowrap" class="ft011">&#160;-----------------------------------------------------------<br/>chroot&#160;/dst/debchroot&#160;/tmp/xchroot/startup-15842<br/>Debian&#160;GNU/Linux&#160;7&#160;\n&#160;\l</p>
+<p style="position:absolute;top:768px;left:64px;white-space:nowrap" class="ft09">debchroot_</p>
+<p style="position:absolute;top:768px;left:117px;white-space:nowrap" class="ft01">elm:</p>
+<p style="position:absolute;top:768px;left:138px;white-space:nowrap" class="ft02">~&gt;</p>
+<p style="position:absolute;top:768px;left:148px;white-space:nowrap" class="ft03">&#160;goldendict&#160;&amp;&#160;</p>
+<p style="position:absolute;top:778px;left:64px;white-space:nowrap" class="ft03">...</p>
+<p style="position:absolute;top:811px;left:59px;white-space:nowrap" class="ft04"><b>establishing&#160;users&#160;for&#160;a&#160;chroot&#160;environment</b></p>
+<p style="position:absolute;top:835px;left:74px;white-space:nowrap" class="ft00">Now&#160;it&#160;may&#160;be&#160;the&#160;case&#160;that&#160;you&#160;have&#160;already&#160;set&#160;up&#160;openroot&#160;correctly&#160;for&#160;users&#160;but&#160;that&#160;your&#160;target&#160;chroot&#160;environment&#160;does&#160;not&#160;have&#160;the&#160;same&#160;users</p>
+<p style="position:absolute;top:847px;left:59px;white-space:nowrap" class="ft00">from&#160;which&#160;you&#160;want&#160;to&#160;issue&#160;an&#160;openroot.&#160;Simply&#160;do&#160;the&#160;following&#160;for&#160;the&#160;user&#160;elm:</p>
+<p style="position:absolute;top:869px;left:59px;white-space:nowrap" class="ft01">root:</p>
+<p style="position:absolute;top:869px;left:86px;white-space:nowrap" class="ft02">~&gt;</p>
+<p style="position:absolute;top:869px;left:96px;white-space:nowrap" class="ft03">&#160;grep&#160;^elm:&#160;/etc/passwd&#160;&gt;&gt;/dst/debchroot/etc/passwd</p>
+<p style="position:absolute;top:880px;left:59px;white-space:nowrap" class="ft01">root:</p>
+<p style="position:absolute;top:880px;left:86px;white-space:nowrap" class="ft02">~&gt;</p>
+<p style="position:absolute;top:880px;left:96px;white-space:nowrap" class="ft03">&#160;grep&#160;^elm:&#160;/etc/shadow&#160;&gt;&gt;/dst/debchroot/etc/shadow</p>
+<p style="position:absolute;top:890px;left:59px;white-space:nowrap" class="ft01">root:</p>
+<p style="position:absolute;top:890px;left:86px;white-space:nowrap" class="ft02">~&gt;</p>
+<p style="position:absolute;top:890px;left:96px;white-space:nowrap" class="ft03">&#160;grep&#160;^elm&#160;/etc/passwd</p>
+<p style="position:absolute;top:901px;left:59px;white-space:nowrap" class="ft03">elm:x:1000:100:Elmar&#160;Stellnberger:/home/elm:/bin/bash</p>
+<p style="position:absolute;top:912px;left:59px;white-space:nowrap" class="ft01">root:</p>
+<p style="position:absolute;top:912px;left:86px;white-space:nowrap" class="ft02">~&gt;</p>
+<p style="position:absolute;top:912px;left:96px;white-space:nowrap" class="ft03">&#160;grep&#160;100&#160;/etc/group</p>
+<p style="position:absolute;top:922px;left:59px;white-space:nowrap" class="ft03">users:x:100:</p>
+<p style="position:absolute;top:933px;left:59px;white-space:nowrap" class="ft01">root:</p>
+<p style="position:absolute;top:933px;left:86px;white-space:nowrap" class="ft02">~&gt;</p>
+<p style="position:absolute;top:933px;left:96px;white-space:nowrap" class="ft03">&#160;grep&#160;100&#160;/dst/debchroot/etc/group</p>
+<p style="position:absolute;top:944px;left:59px;white-space:nowrap" class="ft03">users:x:100:</p>
+<p style="position:absolute;top:965px;left:74px;white-space:nowrap" class="ft00">If&#160;desired&#160;you&#160;may&#160;add&#160;additional&#160;groups&#160;with&#160;</p>
+<p style="position:absolute;top:965px;left:312px;white-space:nowrap" class="ft06"><b>usermod</b></p>
+<p style="position:absolute;top:965px;left:355px;white-space:nowrap" class="ft00">&#160;when&#160;xchrooting&#160;to&#160;the&#160;new&#160;root.</p>
+<p style="position:absolute;top:987px;left:59px;white-space:nowrap" class="ft01">root:</p>
+<p style="position:absolute;top:987px;left:86px;white-space:nowrap" class="ft02">~&gt;</p>
+<p style="position:absolute;top:987px;left:96px;white-space:nowrap" class="ft03">&#160;usermod&#160;--groups&#160;video,vboxusers&#160;elm</p>
+<p style="position:absolute;top:997px;left:59px;white-space:nowrap" class="ft01">root:</p>
+<p style="position:absolute;top:997px;left:86px;white-space:nowrap" class="ft02">~&gt;</p>
+<p style="position:absolute;top:997px;left:96px;white-space:nowrap" class="ft03">&#160;grep&#160;elm&#160;/etc/group</p>
+<p style="position:absolute;top:1008px;left:59px;white-space:nowrap" class="ft011">video:x:33:gdm,elm<br/>vboxusers:x:477:elm</p>
+<p style="position:absolute;top:1047px;left:59px;white-space:nowrap" class="ft04"><b>Xorg/X11&#160;access&#160;as&#160;root</b></p>
+<p style="position:absolute;top:1071px;left:74px;white-space:nowrap" class="ft00">Now&#160;&#160;it&#160;&#160;may&#160;&#160;be&#160;&#160;the&#160;&#160;case&#160;&#160;that&#160;&#160;you&#160;&#160;have&#160;&#160;Xorg&#160;&#160;access&#160;&#160;by&#160;&#160;issuing&#160;&#160;an&#160;&#160;openroot&#160;&#160;but&#160;&#160;not&#160;&#160;after&#160;&#160;a&#160;&#160;su&#160;&#160;or&#160;&#160;sudo&#160;&#160;su&#160;&#160;whenever&#160;&#160;you&#160;&#160;wanna&#160;&#160;become&#160;&#160;root&#160;&#160;for&#160;&#160;some</p>
+<p style="position:absolute;top:1083px;left:59px;white-space:nowrap" class="ft00">purpose.&#160;Your&#160;distro&#160;should&#160;normally&#160;automatically&#160;complete&#160;this&#160;task&#160;by&#160;an&#160;adequate&#160;bash&#160;startup.&#160;However&#160;you&#160;can&#160;also&#160;establish&#160;this&#160;yourself;&#160;</p>
+<p style="position:absolute;top:1083px;left:824px;white-space:nowrap" class="ft00">a&#160;topic</p>
+<p style="position:absolute;top:1094px;left:59px;white-space:nowrap" class="ft013">which&#160;is&#160;not&#160;directly&#160;related&#160;to&#160;xchroot/openroot&#160;but&#160;which&#160;may&#160;be&#160;very&#160;useful&#160;in&#160;the&#160;context&#160;of&#160;openroot.&#160;The&#160;bash&#160;environment&#160;variable&#160;XAUTHORITY<br/>points&#160;to&#160;a&#160;file&#160;which&#160;is&#160;by&#160;default&#160;called&#160;~/.Xauthority&#160;and&#160;which&#160;contains&#160;a&#160;cookie&#160;the&#160;client&#160;needs&#160;to&#160;obtain&#160;access&#160;from&#160;the&#160;Xorg/X11&#160;server.&#160;To&#160;move&#160;the<br/>cookie&#160;&#160;from&#160;&#160;/home/usr/.Xauthority&#160;&#160;to&#160;&#160;/root/.Xauthority&#160;&#160;do&#160;&#160;an&#160;</p>
+<p style="position:absolute;top:1119px;left:380px;white-space:nowrap" class="ft06"><b>xauth&#160;&#160;extract&#160;</b></p>
+<p style="position:absolute;top:1118px;left:467px;white-space:nowrap" class="ft06"><b>myfile</b></p>
+<p style="position:absolute;top:1119px;left:503px;white-space:nowrap" class="ft00">&#160;&#160;as&#160;&#160;user&#160;&#160;and&#160;&#160;an&#160;</p>
+<p style="position:absolute;top:1119px;left:591px;white-space:nowrap" class="ft06"><b>xauth&#160;&#160;merge&#160;</b></p>
+<p style="position:absolute;top:1118px;left:666px;white-space:nowrap" class="ft06"><b>myfile</b></p>
+<p style="position:absolute;top:1119px;left:703px;white-space:nowrap" class="ft00">&#160;&#160;as&#160;&#160;root.&#160;</p>
+<p style="position:absolute;top:1118px;left:752px;white-space:nowrap" class="ft00">Myfile&#160;&#160;may&#160;&#160;be&#160;&#160;'-'&#160;&#160;for</p>
+<p style="position:absolute;top:1131px;left:59px;white-space:nowrap" class="ft00">stdin/stdout.</p>
+<p style="position:absolute;top:1153px;left:74px;white-space:nowrap" class="ft00">Now&#160;let&#160;the&#160;following&#160;code&#160;in&#160;my&#160;.bashrc&#160;slowly&#160;melt&#160;on&#160;your&#160;tongue:</p>
+<p style="position:absolute;top:1175px;left:59px;white-space:nowrap" class="ft03">if&#160;logname&#160;&amp;&gt;/dev/null&#160;&amp;&amp;&#160;[&#160;&#34;$(logname)&#34;&#160;!=&#160;&#34;$(id&#160;--name&#160;-u&#160;)&#34;&#160;]&#160;&amp;&amp;&#160;&#160;[&#160;-z&#160;&#34;$XCHROOT_MYROOT&#34;&#160;];&#160;then</p>
+<p style="position:absolute;top:114px;left:674px;white-space:nowrap" class="ft010">up</p>
+<p style="position:absolute;top:114px;left:687px;white-space:nowrap" class="ft00">&#160;</p>
+<p style="position:absolute;top:114px;left:690px;white-space:nowrap" class="ft010">down</p>
+<p style="position:absolute;top:114px;left:718px;white-space:nowrap" class="ft00">&#160;</p>
+<p style="position:absolute;top:114px;left:721px;white-space:nowrap" class="ft010">Directory</p>
+<p style="position:absolute;top:114px;left:769px;white-space:nowrap" class="ft00">Menu</p>
+<p style="position:absolute;top:799px;left:674px;white-space:nowrap" class="ft010">up</p>
+<p style="position:absolute;top:799px;left:687px;white-space:nowrap" class="ft00">&#160;</p>
+<p style="position:absolute;top:799px;left:690px;white-space:nowrap" class="ft010">down</p>
+<p style="position:absolute;top:799px;left:718px;white-space:nowrap" class="ft00">&#160;</p>
+<p style="position:absolute;top:799px;left:721px;white-space:nowrap" class="ft010">Directory</p>
+<p style="position:absolute;top:799px;left:769px;white-space:nowrap" class="ft00">Menu</p>
+<p style="position:absolute;top:1036px;left:674px;white-space:nowrap" class="ft010">up</p>
+<p style="position:absolute;top:1036px;left:687px;white-space:nowrap" class="ft00">&#160;</p>
+<p style="position:absolute;top:1036px;left:690px;white-space:nowrap" class="ft010">down</p>
+<p style="position:absolute;top:1036px;left:718px;white-space:nowrap" class="ft00">&#160;</p>
+<p style="position:absolute;top:1036px;left:721px;white-space:nowrap" class="ft010">Directory</p>
+<p style="position:absolute;top:1036px;left:769px;white-space:nowrap" class="ft00">Menu</p>
+</div>
+</body>
+</html>

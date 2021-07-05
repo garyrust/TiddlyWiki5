@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+<title>Page 5</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<style type="text/css">
+<!--
+	p {margin: 0; padding: 0;}	.ft00{font-size:9px;font-family:DejaVuSans;color:#313131;}
+	.ft01{font-size:10px;font-family:DejaVuSansMono;color:#3a3a3a;}
+	.ft02{font-size:9px;font-family:DejaVuSans;color:#313131;}
+	.ft03{font-size:13px;font-family:DejaVuSans;color:#313131;}
+	.ft04{font-size:13px;line-height:17px;font-family:DejaVuSans;color:#313131;}
+-->
+</style>
+</head>
+<body bgcolor="#A0A0A0" vlink="blue" link="blue">
+<div id="page5-div" style="position:relative;width:892px;height:1263px;">
+<img width="892" height="1263" src="ALL-07052021005.png" alt="background image"/>
+<p style="position:absolute;top:74px;left:91px;white-space:nowrap" class="ft00">Ex:</p>
+<p style="position:absolute;top:119px;left:105px;white-space:nowrap" class="ft01">#&#160;scp&#160;pkglist.txt&#160;root@192.168.43.150:/root/</p>
+<p style="position:absolute;top:163px;left:91px;white-space:nowrap" class="ft00">Finally,&#160;install&#160;the&#160;packages&#160;from&#160;the&#160;pkglist.txt&#160;ﬁle&#160;using&#160;the&#160;following&#160;command&#160;as&#160;root&#160;user:</p>
+<p style="position:absolute;top:208px;left:105px;white-space:nowrap" class="ft01">#&#160;yum&#160;install&#160;$(cat&#160;/root/pkglist.txt|xargs)</p>
+<p style="position:absolute;top:252px;left:91px;white-space:nowrap" class="ft00">Replace&#160;the&#160;path&#160;of&#160;<b>/root/pkglist.txt</b>&#160;ﬁle&#160;with&#160;your&#160;own.</p>
+<p style="position:absolute;top:280px;left:91px;white-space:nowrap" class="ft00">Done!&#160;The&#160;package&#160;manager&#160;will&#160;install&#160;all&#160;packages&#160;listed&#160;in&#160;the&#160;pkglist.txt&#160;ﬁle&#160;on&#160;your&#160;CentOS&#160;box.</p>
+<p style="position:absolute;top:623px;left:91px;white-space:nowrap" class="ft00">You<a href="https://ostechnix.com/wp-content/uploads/2017/05/root@server_001.png">&#160;can&#160;use&#160;this&#160;pkglist.txt&#160;ﬁle&#160;to&#160;all&#160;systems&#160;on&#160;your&#160;network.&#160;Please&#160;note&#160;that&#160;the&#160;package&#160;manager</a></p>
+<p style="position:absolute;top:640px;left:91px;white-space:nowrap" class="ft00">will<a href="https://ostechnix.com/wp-content/uploads/2017/05/root@server_001.png">&#160;only&#160;install&#160;the&#160;packages&#160;from&#160;the&#160;default&#160;oﬃcial&#160;repositories.&#160;If&#160;you&#160;have&#160;enabled&#160;any&#160;other&#160;extra</a></p>
+<p style="position:absolute;top:657px;left:91px;white-space:nowrap" class="ft00">repositories&#160;on&#160;your&#160;old&#160;system,&#160;you&#160;need&#160;to&#160;add&#160;them&#160;ﬁrst&#160;before&#160;installing&#160;the&#160;software.</p>
+<p style="position:absolute;top:682px;left:91px;white-space:nowrap" class="ft04"><b>Create&#160;A&#160;List&#160;Of&#160;Installed&#160;Packages&#160;in&#160;Ubuntu&#160;and&#160;install&#160;them<br/>later</b></p>
+<p style="position:absolute;top:730px;left:91px;white-space:nowrap" class="ft00">Create&#160;list&#160;of&#160;all&#160;installed&#160;packages&#160;and&#160;save&#160;the&#160;in&#160;a&#160;ﬁle&#160;called&#160;pkglist.txt&#160;in&#160;DEB&#160;based&#160;systems,&#160;run:</p>
+<p style="position:absolute;top:774px;left:105px;white-space:nowrap" class="ft01">$&#160;dpkg-query&#160;-f&#160;'${binary:Package}\n'&#160;-W&#160;&gt;&#160;pkglist.txt</p>
+<p style="position:absolute;top:819px;left:91px;white-space:nowrap" class="ft00">Or,</p>
+<p style="position:absolute;top:863px;left:105px;white-space:nowrap" class="ft01">$&#160;dpkg&#160;--get-selections&#160;&gt;&#160;pkglist.txt</p>
+<p style="position:absolute;top:908px;left:91px;white-space:nowrap" class="ft00">Now,&#160;we&#160;have&#160;created&#160;a&#160;backup&#160;list&#160;of&#160;installed&#160;softwares.&#160;Keep&#160;this&#160;ﬁle&#160;in&#160;a&#160;safe&#160;location.&#160;Format&#160;and</p>
+<p style="position:absolute;top:925px;left:91px;white-space:nowrap" class="ft00">re-install&#160;your&#160;Ubuntu&#160;machine.</p>
+<p style="position:absolute;top:953px;left:91px;white-space:nowrap" class="ft00">After&#160;reinstalling&#160;Ubuntu,&#160;run&#160;the&#160;following&#160;commands&#160;one&#160;by&#160;one&#160;to&#160;re-install&#160;all&#160;software&#160;from&#160;the</p>
+<p style="position:absolute;top:970px;left:91px;white-space:nowrap" class="ft00">backup&#160;list.</p>
+<p style="position:absolute;top:1014px;left:105px;white-space:nowrap" class="ft01">$&#160;sudo&#160;apt-get&#160;install&#160;dselect</p>
+<p style="position:absolute;top:1072px;left:105px;white-space:nowrap" class="ft01">$&#160;sudo&#160;dpkg&#160;--set-selections&#160;&lt;&#160;pkglist.txt</p>
+<p style="position:absolute;top:1131px;left:105px;white-space:nowrap" class="ft01">$&#160;sudo&#160;apt-get&#160;dselect-upgrade</p>
+</div>
+</body>
+</html>

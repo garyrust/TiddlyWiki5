@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+<title>Page 81</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<style type="text/css">
+<!--
+	p {margin: 0; padding: 0;}	.ft00{font-size:9px;font-family:DejaVuSans;color:#222222;}
+	.ft01{font-size:9px;font-family:DejaVuSans;color:#222222;}
+	.ft02{font-size:13px;font-family:DejaVuSans;color:#111111;}
+	.ft03{font-size:7px;font-family:BitstreamVeraSansMono;color:#008200;}
+	.ft04{font-size:7px;font-family:BitstreamVeraSansMono;color:#000000;}
+	.ft05{font-size:7px;font-family:BitstreamVeraSansMono;color:#ff1493;}
+	.ft06{font-size:9px;line-height:16px;font-family:DejaVuSans;color:#222222;}
+	.ft07{font-size:9px;line-height:15px;font-family:DejaVuSans;color:#222222;}
+-->
+</style>
+</head>
+<body bgcolor="#A0A0A0" vlink="blue" link="blue">
+<div id="page81-div" style="position:relative;width:892px;height:1263px;">
+<img width="892" height="1263" src="ALL-07052021081.png" alt="background image"/>
+<p style="position:absolute;top:74px;left:123px;white-space:nowrap" class="ft00">To&#160;see&#160;the&#160;libraries&#160;required&#160;for&#160;this&#160;script,&#160;run&#160;the&#160;following&#160;command:</p>
+<p style="position:absolute;top:246px;left:123px;white-space:nowrap" class="ft00">Now,&#160;copy&#160;these&#160;files&#160;to&#160;the&#160;</p>
+<p style="position:absolute;top:245px;left:258px;white-space:nowrap" class="ft00">lib&#160;or&#160;lib64&#160;of&#160;/chroot&#160;as&#160;required.</p>
+<p style="position:absolute;top:279px;left:123px;white-space:nowrap" class="ft00">Once&#160;you&#160;have&#160;copied&#160;all&#160;the&#160;necessary&#160;files,&#160;it​s&#160;time&#160;to&#160;enter&#160;the&#160;</p>
+<p style="position:absolute;top:278px;left:437px;white-space:nowrap" class="ft00">chroot.</p>
+<p style="position:absolute;top:328px;left:123px;white-space:nowrap" class="ft07">You&#160;will&#160;be&#160;prompted&#160;with&#160;a&#160;shell&#160;running&#160;inside&#160;your&#160;virtual&#160;environment.&#160;Here,&#160;you&#160;don​t<br/>have&#160;much&#160;to&#160;run&#160;besides&#160;ls,&#160;but&#160;it&#160;has&#160;changed&#160;the&#160;root&#160;file&#160;system&#160;for&#160;this&#160;process&#160;to<br/>/chroot.</p>
+<p style="position:absolute;top:394px;left:123px;white-space:nowrap" class="ft00">To&#160;get&#160;a&#160;more&#160;full-featured&#160;environment&#160;you&#160;can&#160;use&#160;the&#160;</p>
+<p style="position:absolute;top:393px;left:395px;white-space:nowrap" class="ft00">debootstrap&#160;utility&#160;to&#160;bootstrap&#160;a</p>
+<p style="position:absolute;top:410px;left:123px;white-space:nowrap" class="ft00">basic&#160;Debian&#160;system:</p>
+<p style="position:absolute;top:460px;left:123px;white-space:nowrap" class="ft00">It&#160;will&#160;download&#160;a&#160;minimal&#160;system&#160;to&#160;run&#160;under&#160;</p>
+<p style="position:absolute;top:459px;left:348px;white-space:nowrap" class="ft00">chroot.&#160;You&#160;can&#160;use&#160;this&#160;to&#160;even&#160;test&#160;32-bit</p>
+<p style="position:absolute;top:476px;left:123px;white-space:nowrap" class="ft06">applications&#160;on&#160;64-bit&#160;systems&#160;or&#160;for&#160;testing&#160;your&#160;program&#160;before&#160;installation.&#160;To&#160;get<br/>process&#160;management,&#160;mount&#160;</p>
+<p style="position:absolute;top:492px;left:265px;white-space:nowrap" class="ft00">proc&#160;to&#160;the&#160;chroot,&#160;and&#160;to&#160;make&#160;the&#160;contents&#160;of&#160;home&#160;​lost&#160;on</p>
+<p style="position:absolute;top:509px;left:123px;white-space:nowrap" class="ft00">exit,&#160;mount</p>
+<p style="position:absolute;top:508px;left:177px;white-space:nowrap" class="ft00">&#160;tmpfs&#160;at&#160;/home//:</p>
+<p style="position:absolute;top:567px;left:123px;white-space:nowrap" class="ft00">To&#160;get&#160;Internet&#160;connection&#160;inside,&#160;use&#160;the&#160;following&#160;command:</p>
+<p style="position:absolute;top:616px;left:123px;white-space:nowrap" class="ft00">After&#160;that,&#160;you&#160;are&#160;ready&#160;to&#160;enter&#160;your&#160;environment.</p>
+<p style="position:absolute;top:666px;left:123px;white-space:nowrap" class="ft00">Here,&#160;you&#160;get&#160;a&#160;whole&#160;basic&#160;operating&#160;system&#160;inside&#160;your&#160;</p>
+<p style="position:absolute;top:666px;left:398px;white-space:nowrap" class="ft00">chroot.&#160;But&#160;it&#160;differs&#160;from&#160;your</p>
+<p style="position:absolute;top:682px;left:123px;white-space:nowrap" class="ft06">main&#160;system&#160;by&#160;mount&#160;point,&#160;because&#160;it&#160;only&#160;uses&#160;the&#160;mount&#160;property&#160;as&#160;the&#160;isolator.&#160;It&#160;has<br/>the&#160;same&#160;hostname,&#160;IP&#160;address&#160;and&#160;process&#160;running&#160;as&#160;in&#160;the&#160;main&#160;system.&#160;That’s&#160;why&#160;it&#160;is<br/>much&#160;less&#160;secure&#160;(this&#160;is&#160;even&#160;mentioned&#160;in&#160;the&#160;man&#160;page&#160;of&#160;chroot),&#160;and&#160;any&#160;running<br/>process&#160;can&#160;still&#160;harm&#160;your&#160;computer&#160;by&#160;killing&#160;your&#160;tasks&#160;or&#160;affecting&#160;network&#160;based<br/>services.</p>
+<p style="position:absolute;top:780px;left:123px;white-space:nowrap" class="ft01"><b>Note:</b></p>
+<p style="position:absolute;top:780px;left:152px;white-space:nowrap" class="ft00">&#160;To&#160;run&#160;graphical&#160;applications&#160;inside&#160;chroot,&#160;open&#160;x&#160;server&#160;by&#160;running&#160;the&#160;following</p>
+<p style="position:absolute;top:796px;left:123px;white-space:nowrap" class="ft00">command&#160;on&#160;the&#160;main&#160;system:</p>
+<p style="position:absolute;top:863px;left:123px;white-space:nowrap" class="ft00">On&#160;</p>
+<p style="position:absolute;top:862px;left:140px;white-space:nowrap" class="ft00">systemd&#160;based&#160;systems,&#160;chrooting&#160;is&#160;pretty&#160;straightforward.&#160;It​s&#160;needed&#160;to&#160;define&#160;the</p>
+<p style="position:absolute;top:879px;left:123px;white-space:nowrap" class="ft00">root&#160;directory&#160;on&#160;the&#160;processes&#160;unit&#160;file&#160;only.</p>
+<p style="position:absolute;top:978px;left:123px;white-space:nowrap" class="ft00">Here</p>
+<p style="position:absolute;top:977px;left:146px;white-space:nowrap" class="ft00">&#160;RootDirectory&#160;shows&#160;where&#160;the&#160;root&#160;directory&#160;is&#160;for&#160;the&#160;foobar&#160;process.</p>
+<p style="position:absolute;top:1011px;left:123px;white-space:nowrap" class="ft01"><b>Note:</b></p>
+<p style="position:absolute;top:1010px;left:152px;white-space:nowrap" class="ft00">&#160;The&#160;program&#160;script&#160;path&#160;has&#160;to&#160;be&#160;inside&#160;chroot,&#160;which&#160;makes&#160;the&#160;full&#160;path&#160;of&#160;that</p>
+<p style="position:absolute;top:1027px;left:123px;white-space:nowrap" class="ft00">process&#160;script&#160;as&#160;/chroot/bin/my_program.</p>
+<p style="position:absolute;top:1060px;left:123px;white-space:nowrap" class="ft06">Before&#160;the&#160;daemon&#160;is&#160;started,&#160;a&#160;shell&#160;script&#160;pre.sh&#160;is&#160;invoked,&#160;the&#160;purpose&#160;of&#160;which&#160;is&#160;to&#160;set<br/>up&#160;the&#160;chroot&#160;environment&#160;as&#160;necessary,&#160;i.e.,&#160;mount</p>
+<p style="position:absolute;top:1076px;left:372px;white-space:nowrap" class="ft00">&#160;/proc&#160;and&#160;similar&#160;file&#160;systems&#160;into&#160;it,</p>
+<p style="position:absolute;top:1092px;left:123px;white-space:nowrap" class="ft06">depending&#160;on&#160;what&#160;the&#160;service&#160;might&#160;need.&#160;You&#160;can&#160;start&#160;your&#160;service&#160;by&#160;using&#160;the<br/>following&#160;command:</p>
+<p style="position:absolute;top:1166px;left:123px;white-space:nowrap" class="ft02">Ip-netns</p>
+<p style="position:absolute;top:55px;left:126px;white-space:nowrap" class="ft03">#cp&#160;-v&#160;/bin/{bash,ls}&#160;/chroot/bin</p>
+<p style="position:absolute;top:104px;left:126px;white-space:nowrap" class="ft03">#ldd&#160;/bin/bash</p>
+<p style="position:absolute;top:112px;left:126px;white-space:nowrap" class="ft04">linux-vdso.so.1&#160;(0x00007fff70deb000)</p>
+<p style="position:absolute;top:121px;left:126px;white-space:nowrap" class="ft04">libncurses.so.5&#160;=&gt;&#160;/lib/x86_64-linux-gnu/libncurses.so.5&#160;(0x00007f25e33a9000)</p>
+<p style="position:absolute;top:129px;left:126px;white-space:nowrap" class="ft04">libtinfo.so.5&#160;=&gt;&#160;/lib/x86_64-linux-gnu/libtinfo.so.5&#160;(0x00007f25e317f000)</p>
+<p style="position:absolute;top:137px;left:126px;white-space:nowrap" class="ft04">libdl.so.2&#160;=&gt;&#160;/lib/x86_64-linux-gnu/libdl.so.2&#160;(0x00007f25e2f7a000)</p>
+<p style="position:absolute;top:145px;left:126px;white-space:nowrap" class="ft04">libc.so.6&#160;=&gt;&#160;/lib/x86_64-linux-gnu/libc.so.6&#160;(0x00007f25e2bd6000)</p>
+<p style="position:absolute;top:153px;left:126px;white-space:nowrap" class="ft04">/lib64/ld-linux-x86-64.so.2&#160;(0x00007f25e360d000)</p>
+<p style="position:absolute;top:161px;left:126px;white-space:nowrap" class="ft04">&#160;</p>
+<p style="position:absolute;top:170px;left:126px;white-space:nowrap" class="ft03">#ldd&#160;/bin/ls</p>
+<p style="position:absolute;top:178px;left:126px;white-space:nowrap" class="ft04">linux-vdso.so.1&#160;(0x00007fff4f8e6000)</p>
+<p style="position:absolute;top:186px;left:126px;white-space:nowrap" class="ft04">libselinux.so.1&#160;=&gt;&#160;/lib/x86_64-linux-gnu/libselinux.so.1&#160;(0x00007f9f00aec000)</p>
+<p style="position:absolute;top:194px;left:126px;white-space:nowrap" class="ft04">libc.so.6&#160;=&gt;&#160;/lib/x86_64-linux-gnu/libc.so.6&#160;(0x00007f9f00748000)</p>
+<p style="position:absolute;top:202px;left:126px;white-space:nowrap" class="ft04">libpcre.so.3&#160;=&gt;&#160;/lib/x86_64-linux-gnu/libpcre.so.3&#160;(0x00007f9f004d7000)</p>
+<p style="position:absolute;top:210px;left:126px;white-space:nowrap" class="ft04">libdl.so.2&#160;=&gt;&#160;/lib/x86_64-linux-gnu/libdl.so.2&#160;(0x00007f9f002d3000)</p>
+<p style="position:absolute;top:219px;left:126px;white-space:nowrap" class="ft04">/lib64/ld-linux-x86-64.so.2&#160;(0x00007f9f00d4f000)</p>
+<p style="position:absolute;top:227px;left:126px;white-space:nowrap" class="ft04">libpthread.so.0&#160;=&gt;&#160;/lib/x86_64-linux-gnu/libpthread.so.0&#160;(0x00007f9f000b6000)</p>
+<p style="position:absolute;top:309px;left:126px;white-space:nowrap" class="ft03">#sudo&#160;chroot&#160;/chroot/&#160;/bin/bash</p>
+<p style="position:absolute;top:441px;left:126px;white-space:nowrap" class="ft03">#debootstrap&#160;--arch=amd64&#160;unstable&#160;my_deb/</p>
+<p style="position:absolute;top:539px;left:126px;white-space:nowrap" class="ft03">#sudo&#160;mount&#160;-o&#160;bind&#160;/proc&#160;my_deb/proc</p>
+<p style="position:absolute;top:548px;left:126px;white-space:nowrap" class="ft03">#mount&#160;-t&#160;tmpfs&#160;-o&#160;size=100m&#160;tmpfs&#160;/home/user</p>
+<p style="position:absolute;top:597px;left:126px;white-space:nowrap" class="ft03">#sudo&#160;cp&#160;/etc/resolv.conf&#160;/var/chroot/etc/resolv.conf</p>
+<p style="position:absolute;top:647px;left:126px;white-space:nowrap" class="ft03">#chroot&#160;my_deb/&#160;/bin/bash</p>
+<p style="position:absolute;top:827px;left:126px;white-space:nowrap" class="ft03">#xhost&#160;+</p>
+<p style="position:absolute;top:836px;left:126px;white-space:nowrap" class="ft04">and&#160;on&#160;chroot&#160;system</p>
+<p style="position:absolute;top:844px;left:126px;white-space:nowrap" class="ft03">#export&#160;DISPLAY=:0.0</p>
+<p style="position:absolute;top:910px;left:126px;white-space:nowrap" class="ft04">[Unit]</p>
+<p style="position:absolute;top:918px;left:126px;white-space:nowrap" class="ft04">Description=my_chroot_Service</p>
+<p style="position:absolute;top:926px;left:126px;white-space:nowrap" class="ft04">[Service]</p>
+<p style="position:absolute;top:934px;left:126px;white-space:nowrap" class="ft04">RootDirectory=/chroot/foobar</p>
+<p style="position:absolute;top:943px;left:126px;white-space:nowrap" class="ft04">ExecStartPre=/usr/local/bin/pre.sh</p>
+<p style="position:absolute;top:951px;left:126px;white-space:nowrap" class="ft04">ExecStart=/bin/my_program</p>
+<p style="position:absolute;top:959px;left:126px;white-space:nowrap" class="ft04">RootDirectoryStartOnly=</p>
+<p style="position:absolute;top:959px;left:230px;white-space:nowrap" class="ft05">yes</p>
+<p style="position:absolute;top:1139px;left:126px;white-space:nowrap" class="ft03">#systemctl&#160;start&#160;my_chroot_Service.service</p>
+</div>
+</body>
+</html>

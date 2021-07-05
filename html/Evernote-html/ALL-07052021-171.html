@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+<title>Page 171</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<style type="text/css">
+<!--
+	p {margin: 0; padding: 0;}	.ft00{font-size:10px;font-family:DejaVuSansMono;color:#000000;}
+	.ft01{font-size:10px;font-family:DejaVuSans;color:#000000;}
+	.ft02{font-size:10px;font-family:DejaVuSansMono;color:#a21313;}
+	.ft03{font-size:10px;font-family:DejaVuSans;color:#a21313;}
+	.ft04{font-size:10px;line-height:15px;font-family:DejaVuSans;color:#000000;}
+-->
+</style>
+</head>
+<body bgcolor="#A0A0A0" vlink="blue" link="blue">
+<div id="page171-div" style="position:relative;width:892px;height:1263px;">
+<img width="892" height="1263" src="ALL-07052021171.png" alt="background image"/>
+<p style="position:absolute;top:55px;left:273px;white-space:nowrap" class="ft00">eatWhile(match:&#160;string|regexp|function(char:&#160;string)&#160;→</p>
+<p style="position:absolute;top:70px;left:292px;white-space:nowrap" class="ft00">boolean)&#160;→&#160;boolean</p>
+<p style="position:absolute;top:86px;left:287px;white-space:nowrap" class="ft01">Repeatedly&#160;calls&#160;</p>
+<p style="position:absolute;top:86px;left:374px;white-space:nowrap" class="ft00">eat</p>
+<p style="position:absolute;top:86px;left:393px;white-space:nowrap" class="ft01">&#160;with&#160;the&#160;given&#160;argument,&#160;until&#160;it&#160;fails.&#160;Returns</p>
+<p style="position:absolute;top:101px;left:287px;white-space:nowrap" class="ft01">true&#160;if&#160;any&#160;characters&#160;were&#160;eaten.</p>
+<p style="position:absolute;top:126px;left:273px;white-space:nowrap" class="ft00">eatSpace()&#160;→&#160;boolean</p>
+<p style="position:absolute;top:141px;left:287px;white-space:nowrap" class="ft01">Shortcut&#160;for&#160;</p>
+<p style="position:absolute;top:141px;left:351px;white-space:nowrap" class="ft00">eatWhile</p>
+<p style="position:absolute;top:141px;left:401px;white-space:nowrap" class="ft01">&#160;when&#160;matching&#160;white-space.</p>
+<p style="position:absolute;top:166px;left:273px;white-space:nowrap" class="ft00">skipToEnd()</p>
+<p style="position:absolute;top:181px;left:287px;white-space:nowrap" class="ft01">Moves&#160;the&#160;position&#160;to&#160;the&#160;end&#160;of&#160;the&#160;line.</p>
+<p style="position:absolute;top:206px;left:273px;white-space:nowrap" class="ft00">skipTo(str:&#160;string)&#160;→&#160;boolean</p>
+<p style="position:absolute;top:221px;left:287px;white-space:nowrap" class="ft04">Skips&#160;to&#160;the&#160;start&#160;of&#160;the&#160;next&#160;occurrence&#160;of&#160;the&#160;given&#160;string,&#160;if&#160;found&#160;on<br/>the&#160;current&#160;line&#160;(doesn't&#160;advance&#160;the&#160;stream&#160;if&#160;the&#160;string&#160;does&#160;not<br/>occur&#160;on&#160;the&#160;line).&#160;Returns&#160;true&#160;if&#160;the&#160;string&#160;was&#160;found.</p>
+<p style="position:absolute;top:277px;left:273px;white-space:nowrap" class="ft00">match(pattern:&#160;string,&#160;?consume:&#160;boolean,&#160;?caseFold:&#160;boolean)</p>
+<p style="position:absolute;top:292px;left:292px;white-space:nowrap" class="ft00">→&#160;boolean</p>
+<p style="position:absolute;top:307px;left:273px;white-space:nowrap" class="ft00">match(pattern:&#160;regexp,&#160;?consume:&#160;boolean)&#160;→&#160;array&lt;string&gt;</p>
+<p style="position:absolute;top:322px;left:287px;white-space:nowrap" class="ft01">Act&#160;like&#160;a&#160;multi-character&#160;</p>
+<p style="position:absolute;top:322px;left:418px;white-space:nowrap" class="ft00">eat</p>
+<p style="position:absolute;top:322px;left:438px;white-space:nowrap" class="ft01">—if&#160;</p>
+<p style="position:absolute;top:322px;left:459px;white-space:nowrap" class="ft00">consume</p>
+<p style="position:absolute;top:322px;left:502px;white-space:nowrap" class="ft01">&#160;is&#160;true&#160;or&#160;not&#160;given—or&#160;a</p>
+<p style="position:absolute;top:337px;left:287px;white-space:nowrap" class="ft01">look-ahead&#160;that&#160;doesn't&#160;update&#160;the&#160;stream&#160;position—if&#160;it&#160;is&#160;false.</p>
+<p style="position:absolute;top:352px;left:288px;white-space:nowrap" class="ft00">pattern</p>
+<p style="position:absolute;top:352px;left:332px;white-space:nowrap" class="ft01">&#160;can&#160;be&#160;either&#160;a&#160;string&#160;or&#160;a&#160;regular&#160;expression&#160;starting&#160;with&#160;</p>
+<p style="position:absolute;top:352px;left:634px;white-space:nowrap" class="ft00">^</p>
+<p style="position:absolute;top:352px;left:641px;white-space:nowrap" class="ft01">.</p>
+<p style="position:absolute;top:367px;left:287px;white-space:nowrap" class="ft01">When&#160;it&#160;is&#160;a&#160;string,&#160;</p>
+<p style="position:absolute;top:367px;left:386px;white-space:nowrap" class="ft00">caseFold</p>
+<p style="position:absolute;top:367px;left:435px;white-space:nowrap" class="ft01">&#160;can&#160;be&#160;set&#160;to&#160;true&#160;to&#160;make&#160;the&#160;match</p>
+<p style="position:absolute;top:382px;left:287px;white-space:nowrap" class="ft04">case-insensitive.&#160;When&#160;successfully&#160;matching&#160;a&#160;regular&#160;expression,&#160;the<br/>returned&#160;value&#160;will&#160;be&#160;the&#160;array&#160;returned&#160;by&#160;</p>
+<p style="position:absolute;top:397px;left:513px;white-space:nowrap" class="ft00">match</p>
+<p style="position:absolute;top:397px;left:545px;white-space:nowrap" class="ft01">,&#160;in&#160;case&#160;you&#160;need</p>
+<p style="position:absolute;top:413px;left:287px;white-space:nowrap" class="ft01">to&#160;extract&#160;matched&#160;groups.</p>
+<p style="position:absolute;top:438px;left:273px;white-space:nowrap" class="ft00">backUp(n:&#160;integer)</p>
+<p style="position:absolute;top:453px;left:287px;white-space:nowrap" class="ft01">Backs&#160;up&#160;the&#160;stream&#160;</p>
+<p style="position:absolute;top:453px;left:395px;white-space:nowrap" class="ft00">n</p>
+<p style="position:absolute;top:453px;left:402px;white-space:nowrap" class="ft01">&#160;characters.&#160;Backing&#160;it&#160;up&#160;further&#160;than&#160;the&#160;start</p>
+<p style="position:absolute;top:468px;left:287px;white-space:nowrap" class="ft01">of&#160;the&#160;current&#160;token&#160;will&#160;cause&#160;things&#160;to&#160;break,&#160;so&#160;be&#160;careful.</p>
+<p style="position:absolute;top:493px;left:273px;white-space:nowrap" class="ft00">column()&#160;→&#160;integer</p>
+<p style="position:absolute;top:508px;left:287px;white-space:nowrap" class="ft04">Returns&#160;the&#160;column&#160;(taking&#160;into&#160;account&#160;tabs)&#160;at&#160;which&#160;the&#160;current<br/>token&#160;starts.</p>
+<p style="position:absolute;top:548px;left:273px;white-space:nowrap" class="ft00">indentation()&#160;→&#160;integer</p>
+<p style="position:absolute;top:563px;left:287px;white-space:nowrap" class="ft04">Tells&#160;you&#160;how&#160;far&#160;the&#160;current&#160;line&#160;has&#160;been&#160;indented,&#160;in&#160;spaces.<br/>Corrects&#160;for&#160;tab&#160;characters.</p>
+<p style="position:absolute;top:604px;left:273px;white-space:nowrap" class="ft00">current()&#160;→&#160;string</p>
+<p style="position:absolute;top:619px;left:287px;white-space:nowrap" class="ft04">Get&#160;the&#160;string&#160;between&#160;the&#160;start&#160;of&#160;the&#160;current&#160;token&#160;and&#160;the&#160;current<br/>stream&#160;position.</p>
+<p style="position:absolute;top:659px;left:273px;white-space:nowrap" class="ft00">lookAhead(n:&#160;number)&#160;→&#160;?string</p>
+<p style="position:absolute;top:674px;left:287px;white-space:nowrap" class="ft01">Get&#160;the&#160;line&#160;</p>
+<p style="position:absolute;top:674px;left:350px;white-space:nowrap" class="ft00">n</p>
+<p style="position:absolute;top:674px;left:357px;white-space:nowrap" class="ft01">&#160;(&gt;0)&#160;lines&#160;after&#160;the&#160;current&#160;one,&#160;in&#160;order&#160;to&#160;scan&#160;ahead</p>
+<p style="position:absolute;top:689px;left:287px;white-space:nowrap" class="ft04">across&#160;line&#160;boundaries.&#160;Note&#160;that&#160;you&#160;want&#160;to&#160;do&#160;this&#160;carefully,&#160;since<br/>looking&#160;far&#160;ahead&#160;will&#160;make&#160;mode&#160;state&#160;caching&#160;much&#160;less&#160;effective.</p>
+<p style="position:absolute;top:729px;left:273px;white-space:nowrap" class="ft00">baseToken()&#160;→&#160;?{type:&#160;?string,&#160;size:&#160;number}</p>
+<p style="position:absolute;top:745px;left:287px;white-space:nowrap" class="ft01">Modes&#160;added&#160;through&#160;</p>
+<p style="position:absolute;top:745px;left:401px;white-space:nowrap" class="ft02">addOverlay</p>
+<p style="position:absolute;top:745px;left:463px;white-space:nowrap" class="ft01">&#160;(and&#160;</p>
+<p style="position:absolute;top:744px;left:492px;white-space:nowrap" class="ft01">only&#160;&#160;such&#160;modes)&#160;can&#160;use&#160;this</p>
+<p style="position:absolute;top:760px;left:287px;white-space:nowrap" class="ft04">method&#160;to&#160;inspect&#160;the&#160;current&#160;token&#160;produced&#160;by&#160;the&#160;underlying<br/>mode.</p>
+<p style="position:absolute;top:800px;left:272px;white-space:nowrap" class="ft04">By&#160;default,&#160;blank&#160;lines&#160;are&#160;simply&#160;skipped&#160;when&#160;tokenizing&#160;a&#160;document.<br/>For&#160;languages&#160;that&#160;have&#160;significant&#160;blank&#160;lines,&#160;you&#160;can&#160;define&#160;a</p>
+<p style="position:absolute;top:830px;left:273px;white-space:nowrap" class="ft00">blankLine(state)</p>
+<p style="position:absolute;top:830px;left:371px;white-space:nowrap" class="ft01">&#160;method&#160;on&#160;your&#160;mode&#160;that&#160;will&#160;get&#160;called&#160;whenever&#160;a</p>
+<p style="position:absolute;top:845px;left:272px;white-space:nowrap" class="ft01">blank&#160;line&#160;is&#160;passed&#160;over,&#160;so&#160;that&#160;it&#160;can&#160;update&#160;the&#160;parser&#160;state.</p>
+<p style="position:absolute;top:870px;left:272px;white-space:nowrap" class="ft04">Because&#160;state&#160;object&#160;are&#160;mutated,&#160;and&#160;CodeMirror&#160;needs&#160;to&#160;keep&#160;valid<br/>versions&#160;of&#160;a&#160;state&#160;around&#160;so&#160;that&#160;it&#160;can&#160;restart&#160;a&#160;parse&#160;at&#160;any&#160;line,&#160;copies<br/>must&#160;be&#160;made&#160;of&#160;state&#160;objects.&#160;The&#160;default&#160;algorithm&#160;used&#160;is&#160;that&#160;a&#160;new<br/>state&#160;object&#160;is&#160;created,&#160;which&#160;gets&#160;all&#160;the&#160;properties&#160;of&#160;the&#160;old&#160;object.&#160;Any<br/>properties&#160;which&#160;hold&#160;arrays&#160;get&#160;a&#160;copy&#160;of&#160;these&#160;arrays&#160;(since&#160;arrays&#160;tend<br/>to&#160;be&#160;used&#160;as&#160;mutable&#160;stacks).&#160;When&#160;this&#160;is&#160;not&#160;correct,&#160;for&#160;example<br/>because&#160;a&#160;mode&#160;mutates&#160;non-array&#160;properties&#160;of&#160;its&#160;state&#160;object,&#160;a&#160;mode<br/>object&#160;should&#160;define&#160;a&#160;</p>
+<p style="position:absolute;top:976px;left:388px;white-space:nowrap" class="ft00">copyState</p>
+<p style="position:absolute;top:976px;left:443px;white-space:nowrap" class="ft01">&#160;method,&#160;which&#160;is&#160;given&#160;a&#160;state&#160;and</p>
+<p style="position:absolute;top:991px;left:272px;white-space:nowrap" class="ft01">should&#160;return&#160;a&#160;safe&#160;copy&#160;of&#160;that&#160;state.</p>
+<p style="position:absolute;top:1016px;left:272px;white-space:nowrap" class="ft01">If&#160;you&#160;want&#160;your&#160;mode&#160;to&#160;provide&#160;smart&#160;indentation&#160;(through&#160;the</p>
+<p style="position:absolute;top:1031px;left:273px;white-space:nowrap" class="ft02">indentLine</p>
+<p style="position:absolute;top:1031px;left:335px;white-space:nowrap" class="ft01">&#160;method&#160;and&#160;the&#160;</p>
+<p style="position:absolute;top:1031px;left:423px;white-space:nowrap" class="ft00">indentAuto</p>
+<p style="position:absolute;top:1031px;left:485px;white-space:nowrap" class="ft01">&#160;and&#160;</p>
+<p style="position:absolute;top:1031px;left:511px;white-space:nowrap" class="ft00">newlineAndIndent</p>
+<p style="position:absolute;top:1046px;left:272px;white-space:nowrap" class="ft01">commands,&#160;to&#160;which&#160;keys&#160;can&#160;be&#160;</p>
+<p style="position:absolute;top:1046px;left:443px;white-space:nowrap" class="ft03">bound</p>
+<p style="position:absolute;top:1046px;left:474px;white-space:nowrap" class="ft01">),&#160;you&#160;must&#160;define&#160;an</p>
+<p style="position:absolute;top:1062px;left:273px;white-space:nowrap" class="ft00">indent(state,&#160;textAfter)</p>
+<p style="position:absolute;top:1062px;left:419px;white-space:nowrap" class="ft01">&#160;method&#160;on&#160;your&#160;mode&#160;object.</p>
+<p style="position:absolute;top:1087px;left:272px;white-space:nowrap" class="ft04">The&#160;indentation&#160;method&#160;should&#160;inspect&#160;the&#160;given&#160;state&#160;object,&#160;and<br/>optionally&#160;the&#160;</p>
+<p style="position:absolute;top:1102px;left:345px;white-space:nowrap" class="ft00">textAfter</p>
+<p style="position:absolute;top:1102px;left:401px;white-space:nowrap" class="ft01">&#160;string,&#160;which&#160;contains&#160;the&#160;text&#160;on&#160;the&#160;line&#160;that</p>
+<p style="position:absolute;top:1117px;left:272px;white-space:nowrap" class="ft04">is&#160;being&#160;indented,&#160;and&#160;return&#160;an&#160;integer,&#160;the&#160;amount&#160;of&#160;spaces&#160;to&#160;indent.<br/>It&#160;should&#160;usually&#160;take&#160;the&#160;</p>
+<p style="position:absolute;top:1132px;left:403px;white-space:nowrap" class="ft02">indentUnit</p>
+<p style="position:absolute;top:1132px;left:465px;white-space:nowrap" class="ft01">&#160;option&#160;into&#160;account.&#160;An&#160;indentation</p>
+<p style="position:absolute;top:1147px;left:272px;white-space:nowrap" class="ft01">method&#160;may&#160;return&#160;</p>
+<p style="position:absolute;top:1147px;left:374px;white-space:nowrap" class="ft00">CodeMirror.Pass</p>
+<p style="position:absolute;top:1147px;left:466px;white-space:nowrap" class="ft01">&#160;to&#160;indicate&#160;that&#160;it&#160;could&#160;not&#160;come</p>
+<p style="position:absolute;top:1162px;left:272px;white-space:nowrap" class="ft01">up&#160;with&#160;a&#160;precise&#160;indentation.</p>
+</div>
+</body>
+</html>
