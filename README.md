@@ -1,7 +1,7 @@
 # garyrust.github.io
 <br>
 <html>
- <iframe align="center" width="800" height="1300" src="https://docs.google.com/document/d/1IgjXNewXkB-VQBOiTt28c-kQA2Ea1GeLfWl-HYZKwAc/edit?usp=sharing" frameborder=yes scrolling="yes" name="myIframe" id="myIframe"> </iframe> 
+ <a href="https://docs.google.com/document/d/1IgjXNewXkB-VQBOiTt28c-kQA2Ea1GeLfWl-HYZKwAc/edit?usp=sharing" target="_blank">See "Tiddlywiki5 Notes on Google Docs"</a>
 <a href="https://kookma.github.io/TW5-GitHub-Saver/" target="_blank">How to save Tiddlywiki 5.1.20 directly to GitHub</a><br>
 From <a href="https://tiddlywiki.com" target="_blank">https://tiddlywiki.com</a>
 download an empty edition <br>
