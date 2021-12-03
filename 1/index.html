@@ -10497,10 +10497,10 @@ Error message and password prompt
 <div created="20210623213540956" modified="20210623213603244" title="$:/state/plugin-info--31582714-$:/plugins/tiddlywiki/evernote--498528686">
 <pre>readme</pre>
 </div>
-<div created="20200415225849375" modified="20211130164305707" title="$:/state/showeditpreview">
-<pre>yes</pre>
+<div created="20200415225849375" modified="20211203145700988" title="$:/state/showeditpreview">
+<pre>no</pre>
 </div>
-<div created="20200416000753699" modified="20211130164320947" title="$:/state/sidebar">
+<div created="20200416000753699" modified="20211203145756444" title="$:/state/sidebar">
 <pre>yes</pre>
 </div>
 <div created="20200415062333650" modified="20210627053128644" title="$:/state/tab-1749438307">
@@ -10533,7 +10533,7 @@ Error message and password prompt
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20211130164505566" list="Notes" modified="20211130164505566" title="$:/StoryList">
+<div created="20211203145844909" list="Notes" modified="20211203145844909" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200415065902661" modified="20200713182907004" title="$:/temp/advancedsearch">
@@ -12277,7 +12277,7 @@ alt=&quot;Ting&quot;
 src=&quot;https://www.richmondsavers.com/wp-content/uploads/2017/06/ting-social-logo.png&quot;&gt;&lt;/a&gt;
 &lt;/html&gt;&lt;br&gt;</pre>
 </div>
-<div created="20210809222901891" modified="20211130164323669" tags="Webclips" title="Notes">
+<div created="20210809222901891" modified="20211203145802014" tags="Webclips" title="Notes">
 <pre>!!! [[TOC|Table Of Contents]] - [[Coinbase|https://www.coinbase.com/]] - [[TW5 Notes|https://drive.google.com/file/d/11YciIwhYUvBQW6ivsKR9zsvYg2gz8cs2/view?usp=sharing]] - [[Unix commands|http://n6xre.duckdns.org:8000/wikipedia_en_all_maxi_2021-03/A/List_of_Unix_commands]] - [[2|https://en.wikipedia.org/wiki/List_of_Unix_commands]] - [[Introduction]]
 ''&lt;a href=&quot;../3/#Command%20execution%20over%20SSH&quot; target=&quot;_blank&quot;&gt;Command
 execution over SSH&lt;/a&gt; -  
@@ -12370,7 +12370,8 @@ Terminal=false&lt;/div&gt;&lt;/left&gt;''
 &lt;iframe width=100% height=&quot;500&quot; src=&quot;https://blog.separateconcerns.com/2020-04-03-2fa-pass-oathtool.html&quot; frameborder=&quot;0&quot; allow=&quot;autoplay; encrypted-media&quot; allowfullscreen&gt;&lt;/iframe&gt; &lt;br&gt;
 
 ''[[Resizing KVM qcow2 images|https://maunium.net/blog/resizing-qcow2-images/]]'' &lt;br&gt;
-qemu-img dd -f qcow2 -O raw bs=4M if=disk.qcow2 of=/dev/sdb &lt;br&gt; 
+qemu-img dd -f qcow2 -O raw bs=4M if=disk.qcow2 of=/dev/sdb &lt;br&gt;
+qemu-img dd -f raw -O qcow2 bs=4M if=/dev/sdb of=disk.qcow2 &lt;br&gt;
 sudo cryptsetup resize /dev/mapper/opened-volume &lt;br&gt;
 &lt;iframe width=100% height=&quot;700&quot; src=&quot;https://maunium.net/blog/resizing-qcow2-images/&quot; frameborder=&quot;0&quot; allow=&quot;autoplay; encrypted-media&quot; allowfullscreen&gt;&lt;/iframe&gt; &lt;br&gt;
 
