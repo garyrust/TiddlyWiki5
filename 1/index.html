@@ -495,6 +495,8 @@ Error message and password prompt
 
 <li>Docker and Virtualization</li>
 
+<li>Draft of 'New Tiddler'</li>
+
 <li>Easy Dough Recipe (for Bread, Rolls, Pizza, &amp; More!)</li>
 
 <li>Easy Vegan Meals Playlist</li>
@@ -10569,7 +10571,7 @@ Error message and password prompt
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20230822114226321" list="Notes" modified="20230822114226321" title="$:/StoryList">
+<div created="20230822114226321" list="[[Draft of 'New Tiddler']] Notes" modified="20230822114226321" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200415065902661" modified="20200713182907004" title="$:/temp/advancedsearch">
@@ -11794,6 +11796,99 @@ Women change their name like men change their socks.  &lt;br&gt;
 ''[[Docker and Virtualization|https://www.youtube.com/playlist?list=PLZXNpqQDHIJqV5H7FGTYuoNokHiev2PPg]] Playlist - [[Docker-crypto-wallets|https://github.com/Hoodchain/docker-crypto-wallets]] - [[Paper Solana Wallet]] ''&lt;br&gt;
 &lt;iframe width=&quot;800&quot; height=&quot;450&quot; src=&quot;https://www.youtube.com/embed/videoseries?list=PLZXNpqQDHIJqV5H7FGTYuoNokHiev2PPg&quot; frameborder=&quot;0&quot; allow=&quot;autoplay; encrypted-media&quot; allowfullscreen&gt;&lt;/iframe&gt;&lt;br&gt;</pre>
 </div>
+<div created="20230822143931545" draft.of="New Tiddler" draft.title="Asustor" modified="20230822144228248" tags="Computer Help Network" title="Draft of 'New Tiddler'">
+<pre>[[Do more with 2.5GbE and AS5202T|https://www.asustor.com/en/product?p_id=61]] - [[How to install a Alternative OS on Asustor NAS’s|https://www.reddit.com/r/asustor/comments/pj23sf/quick_guide_on_how_to_install_a_alternative_os_on/]]&lt;br&gt;
+&lt;iframe src=&quot;https://www.asustor.com/en/product?p_id=61&quot; width=&quot;100%&quot; height=&quot;800&quot; allow=&quot;autoplay&quot;&gt;&lt;/iframe&gt;&lt;br&gt;
+''Quick guide on how to install a Alternative OS on Asustor NAS’s.
+Guide''&lt;br&gt;
+Quick Guide to replace ADM for a alternative OS.
+
+(Disclaimer: I take no liability for damages to hardware, software, or data. Attempt this at your own risk! No support will be offered if you have issues.)
+
+Requirements:
+Intel Based Asustor NAS (Arm cpu will not work)
+
+A PC to create a USB boot device.
+
+8-16gb of ram recommended, or 2gb of ram with ssd swap partition.
+
+Additional packages may be required for services (depends on OS that is installed).
+
+NAS with HDMI out.
+
+USB keyboard &amp; mouse
+
+=====
+
+Caution: Do not format or install to internal EMMC chip on NAS (size roughly 8gb), method of reinstalling ADM if you mess up this drive is unknown. Asustor does NOT support alternative OS installations. This may void your warranty if you erase the internal EMMC drive, however if done correctly by not touching that drive it should be revertible to the official NAS OS.
+
+You cannot dual boot between ADM and a alternative OS.
+
+Recommended you use a OS based for NAS Like Open Media Vault or use a Linux Server like Ubuntu Desktop or Server with Webmin for web interface.
+
+Known Issues:
+
+Control of Fan may not be possible, fan will spin at low speed but adjusting fan during high temperatures might not be possible. Suggestion adjust thermal limit in bios to something reasonable to allow the CPU to thermal throttle avoid 90*C+ temperatures on cpu.
+
+Adjusting LED brightness or Info might not be possible.
+
+Raid availability may depend on OS.
+
+I have not experienced any further driver issues besides fan / led panel however depending on the OS you may experience some.
+
+=====
+
+Steps:
+
+Download a OS you wish to install: Linux Desktop or Server, Windows, FreeNAS, OpenMediaVault, etc.
+
+-Download/install a USB boot loader, examples could be Rufus, Linux Live, Unetbootin
+
+-Create a usb boot device using the application and the downloaded version of your OS.
+
+-Make sure HDMI is plugged in and set to input on monitor.
+
+-Turn off NAS and plug in USB Boot Device
+
+-Turn on NAS press esc button during bio post screen.
+
+-In bios set boot priority order to prefer SATA drives first and EMMC drive last. Save Settings.
+
+-In Bios Boot Manager select USB Boot Device
+
+-Launch into OS installer.
+
+[Because all OS installers are different I will omit the specifics, check YouTube videos if you need a walk through]
+
+-When selecting where to install the OS do NOT let the OS installer decide for itself make sure your installing the OS to a drive that is NOT the internal EMMC drive.
+
+-Drives that were used in the NAS as storage may need to be reformatted. (Do NOT format internal EMMC drive)
+
+-Finalize install &amp; reboot (remove USB boot disk)
+
+[Make sure you boot into the drive you installed your alternative OS on; if you have issues check boot priority order in bios again.]
+
+=====
+
+How to revert to official NAS ADM OS:
+
+Erase or replace SATA bay drives used in the NAS, set Bios boot priority order to prefer the EMMC internal drive first. Save &amp; Reboot.
+
+Personal note:
+
+I’ve been running Ubuntu Desktop on a AS5202T for a couple weeks now and find the performance, and ease of use well running server / desktop applications a much better experience. Setting up services like Samba, Webmin, or Docker on Ubuntu requires knowing how to use Terminal (or SSH*), but is by far much easier to use then SSH on ADM due to package availability. If you want a bit more performance I suggest not installing the desktop versions of Linux if you are familiar running a headless server.
+&lt;br&gt;
+
+[[Using Remote Sync (Rsync) to backup your data|https://www.asustor.com/online/College_topic?topic=259]] - [[Low-latency continuous rsync|https://www.danplanet.com/blog/2012/05/09/low-latency-continuous-rsync/]]&lt;br&gt;
+&lt;iframe src=&quot;https://www.asustor.com/online/College_topic?topic=259&quot; width=&quot;100%&quot; height=&quot;800&quot; allow=&quot;autoplay&quot;&gt;&lt;/iframe&gt;&lt;br&gt;
+
+[[How to Exclude Files and Directories with Rsync|https://linuxize.com/post/how-to-exclude-files-and-directories-with-rsync/]]&lt;br&gt;
+&lt;iframe src=&quot;https://linuxize.com/post/how-to-exclude-files-and-directories-with-rsync/&quot; width=&quot;100%&quot; height=&quot;800&quot; allow=&quot;autoplay&quot;&gt;&lt;/iframe&gt;&lt;br&gt;
+
+[[Using an ASUSTOR NAS with Docker|https://www.asustor.com/solution/what_is_docker]] &lt;br&gt;
+&lt;iframe src=&quot;https://www.asustor.com/solution/what_is_docker&quot; width=&quot;100%&quot; height=&quot;800&quot; allow=&quot;autoplay&quot;&gt;&lt;/iframe&gt;&lt;br&gt;
+</pre>
+</div>
 <div created="20200903175428500" modified="20200914231115738" tags="TableOfContents Food Youtube" title="Easy Dough Recipe (for Bread, Rolls, Pizza, &amp; More!)">
 <pre>[[Easy Dough Recipe (for Bread, Rolls, Pizza, &amp; More!)|https://www.theprairiehomestead.com/2020/03/easy-dough-recipe.html]]&lt;br&gt;
 &lt;iframe width=&quot;800&quot; height=&quot;500&quot; src=&quot;https://www.theprairiehomestead.com/2020/03/easy-dough-recipe.html&quot; frameborder=&quot;0&quot; allow=&quot;autoplay; encrypted-media&quot; allowfullscreen&gt;&lt;/iframe&gt;&lt;br&gt;
@@ -12346,7 +12441,7 @@ alt=&quot;Ting&quot;
 src=&quot;https://www.richmondsavers.com/wp-content/uploads/2017/06/ting-social-logo.png&quot;&gt;&lt;/a&gt;
 &lt;/html&gt;&lt;br&gt;</pre>
 </div>
-<div created="20210809222901891" modified="20230822143749589" tags="Webclips" title="Notes">
+<div created="20210809222901891" modified="20230822144236172" tags="Webclips" title="Notes">
 <pre>&lt;iframe width=&quot;800&quot; height=&quot;700&quot; src=&quot;https://www.clockfaceonline.co.uk/clocks/learning-clock/&quot; frameborder=&quot;0&quot; allow=&quot;autoplay; encrypted-media&quot; allowfullscreen&gt;&lt;/iframe&gt;&lt;br&gt;
 ''[[N6XRE DokuWiki|http://wp-n6xre.duckdns.org/dokuwiki/doku.php]] on [[Linode|https://www.linode.com/]] - [[N6XRE Tiddlywiki|https://garyrust.github.io/TiddlyWiki5/1/#Notes]] - [[Petal Search|https://www.petalsearch.com/]] - [[thefreecountry|https://www.thefreecountry.com]] - [[Dewey Decimal classes|https://www.info.com/serp?q=List+of+Dewey+Decimal+classes]] - [[OCLC Classify|http://classify.oclc.org/classify2/]] - [[Elitemini B550|https://store.minisforum.com/products/b550?variant=42589825958133]] $729.00 - [[NAS Playlist|https://tinyurl.com/3ewx6yu7]] - [[Garuda Linux|https://garudalinux.org]] - [[Pro Git book|https://git-scm.com/book/en/v2]] - [[RocketGit|https://rocketgit.com/op/features]] - [[Git server on NAS|http://thenerdydeveloper.com/2018/04/08/how-to-setup-your-own-git-server-on-nas/]] - [[ESP32-S2 Ad blocker|https://youtu.be/LSqKnAg5mcE]]
 ''&lt;br&gt;
@@ -12456,97 +12551,6 @@ Psychoactive Chemical Bomb
 [[Online Will Making Programs|https://tinyurl.com/285vbvwt]]&lt;br&gt;
 ''My new themesong''&lt;br&gt;
 ''Music - [[Brainphreak - The Fever|https://youtu.be/p4noQWE-iAY]]''&lt;br&gt;
-
-[[Do more with 2.5GbE and AS5202T|https://www.asustor.com/en/product?p_id=61]] - [[How to install a Alternative OS on Asustor NAS’s|https://www.reddit.com/r/asustor/comments/pj23sf/quick_guide_on_how_to_install_a_alternative_os_on/]]&lt;br&gt;
-&lt;iframe src=&quot;https://www.asustor.com/en/product?p_id=61&quot; width=&quot;100%&quot; height=&quot;800&quot; allow=&quot;autoplay&quot;&gt;&lt;/iframe&gt;&lt;br&gt;
-''Quick guide on how to install a Alternative OS on Asustor NAS’s.
-Guide''&lt;br&gt;
-Quick Guide to replace ADM for a alternative OS.
-
-(Disclaimer: I take no liability for damages to hardware, software, or data. Attempt this at your own risk! No support will be offered if you have issues.)
-
-Requirements:
-Intel Based Asustor NAS (Arm cpu will not work)
-
-A PC to create a USB boot device.
-
-8-16gb of ram recommended, or 2gb of ram with ssd swap partition.
-
-Additional packages may be required for services (depends on OS that is installed).
-
-NAS with HDMI out.
-
-USB keyboard &amp; mouse
-
-=====
-
-Caution: Do not format or install to internal EMMC chip on NAS (size roughly 8gb), method of reinstalling ADM if you mess up this drive is unknown. Asustor does NOT support alternative OS installations. This may void your warranty if you erase the internal EMMC drive, however if done correctly by not touching that drive it should be revertible to the official NAS OS.
-
-You cannot dual boot between ADM and a alternative OS.
-
-Recommended you use a OS based for NAS Like Open Media Vault or use a Linux Server like Ubuntu Desktop or Server with Webmin for web interface.
-
-Known Issues:
-
-Control of Fan may not be possible, fan will spin at low speed but adjusting fan during high temperatures might not be possible. Suggestion adjust thermal limit in bios to something reasonable to allow the CPU to thermal throttle avoid 90*C+ temperatures on cpu.
-
-Adjusting LED brightness or Info might not be possible.
-
-Raid availability may depend on OS.
-
-I have not experienced any further driver issues besides fan / led panel however depending on the OS you may experience some.
-
-=====
-
-Steps:
-
-Download a OS you wish to install: Linux Desktop or Server, Windows, FreeNAS, OpenMediaVault, etc.
-
--Download/install a USB boot loader, examples could be Rufus, Linux Live, Unetbootin
-
--Create a usb boot device using the application and the downloaded version of your OS.
-
--Make sure HDMI is plugged in and set to input on monitor.
-
--Turn off NAS and plug in USB Boot Device
-
--Turn on NAS press esc button during bio post screen.
-
--In bios set boot priority order to prefer SATA drives first and EMMC drive last. Save Settings.
-
--In Bios Boot Manager select USB Boot Device
-
--Launch into OS installer.
-
-[Because all OS installers are different I will omit the specifics, check YouTube videos if you need a walk through]
-
--When selecting where to install the OS do NOT let the OS installer decide for itself make sure your installing the OS to a drive that is NOT the internal EMMC drive.
-
--Drives that were used in the NAS as storage may need to be reformatted. (Do NOT format internal EMMC drive)
-
--Finalize install &amp; reboot (remove USB boot disk)
-
-[Make sure you boot into the drive you installed your alternative OS on; if you have issues check boot priority order in bios again.]
-
-=====
-
-How to revert to official NAS ADM OS:
-
-Erase or replace SATA bay drives used in the NAS, set Bios boot priority order to prefer the EMMC internal drive first. Save &amp; Reboot.
-
-Personal note:
-
-I’ve been running Ubuntu Desktop on a AS5202T for a couple weeks now and find the performance, and ease of use well running server / desktop applications a much better experience. Setting up services like Samba, Webmin, or Docker on Ubuntu requires knowing how to use Terminal (or SSH*), but is by far much easier to use then SSH on ADM due to package availability. If you want a bit more performance I suggest not installing the desktop versions of Linux if you are familiar running a headless server.
-&lt;br&gt;
-
-[[Using Remote Sync (Rsync) to backup your data|https://www.asustor.com/online/College_topic?topic=259]] - [[Low-latency continuous rsync|https://www.danplanet.com/blog/2012/05/09/low-latency-continuous-rsync/]]&lt;br&gt;
-&lt;iframe src=&quot;https://www.asustor.com/online/College_topic?topic=259&quot; width=&quot;100%&quot; height=&quot;800&quot; allow=&quot;autoplay&quot;&gt;&lt;/iframe&gt;&lt;br&gt;
-
-[[How to Exclude Files and Directories with Rsync|https://linuxize.com/post/how-to-exclude-files-and-directories-with-rsync/]]&lt;br&gt;
-&lt;iframe src=&quot;https://linuxize.com/post/how-to-exclude-files-and-directories-with-rsync/&quot; width=&quot;100%&quot; height=&quot;800&quot; allow=&quot;autoplay&quot;&gt;&lt;/iframe&gt;&lt;br&gt;
-
-[[Using an ASUSTOR NAS with Docker|https://www.asustor.com/solution/what_is_docker]] &lt;br&gt;
-&lt;iframe src=&quot;https://www.asustor.com/solution/what_is_docker&quot; width=&quot;100%&quot; height=&quot;800&quot; allow=&quot;autoplay&quot;&gt;&lt;/iframe&gt;&lt;br&gt;
 
 [[Docker Without Volume Mounting|https://www.vinnie.work/blog/2021-08-19-docker-without-volume-mounting/]] &lt;br&gt;
 &lt;iframe src=&quot;https://www.vinnie.work/blog/2021-08-19-docker-without-volume-mounting/&quot; width=&quot;100%&quot; height=&quot;800&quot; allow=&quot;autoplay&quot;&gt;&lt;/iframe&gt;&lt;br&gt;
