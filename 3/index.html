@@ -469,6 +469,8 @@ Error message and password prompt
 
 <li>Cascadeur - physics-based animation software</li>
 
+<li>Clone Fedora to Docker</li>
+
 <li>Cloning Encrypted SSD to larger SSD</li>
 
 <li>Command execution over SSH</li>
@@ -10526,7 +10528,7 @@ Error message and password prompt
 <div created="20200415225849375" modified="20240726091156331" title="$:/state/showeditpreview">
 <pre>yes</pre>
 </div>
-<div created="20200416000753699" modified="20240730085136237" title="$:/state/sidebar">
+<div created="20200416000753699" modified="20240730143449891" title="$:/state/sidebar">
 <pre>yes</pre>
 </div>
 <div created="20240620003524002" modified="20240620003524002" title="$:/state/tab--2112689675">
@@ -10556,7 +10558,7 @@ Error message and password prompt
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20240730084341604" list="[[Will and Final Testament of Gary Rust]]" modified="20240730084341604" title="$:/StoryList">
+<div created="20240730142428076" list="[[Clone Fedora to Docker]] [[Artificial Intelligence]]" modified="20240730142428076" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200415065902661" modified="20200529000602524" title="$:/temp/advancedsearch">
@@ -10620,7 +10622,7 @@ Error message and password prompt
     }
 }</pre>
 </div>
-<div created="20200415062727221" modified="20210315175213190" title="$:/temp/NewTagName">
+<div created="20200415062727221" modified="20240730142600831" title="$:/temp/NewTagName">
 <pre></pre>
 </div>
 <div author="Paco Rivière" core-version="&gt;=5.0.0" created="20200415221704633" dependents="" description="Catalan (Spain)" icon="data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%3F%3E%0A%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22810%22%20height%3D%22540%22%3E%0A%3Crect%20width%3D%22810%22%20height%3D%22540%22%20fill%3D%22%23FCDD09%22%2F%3E%0A%3Cpath%20stroke%3D%22%23DA121A%22%20stroke-width%3D%2260%22%20d%3D%22M0%2C90H810m0%2C120H0m0%2C120H810m0%2C120H0%22%2F%3E%0A%3C%2Fsvg%3E" modified="20200415221704633" name="ca-ES" original-plugin-type="language" original-tags="" original-title="$:/languages/ca-ES" original-type="application/json" requires-reload="no" server-url="https://tiddlywiki.com/library/v5.1.22/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/languages/ca-ES" type="text/vnd.tiddlywiki" version="5.1.22">
@@ -12096,6 +12098,78 @@ https://github.com/programminghero1/audiobook&lt;br&gt;</pre>
 &lt;iframe width=&quot;800&quot; height=&quot;800&quot; src=&quot;https://cascadeur.com/download&quot; frameborder=&quot;0&quot; allow=&quot;autoplay; encrypted-media&quot; allowfullscreen&gt;&lt;/iframe&gt;&lt;br&gt;
 [[CASCADEUR -- AWESOME Physics Based Animation Software|https://youtu.be/49lgJMtIw-Y]]&lt;br&gt;
 &lt;iframe width=&quot;800&quot; height=&quot;450&quot; src=&quot;https://www.youtube.com/embed/49lgJMtIw-Y&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;&lt;br&gt;</pre>
+</div>
+<div created="20240730142433377" modified="20240730143454720" tags="Computer [[Artificial Intelligence]]" title="Clone Fedora to Docker">
+<pre>* [[Artificial Intelligence]] &lt;br&gt;
+
+&lt;div style=&quot;width: 800px; white-space: pre-wrap;&quot;&gt;
+  
+You I have fedora 40 installed on a partition on my computer. Can I clone
+it to a docker container so I can run it on another host computer?
+
+mistral-nemo:12b Yes, you can create a Docker image of your Fedora 40 system
+and use that image to run the same environment on another host computer. Here's
+how you can achieve this:
+
+Prepare your Fedora 40 installation:
+
+Make sure your system is up-to-date:
+
+
+sudo dnf update Install cloud-init package which is used by Docker for
+creating images from running systems:
+
+
+sudo dnf install cloud-init Create a tarball of the root filesystem:
+
+You can use tar to create an archive of your root filesystem. This will take
+some time depending on the size of your filesystems.
+
+First, find out which devices correspond to your root filesystem:
+
+
+lsblk -f Let's assume /dev/sda2 is your root filesystem.
+
+Then create a tarball:
+
+
+sudo tar -cvp --xclude=/.journal --xclude=/dev/* --xclude=/proc/*
+--xclude=/sys/* --xclude=/run/* -f /root/fedora40-image.tar.gz /dev/sda2
+Create a Docker image:
+
+Now you can create a Docker image using the tarball created above:
+
+
+docker import - /root/fedora40-image.tar.gz This will create an image with
+the ID fedora40-image.
+
+Push the image to a registry (optional):
+
+If you want to use this image on another host, you'll need to push it to a
+registry like Docker Hub:
+
+
+docker login docker tag fedora40-image
+your_dockerhub_username/fedora40-image:latest docker push
+your_dockerhub_username/fedora40-image:latest Run the image on another host:
+
+On the other host where you want to run the container, pull the image from
+the registry:
+
+
+docker pull your_dockerhub_username/fedora40-image:latest Then start a
+container based on this image:
+
+
+docker run -it --name fedora40-container your_dockerhub_username/fedora40-image
+bash
+
+
+
+
+
+&lt;/div&gt;
+</pre>
 </div>
 <div created="20210205185512477" modified="20210205190106579" tags="Computer Hardware TableOfContents Help" title="Cloning Encrypted SSD to larger SSD">
 <pre>[[Cloning Encrypted SSD to larger SSD|https://askubuntu.com/questions/761763/cloning-encrypted-ssd-to-larger-ssd]]&lt;br&gt;
