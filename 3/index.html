@@ -491,8 +491,6 @@ Error message and password prompt
 
 <li>Crontab – Quick Reference</li>
 
-<li>Draft of 'CHROOT SCRIPT'</li>
-
 <li>Draft of 'Table Of Contents'</li>
 
 <li>Full Disk Encryption Howto 2019</li>
@@ -10536,7 +10534,7 @@ Error message and password prompt
 <div created="20200415225849375" modified="20240726091156331" title="$:/state/showeditpreview">
 <pre>yes</pre>
 </div>
-<div created="20200416000753699" modified="20240806170320466" title="$:/state/sidebar">
+<div created="20200416000753699" modified="20240806170717645" title="$:/state/sidebar">
 <pre>yes</pre>
 </div>
 <div created="20240620003524002" modified="20240620003524002" title="$:/state/tab--2112689675">
@@ -10566,7 +10564,7 @@ Error message and password prompt
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20240806161428815" list="[[Conversion of EXT4 to BTRFS]] [[Draft of 'CHROOT SCRIPT']]" modified="20240806161428815" title="$:/StoryList">
+<div created="20240806161428815" list="[[Conversion of EXT4 to BTRFS]] [[CHROOT SCRIPT]]" modified="20240806170420191" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200415065902661" modified="20200529000602524" title="$:/temp/advancedsearch">
@@ -12123,7 +12121,7 @@ https://github.com/programminghero1/audiobook&lt;br&gt;</pre>
 [[CASCADEUR -- AWESOME Physics Based Animation Software|https://youtu.be/49lgJMtIw-Y]]&lt;br&gt;
 &lt;iframe width=&quot;800&quot; height=&quot;450&quot; src=&quot;https://www.youtube.com/embed/49lgJMtIw-Y&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;&lt;br&gt;</pre>
 </div>
-<div created="20240806133316276" modified="20240806133651780" tags="Computer [[Artificial Intelligence]]" title="CHROOT SCRIPT">
+<div created="20240806133316276" modified="20240806170722826" tags="Computer [[Artificial Intelligence]]" title="CHROOT SCRIPT">
 <pre>[[schroot|https://github.com/fragmede/schroot]]
 &lt;xmp&gt;
 CHROOT SCRIPT
@@ -12145,6 +12143,84 @@ xauth add $(xauth list $DISPLAY)
 firefox
 EOF
 &lt;/xmp&gt;
+
+Try this:
+&lt;xmp&gt;
+Here's a tutorial on how to chroot to an XFCE4 desktop on /dev/sdb5:
+Boot into a live Linux environment (e.g. from a USB drive).
+Open a terminal and become root:
+bash
+sudo -i
+
+Mount the target partition:
+bash
+mount /dev/sdb5 /mnt
+
+Mount necessary filesystems:
+bash
+mount --bind /dev /mnt/dev
+mount --bind /dev/pts /mnt/dev/pts
+mount --bind /proc /mnt/proc
+mount --bind /sys /mnt/sys
+mount --bind /run /mnt/run
+
+Copy DNS configuration:
+bash
+cp /etc/resolv.conf /mnt/etc/
+
+Chroot into the mounted system:
+bash
+chroot /mnt
+
+Set the display variable:
+bash
+export DISPLAY=:0
+
+Allow X connections:
+bash
+xhost +
+
+Start XFCE4:
+bash
+startxfce4
+
+If successful, this should launch the XFCE4 desktop
+environment within the chroot.
+Some additional notes:
+You may need to install Xnest or Xephyr on the host
+system to provide a nested X server.
+If using Xephyr, you can launch it before chrooting
+with:
+bash
+Xephyr -ac -screen 1280x720 :1 &amp;
+
+Then use export DISPLAY=:1 in step 7.
+If you encounter issues with USB devices, try 
+binding /run/udev as well.
+Ensure all necessary X11 and XFCE4 packages are 
+installed in the chroot environment.
+Remember to unmount everything when you're done:
+bash
+exit
+umount -R /mnt
+
+This process allows you to access and troubleshoot
+a graphical environment within a chroot, which can
+be useful for system recovery or maintenance.
+
+Related
+How do I ensure my keyboard and mouse work in the
+chrooted XFCE4 environment
+What are the common issues when launching XFCE4 
+in a chroot and how can they be resolved
+How do I properly configure Xnest to display a 
+graphical XFCE4 desktop
+Are there any specific steps to follow if I'm 
+using a non-x86 OS for chrooting
+How can I troubleshoot if my XFCE4 desktop fails
+to launch in the chroot
+&lt;/xmp&gt;
+See [[Write a tutorial on how to chroot to an xfce4 desktop on /dev/sdb5|https://www.perplexity.ai/search/write-a-tutorial-on-how-to-chr-YBc8maVZRrKGa5vzjKz77w]] &lt;br&gt;
 </pre>
 </div>
 <div created="20240730142433377" modified="20240730214543797" tags="Computer [[Artificial Intelligence]]" title="Clone Fedora to Docker">
@@ -12616,95 +12692,6 @@ type as necessary.
 <pre>Also see [[Webcam]] and [[Alexa Notify Me]]&lt;br&gt;
 https://www.adminschoice.com/crontab-quick-reference &lt;br&gt;
 &lt;iframe width=&quot;800&quot; height=&quot;800&quot; src=&quot;https://www.adminschoice.com/crontab-quick-reference&quot; frameborder=&quot;0&quot; allow=&quot;autoplay; encrypted-media&quot; allowfullscreen&gt;&lt;/iframe&gt;&lt;br&gt;</pre>
-</div>
-<div created="20240806133316276" draft.of="CHROOT SCRIPT" draft.title="CHROOT SCRIPT" modified="20240806170051632" tags="Computer [[Artificial Intelligence]]" title="Draft of 'CHROOT SCRIPT'">
-<pre>[[schroot|https://github.com/fragmede/schroot]]
-&lt;xmp&gt;
-CHROOT SCRIPT
-
-#!/bin/bash
-
-# Path to chroot environment
-CHROOT_PATH=&quot;/path/to/chroot&quot;
-
-# Enter the chroot environment
-sudo chroot $CHROOT_PATH /bin/bash &lt;&lt;'EOF'
-# Set the DISPLAY variable
-export DISPLAY=:0
-
-# Add X11 authorization key
-xauth add $(xauth list $DISPLAY)
-
-# Run the GUI application
-firefox
-EOF
-&lt;/xmp&gt;
-
-Try this:
-&lt;xmp&gt;
-Here's a tutorial on how to chroot to an XFCE4 desktop on /dev/sdb5:
-Boot into a live Linux environment (e.g. from a USB drive).
-Open a terminal and become root:
-bash
-sudo -i
-
-Mount the target partition:
-bash
-mount /dev/sdb5 /mnt
-
-Mount necessary filesystems:
-bash
-mount --bind /dev /mnt/dev
-mount --bind /dev/pts /mnt/dev/pts
-mount --bind /proc /mnt/proc
-mount --bind /sys /mnt/sys
-mount --bind /run /mnt/run
-
-Copy DNS configuration:
-bash
-cp /etc/resolv.conf /mnt/etc/
-
-Chroot into the mounted system:
-bash
-chroot /mnt
-
-Set the display variable:
-bash
-export DISPLAY=:0
-
-Allow X connections:
-bash
-xhost +
-
-Start XFCE4:
-bash
-startxfce4
-
-If successful, this should launch the XFCE4 desktop environment within the chroot.
-Some additional notes:
-You may need to install Xnest or Xephyr on the host system to provide a nested X server.
-If using Xephyr, you can launch it before chrooting with:
-bash
-Xephyr -ac -screen 1280x720 :1 &amp;
-
-Then use export DISPLAY=:1 in step 7.
-If you encounter issues with USB devices, try binding /run/udev as well.
-Ensure all necessary X11 and XFCE4 packages are installed in the chroot environment.
-Remember to unmount everything when you're done:
-bash
-exit
-umount -R /mnt
-
-This process allows you to access and troubleshoot a graphical environment within a chroot, which can be useful for system recovery or maintenance.
-Related
-How do I ensure my keyboard and mouse work in the chrooted XFCE4 environment
-What are the common issues when launching XFCE4 in a chroot and how can they be resolved
-How do I properly configure Xnest to display a graphical XFCE4 desktop
-Are there any specific steps to follow if I'm using a non-x86 OS for chrooting
-How can I troubleshoot if my XFCE4 desktop fails to launch in the chroot
-&lt;/xmp&gt;
-See [[Write a tutorial on how to chroot to an xfce4 desktop on /dev/sdb5|https://www.perplexity.ai/search/write-a-tutorial-on-how-to-chr-YBc8maVZRrKGa5vzjKz77w]] &lt;br&gt;
-</pre>
 </div>
 <div modified="20210908135344709" title="Draft of 'Table Of Contents'">
 <pre></pre>
