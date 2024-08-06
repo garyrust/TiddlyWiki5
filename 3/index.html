@@ -10536,8 +10536,8 @@ Error message and password prompt
 <div created="20200415225849375" modified="20240726091156331" title="$:/state/showeditpreview">
 <pre>yes</pre>
 </div>
-<div created="20200416000753699" modified="20240806185616860" title="$:/state/sidebar">
-<pre>no</pre>
+<div created="20200416000753699" modified="20240806192841585" title="$:/state/sidebar">
+<pre>yes</pre>
 </div>
 <div created="20240620003524002" modified="20240620003524002" title="$:/state/tab--2112689675">
 <pre>$:/core/ui/ControlPanel/Advanced</pre>
@@ -12207,12 +12207,13 @@ to launch in the chroot
 
 </pre>
 </div>
-<div created="20240806184617674" modified="20240806190118553" tags="Computer [[Artificial Intelligence]]" title="chroot_/dev/sda5_(garuda).sh" type="text/html">
+<div created="20240806184617674" modified="20240806192922929" tags="Computer [[Artificial Intelligence]]" title="chroot_/dev/sda5_(garuda).sh" type="text/html">
 <pre># chroot_/dev/sda5_(garuda).sh&lt;br&gt;&lt;br&gt;
 
       #!/bin/bash&lt;br&gt;
-      sudo -i&lt;br&gt;
+      #sudo -i ; do this first&lt;br&gt;
       mount /dev/sda5 /mnt&lt;br&gt;
+			sleep 5&lt;br&gt;
       mount --bind /dev /mnt/@/dev&lt;br&gt;
       mount --bind /dev/pts /mnt/@/dev/pts&lt;br&gt;
       mount --bind /proc /mnt@/proc&lt;br&gt;
