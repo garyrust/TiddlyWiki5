@@ -10534,7 +10534,7 @@ Error message and password prompt
 <div created="20200415225849375" modified="20240726091156331" title="$:/state/showeditpreview">
 <pre>yes</pre>
 </div>
-<div created="20200416000753699" modified="20240806170948190" title="$:/state/sidebar">
+<div created="20200416000753699" modified="20240806173022544" title="$:/state/sidebar">
 <pre>yes</pre>
 </div>
 <div created="20240620003524002" modified="20240620003524002" title="$:/state/tab--2112689675">
@@ -10564,7 +10564,7 @@ Error message and password prompt
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20240806161428815" list="[[Conversion of EXT4 to BTRFS]] [[CHROOT SCRIPT]]" modified="20240806170420191" title="$:/StoryList">
+<div created="20240806161428815" list="[[CHROOT SCRIPT]]" modified="20240806170420191" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200415065902661" modified="20200529000602524" title="$:/temp/advancedsearch">
@@ -12121,7 +12121,7 @@ https://github.com/programminghero1/audiobook&lt;br&gt;</pre>
 [[CASCADEUR -- AWESOME Physics Based Animation Software|https://youtu.be/49lgJMtIw-Y]]&lt;br&gt;
 &lt;iframe width=&quot;800&quot; height=&quot;450&quot; src=&quot;https://www.youtube.com/embed/49lgJMtIw-Y&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;&lt;br&gt;</pre>
 </div>
-<div created="20240806133316276" modified="20240806170950386" tags="Computer [[Artificial Intelligence]]" title="CHROOT SCRIPT">
+<div created="20240806133316276" modified="20240806173027479" tags="Computer [[Artificial Intelligence]]" title="CHROOT SCRIPT">
 <pre>Try this: See [[Write a tutorial on how to chroot to an xfce4 desktop on /dev/sdb5|https://www.perplexity.ai/search/write-a-tutorial-on-how-to-chr-YBc8maVZRrKGa5vzjKz77w]] &lt;br&gt;
 &lt;xmp&gt;
 Here's a tutorial on how to chroot to an XFCE4 desktop on /dev/sdb5:
@@ -12197,6 +12197,20 @@ Are there any specific steps to follow if I'm
 using a non-x86 OS for chrooting
 How can I troubleshoot if my XFCE4 desktop fails
 to launch in the chroot
+
+EXAMPLE:
+# chroot_/dev/sda5_(garuda)
+#!/bin/bash
+sudo -i
+mount /dev/sda5 /mnt
+mount –bind /dev /mnt/@/dev
+mount –bind /dev/pts /mnt/@/dev/pts
+mount –bind /proc /mnt@/proc
+mount –bind /sys /mnt/@/sys
+mount –bind /run /mnt/@/run
+cp /etc/resolv.conf /mnt/@/etc/
+chroot /mnt
+
 &lt;/xmp&gt;
 
 
