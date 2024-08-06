@@ -12207,7 +12207,7 @@ to launch in the chroot
 
 </pre>
 </div>
-<div created="20240806184617674" modified="20240806185020749" tags="Computer [[Artificial Intelligence]]" title="chroot_/dev/sda5_(garuda).sh" type="text/html">
+<div created="20240806184617674" modified="20240806190118553" tags="Computer [[Artificial Intelligence]]" title="chroot_/dev/sda5_(garuda).sh" type="text/html">
 <pre># chroot_/dev/sda5_(garuda).sh&lt;br&gt;&lt;br&gt;
 
       #!/bin/bash&lt;br&gt;
@@ -12219,7 +12219,27 @@ to launch in the chroot
       mount --bind /sys /mnt/@/sys&lt;br&gt;
       mount --bind /run /mnt/@/run&lt;br&gt;
       cp /etc/resolv.conf /mnt/@/etc/&lt;br&gt;
-      chroot /mnt</pre>
+      chroot /mnt&lt;br&gt;
+			&lt;br&gt;&lt;br&gt;
+CHROOT SCRIPT&lt;br&gt;
+    &lt;br&gt;
+    #!/bin/bash&lt;br&gt;
+    &lt;br&gt;
+    # Path to chroot environment&lt;br&gt;
+    CHROOT_PATH=&quot;/path/to/chroot&quot;&lt;br&gt;
+    &lt;br&gt;
+    # Enter the chroot environment&lt;br&gt;
+    sudo chroot $CHROOT_PATH /bin/bash &amp;lt;&amp;lt;'EOF'&lt;br&gt;
+    # Set the DISPLAY variable&lt;br&gt;
+    export DISPLAY=:0&lt;br&gt;
+    &lt;br&gt;
+    # Add X11 authorization key&lt;br&gt;
+    xauth add $(xauth list $DISPLAY)&lt;br&gt;
+    &lt;br&gt;
+    # Run the GUI application&lt;br&gt;
+    firefox&lt;br&gt;
+    EOF
+		&lt;br&gt;</pre>
 </div>
 <div created="20240730142433377" modified="20240730214543797" tags="Computer [[Artificial Intelligence]]" title="Clone Fedora to Docker">
 <pre>* [[Artificial Intelligence]] - [[Convert OPSYS from ext4 to btrf]] &lt;br&gt;
