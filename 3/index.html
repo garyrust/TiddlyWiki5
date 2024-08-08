@@ -10538,7 +10538,7 @@ Error message and password prompt
 <div created="20200415225849375" modified="20240726091156331" title="$:/state/showeditpreview">
 <pre>yes</pre>
 </div>
-<div created="20200416000753699" modified="20240808002554715" title="$:/state/sidebar">
+<div created="20200416000753699" modified="20240808052650750" title="$:/state/sidebar">
 <pre>yes</pre>
 </div>
 <div created="20240620003524002" modified="20240620003524002" title="$:/state/tab--2112689675">
@@ -10568,7 +10568,7 @@ Error message and password prompt
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20240808002604610" list="[[Change the installation from an BTRFS root partition]] [[Conversion of EXT4 to BTRFS]]" modified="20240808002604610" title="$:/StoryList">
+<div created="20240808052238380" list="[[Conversion of EXT4 to BTRFS]]" modified="20240808052250252" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200415065902661" modified="20200529000602524" title="$:/temp/advancedsearch">
@@ -12398,7 +12398,7 @@ ssh-keygen -R host
 
 </pre>
 </div>
-<div created="20240806130614929" modified="20240808002546018" tags="Computer [[Artificial Intelligence]]" title="Conversion of EXT4 to BTRFS">
+<div created="20240806130614929" modified="20240808052655351" tags="Computer [[Artificial Intelligence]]" title="Conversion of EXT4 to BTRFS">
 <pre>[[Change the installation from an BTRFS root partition]]&lt;br&gt;
 [[Convert OPSYS from ext4 to btrf]] &lt;br&gt;
 [[chroot_/dev/sda5_(garuda).sh]]&lt;br&gt;
@@ -12409,80 +12409,68 @@ ssh-keygen -R host
 
 [[CHROOT SCRIPT]]&lt;br&gt;
 
-!! How to change an installed Xubuntu 24.04 on an BTRFS / partition to a BTRFS  @ Subvolume and @home Subvolume
+[[Perplexity|https://www.perplexity.ai/search/how-to-change-the-installation-iHhxnQCfS0il4fdIMzivBw]] &lt;br&gt;
+How to change the installation from an BTRFS root partition to a BTRFS subvolume and home subvolume with zstd compression using snapshots
+Sources&lt;br&gt;
 
 
-I understand that you'd like a step-by-step guide on converting an
-existing Xubuntu 24.04 installation from a single BTRFS partition
-to a setup with separate `@` (root) and `@home` subvolumes using
-zstd compression, without data loss. Here's how you can do it:
 
-**Prerequisites:**
+kubuntuforums.net favicon
+groups.google.com favicon
+View 2 more
+Answer
+To change your installation from a BTRFS root partition to a BTRFS subvolume and home subvolume with ZSTD compression using snapshots, follow these steps:
+Boot from a LiveCD or LiveUSB:
+Use a Linux LiveCD or LiveUSB to boot your system. This allows you to make changes to your BTRFS setup without interference from the running system.
+Mount the BTRFS Partition:
+Identify your BTRFS partition, for example, /dev/sdX.
+Mount it to a temporary directory:
+bash
+mount /dev/sdX /mnt
 
-1. Ensure your system is fully updated.  2. Have a backup of
-important data.
+Create Subvolumes:
+Create a new root subvolume:
+bash
+btrfs subvolume create /mnt/@
 
-**Steps:**
+Move all files from the root of the BTRFS partition to the new root subvolume:
+bash
+mv /mnt/* /mnt/@/
 
-1. **Boot into recovery mode:**
-   - Restart your computer.  - During boot, hold down the Shift key
-   to access the GRUB menu.  - Select 'Advanced options' for your
-   Ubuntu version.  - Select the kernel version with `(recovery
-   mode)` in the label.  - In the recovery menu, select `root`
-   to drop to a root shell prompt.
+Create a home subvolume:
+bash
+btrfs subvolume create /mnt/@home
 
-2. **Mount the file systems:**
-   ```bash mount -o remount,rw / mount --types=btrfs none
-   /dev/your_device /mnt  # replace your_device with your BTRFS
-   partition (e.g., sda1) ```
+Move the contents of the home directory to the new home subvolume:
+bash
+mv /mnt/@/home/* /mnt/@home/
 
-3. **Create subvolumes and set compression:**
-   ```bash btrfs subvolume create /mnt/@ btrfs subvolume
-   create /mnt/@home btrfs property set -ts compressed=zstd
-   /mnt/@,/mnt/@home ```
+Set Up Compression:
+Remount the subvolumes with ZSTD compression by updating your /etc/fstab file. Add or modify entries like:
+text
+/dev/sdX / btrfs subvol=/@,compress=zstd 0 1
+/dev/sdX /home btrfs subvol=/@home,compress=zstd 0 2
 
-4. **Copy the existing data to new subvolumes:**
-   ```bash rsync -aAXv
-   --exclude={&quot;/dev/*&quot;,&quot;/proc/*&quot;,&quot;/sys/*&quot;,&quot;/tmp/*&quot;,&quot;/run/*&quot;,&quot;/mnt/*&quot;}
-   / /mnt/@ rsync -aAXv /home/ /mnt/@home ```
+Update Bootloader:
+Reinstall and configure your bootloader (e.g., GRUB) to recognize the new root subvolume. Ensure that the rootflags=subvol=@ is set in your bootloader configuration.
+Create Snapshots:
+You can create snapshots of your root and home subvolumes using:
+bash
+btrfs subvolume snapshot /mnt/@ /mnt/@snapshots/root-$(date +%Y%m%d)
+btrfs subvolume snapshot /mnt/@home /mnt/@snapshots/home-$(date +%Y%m%d)
 
-5. **Update the fstab file:**
-   - Create a new `/etc/fstab` file:
-     ```bash mkswap /dev/your_device  # create swap on root device
-     if not already done swapon - ```
-   - Edit the new `fstab` file:
-     ```bash nano /mnt/etc/fstab ```
-   - Update it with the following content (replace `/dev/your_device`
-   with your actual partition):
-     ``` /dev/your_device       /           btrfs
-     subvol=@,compress=zstd,noatime,nodiscard    0
-     1 /dev/your_device       /home       btrfs
-     subvol=@home,compress=zstd,noatime,nodiscard 0 2 ```
-   - Verify the new `fstab` file:
-     ```bash mount -a ```
+Verify Setup:
+Reboot your system and verify that it boots correctly from the new subvolumes. Check that compression is enabled by examining the mount options with:
+bash
+mount | grep btrfs
 
-6. **Copy important configuration files (optional but recommended):**
-   ```bash cp /etc/resolv.conf /mnt/etc/ cp /etc/hostname /mnt/etc/
-   cp /etc/hosts /mnt/etc/ ```
-
-7. **Update the GRUB configuration:**
-   - Remount the `/boot` partition with the correct UUID if it's
-   separate:
-     ```bash umount /boot mount -o remount,rw / ```
-   - Update the GRUB configuration:
-     ```bash update-grub ```
-
-8. **Update the initramfs:**
-   ```bash update-initramfs -u ```
-
-9. **Exit recovery mode and reboot:**
-   ```bash exit ``` - In the recovery menu, select `resume` to
-   resume normal boot.  - After successful login, verify your new
-   BTRFS subvolume setup.
-
-That's it! You've successfully converted your single BTRFS
-partition into separate `@` (root) and `@home` subvolumes with
-zstd compression.
+These steps will convert your installation to use BTRFS subvolumes with ZSTD compression, allowing you to leverage the benefits of subvolumes and snapshots for easier management and backup.
+Related
+What are the steps to create a snapshot of the root partition in BTRFS
+How do I update GRUB to recognize the new root subvolume
+Can I use zstd compression for both the root and home subvolumes
+What's the best way to move files to a new home subvolume without copying everything
+How do I ensure that my system boots correctly after changing the subvolumes
 </pre>
 </div>
 <div created="20240730213555632" modified="20240730214447576" tags="Computer [[Artificial Intelligence]]" title="Convert OPSYS from ext4 to btrf">
