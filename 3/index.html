@@ -601,6 +601,8 @@ Error message and password prompt
 
 <li>Running Ubuntu on WSL (Windows 10)</li>
 
+<li>Script to install btrfs xubuntu 24.04 on a partition</li>
+
 <li>SSHFS for Windows</li>
 
 <li>Start</li>
@@ -10538,7 +10540,7 @@ Error message and password prompt
 <div created="20200415225849375" modified="20240808061401852" title="$:/state/showeditpreview">
 <pre>yes</pre>
 </div>
-<div created="20200416000753699" modified="20240808061504254" title="$:/state/sidebar">
+<div created="20200416000753699" modified="20240808073113798" title="$:/state/sidebar">
 <pre>yes</pre>
 </div>
 <div created="20240620003524002" modified="20240620003524002" title="$:/state/tab--2112689675">
@@ -10568,7 +10570,7 @@ Error message and password prompt
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20240808052238380" list="[[Conversion of EXT4 to BTRFS]]" modified="20240808052250252" title="$:/StoryList">
+<div created="20240808072458569" list="[[Script to install btrfs xubuntu 24.04 on a partition]] [[Conversion of EXT4 to BTRFS]]" modified="20240808072458569" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200415065902661" modified="20200529000602524" title="$:/temp/advancedsearch">
@@ -13586,6 +13588,53 @@ Also see [[ZFS Garbage collection]] &lt;br&gt;</pre>
 [[XFCE 4 Linux Desktop on WSL (windows subsystem for linux) with Pulse Audio|https://youtu.be/nKCe9UE-quA]]&lt;br&gt;
 &lt;iframe width=&quot;800&quot; height=&quot;450&quot; src=&quot;https://www.youtube.com/embed/nKCe9UE-quA&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;&lt;br&gt;
 </pre>
+</div>
+<div created="20240808072502617" modified="20240808073118702" tags="" title="Script to install btrfs xubuntu 24.04 on a partition" type="text/plain">
+<pre>Write a bash script to install xubuntu 24.04 on a partition with btrfs file system with @ and @home subvolumes and zstd compression to be used with the xubuntu installer on the live cd.
+
+Here's a bash script that you can use to create a BTRFS filesystems with @ and @home subvolumes, compressed using zstd, and then install Xubuntu 24.04 onto it. Save this script as install_xubuntu_btrfs.sh and make sure to give it executable permissions (chmod +x install_xubuntu_btrfs.sh).
+
+Before running the script, ensure you have booted from the Xubuntu live CD and have opened a terminal.
+
+
+
+#!/bin/bash
+
+# Set variables
+PARTITION=&quot;/dev/sda1&quot;  # Change this to your desired partition
+MOUNT_POINT=&quot;/mnt/xubuntu&quot;
+SUBVOLUME &quot;@&quot;
+HOME_SUBVOLUME=&quot;@home&quot;
+
+# Create BTRFS filesystem with zstd compression
+sudo mkfs.btrfs -f -L Xubuntu_BTRFS \
+    --mixed /dev/zero /dev/random \
+    --metadata compress=zstd \
+    &quot;$PARTITION&quot;
+
+# Create subvolumes
+sudo btrfs subvolume create &quot;${MOUNT_POINT}${SUBVOLUME}&quot;
+sudo btrfs subvolume create &quot;${MOUNT_POINT}${HOME_SUBVOLUME}&quot;
+
+# Mount the filesystem and bind mount subvolumes
+sudo mkdir -p &quot;${MOUNT_POINT}{$SUBVOLUME,$HOME_SUBVOLUME}&quot;
+sudo mount -t btrfs &quot;$PARTITION&quot; &quot;${MOUNT_POINT}&quot;
+sudo mount -o compress=zstd -obind &quot;${MOUNT_POINT}${SUBVOLUME}&quot; &quot;${MOUNT_POINT}&quot;
+sudo mount -o compress=zstd -obind &quot;${MOUNT_POINT}${HOME_SUBVOLUME}&quot; &quot;${MOUNT_POINT}${HOME_SUBVOLUME}&quot;
+
+# Install Xubuntu
+echo &quot;Starting Xubuntu installation...&quot;
+sudo apt-get install -y --root=&quot;${MOUNT_POINT}&quot; xubuntu-desktop
+
+# Set ownership and permissions for the installed files
+sudo chown -R &quot;$(whoami):$(id -g)&quot; &quot;${MOUNT_POINT}&quot;
+sudo chmod -R 755 &quot;${MOUNT_POINT}&quot;
+
+echo &quot;Xubuntu installation completed successfully!&quot;
+
+read -p &quot;Press Enter to umount and reboot...&quot;
+sudo umount -R &quot;${MOUNT_POINT}&quot;
+sudo reboot</pre>
 </div>
 <div created="20200704113655333" modified="20200704114727423" tags="Computer Software Help" title="SSHFS for Windows">
 <pre>https://github.com/billziss-gh/sshfs-win &lt;br&gt;
