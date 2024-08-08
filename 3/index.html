@@ -469,6 +469,8 @@ Error message and password prompt
 
 <li>Cascadeur - physics-based animation software</li>
 
+<li>Change the installation from an BTRFS root partition</li>
+
 <li>CHROOT SCRIPT</li>
 
 <li>chroot_/dev/sda5_(garuda).sh</li>
@@ -10536,7 +10538,7 @@ Error message and password prompt
 <div created="20200415225849375" modified="20240726091156331" title="$:/state/showeditpreview">
 <pre>yes</pre>
 </div>
-<div created="20200416000753699" modified="20240807203632244" title="$:/state/sidebar">
+<div created="20200416000753699" modified="20240808002554715" title="$:/state/sidebar">
 <pre>yes</pre>
 </div>
 <div created="20240620003524002" modified="20240620003524002" title="$:/state/tab--2112689675">
@@ -10566,7 +10568,7 @@ Error message and password prompt
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20240807203439678" list="chroot_/dev/sda5_(garuda).sh [[Conversion of EXT4 to BTRFS]]" modified="20240807203531350" title="$:/StoryList">
+<div created="20240808002604610" list="[[Change the installation from an BTRFS root partition]] [[Conversion of EXT4 to BTRFS]]" modified="20240808002604610" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200415065902661" modified="20200529000602524" title="$:/temp/advancedsearch">
@@ -12123,6 +12125,20 @@ https://github.com/programminghero1/audiobook&lt;br&gt;</pre>
 [[CASCADEUR -- AWESOME Physics Based Animation Software|https://youtu.be/49lgJMtIw-Y]]&lt;br&gt;
 &lt;iframe width=&quot;800&quot; height=&quot;450&quot; src=&quot;https://www.youtube.com/embed/49lgJMtIw-Y&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;&lt;br&gt;</pre>
 </div>
+<div created="20240808002124663" modified="20240808002420550" tags="" title="Change the installation from an BTRFS root partition">
+<pre>To change the installation from an BTRFS root partition to a BTRFS subvolume and home subvolume with zstd compression, follow these steps:
+1. Back up all important files and folders to an external storage device or backup service.
+2. Open the Terminal on your Xubuntu 24.04 system and type in the command `sudo su` to gain root access.
+3. Once you have root access, type in the command `btrfs subvolume create @system` to create a new subvolume for the system files.
+4. Next, type in the command `btrfs subvolume create @home` to create a new subvolume for the home directory.
+5. After creating the new subvolumes, type in the command `btrfs property set system.subvolume.compression=zstd` to enable zstd compression on the system subvolume.
+6. Type in the command `btrfs property set home.subvolume.compression=zstd` to enable zstd compression on the home subvolume as well.
+7. Next, type in the command `btrfs subvolume snapshot @system system-snapshot` to create a snapshot of the system subvolume.
+8. Type in the command `btrfs subvolume snapshot @home home-snapshot` to create a snapshot of the home subvolume as well.
+9. Then, type in the command `btrfs subvolume delete @system` to remove the old system subvolume.
+10. Finally, type in the command `btrfs subvolume move /@home /@system` to move the home subvolume to the location of the former system subvolume.
+After completing these steps, your Xubuntu 24.04 installation should now be running on a BTRFS subvolume with zstd compression for both the system and home directories.</pre>
+</div>
 <div created="20240806133316276" modified="20240806185704368" tags="Computer [[Artificial Intelligence]]" title="CHROOT SCRIPT" type="text/vnd.tiddlywiki">
 <pre>[[schroot|https://github.com/fragmede/schroot]]&lt;br&gt;
 
@@ -12382,8 +12398,10 @@ ssh-keygen -R host
 
 </pre>
 </div>
-<div created="20240806130614929" modified="20240807203635635" tags="Computer [[Artificial Intelligence]]" title="Conversion of EXT4 to BTRFS">
-<pre>[[Convert OPSYS from ext4 to btrf]] - [[chroot_/dev/sda5_(garuda).sh]]&lt;br&gt;
+<div created="20240806130614929" modified="20240808002546018" tags="Computer [[Artificial Intelligence]]" title="Conversion of EXT4 to BTRFS">
+<pre>[[Change the installation from an BTRFS root partition]]&lt;br&gt;
+[[Convert OPSYS from ext4 to btrf]] &lt;br&gt;
+[[chroot_/dev/sda5_(garuda).sh]]&lt;br&gt;
 
 [[The btrfs-convert tool|https://btrfs.readthedocs.io/en/latest/Convert.html]]&lt;br&gt;
 &lt;iframe width=&quot;800&quot; height=&quot;700&quot; src=&quot;https://btrfs.readthedocs.io/en/latest/Convert.html&quot; frameborder=&quot;0&quot; allow=&quot;autoplay; encrypted-media&quot; allowfullscreen&gt;&lt;/iframe&gt;
