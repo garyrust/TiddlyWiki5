@@ -196,6 +196,8 @@ Error message and password prompt
 
 <li>$:/state/sidebar</li>
 
+<li>$:/state/tab--1963855381</li>
+
 <li>$:/state/tab--2112689675</li>
 
 <li>$:/state/tab-1749438307</li>
@@ -419,6 +421,8 @@ Error message and password prompt
 <li>$:/themes/tiddlywiki/snowwhite</li>
 
 <li>$:/themes/tiddlywiki/vanilla</li>
+
+<li>$:/themes/tiddlywiki/vanilla/options/sidebarlayout</li>
 
 <li>1-Minute Wonder: Incredible PBX &amp; Fax 2020 for Raspberry Pi</li>
 
@@ -10383,11 +10387,14 @@ Error message and password prompt
 <div created="20200713170438692" modified="20240801190130951" title="$:/state/sidebar">
 <pre>yes</pre>
 </div>
+<div created="20241019161411243" modified="20241019161411243" title="$:/state/tab--1963855381">
+<pre>$:/themes/tiddlywiki/vanilla/themetweaks</pre>
+</div>
 <div created="20240327123934355" modified="20240327124247171" title="$:/state/tab--2112689675">
 <pre>$:/core/ui/ControlPanel/Basics</pre>
 </div>
-<div created="20200713153608861" modified="20240911225239224" title="$:/state/tab-1749438307">
-<pre>$:/core/ui/ControlPanel/Info</pre>
+<div created="20200713153608861" modified="20241019161408395" title="$:/state/tab-1749438307">
+<pre>$:/core/ui/ControlPanel/Appearance</pre>
 </div>
 <div created="20200713153637671" modified="20200713153637671" title="$:/state/tab-2065006209">
 <pre>$:/core/ui/ControlPanel/Saving/GitHub</pre>
@@ -10401,7 +10408,7 @@ Error message and password prompt
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20241019125528024" list="$:/SiteSubtitle [[Table Of Contents]] Start [[Beelink GT-R AMD Ryzen 5 3550H Mini PC]] [[HP EliteDesk 705 G1 - mini desktop Specs]] [[Dell PowerEdge R710 Server]] Wikipedia [[Learn Enough Docker To Be Useful]] [[VirtualBox Meets Docker]] [[Docker Containers 101]] [[Logical Volume Manager]] [[Learn Virtual Machines RIGHT NOW]] [[KVM Virtual Machines]] [[LXD Virtual Machines Runing Perfectly In Raspberry Pi 4]] [[How to use LXD to deploy containers]] [[Introduction to LXD projects]] [[LXD - Try it online]] [[Run Raspbian with qemu and virt-manager]] [[Install Tor proxy on Ubuntu 20.04 Linux]] [[USB Ports, Cables, &amp; Connectors]] [[Nextcloud Installation on Raspberry Pi]] [[1-Minute Wonder: Incredible PBX &amp; Fax 2020 for Raspberry Pi]] [[Create A List Of Installed Packages And Install Them]] [[How to use Remote Desktop]]" modified="20241019125528024" title="$:/StoryList">
+<div created="20241019161404841" list="[[Table Of Contents]] Start [[Beelink GT-R AMD Ryzen 5 3550H Mini PC]] [[HP EliteDesk 705 G1 - mini desktop Specs]] [[Dell PowerEdge R710 Server]] Wikipedia [[Learn Enough Docker To Be Useful]] [[VirtualBox Meets Docker]] [[Docker Containers 101]] [[Logical Volume Manager]] [[Learn Virtual Machines RIGHT NOW]] [[KVM Virtual Machines]] [[LXD Virtual Machines Runing Perfectly In Raspberry Pi 4]] [[How to use LXD to deploy containers]] [[Introduction to LXD projects]] [[LXD - Try it online]] [[Run Raspbian with qemu and virt-manager]] [[Install Tor proxy on Ubuntu 20.04 Linux]] [[USB Ports, Cables, &amp; Connectors]] [[Nextcloud Installation on Raspberry Pi]] [[1-Minute Wonder: Incredible PBX &amp; Fax 2020 for Raspberry Pi]] [[Create A List Of Installed Packages And Install Them]] [[How to use Remote Desktop]]" modified="20241019161404841" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -10417,19 +10424,19 @@ Error message and password prompt
         },
         &quot;$:/info/url/full&quot;: {
             &quot;title&quot;: &quot;$:/info/url/full&quot;,
-            &quot;text&quot;: &quot;file:///srv/http/TiddlyWiki5/4/index.html&quot;
+            &quot;text&quot;: &quot;https://garyrust.github.io/TiddlyWiki5/4/&quot;
         },
         &quot;$:/info/url/host&quot;: {
             &quot;title&quot;: &quot;$:/info/url/host&quot;,
-            &quot;text&quot;: &quot;&quot;
+            &quot;text&quot;: &quot;garyrust.github.io&quot;
         },
         &quot;$:/info/url/hostname&quot;: {
             &quot;title&quot;: &quot;$:/info/url/hostname&quot;,
-            &quot;text&quot;: &quot;&quot;
+            &quot;text&quot;: &quot;garyrust.github.io&quot;
         },
         &quot;$:/info/url/protocol&quot;: {
             &quot;title&quot;: &quot;$:/info/url/protocol&quot;,
-            &quot;text&quot;: &quot;file:&quot;
+            &quot;text&quot;: &quot;https:&quot;
         },
         &quot;$:/info/url/port&quot;: {
             &quot;title&quot;: &quot;$:/info/url/port&quot;,
@@ -10437,7 +10444,7 @@ Error message and password prompt
         },
         &quot;$:/info/url/pathname&quot;: {
             &quot;title&quot;: &quot;$:/info/url/pathname&quot;,
-            &quot;text&quot;: &quot;/srv/http/TiddlyWiki5/4/index.html&quot;
+            &quot;text&quot;: &quot;/TiddlyWiki5/4/&quot;
         },
         &quot;$:/info/url/search&quot;: {
             &quot;title&quot;: &quot;$:/info/url/search&quot;,
@@ -10445,7 +10452,7 @@ Error message and password prompt
         },
         &quot;$:/info/url/origin&quot;: {
             &quot;title&quot;: &quot;$:/info/url/origin&quot;,
-            &quot;text&quot;: &quot;file://&quot;
+            &quot;text&quot;: &quot;https://garyrust.github.io&quot;
         },
         &quot;$:/info/browser/screen/width&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/width&quot;,
@@ -11526,6 +11533,9 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
         }
     }
 }</pre>
+</div>
+<div created="20241019161414786" modified="20241019161414786" title="$:/themes/tiddlywiki/vanilla/options/sidebarlayout">
+<pre>fluid-fixed</pre>
 </div>
 <div created="20200725025904983" modified="20200727050645222" tags="Computer Virtualization Learning Phone" title="1-Minute Wonder: Incredible PBX &amp; Fax 2020 for Raspberry Pi">
 <pre>Also see [[Run Raspbian with qemu and virt-manager]] - [[Incredible PBX Done|http://n6xre.duckdns.org:73/dokuwiki/doku.php?id=wiki:phone#incredible_pbx]]&lt;br&gt;
