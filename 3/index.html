@@ -10563,7 +10563,7 @@ Error message and password prompt
 <div created="20200702114451017" modified="20200702114451017" title="$:/state/image-picker/system-697231363">
 <pre>show</pre>
 </div>
-<div created="20200415225849375" modified="20241116185243704" title="$:/state/showeditpreview">
+<div created="20200415225849375" modified="20241203235625604" title="$:/state/showeditpreview">
 <pre>yes</pre>
 </div>
 <div created="20200416000753699" modified="20240930180331310" title="$:/state/sidebar">
@@ -10599,7 +10599,7 @@ Error message and password prompt
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20241203180537433" list="[[LangChain is for developing large language models (LLMs) applications]] [[How To Use Virtual Machine Manager]] [[Quick Guide to MX Linux Persistence and Frugal Setup]] [[Midnight Commander]] [[Bash Shell Scripting]] [[Command execution over SSH]] [[Rhasspy voice assistant]] [[Artificial Intelligence]] [[Linux Filesystems]] [[How to Run Linux on an ESP32]] [[Python for Everybody]] [[Python programming for the absolute beginner]] [[Deno Docs]] Wikipedia [[Obitalk Speed Dial]] [[Zoiper Voice over IP App]] [[Muses Radio Player]] Start [[How to use Remote Desktop]]" modified="20241203190037119" title="$:/StoryList">
+<div list="[[How To Use Virtual Machine Manager]]" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200415065902661" modified="20200529000602524" title="$:/temp/advancedsearch">
@@ -12891,13 +12891,50 @@ Here are some html tags for quoting code
 [[AWK - geeksforgeeks|https://www.geeksforgeeks.org/awk-command-unixlinux-examples/]]&lt;br&gt;
 [img[https://imgur.com/334PnzV.png]]&lt;br&gt;</pre>
 </div>
-<div created="20241203180140553" modified="20241203183413453" tags="[[Artificial Intelligence]] Computer Software" title="How To Use Virtual Machine Manager">
+<div created="20241203180140553" modified="20241203235640439" tags="[[Artificial Intelligence]] Computer Software" title="How To Use Virtual Machine Manager">
 <pre>''[[How To Use Virtual Machine Manager|https://robots.net/tech/how-to-use-virtual-machine-manager/]] - [[Quick Guide to MX Linux Persistence and Frugal Setup]]''&lt;br&gt;
 &lt;iframe width=100% height=&quot;700&quot; src=&quot;https://robots.net/tech/how-to-use-virtual-machine-manager/&quot; frameborder=&quot;0&quot; allow=&quot;autoplay; encrypted-media&quot; allowfullscreen&gt;&lt;/iframe&gt;&lt;br&gt;
 
 ''[[QEMU supports many disk image formats|https://qemu-project.gitlab.io/qemu/system/images.html]]''&lt;br&gt;
 &lt;iframe width=100% height=&quot;700&quot; src=&quot;https://qemu-project.gitlab.io/qemu/system/images.html&quot; frameborder=&quot;0&quot; allow=&quot;autoplay; encrypted-media&quot; allowfullscreen&gt;&lt;/iframe&gt;&lt;br&gt;
-</pre>
+
+&lt;xmp&gt;
+To set up your network for a bridged connection on QEMU's Virtual Machine Manager (virt-manager), follow these steps:
+
+1. **Create or edit your VM:**
+
+   Open virt-manager and select the virtual machine you want to configure, then click on 'Edit' (or right-click and select 'Details') to open its settings.
+
+2. **Navigate to the Network section:**
+
+   In the 'Edit Virtual Machine' window, go to the 'Details' tab and click on 'Add Hardware' (or press Ctrl+Alt+I). Select 'Network interface' from the list of available devices and click 'Forward'.
+
+3. **Configure the network interface:**
+
+   - **Mode:** Select 'Bridged adapter' from the dropdown menu.
+   - **Connection type:** Choose your host machine's network connection, e.g., 'eno1', 'eth0', or 'wlan0'. Make sure it matches the name of your active network device. To find out the correct name, you can use the `ip link` command in a terminal on your host machine.
+   - **Name:** Leave this as the default ('virbr0' or similar) unless you have specific reasons to change it.
+   - **MAC address:** You can leave this as 'Autogenerate' for simplicity, but if you need to set a custom MAC address, click on 'Change' and enter the desired value.
+   - **UUID (optional):** If needed, generate a UUID for your VM's network interface by clicking on 'Generate'.
+   - **Start enabled:** Check this box to ensure that the network interface starts automatically when your VM boots.
+
+4. **Configure additional settings (optional):**
+
+   - Click on 'Advanced' to access more configuration options:
+     - **Virtual function:** Leave this blank unless you have specific requirements.
+     - **MTU size:** You can leave this as default, but if you're experiencing issues with large packets, try adjusting the MTU size to match your host machine's setting (you can find it using the `ip link` command).
+     - **Bandwidth:** Set a limit for incoming and outgoing bandwidth if you want to control the network traffic of your VM.
+
+5. **Save your changes:**
+
+   Click 'OK' to save the new network settings, then click 'Apply' in the main virt-manager window to apply the changes to your running VM, or click 'OK' if your VM is not yet created.
+
+6. **Test the bridged connection:**
+
+   Start (or restart) your VM and verify that it has obtained an IP address via DHCP from your network. You can use `ip addr` on the VM or check its network settings to confirm this.
+
+By following these steps, you should have successfully configured your virtual machine for a bridged network connection using virt-manager. This setup will allow your VM to communicate with other devices on your local network and the internet as if it were a physical machine connected directly to your network.
+&lt;/xmp&gt;</pre>
 </div>
 <div created="20200420075221347" modified="20200427055850667" tags="Computer Help TableOfContents Youtube" title="HTML5 Video - w3schools">
 <pre>https://www.w3schools.com/html/html5_video.asp &lt;br&gt;
