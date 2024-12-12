@@ -12903,50 +12903,12 @@ Here are some html tags for quoting code
 [[AWK - geeksforgeeks|https://www.geeksforgeeks.org/awk-command-unixlinux-examples/]]&lt;br&gt;
 [img[https://imgur.com/334PnzV.png]]&lt;br&gt;</pre>
 </div>
-<div created="20241203180140553" modified="20241212080751576" tags="[[Artificial Intelligence]] Computer Software Help" title="How To Use Virtual Machine Manager">
+<div created="20241203180140553" modified="20241212081217065" tags="[[Artificial Intelligence]] Computer Software Help" title="How To Use Virtual Machine Manager">
 <pre>''[[How To Use Virtual Machine Manager|https://robots.net/tech/how-to-use-virtual-machine-manager/]] - [[Quick Guide to MX Linux Persistence and Frugal Setup]]''&lt;br&gt;
 &lt;iframe width=100% height=&quot;700&quot; src=&quot;https://robots.net/tech/how-to-use-virtual-machine-manager/&quot; frameborder=&quot;0&quot; allow=&quot;autoplay; encrypted-media&quot; allowfullscreen&gt;&lt;/iframe&gt;&lt;br&gt;
 
 ''[[QEMU (Quick Emulator) - KIWIX|https://library.kiwix.org/viewer#wikipedia_en_all_maxi_2024-01/A/QEMU]] - [[QEMU supports many disk image formats (DOCS)|https://qemu-project.gitlab.io/qemu/system/images.html]]''&lt;br&gt;
 &lt;iframe width=&quot;800&quot; height=&quot;700&quot; src=&quot;https://library.kiwix.org/viewer#wikipedia_en_all_maxi_2024-01/A/QEMU&quot; frameborder=&quot;0&quot; allow=&quot;autoplay; encrypted-media&quot; allowfullscreen&gt;&lt;/iframe&gt;&lt;br&gt;
-
-&lt;div style=&quot;width: 550px; white-space: pre-wrap;&quot;&gt;
-To set up your network for a bridged connection on QEMU's Virtual Machine Manager (virt-manager), follow these steps:
-
-1. **Create or edit your VM:**
-
-   Open virt-manager and select the virtual machine you want to configure, then click on 'Edit' (or right-click and select 'Details') to open its settings.
-
-2. **Navigate to the Network section:**
-
-   In the 'Edit Virtual Machine' window, go to the 'Details' tab and click on 'Add Hardware' (or press Ctrl+Alt+I). Select 'Network interface' from the list of available devices and click 'Forward'.
-
-3. **Configure the network interface:**
-
-   - **Mode:** Select 'Bridged adapter' from the dropdown menu.
-   - **Connection type:** Choose your host machine's network connection, e.g., 'eno1', 'eth0', or 'wlan0'. Make sure it matches the name of your active network device. To find out the correct name, you can use the `ip link` command in a terminal on your host machine.
-   - **Name:** Leave this as the default ('virbr0' or similar) unless you have specific reasons to change it.
-   - **MAC address:** You can leave this as 'Autogenerate' for simplicity, but if you need to set a custom MAC address, click on 'Change' and enter the desired value.
-   - **UUID (optional):** If needed, generate a UUID for your VM's network interface by clicking on 'Generate'.
-   - **Start enabled:** Check this box to ensure that the network interface starts automatically when your VM boots.
-
-4. **Configure additional settings (optional):**
-
-   - Click on 'Advanced' to access more configuration options:
-     - **Virtual function:** Leave this blank unless you have specific requirements.
-     - **MTU size:** You can leave this as default, but if you're experiencing issues with large packets, try adjusting the MTU size to match your host machine's setting (you can find it using the `ip link` command).
-     - **Bandwidth:** Set a limit for incoming and outgoing bandwidth if you want to control the network traffic of your VM.
-
-5. **Save your changes:**
-
-   Click 'OK' to save the new network settings, then click 'Apply' in the main virt-manager window to apply the changes to your running VM, or click 'OK' if your VM is not yet created.
-
-6. **Test the bridged connection:**
-
-   Start (or restart) your VM and verify that it has obtained an IP address via DHCP from your network. You can use `ip addr` on the VM or check its network settings to confirm this.
-
-By following these steps, you should have successfully configured your virtual machine for a bridged network connection using virt-manager. This setup will allow your VM to communicate with other devices on your local network and the internet as if it were a physical machine connected directly to your network.
-&lt;/div&gt;
 
 </pre>
 </div>
